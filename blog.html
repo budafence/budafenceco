@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Buda Fence Company | Austin, TX</title>
+    <meta name="description" content="Expert fence tips, maintenance guides, and industry insights from Buda Fence Company. Learn about fence installation, repair, and care in Austin, TX.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'buda-red': '#dc2626',
+                        'buda-blue': '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo Only -->
+                <div class="flex items-center">
+                    <img src="images/buda-fence-logo.jpeg" alt="Buda Fence Company" class="h-12 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-buda-red transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-buda-red transition duration-300 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="services.html" class="text-gray-700 hover:text-buda-red transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-buda-red transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                    <a href="blog.html" class="text-buda-red border-b-2 border-buda-red px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-buda-red transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:5127107116" class="text-buda-blue hover:text-buda-red font-semibold">(512) 710-7116</a>
+                    <a href="contact.html" class="bg-buda-red text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">Free Quote</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-buda-red focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-buda-blue to-buda-red text-white py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Fence Insights & Tips</h1>
+            <p class="text-xl text-gray-200">Expert advice, maintenance tips, and industry insights from Central Texas's trusted fence professionals</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Featured Article -->
+            <div class="mb-16">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-300 flex items-center justify-center">
+                        <span class="text-gray-500 text-lg">Featured Article Image</span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-buda-red text-white px-3 py-1 rounded-full text-sm font-medium">Featured</span>
+                            <span class="text-gray-500 ml-4">December 15, 2024</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-buda-blue mb-4">The Complete Guide to Fence Maintenance in Central Texas</h2>
+                        <p class="text-gray-600 text-lg mb-6">Central Texas weather can be tough on fences. From scorching summers to unexpected freezes, your fence faces unique challenges. Learn how to protect your investment and extend your fence's lifespan with our comprehensive maintenance guide.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-gray-300 rounded-full mr-3"></div>
+                                <div>
+                                    <p class="font-semibold text-buda-blue">William Johnson</p>
+                                    <p class="text-gray-500 text-sm">Founder & Owner</p>
+                                </div>
+                            </div>
+                            <a href="#" class="text-buda-red hover:text-red-700 font-semibold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <span class="text-gray-500">Wood Fence Image</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Wood Fences</span>
+                            <span class="text-gray-500 ml-3 text-sm">December 10, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-buda-blue mb-3">Choosing the Right Wood for Your Austin Fence</h3>
+                        <p class="text-gray-600 mb-4">Cedar vs. pressure-treated pine: which is best for Central Texas? We break down the pros, cons, and costs to help you make the right choice.</p>
+                        <a href="#" class="text-buda-red hover:text-red-700 font-semibold">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <span class="text-gray-500">Metal Fence Image</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Metal Fences</span>
+                            <span class="text-gray-500 ml-3 text-sm">December 5, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-buda-blue mb-3">Why Metal Fences Are Perfect for Texas Weather</h3>
+                        <p class="text-gray-600 mb-4">Discover why steel and aluminum fences are becoming the top choice for Texas homeowners seeking durability and low maintenance.</p>
+                        <a href="#" class="text-buda-red hover:text-red-700 font-semibold">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <span class="text-gray-500">Installation Image</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Installation</span>
+                            <span class="text-gray-500 ml-3 text-sm">November 28, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-buda-blue mb-3">5 Signs You Need Professional Fence Installation</h3>
+                        <p class="text-gray-600 mb-4">DIY or professional installation? Learn when it's worth investing in expert installation for safety, quality, and warranty protection.</p>
+                        <a href="#" class="text-buda-red hover:text-red-700 font-semibold">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <span class="text-gray-500">Repair Image</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Repair</span>
+                            <span class="text-gray-500 ml-3 text-sm">November 20, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-buda-blue mb-3">Storm Damage: When to Repair vs. Replace Your Fence</h3>
+                        <p class="text-gray-600 mb-4">Texas storms can wreak havoc on fences. Learn how to assess damage and make smart decisions about repair versus replacement.</p>
+                        <a href="#" class="text-buda-red hover:text-red-700 font-semibold">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <span class="text-gray-500">Property Value Image</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Property Value</span>
+                            <span class="text-gray-500 ml-3 text-sm">November 15, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-buda-blue mb-3">How a Quality Fence Increases Your Home Value</h3>
+                        <p class="text-gray-600 mb-4">Investing in a quality fence isn't just about privacy and security—it's about boosting your property value. Here's what you need to know.</p>
+                        <a href="#" class="text-buda-red hover:text-red-700 font-semibold">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <span class="text-gray-500">Chain Link Image</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">Chain Link</span>
+                            <span class="text-gray-500 ml-3 text-sm">November 8, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-buda-blue mb-3">Chain Link Fences: More Than Just Practical</h3>
+                        <p class="text-gray-600 mb-4">Modern chain link fencing has evolved beyond basic functionality. Discover stylish options that combine affordability with curb appeal.</p>
+                        <a href="#" class="text-buda-red hover:text-red-700 font-semibold">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="mt-16 bg-gradient-to-r from-buda-blue to-buda-red rounded-lg p-8 text-white text-center">
+                <h3 class="text-2xl font-bold mb-4">Stay Updated with Fence Care Tips</h3>
+                <p class="text-gray-200 mb-6">Get expert advice, maintenance reminders, and exclusive offers delivered to your inbox.</p>
+                <div class="max-w-md mx-auto flex">
+                    <input type="email" placeholder="Enter your email address" class="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none">
+                    <button class="bg-white text-buda-red px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition duration-300">Subscribe</button>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-buda-blue mb-8 text-center">Browse by Category</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="#" class="bg-green-100 text-green-800 p-4 rounded-lg text-center hover:bg-green-200 transition duration-300">
+                        <div class="text-2xl mb-2">🪵</div>
+                        <div class="font-semibold">Wood Fences</div>
+                        <div class="text-sm">12 Articles</div>
+                    </a>
+                    <a href="#" class="bg-blue-100 text-blue-800 p-4 rounded-lg text-center hover:bg-blue-200 transition duration-300">
+                        <div class="text-2xl mb-2">🛡️</div>
+                        <div class="font-semibold">Metal Fences</div>
+                        <div class="text-sm">8 Articles</div>
+                    </a>
+                    <a href="#" class="bg-gray-100 text-gray-800 p-4 rounded-lg text-center hover:bg-gray-200 transition duration-300">
+                        <div class="text-2xl mb-2">⛓️</div>
+                        <div class="font-semibold">Chain Link</div>
+                        <div class="text-sm">6 Articles</div>
+                    </a>
+                    <a href="#" class="bg-orange-100 text-orange-800 p-4 rounded-lg text-center hover:bg-orange-200 transition duration-300">
+                        <div class="text-2xl mb-2">🔧</div>
+                        <div class="font-semibold">Maintenance</div>
+                        <div class="text-sm">15 Articles</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-buda-blue text-white py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready for Your Fence Project?</h2>
+            <p class="text-xl text-gray-300 mb-8">Get expert advice and a free estimate from Central Texas's trusted fence professionals.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:5127107116" class="bg-white text-buda-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">📞 Call (512) 710-7116</a>
+                <a href="contact.html" class="bg-buda-red text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition duration-300">Get Free Estimate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="images/buda-fence-logo.jpeg" alt="Buda Fence Company" class="h-12 w-auto mb-4">
+                    <h3 class="text-xl font-bold mb-4">Buda Fence Company</h3>
+                    <p class="text-gray-400">Professional fence installation and repair services in Austin, Buda, and Central Texas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white">Wood Fence Installation</a></li>
+                        <li><a href="services.html" class="hover:text-white">Metal Fence Installation</a></li>
+                        <li><a href="services.html" class="hover:text-white">Chain Link Fences</a></li>
+                        <li><a href="services.html" class="hover:text-white">Fence Repair</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Service Areas</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Buda, TX</li>
+                        <li>Austin, TX</li>
+                        <li>Kyle, TX</li>
+                        <li>Dripping Springs, TX</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p>📞 (512) 710-7116</p>
+                        <p>✉️ Info@BudaFenceCo.com</p>
+                        <p>🕒 Mon-Fri: 6 AM - 6 PM</p>
+                        <p>🕒 Sat: 9 AM - 2 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Buda Fence Company. All rights reserved. | Professional fence installation and repair in Austin, TX</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
