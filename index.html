@@ -106,11 +106,29 @@
         .text-buda-secondary { color: #dc2626; }
         .mobile-menu { display: none; }
         .mobile-menu.active { display: block; }
+        
+        /* Hero background - optimized for mobile */
         .hero-bg {
-            background-image: linear-gradient(rgba(30, 41, 59, 0.7), rgba(220, 38, 38, 0.7)), url('images/Hero-Section.jpg');
+            background-image: linear-gradient(rgba(30, 41, 59, 0.85), rgba(220, 38, 38, 0.85)), url('images/Hero-Section.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        
+        /* Desktop: use fixed parallax effect */
+        @media (min-width: 768px) {
+            .hero-bg {
+                background-attachment: fixed;
+                background-image: linear-gradient(rgba(30, 41, 59, 0.7), rgba(220, 38, 38, 0.7)), url('images/Hero-Section.jpg');
+            }
+        }
+        
+        /* Mobile: scroll normally, darker overlay for text readability */
+        @media (max-width: 767px) {
+            .hero-bg {
+                background-attachment: scroll;
+                background-position: center center;
+            }
         }
     </style>
 </head>
