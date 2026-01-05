@@ -101,13 +101,56 @@
     }
     </script>
     
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'buda-primary': '#1e293b',
+                        'buda-secondary': '#dc2626',
+                    }
+                }
+            }
+        }
+        
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('mobile-menu-open');
+        }
+    </script>
     <style>
-        .bg-buda-primary { background-color: #1e293b; }
-        .text-buda-primary { color: #1e293b; }
-        .bg-buda-secondary { background-color: #dc2626; }
-        .text-buda-secondary { color: #dc2626; }
-        .mobile-menu { display: none; }
-        .mobile-menu.active { display: block; }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu-open {
+            max-height: 500px;
+        }
+        /* Mobile text overflow fixes */
+        @media (max-width: 767px) {
+            * {
+                max-width: 100vw;
+            }
+            body {
+                overflow-x: hidden;
+            }
+            h1, h2, h3, h4, h5, h6, p, li, td, div, span {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                word-break: break-word;
+                hyphens: auto;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -121,21 +164,75 @@
                     </a>
                 </div>
                 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-buda-secondary transition">Home</a>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
+                    <a href="../about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
                     <div class="relative group">
-                        <button class="text-gray-700 hover:text-buda-secondary transition">Services ▾</button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-64">
-                            <a href="/services/wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100">Wood Fence Installation</a>
-                            <a href="/services/metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100">Metal Fence Installation</a>
-                            <a href="/services/chain-link-fence.html" class="block px-4 py-2 hover:bg-gray-100">Chain Link Fence</a>
-                            <a href="/services/fence-repair.html" class="block px-4 py-2 hover:bg-gray-100">Fence Repair</a>
+                        <button class="text-buda-secondary font-medium pb-4">Services ▾</button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 w-64 z-50">
+                            <a href="../services.html" class="block px-4 py-2 hover:bg-gray-100">All Services</a>
+                            <a href="wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 text-buda-secondary">Wood Fence Installation</a>
+                            <a href="metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100">Metal Fence Installation</a>
+                            <a href="chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100">Chain Link Fence Installation</a>
+                            <a href="fence-repair.html" class="block px-4 py-2 hover:bg-gray-100">Fence Repair</a>
                         </div>
                     </div>
-                    <a href="/about.html" class="text-gray-700 hover:text-buda-secondary transition">About</a>
-                    <a href="/contact.html" class="text-gray-700 hover:text-buda-secondary transition">Contact</a>
-                    <a href="tel:+15127107116" class="bg-buda-secondary text-white px-6 py-3 rounded-lg hover:bg-red-700 transition font-semibold">(512) 710-7116</a>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 w-48 z-50">
+                            <a href="../service-areas/austin.html" class="block px-4 py-2 hover:bg-gray-100">Austin</a>
+                            <a href="../service-areas/buda.html" class="block px-4 py-2 hover:bg-gray-100">Buda</a>
+                            <a href="../service-areas/kyle.html" class="block px-4 py-2 hover:bg-gray-100">Kyle</a>
+                            <a href="../service-areas/dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100">Dripping Springs</a>
+                        </div>
+                    </div>
+                    <a href="../gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
+                    <a href="../blog.html" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
+                    <a href="../contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+                </div>
+                
+                <!-- Desktop Contact -->
+                <div class="hidden md:flex space-x-4 items-center">
+                    <a href="tel:5127107116" class="text-buda-secondary font-medium">(512) 710-7116</a>
+                    <a href="../contact.html" class="bg-buda-secondary text-white px-4 py-2 rounded-lg hover:bg-red-700">Free Quote</a>
+                </div>
+                
+                <!-- Mobile Contact & Menu -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:5127107116" class="text-buda-secondary font-medium text-sm">(512) 710-7116</a>
+                    <a href="../contact.html" class="bg-buda-secondary text-white px-3 py-2 rounded-lg text-sm">Free Quote</a>
+                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-buda-secondary focus:outline-none ml-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
+                <div class="px-4 py-2 space-y-1">
+                    <a href="../index.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Home</a>
+                    <a href="../about.html" class="block py-2 text-gray-700 hover:text-buda-secondary">About</a>
+                    <div class="py-2">
+                        <p class="font-semibold text-gray-900 mb-1">Services</p>
+                        <a href="../services.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">All Services</a>
+                        <a href="wood-fence-installation.html" class="block py-1 pl-4 text-buda-secondary">Wood Fence</a>
+                        <a href="metal-fence-installation.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Metal Fence</a>
+                        <a href="chain-link-fence-installation.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Chain Link</a>
+                        <a href="fence-repair.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Fence Repair</a>
+                    </div>
+                    <div class="py-2">
+                        <p class="font-semibold text-gray-900 mb-1">Service Areas</p>
+                        <a href="../service-areas/austin.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Austin</a>
+                        <a href="../service-areas/buda.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Buda</a>
+                        <a href="../service-areas/kyle.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Kyle</a>
+                        <a href="../service-areas/dripping-springs.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Dripping Springs</a>
+                    </div>
+                    <a href="../gallery.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Gallery</a>
+                    <a href="../blog.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Blog</a>
+                    <a href="../contact.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Contact</a>
                 </div>
             </div>
         </div>
