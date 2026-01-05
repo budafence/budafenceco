@@ -34,6 +34,36 @@
         .mobile-menu-open {
             max-height: 500px;
         }
+        /* Mobile text overflow fixes */
+        @media (max-width: 767px) {
+            * {
+                max-width: 100vw;
+            }
+            body, html {
+                overflow-x: hidden;
+                width: 100%;
+            }
+            h1, h2, h3, h4, h5, h6, p, li, td, div, span {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                word-break: break-word;
+                hyphens: auto;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            .max-w-7xl, .max-w-3xl, .prose {
+                max-width: 100% !important;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
     </style>
     
     <!-- Service Schema Markup -->
@@ -483,7 +513,7 @@
                         </div>
                         
                         <div>
-                            <img src="../images/black-metal-fence-4ft-tall-on-retainingwall.JPG" alt="Black metal fence installed on stone retaining wall in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md mb-3">
+                            <img src="../images/black-metal-fence-4ft-tall-on-retainingwall.jpg" alt="Black metal fence installed on stone retaining wall in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md mb-3">
                             <p class="text-sm text-gray-600"><strong>Retaining Wall Installation</strong> - 4ft black metal fence mounted on beautiful stone retaining wall</p>
                         </div>
                         
@@ -508,7 +538,7 @@
                         </div>
                         
                         <div>
-                            <img src="../images/metal-puppy-panel-fence.JPG" alt="Metal puppy panel fence with closer picket spacing" class="w-full h-64 object-cover rounded-lg shadow-md mb-3">
+                            <img src="../images/metal-puppy-panel-fence.jpg" alt="Metal puppy panel fence with closer picket spacing" class="w-full h-64 object-cover rounded-lg shadow-md mb-3">
                             <p class="text-sm text-gray-600"><strong>Puppy Panel Design</strong> - Closer picket spacing at bottom to contain small dogs and pets</p>
                         </div>
                     </div>
