@@ -33,6 +33,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Montserrat', sans-serif; }
+        .mobile-menu { display: none; }
+        .mobile-menu.active { display: block; }
     </style>
     
     <!-- LocalBusiness Schema -->
@@ -91,54 +93,50 @@
     </script>
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between py-3">
+            <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="index.html">
-                        <img src="images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo" class="h-16 w-auto">
+                        <img src="images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo" class="h-12 w-auto">
                     </a>
                 </div>
                 
-               <!-- Desktop Navigation -->
-<div class="hidden md:flex space-x-8">
-    <a href="index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-    <a href="about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
-    <div class="relative group">
-        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Services ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
-            <a href="services/deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
-            <a href="services/wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
-            <a href="services/metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
-            <a href="services/chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
-            <a href="services/fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
-        </div>
-    </div>
-    <div class="relative group">
-        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="service-areas/austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
-            <a href="service-areas/buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
-            <a href="service-areas/kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
-            <a href="service-areas/dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
-        </div>
-    </div>
-    <a href="gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-    <a href="blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-    <a href="contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-</div>
-                    
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
+                    <div class="relative group">
+                        <button class="text-buda-secondary font-medium pb-4">Services ▾</button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+                            <a href="services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
+                            <a href="services/deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
+                            <a href="services/wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
+                            <a href="services/metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
+                            <a href="services/chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
+                            <a href="services/fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+                            <a href="service-areas/austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
+                            <a href="service-areas/buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
+                            <a href="service-areas/kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
+                            <a href="service-areas/dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
+                        </div>
+                    </div>
                     <a href="gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
+                    <a href="blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
                     <a href="contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-                </nav>
+                </div>
                 
                 <!-- Desktop Contact -->
-                <div class="hidden md:flex items-center space-x-3">
-                    <a href="tel:512-710-7116" class="text-buda-primary font-semibold">(512) 710-7116</a>
-                    <a href="contact.html" class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition">Free Quote</a>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:5127107116" class="text-buda-secondary font-medium">(512) 710-7116</a>
+                    <a href="contact.html" class="bg-buda-secondary text-white px-4 py-2 rounded-lg hover:bg-red-700">Free Quote</a>
                 </div>
                 
                 <!-- Mobile Contact & Menu -->
@@ -154,33 +152,33 @@
             </div>
         </div>
         
- <!-- Mobile Navigation Menu -->
-<div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="index.html" class="block px-3 py-2 text-buda-secondary font-medium">Home</a>
-        <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
-        <div class="px-3 py-2">
-            <p class="text-gray-900 font-semibold mb-2">Services</p>
-            <a href="services.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">All Services</a>
-            <a href="services/deck-construction.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Deck Construction</a>
-            <a href="services/wood-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Wood Fence</a>
-            <a href="services/metal-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Metal Fence</a>
-            <a href="services/chain-link-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Chain Link</a>
-            <a href="services/fence-repair.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Fence Repair</a>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
+                <div class="px-3 py-2">
+                    <p class="text-gray-900 font-semibold mb-2">Services</p>
+                    <a href="services.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">All Services</a>
+                    <a href="services/deck-construction.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Deck Construction</a>
+                    <a href="services/wood-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Wood Fence</a>
+                    <a href="services/metal-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Metal Fence</a>
+                    <a href="services/chain-link-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Chain Link</a>
+                    <a href="services/fence-repair.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Fence Repair</a>
+                </div>
+                <div class="px-3 py-2">
+                    <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
+                    <a href="service-areas/austin.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Austin</a>
+                    <a href="service-areas/buda.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Buda</a>
+                    <a href="service-areas/kyle.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Kyle</a>
+                    <a href="service-areas/dripping-springs.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Dripping Springs</a>
+                </div>
+                <a href="gallery.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
+                <a href="blog/" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+            </div>
         </div>
-        <div class="px-3 py-2">
-            <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-            <a href="service-areas/austin.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Austin</a>
-            <a href="service-areas/buda.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Buda</a>
-            <a href="service-areas/kyle.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Kyle</a>
-            <a href="service-areas/dripping-springs.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Dripping Springs</a>
-        </div>
-        <a href="gallery.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-        <a href="blog/" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-        <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-    </div>
-</div>
-    </header>
+    </nav>
     
     <!-- Hero Section -->
     <section class="relative bg-buda-primary text-white py-20">
@@ -480,6 +478,7 @@
                 <div>
                     <h4 class="font-bold mb-4">Services</h4>
                     <ul class="space-y-2 text-gray-400">
+                        <li><a href="services/deck-construction.html" class="hover:text-white">Deck Construction</a></li>
                         <li><a href="services/wood-fence-installation.html" class="hover:text-white">Wood Fences</a></li>
                         <li><a href="services/metal-fence-installation.html" class="hover:text-white">Metal Fences</a></li>
                         <li><a href="services/chain-link-fence-installation.html" class="hover:text-white">Chain Link</a></li>
@@ -511,9 +510,10 @@
     
     <!-- Mobile Menu Script -->
     <script>
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
