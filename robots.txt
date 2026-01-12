@@ -1,0 +1,8 @@
+# Robots.txt for Buda Fence Company
+# https://budafenceco.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://budafenceco.com/sitemap.xml
