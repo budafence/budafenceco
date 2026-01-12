@@ -33,7 +33,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Montserrat', sans-serif; }
-    </style>
+    
+.mobile-menu { display: none; }
+.mobile-menu.active { display: block; }
+</style>
     
     <!-- LocalBusiness Schema -->
     <script type="application/ld+json">
@@ -110,6 +113,36 @@
       "description": "Professional fence installation services in Austin, TX. Specializing in wood cedar fences, metal fences, and chain link fencing for residential and commercial properties."
     }
     </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Do I need a permit for a fence in Austin, TX?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In Austin, a permit is generally not required for fences that are 7 feet or shorter. However, rules can vary based on your specific location, zoning overlays, and HOA covenants. We always recommend checking with the City of Austin and your HOA. We can help you with this process."
+    }
+  },{
+    "@type": "Question",
+    "name": "How long does a cedar fence last in the Austin climate?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A well-built cedar fence can last 15-20 years in the Austin area. Cedar is naturally resistant to rot and insects, making it a great choice for the Central Texas climate. Regular maintenance, such as staining and sealing every 3-5 years, can significantly extend its lifespan."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the most popular type of fence in Austin?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The most popular fence style in Austin is by far the 6-foot cedar privacy fence. It offers a great combination of privacy, natural beauty, and durability that complements Austin's architecture and landscape. Flat-top metal fences are also very popular for a more modern look."
+    }
+  }]
+}
+</script>
+
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -118,50 +151,50 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="../index.html">
+                    <a href='/'>
                         <img class="h-16 w-auto" src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo">
                     </a>
                 </div>
                 
                <!-- Desktop Navigation -->
 <div class="hidden md:flex space-x-8">
-    <a href="../index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-    <a href="../about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
+    <a class='text-gray-700 hover:text-buda-secondary font-medium' href='/'>Home</a>
+    <a class='text-gray-700 hover:text-buda-secondary font-medium' href='/about'>About</a>
     <div class="relative group">
         <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Services ▾</button>
         <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="../services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
-            <a href="../services/deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
-            <a href="../services/wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
-            <a href="../services/metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
-            <a href="../services/chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
-            <a href="../services/fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services'>All Services</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/deck-construction'>Deck Construction</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/wood-fence-installation'>Wood Fence Installation</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/metal-fence-installation'>Metal Fence Installation</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/chain-link-fence-installation'>Chain Link Fence Installation</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/fence-repair'>Fence Repair</a>
         </div>
     </div>
     <div class="relative group">
         <button class="text-buda-secondary font-medium pb-4">Service Areas ▾</button>
         <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
-            <a href="buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
-            <a href="kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
-            <a href="dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/service-areas/austin'>Austin</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/service-areas/buda'>Buda</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/service-areas/kyle'>Kyle</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/service-areas/dripping-springs'>Dripping Springs</a>
         </div>
     </div>
-    <a href="../gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
+    <a class='text-gray-700 hover:text-buda-secondary font-medium' href='/gallery'>Gallery</a>
     <a href="../blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-    <a href="../contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+    <a class='text-gray-700 hover:text-buda-secondary font-medium' href='/contact'>Contact</a>
 </div>
                 
                 <!-- Desktop Contact -->
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
-                    <a href="../contact.html" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold">Free Quote</a>
+                    <a class='bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold' href='/contact'>Free Quote</a>
                 </div>
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center space-x-2">
                     <a href="tel:5127107116" class="text-buda-secondary text-xs font-semibold whitespace-nowrap">(512) 710-7116</a>
-                    <a href="../contact.html" class="bg-buda-secondary text-white px-3 py-1.5 rounded text-xs font-semibold whitespace-nowrap">Quote</a>
+                    <a class='bg-buda-secondary text-white px-3 py-1.5 rounded text-xs font-semibold whitespace-nowrap' href='/contact'>Quote</a>
                     <button id="mobile-menu-button" class="text-gray-700 hover:text-buda-secondary">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -174,15 +207,15 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-4 pt-2 pb-4 space-y-2">
-                <a href="../index.html" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-                <a href="../about.html" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
-                <a href="../services.html" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Services</a>
-                <a href="austin.html" class="block py-2 text-buda-secondary font-medium">Austin</a>
-                <a href="buda.html" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Buda</a>
-                <a href="kyle.html" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Kyle</a>
-                <a href="dripping-springs.html" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Dripping Springs</a>
-                <a href="../gallery.html" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-                <a href="../contact.html" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/'>Home</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/about'>About</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/services'>Services</a>
+                <a class='block py-2 text-buda-secondary font-medium' href='/service-areas/austin'>Austin</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/service-areas/buda'>Buda</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/service-areas/kyle'>Kyle</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/service-areas/dripping-springs'>Dripping Springs</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/gallery'>Gallery</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/contact'>Contact</a>
             </div>
         </div>
     </nav>
@@ -197,7 +230,7 @@
                 <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition">
                     📞 Call (512) 710-7116
                 </a>
-                <a href="../contact.html" class="bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+                <a class='bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition' href='/contact'>
                     Get Free Estimate
                 </a>
             </div>
@@ -489,7 +522,7 @@
                         <a href="tel:5127107116" class="block bg-buda-secondary text-white text-center py-3 rounded-lg font-semibold mb-3 hover:bg-red-700 transition">
                             📞 (512) 710-7116
                         </a>
-                        <a href="../contact.html" class="block bg-white text-buda-primary text-center py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        <a class='block bg-white text-buda-primary text-center py-3 rounded-lg font-semibold hover:bg-gray-100 transition' href='/contact'>
                             Request Quote Online
                         </a>
                         <div class="mt-4 pt-4 border-t border-white/20 text-sm">
@@ -503,16 +536,16 @@
                     <div class="bg-white rounded-lg shadow-md p-6 mb-6">
                         <h3 class="text-xl font-bold text-buda-primary mb-4">Our Austin Services</h3>
                         <ul class="space-y-3">
-                            <li><a href="../services/wood-fence-installation.html" class="flex items-center text-gray-700 hover:text-buda-secondary">
+                            <li><a class='flex items-center text-gray-700 hover:text-buda-secondary' href='/services/wood-fence-installation'>
                                 <span class="mr-2">🪵</span> Wood Fence Installation
                             </a></li>
-                            <li><a href="../services/metal-fence-installation.html" class="flex items-center text-gray-700 hover:text-buda-secondary">
+                            <li><a class='flex items-center text-gray-700 hover:text-buda-secondary' href='/services/metal-fence-installation'>
                                 <span class="mr-2">🔩</span> Metal Fence Installation
                             </a></li>
-                            <li><a href="../services/chain-link-fence-installation.html" class="flex items-center text-gray-700 hover:text-buda-secondary">
+                            <li><a class='flex items-center text-gray-700 hover:text-buda-secondary' href='/services/chain-link-fence-installation'>
                                 <span class="mr-2">⛓️</span> Chain Link Fencing
                             </a></li>
-                            <li><a href="../services/fence-repair.html" class="flex items-center text-gray-700 hover:text-buda-secondary">
+                            <li><a class='flex items-center text-gray-700 hover:text-buda-secondary' href='/services/fence-repair'>
                                 <span class="mr-2">🔧</span> Fence Repair
                             </a></li>
                         </ul>
@@ -522,9 +555,9 @@
                     <div class="bg-white rounded-lg shadow-md p-6 mb-6">
                         <h3 class="text-xl font-bold text-buda-primary mb-4">Nearby Service Areas</h3>
                         <ul class="space-y-2">
-                            <li><a href="buda.html" class="text-gray-700 hover:text-buda-secondary">→ Buda, TX</a></li>
-                            <li><a href="kyle.html" class="text-gray-700 hover:text-buda-secondary">→ Kyle, TX</a></li>
-                            <li><a href="dripping-springs.html" class="text-gray-700 hover:text-buda-secondary">→ Dripping Springs, TX</a></li>
+                            <li><a class='text-gray-700 hover:text-buda-secondary' href='/service-areas/buda'>→ Buda, TX</a></li>
+                            <li><a class='text-gray-700 hover:text-buda-secondary' href='/service-areas/kyle'>→ Kyle, TX</a></li>
+                            <li><a class='text-gray-700 hover:text-buda-secondary' href='/service-areas/dripping-springs'>→ Dripping Springs, TX</a></li>
                         </ul>
                     </div>
 
@@ -549,7 +582,7 @@
                 <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition">
                     Call (512) 710-7116
                 </a>
-                <a href="../contact.html" class="bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+                <a class='bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition' href='/contact'>
                     Get Free Estimate
                 </a>
             </div>
@@ -567,19 +600,712 @@
                 <div>
                     <h4 class="font-bold mb-4">Services</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="../services/wood-fence-installation.html" class="hover:text-white">Wood Fences</a></li>
-                        <li><a href="../services/metal-fence-installation.html" class="hover:text-white">Metal Fences</a></li>
-                        <li><a href="../services/chain-link-fence-installation.html" class="hover:text-white">Chain Link</a></li>
-                        <li><a href="../services/fence-repair.html" class="hover:text-white">Fence Repair</a></li>
+                        <li><a class='hover:text-white' href='/services/wood-fence-installation'>Wood Fences</a></li>
+                        <li><a class='hover:text-white' href='/services/metal-fence-installation'>Metal Fences</a></li>
+                        <li><a class='hover:text-white' href='/services/chain-link-fence-installation'>Chain Link</a></li>
+                        <li><a class='hover:text-white' href='/services/fence-repair'>Fence Repair</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Service Areas</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="austin.html" class="hover:text-white">Austin, TX</a></li>
-                        <li><a href="buda.html" class="hover:text-white">Buda, TX</a></li>
-                        <li><a href="kyle.html" class="hover:text-white">Kyle, TX</a></li>
-                        <li><a href="dripping-springs.html" class="hover:text-white">Dripping Springs, TX</a></li>
+                        <li><a class='hover:text-white' href='/service-areas/austin'>Austin, TX</a></li>
+                        <li><a class='hover:text-white' href='/service-areas/buda'>Buda, TX</a></li>
+                        <li><a class='hover:text-white' href='/service-areas/kyle'>Kyle, TX</a></li>
+                        <li><a class='hover:text-white' href='/service-areas/dripping-springs'>Dripping Springs, TX</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></li>
+                        <li><a href="mailto:Info@BudaFenceCo.com" class="hover:text-white">Info@BudaFenceCo.com</a></li>
+                        <li>Mon-Fri: 6 AM - 6 PM</li>
+                        <li>Saturday: 9 AM - 2 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Buda Fence Company. All rights reserved. | Serving Austin, Buda, Kyle, Dripping Springs & Surrounding Areas</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+<script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo" class="h-12 w-auto">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
+                    <a href="../about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Services ▾</button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+                            <a href="../services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
+                            <a href="../services/deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
+                            <a href="../services/wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
+                            <a href="../services/metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
+                            <a href="../services/chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
+                            <a href="../services/fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-buda-secondary font-medium pb-4">Service Areas ▾</button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+                            <a href="austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
+                            <a href="buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
+                            <a href="kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
+                            <a href="dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
+                        </div>
+                    </div>
+                    <a href="../gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
+                    <a href="../blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
+                    <a href="../contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-buda-secondary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Home</a>
+                <a href="../about.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
+                <div class="px-3 py-2">
+                    <p class="text-gray-900 font-semibold mb-2">Services</p>
+                    <a href="../services.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">All Services</a>
+                    <a href="../services/deck-construction.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Deck Construction</a>
+                    <a href="../services/wood-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Wood Fence</a>
+                    <a href="../services/metal-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Metal Fence</a>
+                    <a href="../services/chain-link-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Chain Link</a>
+                    <a href="../services/fence-repair.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Fence Repair</a>
+                </div>
+                <div class="px-3 py-2">
+                    <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
+                    <a href="austin.html" class="block pl-4 py-1 text-buda-secondary text-sm">Austin</a>
+                    <a href="buda.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Buda</a>
+                    <a href="kyle.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Kyle</a>
+                    <a href="dripping-springs.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Dripping Springs</a>
+                </div>
+                <a href="../gallery.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
+                <a href="../blog/" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
+                <a href="../contact.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+E html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fence Company Austin TX | Wood & Metal Fence Installation | Buda Fence Company</title>
+    <meta name="description" content="Austin's trusted fence company serving Circle C, Westlake, Steiner Ranch & more. Expert wood & metal fence installation with HOA approval assistance. Free estimates. Call (512) 710-7116.">
+    <meta name="keywords" content="fence company Austin TX, fence installation Austin, wood fence Austin, metal fence Austin, fence contractor Austin, HOA fence approval Austin, Circle C fence, Westlake fence">
+    <link rel="canonical" href="https://budafenceco.com/service-areas/austin.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fence Company Austin TX | Buda Fence Company">
+    <meta property="og:description" content="Austin's trusted fence company. Expert wood & metal fence installation with HOA approval assistance. Serving Circle C, Westlake, Steiner Ranch & more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://budafenceco.com/service-areas/austin.html">
+    <meta property="og:image" content="https://budafenceco.com/images/austin-skyline.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'buda-primary': '#1e3a5f',
+                        'buda-secondary': '#dc2626',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+    </style>
+    
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Buda Fence Company - Austin",
+      "image": "https://budafenceco.com/images/BudaFenceLogo.jpeg",
+      "url": "https://budafenceco.com/service-areas/austin.html",
+      "telephone": "(512) 710-7116",
+      "email": "Info@BudaFenceCo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Austin",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 30.2672,
+        "longitude": -97.7431
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Austin",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          }
+        }
+      ],
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "122"
+      }
+    }
+    </script>
+    
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Fence Installation",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Buda Fence Company"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Austin",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      "description": "Professional fence installation services in Austin, TX. Specializing in wood cedar fences, metal fences, and chain link fencing for residential and commercial properties."
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href='/'>
+                        <img class="h-16 w-auto" src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo">
+                    </a>
+                </div>
+                
+               <!-- Desktop Navigation -->
+<div class="hidden md:flex space-x-8">
+    <a class='text-gray-700 hover:text-buda-secondary font-medium' href='/'>Home</a>
+    <a class='text-gray-700 hover:text-buda-secondary font-medium' href='/about'>About</a>
+    <div class="relative group">
+        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Services ▾</button>
+        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services'>All Services</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/deck-construction'>Deck Construction</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/wood-fence-installation'>Wood Fence Installation</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/metal-fence-installation'>Metal Fence Installation</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/chain-link-fence-installation'>Chain Link Fence Installation</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/services/fence-repair'>Fence Repair</a>
+        </div>
+    </div>
+    <div class="relative group">
+        <button class="text-buda-secondary font-medium pb-4">Service Areas ▾</button>
+        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/service-areas/austin'>Austin</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/service-areas/buda'>Buda</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/service-areas/kyle'>Kyle</a>
+            <a class='block px-4 py-2 hover:bg-gray-100 whitespace-nowrap' href='/service-areas/dripping-springs'>Dripping Springs</a>
+        </div>
+    </div>
+    <a class='text-gray-700 hover:text-buda-secondary font-medium' href='/gallery'>Gallery</a>
+    <a href="../blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
+    <a class='text-gray-700 hover:text-buda-secondary font-medium' href='/contact'>Contact</a>
+</div>
+                
+                <!-- Desktop Contact -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
+                    <a class='bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold' href='/contact'>Free Quote</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <a href="tel:5127107116" class="text-buda-secondary text-xs font-semibold whitespace-nowrap">(512) 710-7116</a>
+                    <a class='bg-buda-secondary text-white px-3 py-1.5 rounded text-xs font-semibold whitespace-nowrap' href='/contact'>Quote</a>
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-buda-secondary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/'>Home</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/about'>About</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/services'>Services</a>
+                <a class='block py-2 text-buda-secondary font-medium' href='/service-areas/austin'>Austin</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/service-areas/buda'>Buda</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/service-areas/kyle'>Kyle</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/service-areas/dripping-springs'>Dripping Springs</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/gallery'>Gallery</a>
+                <a class='block py-2 text-gray-700 hover:text-buda-secondary font-medium' href='/contact'>Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Austin Skyline -->
+    <section class="relative bg-buda-primary text-white py-20">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('../images/austin-skyline.jpg');"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Fence Company in Austin, TX</h1>
+            <p class="text-xl md:text-2xl mb-6 max-w-3xl mx-auto">Trusted by homeowners in Circle C, Westlake, Steiner Ranch, and neighborhoods across Austin. Quality fencing with HOA approval assistance.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition">
+                    📞 Call (512) 710-7116
+                </a>
+                <a class='bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition' href='/contact'>
+                    Get Free Estimate
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="bg-white py-8 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-buda-primary">10+</div>
+                    <div class="text-gray-600">Years Serving Austin</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-buda-primary">500+</div>
+                    <div class="text-gray-600">Austin Fences Installed</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-buda-primary">4.9★</div>
+                    <div class="text-gray-600">Google Rating</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-buda-primary">$1M</div>
+                    <div class="text-gray-600">Insurance Coverage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content Column -->
+                <div class="lg:col-span-2">
+                    <!-- Introduction -->
+                    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+                        <h2 class="text-3xl font-bold text-buda-primary mb-6">Austin's Trusted Fence Installation Experts</h2>
+                        
+                        <p class="text-gray-700 mb-4">When Austin homeowners need a fence that combines beauty, durability, and value, they call Buda Fence Company. Based just minutes south of Austin in Buda, we've been serving the greater Austin area for over a decade, building fences that stand the test of time in our challenging Texas climate.</p>
+                        
+                        <p class="text-gray-700 mb-4">From the established neighborhoods of Circle C Ranch and Westlake Hills to the master-planned communities of Steiner Ranch and Mueller, we understand what Austin homeowners want: quality craftsmanship, honest pricing, and a fence that enhances their property's value and curb appeal.</p>
+                        
+                        <p class="text-gray-700 mb-6">As a family-owned business, we treat every project like it's our own home. We're not the cheapest option in Austin, but we guarantee we'll build it better than anyone else—with no shortcuts, no compromises, and no surprises.</p>
+                        
+                        <div class="bg-gray-50 border-l-4 border-buda-secondary p-4 rounded">
+                            <p class="text-gray-700 italic">"We're not the cheapest, but we guarantee we'll build it better than anyone else with no shortcuts."</p>
+                            <p class="text-gray-600 mt-2">— William Espich, Owner</p>
+                        </div>
+                    </div>
+
+                    <!-- Popular Fence Styles in Austin -->
+                    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-buda-primary mb-6">Most Popular Fence Styles in Austin</h2>
+                        
+                        <p class="text-gray-700 mb-6">Austin homeowners have distinct preferences when it comes to fencing. Through hundreds of installations across the city, we've identified the styles that best complement Austin's architecture and lifestyle:</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="border rounded-lg overflow-hidden">
+                                <img src="../images/cedar-fence-after.jpg" alt="6-foot cedar privacy fence in Austin TX" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-buda-primary mb-2">6' Cedar Privacy Fence</h3>
+                                    <p class="text-gray-600 text-sm">The most requested style in Austin. Available in vertical board-on-board or modern horizontal designs. Perfect for backyards and pool areas.</p>
+                                </div>
+                            </div>
+                            <div class="border rounded-lg overflow-hidden">
+                                <img src="../images/black-metal-fence-6ft-tall.jpg" alt="6-foot flat top black metal fence in Austin TX" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-buda-primary mb-2">6' Flat Top Black Metal</h3>
+                                    <p class="text-gray-600 text-sm">The second most popular choice. Sleek, modern appearance that complements contemporary Austin homes. Low maintenance and long-lasting.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="border rounded-lg overflow-hidden">
+                                <img src="../images/CedarFence.jpg" alt="Horizontal cedar fence modern design Austin" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-buda-primary mb-2">Horizontal Cedar Fence</h3>
+                                    <p class="text-gray-600 text-sm">Growing in popularity for Austin's modern and mid-century homes. Creates a contemporary, architectural look.</p>
+                                </div>
+                            </div>
+                            <div class="border rounded-lg overflow-hidden">
+                                <img src="../images/black-vinyl-chainlink-backyard.jpg" alt="Black vinyl chain link fence Austin TX" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-buda-primary mb-2">Black Vinyl Chain Link</h3>
+                                    <p class="text-gray-600 text-sm">Affordable option for large properties, pet containment, and commercial applications. Black coating blends with landscaping.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HOA Approval Assistance -->
+                    <div class="bg-gradient-to-r from-buda-primary to-blue-800 text-white rounded-lg shadow-md p-8 mb-8">
+                        <h2 class="text-2xl font-bold mb-4">🏠 HOA Approval Assistance</h2>
+                        <p class="mb-4">Many Austin neighborhoods—especially established communities like Circle C, Steiner Ranch, and Travis Country—have HOA requirements for fence installations. We make the approval process easy:</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-white/10 rounded-lg p-4">
+                                <h3 class="font-bold mb-2">What We Provide:</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li>✓ Professional fence layout drawings</li>
+                                    <li>✓ Material specifications & samples</li>
+                                    <li>✓ Property line documentation</li>
+                                    <li>✓ Before & after photos</li>
+                                    <li>✓ Complete HOA submission package</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-4">
+                                <h3 class="font-bold mb-2">Our Process:</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li>1. Review your HOA guidelines</li>
+                                    <li>2. Design compliant fence plan</li>
+                                    <li>3. Prepare all required documents</li>
+                                    <li>4. Submit on your behalf (if allowed)</li>
+                                    <li>5. Address any revision requests</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p class="mt-4 text-sm opacity-90">We've successfully navigated HOA approvals in dozens of Austin communities. Let us handle the paperwork while you focus on choosing your perfect fence.</p>
+                    </div>
+
+                    <!-- Austin Neighborhoods We Serve -->
+                    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-buda-primary mb-6">Austin Neighborhoods We Serve</h2>
+                        
+                        <p class="text-gray-700 mb-6">We've installed fences throughout Austin's most desirable neighborhoods. Many of these established communities are now 10-20 years old, meaning original fences are ready for replacement. If your neighborhood isn't listed, give us a call—we likely serve your area too.</p>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div>
+                                <h3 class="font-bold text-buda-primary mb-3">Southwest Austin</h3>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>• Circle C Ranch</li>
+                                    <li>• Shady Hollow</li>
+                                    <li>• Travis Country</li>
+                                    <li>• Sendera</li>
+                                    <li>• Maple Run</li>
+                                    <li>• Barton Creek</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-buda-primary mb-3">West Austin / Westlake</h3>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>• Westlake Hills</li>
+                                    <li>• Rollingwood</li>
+                                    <li>• Tarrytown</li>
+                                    <li>• Old Enfield</li>
+                                    <li>• Pemberton Heights</li>
+                                    <li>• Jester Estates</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-buda-primary mb-3">Northwest Austin</h3>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>• Steiner Ranch</li>
+                                    <li>• River Place</li>
+                                    <li>• Great Hills</li>
+                                    <li>• Anderson Mill</li>
+                                    <li>• Balcones Woods</li>
+                                    <li>• Spicewood Springs</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-buda-primary mb-3">North Austin</h3>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>• Mueller</li>
+                                    <li>• Quail Creek</li>
+                                    <li>• Gracywoods</li>
+                                    <li>• Milwood</li>
+                                    <li>• Wells Branch</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-buda-primary mb-3">Central Austin</h3>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>• Allandale</li>
+                                    <li>• Crestview</li>
+                                    <li>• Brentwood</li>
+                                    <li>• Hyde Park</li>
+                                    <li>• Rosedale</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-buda-primary mb-3">South Austin</h3>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>• South Congress</li>
+                                    <li>• Zilker</li>
+                                    <li>• Barton Hills</li>
+                                    <li>• South Manchaca</li>
+                                    <li>• Cherry Creek</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Reviews -->
+                    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-buda-primary mb-6">What Austin Customers Say</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-buda-secondary pl-4">
+                                <div class="flex items-center mb-2">
+                                    <span class="text-yellow-500">★★★★★</span>
+                                    <span class="ml-2 font-semibold">Dale K.</span>
+                                    <span class="ml-2 text-gray-500 text-sm">Austin, TX</span>
+                                </div>
+                                <p class="text-gray-700">"Buda Fence did a nice job repairing our fence. We had 3 posts that broke during a windstorm and needed replaced quick. Called them Monday and we had our fence fixed on Tuesday for a great price."</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-buda-secondary pl-4">
+                                <div class="flex items-center mb-2">
+                                    <span class="text-yellow-500">★★★★★</span>
+                                    <span class="ml-2 font-semibold">Amber L.</span>
+                                    <span class="ml-2 text-gray-500 text-sm">Austin, TX</span>
+                                </div>
+                                <p class="text-gray-700">"William and his team were amazing! They helped us navigate our HOA requirements and built a beautiful cedar fence that all our neighbors have complimented. Professional from start to finish."</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-buda-secondary pl-4">
+                                <div class="flex items-center mb-2">
+                                    <span class="text-yellow-500">★★★★★</span>
+                                    <span class="ml-2 font-semibold">Shalen A.</span>
+                                    <span class="ml-2 text-gray-500 text-sm">Circle C, Austin</span>
+                                </div>
+                                <p class="text-gray-700">"We got quotes from 5 fence companies and Buda Fence wasn't the cheapest, but their quality and attention to detail was clearly the best. Our fence has been up for 2 years now and still looks brand new."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Why Austin Homeowners Choose Us -->
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h2 class="text-2xl font-bold text-buda-primary mb-6">Why Austin Homeowners Choose Buda Fence</h2>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex items-start">
+                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">✓</div>
+                                <div>
+                                    <h3 class="font-bold text-buda-primary">Local Expertise</h3>
+                                    <p class="text-gray-600 text-sm">Based in Buda, we understand Austin's soil conditions, weather patterns, and neighborhood requirements.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">✓</div>
+                                <div>
+                                    <h3 class="font-bold text-buda-primary">HOA Experience</h3>
+                                    <p class="text-gray-600 text-sm">We've navigated approvals in dozens of Austin HOA communities and know what they're looking for.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">✓</div>
+                                <div>
+                                    <h3 class="font-bold text-buda-primary">Quality Materials</h3>
+                                    <p class="text-gray-600 text-sm">Premium cedar, heavy-gauge steel, and commercial-grade hardware that withstands Texas heat.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">✓</div>
+                                <div>
+                                    <h3 class="font-bold text-buda-primary">$1 Million Insurance</h3>
+                                    <p class="text-gray-600 text-sm">Fully insured for your protection and peace of mind throughout the project.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">✓</div>
+                                <div>
+                                    <h3 class="font-bold text-buda-primary">AFA Member</h3>
+                                    <p class="text-gray-600 text-sm">American Fence Association member with professional training and industry best practices.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mr-4">✓</div>
+                                <div>
+                                    <h3 class="font-bold text-buda-primary">5-Year Guarantee</h3>
+                                    <p class="text-gray-600 text-sm">Our installation workmanship is guaranteed for 5 years, plus manufacturer warranties on materials.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Quick Contact -->
+                    <div class="bg-buda-primary text-white rounded-lg shadow-md p-6 mb-6 sticky top-24">
+                        <h3 class="text-xl font-bold mb-4">Get Your Free Austin Estimate</h3>
+                        <p class="mb-4 text-sm opacity-90">Call now or fill out our form for a free on-site estimate. We'll assess your property and provide a detailed quote.</p>
+                        <a href="tel:5127107116" class="block bg-buda-secondary text-white text-center py-3 rounded-lg font-semibold mb-3 hover:bg-red-700 transition">
+                            📞 (512) 710-7116
+                        </a>
+                        <a class='block bg-white text-buda-primary text-center py-3 rounded-lg font-semibold hover:bg-gray-100 transition' href='/contact'>
+                            Request Quote Online
+                        </a>
+                        <div class="mt-4 pt-4 border-t border-white/20 text-sm">
+                            <p><strong>Business Hours:</strong></p>
+                            <p>Mon-Fri: 6 AM - 6 PM</p>
+                            <p>Saturday: 9 AM - 2 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h3 class="text-xl font-bold text-buda-primary mb-4">Our Austin Services</h3>
+                        <ul class="space-y-3">
+                            <li><a class='flex items-center text-gray-700 hover:text-buda-secondary' href='/services/wood-fence-installation'>
+                                <span class="mr-2">🪵</span> Wood Fence Installation
+                            </a></li>
+                            <li><a class='flex items-center text-gray-700 hover:text-buda-secondary' href='/services/metal-fence-installation'>
+                                <span class="mr-2">🔩</span> Metal Fence Installation
+                            </a></li>
+                            <li><a class='flex items-center text-gray-700 hover:text-buda-secondary' href='/services/chain-link-fence-installation'>
+                                <span class="mr-2">⛓️</span> Chain Link Fencing
+                            </a></li>
+                            <li><a class='flex items-center text-gray-700 hover:text-buda-secondary' href='/services/fence-repair'>
+                                <span class="mr-2">🔧</span> Fence Repair
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Other Service Areas -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h3 class="text-xl font-bold text-buda-primary mb-4">Nearby Service Areas</h3>
+                        <ul class="space-y-2">
+                            <li><a class='text-gray-700 hover:text-buda-secondary' href='/service-areas/buda'>→ Buda, TX</a></li>
+                            <li><a class='text-gray-700 hover:text-buda-secondary' href='/service-areas/kyle'>→ Kyle, TX</a></li>
+                            <li><a class='text-gray-700 hover:text-buda-secondary' href='/service-areas/dripping-springs'>→ Dripping Springs, TX</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Austin Image -->
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="../images/texas-hill-country.jpg" alt="Texas Hill Country near Austin" class="w-full">
+                        <div class="bg-white p-4">
+                            <p class="text-gray-600 text-sm">Proudly serving Austin and the Texas Hill Country</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-buda-primary text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready for Your Austin Fence Project?</h2>
+            <p class="text-xl mb-8 opacity-90">Get a free estimate from Austin's trusted fence company. We'll help you choose the perfect fence for your home and handle all the details—including HOA approval.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition">
+                    Call (512) 710-7116
+                </a>
+                <a class='bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition' href='/contact'>
+                    Get Free Estimate
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company" class="h-16 mb-4 rounded">
+                    <p class="text-gray-400 text-sm">Building Budaful fences for Austin homeowners since 2014. Quality craftsmanship, honest pricing, and exceptional service.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a class='hover:text-white' href='/services/wood-fence-installation'>Wood Fences</a></li>
+                        <li><a class='hover:text-white' href='/services/metal-fence-installation'>Metal Fences</a></li>
+                        <li><a class='hover:text-white' href='/services/chain-link-fence-installation'>Chain Link</a></li>
+                        <li><a class='hover:text-white' href='/services/fence-repair'>Fence Repair</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Service Areas</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a class='hover:text-white' href='/service-areas/austin'>Austin, TX</a></li>
+                        <li><a class='hover:text-white' href='/service-areas/buda'>Buda, TX</a></li>
+                        <li><a class='hover:text-white' href='/service-areas/kyle'>Kyle, TX</a></li>
+                        <li><a class='hover:text-white' href='/service-areas/dripping-springs'>Dripping Springs, TX</a></li>
                     </ul>
                 </div>
                 <div>
