@@ -1,30 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://budafenceco.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://budafenceco.com/about.html</loc><priority>0.8</priority></url>
-  <url><loc>https://budafenceco.com/services.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/contact.html</loc><priority>0.8</priority></url>
-  <url><loc>https://budafenceco.com/gallery.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/services/wood-fence-installation.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/services/metal-fence-installation.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/services/chain-link-fence-installation.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/services/fence-repair.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/services/deck-construction.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/service-areas/austin.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/service-areas/buda.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/service-areas/kyle.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/service-areas/dripping-springs.html</loc><priority>0.9</priority></url>
-  <url><loc>https://budafenceco.com/blog/</loc><priority>0.8</priority></url>
-  <url><loc>https://budafenceco.com/blog/cedar-vs-pine-fence-austin.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/wood-vs-metal-fence-comparison.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/chain-link-fence-guide-texas.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/fence-maintenance-central-texas.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/how-to-stain-wood-fence.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/fence-repair-vs-replace.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/austin-fence-permit-guide.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/hoa-fence-approval-tips.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/privacy-fence-styles-austin.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/metal-fence-styles-guide.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/best-fence-for-dogs-texas.html</loc><priority>0.7</priority></url>
-  <url><loc>https://budafenceco.com/blog/storm-damage-fence-repair-texas.html</loc><priority>0.7</priority></url>
+  <!-- Homepage -->
+  <url>
+    <loc>https://budafenceco.com/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://budafenceco.com/about</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/services</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/contact</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/gallery</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Service Pages -->
+  <url>
+    <loc>https://budafenceco.com/services/wood-fence-installation</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/services/metal-fence-installation</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/services/chain-link-fence-installation</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/services/fence-repair</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/services/deck-construction</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Service Area Pages (High SEO Priority) -->
+  <url>
+    <loc>https://budafenceco.com/service-areas/austin</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/service-areas/buda</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/service-areas/kyle</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/service-areas/dripping-springs</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog Index -->
+  <url>
+    <loc>https://budafenceco.com/blog/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Articles - Featured -->
+  <url>
+    <loc>https://budafenceco.com/blog/wood-vs-metal-fence-comparison</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Articles - Fence Buying Guides -->
+  <url>
+    <loc>https://budafenceco.com/blog/cedar-vs-pine-fence-austin</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/blog/chain-link-fence-guide-texas</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/blog/privacy-fence-styles-austin</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Articles - Maintenance & Care -->
+  <url>
+    <loc>https://budafenceco.com/blog/fence-maintenance-central-texas</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/blog/how-to-stain-wood-fence</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/blog/fence-repair-vs-replace</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Articles - Permits, HOAs & Local Info -->
+  <url>
+    <loc>https://budafenceco.com/blog/austin-fence-permit-guide</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/blog/hoa-fence-approval-tips</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/blog/storm-damage-fence-repair-texas</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Articles - Fence Types & Styles -->
+  <url>
+    <loc>https://budafenceco.com/blog/metal-fence-styles-guide</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://budafenceco.com/blog/best-fence-for-dogs-texas</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
