@@ -94,7 +94,7 @@
   
   <!-- Blog Index -->
   <url>
-    <loc>https://budafenceco.com/blog/</loc>
+    <loc>https://budafenceco.com/blog</loc>
     <lastmod>2026-01-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
