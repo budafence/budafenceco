@@ -40,29 +40,213 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="/images/austin-skyline.webp" as="image" type="image/webp">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <!-- Preload Critical Resources - LCP Image with fetchpriority -->
+    <link rel="preload" href="/images/austin-skyline.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'buda-primary': '#1e3a5f',
-                        'buda-secondary': '#dc2626',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Google Fonts - Load with display=swap for non-blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Critical CSS Inlined - No render blocking -->
+    <style>
+        /* Critical CSS - Inlined to avoid render blocking */
+        *,*::before,*::after{box-sizing:border-box}
+        body{margin:0;font-family:'Montserrat',system-ui,-apple-system,sans-serif;background-color:#f9fafb;line-height:1.5}
+        
+        /* Colors */
+        .bg-buda-primary{background-color:#1e3a5f}
+        .bg-buda-secondary{background-color:#dc2626}
+        .text-buda-primary{color:#1e3a5f}
+        .text-buda-secondary{color:#dc2626}
+        .bg-white{background-color:#fff}
+        .bg-gray-50{background-color:#f9fafb}
+        .bg-gray-900{background-color:#111827}
+        .text-white{color:#fff}
+        .text-gray-700{color:#374151}
+        .text-gray-600{color:#4b5563}
+        .text-gray-500{color:#6b7280}
+        .text-gray-400{color:#9ca3af}
+        
+        /* Layout */
+        .max-w-7xl{max-width:80rem;margin-left:auto;margin-right:auto}
+        .max-w-4xl{max-width:56rem;margin-left:auto;margin-right:auto}
+        .max-w-3xl{max-width:48rem;margin-left:auto;margin-right:auto}
+        .px-4{padding-left:1rem;padding-right:1rem}
+        .py-4{padding-top:1rem;padding-bottom:1rem}
+        .py-8{padding-top:2rem;padding-bottom:2rem}
+        .py-12{padding-top:3rem;padding-bottom:3rem}
+        .py-16{padding-top:4rem;padding-bottom:4rem}
+        .py-20{padding-top:5rem;padding-bottom:5rem}
+        .p-4{padding:1rem}
+        .p-6{padding:1.5rem}
+        .p-8{padding:2rem}
+        .mb-2{margin-bottom:0.5rem}
+        .mb-3{margin-bottom:0.75rem}
+        .mb-4{margin-bottom:1rem}
+        .mb-6{margin-bottom:1.5rem}
+        .mb-8{margin-bottom:2rem}
+        .mt-2{margin-top:0.5rem}
+        .mt-4{margin-top:1rem}
+        .mt-6{margin-top:1.5rem}
+        .mt-8{margin-top:2rem}
+        .mr-2{margin-right:0.5rem}
+        .mr-4{margin-right:1rem}
+        .ml-2{margin-left:0.5rem}
+        .pt-2{padding-top:0.5rem}
+        .pt-4{padding-top:1rem}
+        .pt-8{padding-top:2rem}
+        .pb-2{padding-bottom:0.5rem}
+        .pb-3{padding-bottom:0.75rem}
+        .pb-4{padding-bottom:1rem}
+        .pl-4{padding-left:1rem}
+        
+        /* Flexbox */
+        .flex{display:flex}
+        .hidden{display:none}
+        .block{display:block}
+        .inline-block{display:inline-block}
+        .items-center{align-items:center}
+        .items-start{align-items:flex-start}
+        .justify-between{justify-content:space-between}
+        .justify-center{justify-content:center}
+        .flex-col{flex-direction:column}
+        .flex-shrink-0{flex-shrink:0}
+        .space-x-3>*+*{margin-left:0.75rem}
+        .space-x-4>*+*{margin-left:1rem}
+        .space-x-8>*+*{margin-left:2rem}
+        .space-y-1>*+*{margin-top:0.25rem}
+        .space-y-2>*+*{margin-top:0.5rem}
+        .space-y-3>*+*{margin-top:0.75rem}
+        .gap-4{gap:1rem}
+        .gap-6{gap:1.5rem}
+        .gap-8{gap:2rem}
+        
+        /* Grid */
+        .grid{display:grid}
+        .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+        
+        /* Typography */
+        .text-sm{font-size:0.875rem;line-height:1.25rem}
+        .text-lg{font-size:1.125rem;line-height:1.75rem}
+        .text-xl{font-size:1.25rem;line-height:1.75rem}
+        .text-2xl{font-size:1.5rem;line-height:2rem}
+        .text-3xl{font-size:1.875rem;line-height:2.25rem}
+        .text-4xl{font-size:2.25rem;line-height:2.5rem}
+        .font-medium{font-weight:500}
+        .font-semibold{font-weight:600}
+        .font-bold{font-weight:700}
+        .text-center{text-align:center}
+        .italic{font-style:italic}
+        .not-italic{font-style:normal}
+        .whitespace-nowrap{white-space:nowrap}
+        
+        /* Sizing */
+        .w-full{width:100%}
+        .w-auto{width:auto}
+        .w-6{width:1.5rem}
+        .w-10{width:2.5rem}
+        .h-6{height:1.5rem}
+        .h-10{height:2.5rem}
+        .h-12{height:3rem}
+        .h-16{height:4rem}
+        .h-48{height:12rem}
+        .min-w-max{min-width:max-content}
+        
+        /* Borders & Shadows */
+        .rounded{border-radius:0.25rem}
+        .rounded-lg{border-radius:0.5rem}
+        .rounded-full{border-radius:9999px}
+        .shadow-md{box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06)}
+        .shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05)}
+        .border{border-width:1px;border-color:#e5e7eb}
+        .border-t{border-top-width:1px;border-color:#e5e7eb}
+        .border-b{border-bottom-width:1px;border-color:#e5e7eb}
+        .border-l-4{border-left-width:4px}
+        .border-buda-secondary{border-color:#dc2626}
+        .border-gray-200{border-color:#e5e7eb}
+        .border-gray-800{border-color:#1f2937}
+        .border-white\/20{border-color:rgba(255,255,255,0.2)}
+        
+        /* Effects */
+        .overflow-hidden{overflow:hidden}
+        .object-cover{object-fit:cover}
+        .sticky{position:sticky}
+        .top-0{top:0}
+        .top-24{top:6rem}
+        .z-50{z-index:50}
+        .relative{position:relative}
+        .absolute{position:absolute}
+        .transition-colors{transition-property:color,background-color,border-color;transition-duration:150ms}
+        
+        /* Hover states */
+        .hover\:text-buda-secondary:hover{color:#dc2626}
+        .hover\:text-white:hover{color:#fff}
+        .hover\:bg-red-700:hover{background-color:#b91c1c}
+        .hover\:bg-gray-100:hover{background-color:#f3f4f6}
+        .hover\:underline:hover{text-decoration:underline}
+        
+        /* Focus states for accessibility - WCAG compliant */
+        a:focus,button:focus{outline:2px solid #dc2626;outline-offset:2px}
+        
+        /* Skip link */
+        .skip-link{position:absolute;top:-40px;left:0;background:#dc2626;color:white;padding:8px;z-index:100}
+        .skip-link:focus{top:0}
+        
+        /* Hero Background */
+        .hero-bg{
+            background-image:linear-gradient(rgba(30,58,95,0.85),rgba(30,58,95,0.85)),url('/images/austin-skyline.webp');
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu{display:none;max-height:0;overflow:hidden;transition:max-height 0.3s ease-out}
+        .mobile-menu.active{display:block;max-height:600px}
+        
+        /* Smooth scrolling */
+        html{scroll-behavior:smooth}
+        
+        /* Gradient backgrounds */
+        .bg-gradient-primary{background:linear-gradient(to right,#1e3a5f,#1e40af)}
+        .bg-white\/10{background-color:rgba(255,255,255,0.1)}
+        
+        /* Contrast fix - Changed from opacity-90 to explicit lighter color for WCAG compliance */
+        .text-white-high-contrast{color:#e5e7eb}
+        
+        /* Responsive - Medium screens and up */
+        @media(min-width:768px){
+            .md\:flex{display:flex}
+            .md\:hidden{display:none}
+            .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+            .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+            .md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+            .md\:text-5xl{font-size:3rem;line-height:1}
+            .md\:text-2xl{font-size:1.5rem;line-height:2rem}
+            .md\:col-span-2{grid-column:span 2/span 2}
+            .md\:flex-row{flex-direction:row}
+            .px-6{padding-left:1.5rem;padding-right:1.5rem}
+        }
+        
+        /* Responsive - Large screens and up */
+        @media(min-width:1024px){
+            .lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+            .lg\:col-span-1{grid-column:span 1/span 1}
+            .lg\:col-span-2{grid-column:span 2/span 2}
+            .px-8{padding-left:2rem;padding-right:2rem}
+        }
+        
+        /* Small screens */
+        @media(min-width:640px){
+            .sm\:flex-row{flex-direction:row}
+            .sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}
+        }
+        
+        /* Desktop dropdown */
+        .group:hover .group-hover\:block{display:block}
+    </style>
     
     <!-- LocalBusiness Schema (Enhanced) -->
     <script type="application/ld+json">
@@ -97,52 +281,17 @@
         "longitude": "-97.7431"
       },
       "areaServed": [
-        {
-          "@type": "City",
-          "name": "Austin",
-          "sameAs": "https://en.wikipedia.org/wiki/Austin,_Texas"
-        },
-        {
-          "@type": "Place",
-          "name": "Circle C Ranch, Austin"
-        },
-        {
-          "@type": "Place",
-          "name": "Westlake Hills, Austin"
-        },
-        {
-          "@type": "Place",
-          "name": "Steiner Ranch, Austin"
-        }
+        {"@type": "City", "name": "Austin", "sameAs": "https://en.wikipedia.org/wiki/Austin,_Texas"},
+        {"@type": "Place", "name": "Circle C Ranch, Austin"},
+        {"@type": "Place", "name": "Westlake Hills, Austin"},
+        {"@type": "Place", "name": "Steiner Ranch, Austin"}
       ],
       "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "06:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "09:00",
-          "closes": "14:00"
-        }
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "06:00", "closes": "18:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00"}
       ],
       "priceRange": "$$",
-      "currenciesAccepted": "USD",
-      "paymentAccepted": "Cash, Credit Card, Check",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "122",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "sameAs": [
-        "https://www.facebook.com/budafenceco",
-        "https://www.google.com/maps/place/Buda+Fence+Company"
-      ]
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "122", "bestRating": "5", "worstRating": "1"}
     }
     </script>
     
@@ -153,54 +302,9 @@
       "@type": "Service",
       "serviceType": "Fence Installation",
       "name": "Austin Fence Installation Services",
-      "description": "Professional fence installation services in Austin, TX. Specializing in wood cedar fences, metal fences, and chain link fencing for residential and commercial properties. HOA approval assistance included.",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Buda Fence Company",
-        "telephone": "+1-512-710-7116"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Austin",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Texas"
-        }
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Austin Fence Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Wood Fence Installation Austin"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Metal Fence Installation Austin"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Chain Link Fence Installation Austin"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Fence Repair Austin"
-            }
-          }
-        ]
-      }
+      "description": "Professional fence installation services in Austin, TX.",
+      "provider": {"@type": "LocalBusiness", "name": "Buda Fence Company", "telephone": "+1-512-710-7116"},
+      "areaServed": {"@type": "City", "name": "Austin", "containedInPlace": {"@type": "State", "name": "Texas"}}
     }
     </script>
     
@@ -210,76 +314,12 @@
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://budafenceco.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Service Areas",
-          "item": "https://budafenceco.com/service-areas/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Austin, TX",
-          "item": "https://budafenceco.com/service-areas/austin"
-        }
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://budafenceco.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://budafenceco.com/service-areas/"},
+        {"@type": "ListItem", "position": 3, "name": "Austin, TX", "item": "https://budafenceco.com/service-areas/austin"}
       ]
     }
     </script>
-    
-    <style>
-        body { font-family: 'Montserrat', sans-serif; }
-        
-        /* Mobile Menu */
-        .mobile-menu { 
-            display: none;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .mobile-menu.active { 
-            display: block;
-            max-height: 600px;
-        }
-        
-        /* Hero Background */
-        .hero-bg {
-            background-image: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.85)), url('/images/austin-skyline.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Focus states for accessibility */
-        a:focus, button:focus {
-            outline: 2px solid #dc2626;
-            outline-offset: 2px;
-        }
-        
-        /* Skip to main content link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #dc2626;
-            color: white;
-            padding: 8px;
-            z-index: 100;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Skip to main content for accessibility -->
@@ -287,7 +327,7 @@
     
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-7xl px-4">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center">
@@ -341,7 +381,7 @@
                     <a href="tel:5127107116" class="text-buda-secondary font-medium text-sm">(512) 710-7116</a>
                     <a class="bg-buda-secondary text-white px-3 py-2 rounded-lg text-sm" href="/contact">Free Quote</a>
                     <button onclick="toggleMobileMenu()" 
-                            class="text-gray-700 hover:text-buda-secondary focus:outline-none ml-2 p-2" 
+                            class="text-gray-700 hover:text-buda-secondary ml-2 p-2" 
                             aria-label="Toggle mobile menu"
                             aria-expanded="false"
                             aria-controls="mobile-menu">
@@ -355,7 +395,7 @@
         
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200" role="menu">
-            <div class="px-2 pt-2 pb-3 space-y-1">
+            <div class="px-4 pt-2 pb-3 space-y-1">
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/" role="menuitem">Home</a>
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/about" role="menuitem">About</a>
                 <div class="px-3 py-2">
@@ -385,14 +425,14 @@
     <main id="main-content">
         <!-- Hero Section with Austin Skyline -->
         <section class="hero-bg text-white py-20" aria-label="Austin fence installation services">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-7xl px-4 sm:px-6 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Fence Installation Company in Austin, TX</h1>
-                <p class="text-xl md:text-2xl mb-6 max-w-3xl mx-auto">Trusted by homeowners in Circle C, Westlake, Steiner Ranch, and neighborhoods across Austin. Quality <strong>fence installation</strong> with HOA approval assistance.</p>
+                <p class="text-xl md:text-2xl mb-6 max-w-3xl" style="margin-left:auto;margin-right:auto;color:#e5e7eb">Trusted by homeowners in Circle C, Westlake, Steiner Ranch, and neighborhoods across Austin. Quality <strong>fence installation</strong> with HOA approval assistance.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors">
-                        📞 Call (512) 710-7116
+                    <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors inline-block">
+                        Call (512) 710-7116
                     </a>
-                    <a class="bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors" href="/contact">
+                    <a class="bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-block" href="/contact">
                         Get Free Estimate
                     </a>
                 </div>
@@ -401,7 +441,7 @@
 
         <!-- Trust Badges -->
         <section class="bg-white py-8 border-b" aria-label="Company credentials">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl px-4 sm:px-6">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                     <div>
                         <div class="text-3xl font-bold text-buda-primary">10+</div>
@@ -425,8 +465,8 @@
 
         <!-- Main Content Grid -->
         <section class="py-16" aria-labelledby="main-heading">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-3 gap-12">
+            <div class="max-w-7xl px-4 sm:px-6">
+                <div class="grid lg:grid-cols-3 gap-8">
                     <!-- Main Content Column -->
                     <div class="lg:col-span-2">
                         <!-- Introduction -->
@@ -456,8 +496,8 @@
                                     <img src="/images/cedar-fence-after.webp" 
                                          alt="6-foot cedar privacy fence installation in Austin TX" 
                                          class="w-full h-48 object-cover"
-                                         width="600"
-                                         height="400"
+                                         width="400"
+                                         height="192"
                                          loading="lazy">
                                     <div class="p-4">
                                         <h3 class="font-bold text-buda-primary mb-2">6' Cedar Privacy Fence</h3>
@@ -468,8 +508,8 @@
                                     <img src="/images/black-metal-fence-6ft-tall.webp" 
                                          alt="6-foot flat top black metal fence installation in Austin TX" 
                                          class="w-full h-48 object-cover"
-                                         width="600"
-                                         height="400"
+                                         width="400"
+                                         height="192"
                                          loading="lazy">
                                     <div class="p-4">
                                         <h3 class="font-bold text-buda-primary mb-2">6' Flat Top Black Metal</h3>
@@ -483,8 +523,8 @@
                                     <img src="/images/horizontal-cedar-fence.webp" 
                                          alt="Horizontal cedar fence modern design in Austin TX" 
                                          class="w-full h-48 object-cover"
-                                         width="600"
-                                         height="400"
+                                         width="400"
+                                         height="192"
                                          loading="lazy">
                                     <div class="p-4">
                                         <h3 class="font-bold text-buda-primary mb-2">Horizontal Cedar Fence</h3>
@@ -495,8 +535,8 @@
                                     <img src="/images/black-vinyl-chainlink-backyard.webp" 
                                          alt="Black vinyl chain link fence installation in Austin TX" 
                                          class="w-full h-48 object-cover"
-                                         width="600"
-                                         height="400"
+                                         width="400"
+                                         height="192"
                                          loading="lazy">
                                     <div class="p-4">
                                         <h3 class="font-bold text-buda-primary mb-2">Black Vinyl Chain Link</h3>
@@ -507,14 +547,14 @@
                         </article>
 
                         <!-- HOA Approval Assistance -->
-                        <article class="bg-gradient-to-r from-buda-primary to-blue-800 text-white rounded-lg shadow-md p-8 mb-8">
-                            <h2 class="text-2xl font-bold mb-4">🏠 HOA Approval Assistance</h2>
-                            <p class="mb-4">Many Austin neighborhoods—especially established communities like Circle C, Steiner Ranch, and Travis Country—have HOA requirements for fence installations. We make the approval process easy:</p>
+                        <article class="bg-gradient-primary text-white rounded-lg shadow-md p-8 mb-8">
+                            <h2 class="text-2xl font-bold mb-4">HOA Approval Assistance</h2>
+                            <p class="mb-4" style="color:#e5e7eb">Many Austin neighborhoods—especially established communities like Circle C, Steiner Ranch, and Travis Country—have HOA requirements for fence installations. We make the approval process easy:</p>
                             
                             <div class="grid md:grid-cols-2 gap-4">
-                                <div class="bg-white/10 rounded-lg p-4">
+                                <div class="bg-white\/10 rounded-lg p-4">
                                     <h3 class="font-bold mb-2">What We Provide:</h3>
-                                    <ul class="space-y-2 text-sm" aria-label="HOA documentation we provide">
+                                    <ul class="space-y-2 text-sm" style="color:#e5e7eb" aria-label="HOA documentation we provide">
                                         <li>✓ Professional fence layout drawings</li>
                                         <li>✓ Material specifications & samples</li>
                                         <li>✓ Property line documentation</li>
@@ -522,9 +562,9 @@
                                         <li>✓ Complete HOA submission package</li>
                                     </ul>
                                 </div>
-                                <div class="bg-white/10 rounded-lg p-4">
+                                <div class="bg-white\/10 rounded-lg p-4">
                                     <h3 class="font-bold mb-2">Our Process:</h3>
-                                    <ol class="space-y-2 text-sm" aria-label="HOA approval process steps">
+                                    <ol class="space-y-2 text-sm" style="color:#e5e7eb" aria-label="HOA approval process steps">
                                         <li>1. Review your HOA guidelines</li>
                                         <li>2. Design compliant fence plan</li>
                                         <li>3. Prepare all required documents</li>
@@ -534,7 +574,7 @@
                                 </div>
                             </div>
                             
-                            <p class="mt-4 text-sm opacity-90">We've successfully navigated HOA approvals in dozens of Austin communities. Let us handle the paperwork while you focus on choosing your perfect fence.</p>
+                            <p class="mt-4 text-sm" style="color:#d1d5db">We've successfully navigated HOA approvals in dozens of Austin communities. Let us handle the paperwork while you focus on choosing your perfect fence.</p>
                         </article>
 
                         <!-- Austin Neighborhoods We Serve -->
@@ -672,17 +712,17 @@
                         <!-- Quick Contact -->
                         <div class="bg-buda-primary text-white rounded-lg shadow-md p-6 mb-6 sticky top-24">
                             <h3 class="text-xl font-bold mb-4">Get Your Free Austin Estimate</h3>
-                            <p class="mb-4 text-sm opacity-90">Call now or fill out our form for a free on-site estimate. We'll assess your property and provide a detailed quote.</p>
+                            <p class="mb-4 text-sm" style="color:#d1d5db">Call now or fill out our form for a free on-site estimate. We'll assess your property and provide a detailed quote.</p>
                             <a href="tel:5127107116" class="block bg-buda-secondary text-white text-center py-3 rounded-lg font-semibold mb-3 hover:bg-red-700 transition-colors">
-                                📞 (512) 710-7116
+                                (512) 710-7116
                             </a>
                             <a class="block bg-white text-buda-primary text-center py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" href="/contact">
                                 Request Quote Online
                             </a>
-                            <div class="mt-4 pt-4 border-t border-white/20 text-sm">
+                            <div class="mt-4 pt-4 border-t border-white\/20 text-sm">
                                 <p><strong>Business Hours:</strong></p>
-                                <p>Mon-Fri: 6 AM - 6 PM</p>
-                                <p>Saturday: 9 AM - 2 PM</p>
+                                <p style="color:#d1d5db">Mon-Fri: 6 AM - 6 PM</p>
+                                <p style="color:#d1d5db">Saturday: 9 AM - 2 PM</p>
                             </div>
                         </div>
 
@@ -734,14 +774,14 @@
 
         <!-- CTA Section -->
         <section class="bg-buda-primary text-white py-16" aria-labelledby="cta-heading">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl px-4 sm:px-6 text-center" style="margin-left:auto;margin-right:auto">
                 <h2 id="cta-heading" class="text-3xl font-bold mb-4">Ready for Your Austin Fence Project?</h2>
-                <p class="text-xl mb-8 opacity-90">Get a free estimate from Austin's trusted <strong>fence installation company</strong>. We'll help you choose the perfect fence for your home and handle all the details—including HOA approval.</p>
+                <p class="text-xl mb-8" style="color:#e5e7eb">Get a free estimate from Austin's trusted <strong>fence installation company</strong>. We'll help you choose the perfect fence for your home and handle all the details—including HOA approval.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors">
+                    <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors inline-block">
                         Call (512) 710-7116
                     </a>
-                    <a class="bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors" href="/contact">
+                    <a class="bg-white text-buda-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-block" href="/contact">
                         Get Free Estimate
                     </a>
                 </div>
@@ -751,7 +791,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12" role="contentinfo">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl px-4 sm:px-6" style="margin-left:auto;margin-right:auto">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <img src="/images/buda-fence-logo.webp" 
@@ -792,33 +832,15 @@
                     </address>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2026 Buda Fence Company. All rights reserved. | Serving Austin, Buda, Kyle, Dripping Springs & Surrounding Areas</p>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm" style="color:#9ca3af">
+                <p>© 2026 Buda Fence Company. All rights reserved. | Serving Austin, Buda, Kyle, Dripping Springs & Surrounding Areas</p>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Menu Script -->
+    <!-- Mobile Menu Script - Deferred -->
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const button = document.querySelector('[aria-controls="mobile-menu"]');
-            const isExpanded = menu.classList.contains('active');
-            
-            menu.classList.toggle('active');
-            button.setAttribute('aria-expanded', !isExpanded);
-        }
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('mobile-menu');
-            const button = document.querySelector('[aria-controls="mobile-menu"]');
-            
-            if (!menu.contains(event.target) && !button.contains(event.target)) {
-                menu.classList.remove('active');
-                button.setAttribute('aria-expanded', 'false');
-            }
-        });
+        function toggleMobileMenu(){var e=document.getElementById("mobile-menu"),t=document.querySelector('[aria-controls="mobile-menu"]'),n=e.classList.contains("active");e.classList.toggle("active"),t.setAttribute("aria-expanded",!n)}document.addEventListener("click",function(e){var t=document.getElementById("mobile-menu"),n=document.querySelector('[aria-controls="mobile-menu"]');t.contains(e.target)||n.contains(e.target)||(t.classList.remove("active"),n.setAttribute("aria-expanded","false"))});
     </script>
 </body>
 </html>
