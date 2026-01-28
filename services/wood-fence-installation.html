@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wood Fence Installation in Austin, TX | Buda Fence Company</title>
-    <meta name="description" content="Professional wood fence installation in Austin. We specialize in cedar and pine privacy fences with 5-year installation guarantee. One-day installation available. Free estimate!">
-    <link rel="canonical" href="https://budafenceco.com/services/wood-fence-installation.html" />
+    <title>Wood Fence Installation in Austin & Buda, TX | Cedar & Pine Fences | Buda Fence Company</title>
+    <meta name="description" content="Professional wood fence installation in Austin & Buda TX. Cedar & pine privacy fences with 5-year guarantee. One-day installation under 100 linear feet. Free estimate! Call (512) 710-7116">
+    <link rel="canonical" href="https://budafenceco.com/services/wood-fence-installation" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Wood Fence Installation in Austin & Buda, TX | Buda Fence Company">
+    <meta property="og:description" content="Professional cedar & pine fence installation with 5-year guarantee. One-day installation for most projects. Free estimate!">
+    <meta property="og:image" content="https://budafenceco.com/images/stained-cedar-fence.webp">
+    <meta property="og:url" content="https://budafenceco.com/services/wood-fence-installation">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wood Fence Installation in Austin & Buda, TX">
+    <meta name="twitter:description" content="Professional cedar & pine fence installation with 5-year guarantee. Free estimate!">
+    <meta name="twitter:image" content="https://budafenceco.com/images/stained-cedar-fence.webp">
+    
+    <!-- Local SEO -->
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Austin, Buda, Kyle, Dripping Springs">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Service Schema Markup -->
     <script type="application/ld+json">
@@ -17,7 +44,7 @@
       "provider": {
         "@type": "LocalBusiness",
         "name": "Buda Fence Company",
-        "image": "https://budafenceco.com/images/BudaFenceLogo.jpeg",
+        "image": "https://budafenceco.com/images/buda-fence-logo.webp",
         "telephone": "+15127107116",
         "email": "info@budafenceco.com",
         "address": {
@@ -26,6 +53,11 @@
           "addressLocality": "Buda",
           "addressRegion": "TX",
           "postalCode": "78610"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "127"
         }
       },
       "areaServed": ["Austin", "Buda", "Kyle", "Dripping Springs"],
@@ -101,6 +133,19 @@
     }
     </script>
     
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://budafenceco.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://budafenceco.com/services"},
+        {"@type": "ListItem", "position": 3, "name": "Wood Fence Installation", "item": "https://budafenceco.com/services/wood-fence-installation"}
+      ]
+    }
+    </script>
+    
     <script>
         tailwind.config = {
             theme: {
@@ -108,6 +153,9 @@
                     colors: {
                         'buda-primary': '#1e293b',
                         'buda-secondary': '#dc2626',
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
                     }
                 }
             }
@@ -119,22 +167,19 @@
         }
     </script>
     <style>
+        body { font-family: 'Montserrat', sans-serif; }
         .mobile-menu {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
         .mobile-menu-open {
-            max-height: 500px;
+            max-height: 600px;
         }
         /* Mobile text overflow fixes */
         @media (max-width: 767px) {
-            * {
-                max-width: 100vw;
-            }
-            body {
-                overflow-x: hidden;
-            }
+            * { max-width: 100vw; }
+            body { overflow-x: hidden; }
             h1, h2, h3, h4, h5, h6, p, li, td, div, span {
                 word-wrap: break-word;
                 overflow-wrap: break-word;
@@ -146,64 +191,72 @@
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
             }
-            img {
-                max-width: 100%;
-                height: auto;
-            }
+            img { max-width: 100%; height: auto; }
+        }
+        /* Accessibility - focus visible only on keyboard */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #dc2626;
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible), button:focus:not(:focus-visible) {
+            outline: none;
         }
     </style>
 </head>
 <body class="bg-gray-50">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-buda-secondary text-white px-4 py-2 rounded z-50">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
                     <a href="/" class="flex items-center">
-                        <img src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo" class="h-16">
+                        <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company Logo" class="h-16" width="180" height="64">
                     </a>
                 </div>
                 
                 <!-- Desktop Navigation -->
-<div class="hidden md:flex space-x-8">
-    <a href="../index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-    <a href="../about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
-    <div class="relative group">
-        <button class="text-buda-secondary font-medium pb-4">Services ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="../services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
-            <a href="deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
-            <a href="wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
-            <a href="metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
-            <a href="chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
-            <a href="fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
-        </div>
-    </div>
-    <div class="relative group">
-        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="../service-areas/austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
-            <a href="../service-areas/buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
-            <a href="../service-areas/kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
-            <a href="../service-areas/dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
-        </div>
-    </div>
-    <a href="../gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-    <a href="../blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-    <a href="../contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-</div>
+                <div class="hidden md:flex space-x-8">
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/">Home</a>
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/about">About</a>
+                    <div class="relative group">
+                        <button class="text-buda-secondary font-medium pb-4">Services ▾</button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+                            <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap" href="/services">All Services</a>
+                            <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap" href="/services/deck-construction">Deck Construction</a>
+                            <a class="block px-4 py-2 text-buda-secondary hover:bg-gray-100 whitespace-nowrap" href="/services/wood-fence-installation">Wood Fence Installation</a>
+                            <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap" href="/services/metal-fence-installation">Metal Fence Installation</a>
+                            <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap" href="/services/chain-link-fence-installation">Chain Link Fence Installation</a>
+                            <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap" href="/services/fence-repair">Fence Repair</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+                            <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/austin">Austin</a>
+                            <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/buda">Buda</a>
+                            <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/kyle">Kyle</a>
+                            <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/dripping-springs">Dripping Springs</a>
+                        </div>
+                    </div>
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/gallery">Gallery</a>
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/blog/">Blog</a>
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/contact">Contact</a>
+                </div>
                 
                 <!-- Desktop Contact -->
                 <div class="hidden md:flex space-x-4 items-center">
                     <a href="tel:5127107116" class="text-buda-secondary font-medium">(512) 710-7116</a>
-                    <a href="../contact.html" class="bg-buda-secondary text-white px-4 py-2 rounded-lg hover:bg-red-700">Free Quote</a>
+                    <a class="bg-buda-secondary text-white px-4 py-2 rounded-lg hover:bg-red-700 transition" href="/contact">Free Quote</a>
                 </div>
                 
                 <!-- Mobile Contact & Menu -->
                 <div class="md:hidden flex items-center space-x-3">
                     <a href="tel:5127107116" class="text-buda-secondary font-medium text-sm">(512) 710-7116</a>
-                    <a href="../contact.html" class="bg-buda-secondary text-white px-3 py-2 rounded-lg text-sm">Free Quote</a>
-                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-buda-secondary focus:outline-none ml-2">
+                    <a class="bg-buda-secondary text-white px-3 py-2 rounded-lg text-sm" href="/contact">Free Quote</a>
+                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-buda-secondary focus:outline-none ml-2" aria-label="Toggle mobile menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -214,39 +267,40 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
                 <div class="px-4 py-2 space-y-1">
-                    <a href="../index.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Home</a>
-                    <a href="../about.html" class="block py-2 text-gray-700 hover:text-buda-secondary">About</a>
+                    <a class="block py-2 text-gray-700 hover:text-buda-secondary" href="/">Home</a>
+                    <a class="block py-2 text-gray-700 hover:text-buda-secondary" href="/about">About</a>
                     <div class="py-2">
                         <p class="font-semibold text-gray-900 mb-1">Services</p>
-                        <a href="../services.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">All Services</a>
-                        <a href="wood-fence-installation.html" class="block py-1 pl-4 text-buda-secondary">Wood Fence</a>
-                        <a href="metal-fence-installation.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Metal Fence</a>
-                        <a href="chain-link-fence-installation.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Chain Link</a>
-                        <a href="fence-repair.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Fence Repair</a>
+                        <a class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary" href="/services">All Services</a>
+                        <a class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary" href="/services/deck-construction">Deck Construction</a>
+                        <a class="block py-1 pl-4 text-buda-secondary font-medium" href="/services/wood-fence-installation">Wood Fence</a>
+                        <a class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary" href="/services/metal-fence-installation">Metal Fence</a>
+                        <a class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary" href="/services/chain-link-fence-installation">Chain Link</a>
+                        <a class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary" href="/services/fence-repair">Fence Repair</a>
                     </div>
                     <div class="py-2">
                         <p class="font-semibold text-gray-900 mb-1">Service Areas</p>
-                        <a href="../service-areas/austin.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Austin</a>
-                        <a href="../service-areas/buda.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Buda</a>
-                        <a href="../service-areas/kyle.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Kyle</a>
-                        <a href="../service-areas/dripping-springs.html" class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary">Dripping Springs</a>
+                        <a class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary" href="/service-areas/austin">Austin</a>
+                        <a class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary" href="/service-areas/buda">Buda</a>
+                        <a class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary" href="/service-areas/kyle">Kyle</a>
+                        <a class="block py-1 pl-4 text-gray-600 hover:text-buda-secondary" href="/service-areas/dripping-springs">Dripping Springs</a>
                     </div>
-                    <a href="../gallery.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Gallery</a>
-                    <a href="../blog.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Blog</a>
-                    <a href="../contact.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Contact</a>
+                    <a class="block py-2 text-gray-700 hover:text-buda-secondary" href="/gallery">Gallery</a>
+                    <a class="block py-2 text-gray-700 hover:text-buda-secondary" href="/blog/">Blog</a>
+                    <a class="block py-2 text-gray-700 hover:text-buda-secondary" href="/contact">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-buda-primary text-white py-16">
+    <section class="bg-buda-primary text-white py-16" role="banner">
         <div class="max-w-7xl mx-auto px-4">
             <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Professional Wood Fence Installation in Austin, TX</h1>
-                <p class="text-xl mb-8">Premium cedar and pine fences built to last. 5-year installation guarantee. Most projects completed in one day.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Professional Wood Fence Installation in Austin, TX</h1>
+                <p class="text-xl text-white mb-8">Premium cedar and pine fences built to last. 5-year installation guarantee. Most projects under 100 linear feet completed in one day.</p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="/contact.html" class="bg-buda-secondary text-white px-8 py-4 rounded-lg hover:bg-red-700 transition font-semibold text-lg">Get Free Estimate</a>
+                    <a class="bg-buda-secondary text-white px-8 py-4 rounded-lg hover:bg-red-700 transition font-semibold text-lg" href="/contact">Get Free Estimate</a>
                     <a href="tel:+15127107116" class="bg-white text-buda-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition font-semibold text-lg">(512) 710-7116</a>
                 </div>
             </div>
@@ -254,397 +308,401 @@
     </section>
 
     <!-- Main Content -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-12">
-                <!-- Main Content Column -->
-                <div class="md:col-span-2">
-                    <article class="prose max-w-none">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">Looking for a durable and beautiful wood fence in Austin that can withstand the Texas heat while providing the privacy and security your family deserves? You've come to the right place. At Buda Fence Company, we specialize in crafting high-quality wood fences that not only enhance your property's curb appeal but are also built to last.</p>
+    <main id="main-content" role="main">
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <!-- Main Content Column -->
+                    <div class="md:col-span-2">
+                        <article class="prose max-w-none">
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">Looking for a durable and beautiful wood fence in Austin that can withstand the Texas heat while providing the privacy and security your family deserves? You've come to the right place. At Buda Fence Company, we specialize in crafting high-quality wood fences that not only enhance your property's curb appeal but are also built to last.</p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-8">A wood fence is more than just a boundary; it's an extension of your home. It creates a safe space for your children and pets to play, a private oasis for you to relax and entertain, and a natural-looking backdrop that complements Austin's unique landscape.</p>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-8">A wood fence is more than just a boundary; it's an extension of your home. It creates a safe space for your children and pets to play, a private oasis for you to relax and entertain, and a natural-looking backdrop that complements Austin's unique landscape.</p>
 
-                        <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Why Choose a Wood Fence for Your Austin Home?</h2>
+                            <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Why Choose a Wood Fence for Your Austin Home?</h2>
 
-                        <p class="text-gray-700 leading-relaxed mb-6">In a city known for its vibrant culture and love for the outdoors, a wood fence is the quintessential choice for homeowners. It offers a timeless, natural aesthetic that metal or vinyl simply can't replicate. But the benefits go far beyond looks, especially here in Central Texas.</p>
+                            <p class="text-gray-700 leading-relaxed mb-6">In a city known for its vibrant culture and love for the outdoors, a wood fence is the quintessential choice for homeowners. It offers a timeless, natural aesthetic that metal or vinyl simply can't replicate. But the benefits go far beyond looks, especially here in Central Texas.</p>
 
-                        <div class="bg-gray-100 p-6 rounded-lg mb-8">
-                            <h3 class="text-xl font-bold text-buda-primary mb-4">Key Benefits of Wood Fencing</h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-3 text-xl">✓</span>
-                                    <span><strong>Unmatched Privacy and Security:</strong> Wood fences create a solid barrier that shields your backyard from neighbors and provides security for your family.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-3 text-xl">✓</span>
-                                    <span><strong>Durability in Texas Climate:</strong> Our premium cedar and pressure-treated pine resist rot, decay, and insect infestation in harsh Texas weather.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-3 text-xl">✓</span>
-                                    <span><strong>Customizable to Your Style:</strong> Choose from classic picket, modern horizontal, rustic ranch, or custom designs with various heights and finishes.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-3 text-xl">✓</span>
-                                    <span><strong>Eco-Friendly and Sustainable:</strong> Wood is a renewable resource sourced from responsibly managed forests.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Wood Fence Materials: Cedar vs. Pressure-Treated Pine</h2>
-
-                        <p class="text-gray-700 leading-relaxed mb-6">The most critical decision you'll make is the type of wood for your fence. We primarily work with Western Red Cedar and pressure-treated Southern Yellow Pine, as they are the best options for durability and value in our climate.</p>
-
-                        <div class="grid md:grid-cols-2 gap-6 mb-8">
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-buda-primary mb-4">Western Red Cedar</h3>
-                                <p class="text-gray-700 mb-4">Often considered the premium choice for wood fencing, Western Red Cedar contains natural oils that make it inherently resistant to rot, decay, and insects.</p>
-                                <p class="font-semibold text-green-600 mb-2">Pros:</p>
-                                <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                                    <li>• Natural durability without chemicals</li>
-                                    <li>• Dimensional stability - stays straight</li>
-                                    <li>• Stunning appearance with natural aging</li>
-                                    <li>• Lightweight and easy to work with</li>
-                                </ul>
-                                <p class="font-semibold text-red-600 mb-2">Cons:</p>
-                                <ul class="text-sm text-gray-700 space-y-1">
-                                    <li>• Higher initial cost than pine</li>
+                            <div class="bg-gray-100 p-6 rounded-lg mb-8">
+                                <h3 class="text-xl font-bold text-buda-primary mb-4">Key Benefits of Wood Fencing</h3>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-3 text-xl">✓</span>
+                                        <span class="text-gray-700"><strong>Unmatched Privacy and Security:</strong> Wood fences create a solid barrier that shields your backyard from neighbors and provides security for your family.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-3 text-xl">✓</span>
+                                        <span class="text-gray-700"><strong>Durability in Texas Climate:</strong> Our premium cedar and pressure-treated pine resist rot, decay, and insect infestation in harsh Texas weather.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-3 text-xl">✓</span>
+                                        <span class="text-gray-700"><strong>Customizable to Your Style:</strong> Choose from classic picket, modern horizontal, rustic ranch, or custom designs with various heights and finishes.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-3 text-xl">✓</span>
+                                        <span class="text-gray-700"><strong>Eco-Friendly and Sustainable:</strong> Wood is a renewable resource sourced from responsibly managed forests.</span>
+                                    </li>
                                 </ul>
                             </div>
 
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-buda-primary mb-4">Pressure-Treated Pine</h3>
-                                <p class="text-gray-700 mb-4">A more budget-friendly option that offers excellent durability. Chemical preservatives are forced deep into the wood's fibers for long-lasting protection.</p>
-                                <p class="font-semibold text-green-600 mb-2">Pros:</p>
-                                <ul class="text-sm text-gray-700 space-y-1 mb-4">
-                                    <li>• Cost-effective and budget-friendly</li>
-                                    <li>• Excellent durability with treatment</li>
-                                    <li>• Readily available resource</li>
-                                    <li>• Great value for larger projects</li>
+                            <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Wood Fence Materials: Cedar vs. Pressure-Treated Pine</h2>
+
+                            <p class="text-gray-700 leading-relaxed mb-6">The most critical decision you'll make is the type of wood for your fence. We primarily work with Western Red Cedar and pressure-treated Southern Yellow Pine, as they are the best options for durability and value in our climate.</p>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                <div class="border border-gray-200 rounded-lg p-6 bg-white">
+                                    <h3 class="text-xl font-bold text-buda-primary mb-4">Western Red Cedar</h3>
+                                    <p class="text-gray-700 mb-4">Often considered the premium choice for wood fencing, Western Red Cedar contains natural oils that make it inherently resistant to rot, decay, and insects.</p>
+                                    <p class="font-semibold text-green-700 mb-2">Pros:</p>
+                                    <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                                        <li>• Natural durability without chemicals</li>
+                                        <li>• Dimensional stability - stays straight</li>
+                                        <li>• Stunning appearance with natural aging</li>
+                                        <li>• Lightweight and easy to work with</li>
+                                    </ul>
+                                    <p class="font-semibold text-red-700 mb-2">Cons:</p>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Higher initial cost than pine</li>
+                                    </ul>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-lg p-6 bg-white">
+                                    <h3 class="text-xl font-bold text-buda-primary mb-4">Pressure-Treated Pine</h3>
+                                    <p class="text-gray-700 mb-4">A more budget-friendly option that offers excellent durability. Chemical preservatives are forced deep into the wood's fibers for long-lasting protection.</p>
+                                    <p class="font-semibold text-green-700 mb-2">Pros:</p>
+                                    <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                                        <li>• Cost-effective and budget-friendly</li>
+                                        <li>• Excellent durability with treatment</li>
+                                        <li>• Readily available resource</li>
+                                        <li>• Great value for larger projects</li>
+                                    </ul>
+                                    <p class="font-semibold text-red-700 mb-2">Cons:</p>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Can warp or crack as it dries</li>
+                                        <li>• Requires staining for best appearance</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Popular Wood Fence Styles in Austin</h2>
+
+                            <p class="text-gray-700 leading-relaxed mb-6">We can build any style of wood fence you can imagine. Here are some of the most popular choices among Austin homeowners:</p>
+
+                            <div class="space-y-4 mb-8">
+                                <div class="border-l-4 border-buda-secondary pl-4">
+                                    <h3 class="font-bold text-lg text-buda-primary">Privacy Fence</h3>
+                                    <p class="text-gray-700">The most common style, featuring pickets placed side-by-side to create a solid, gap-free barrier. Best for privacy and security.</p>
+                                </div>
+                                <div class="border-l-4 border-buda-secondary pl-4">
+                                    <h3 class="font-bold text-lg text-buda-primary">Board-on-Board Fence</h3>
+                                    <p class="text-gray-700">Enhanced privacy with overlapping pickets creating a completely solid screen that looks great from both sides. Adds depth and premium look.</p>
+                                </div>
+                                <div class="border-l-4 border-buda-secondary pl-4">
+                                    <h3 class="font-bold text-lg text-buda-primary">Shadow Box Fence</h3>
+                                    <p class="text-gray-700">Alternating pickets on both sides of the rails create a semi-private fence with airflow and visual interest from both sides.</p>
+                                </div>
+                                <div class="border-l-4 border-buda-secondary pl-4">
+                                    <h3 class="font-bold text-lg text-buda-primary">Horizontal Fence</h3>
+                                    <p class="text-gray-700">Modern and stylish with boards run horizontally instead of vertically. Creates a unique, contemporary look popular in Austin's modern homes.</p>
+                                </div>
+                                <div class="border-l-4 border-buda-secondary pl-4">
+                                    <h3 class="font-bold text-lg text-buda-primary">Picture Frame Fence</h3>
+                                    <p class="text-gray-700">Trim added around each fence section creates a clean, finished look. Adds elegance to a standard privacy fence.</p>
+                                </div>
+                            </div>
+
+                            <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Our Expert Wood Fence Installation Process</h2>
+
+                            <p class="text-gray-700 leading-relaxed mb-6">A beautiful, long-lasting fence starts with a professional installation process. We have refined our methods over 5,000+ fence installations to ensure maximum quality, efficiency, and customer satisfaction.</p>
+
+                            <div class="space-y-6 mb-8">
+                                <div class="flex items-start">
+                                    <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-buda-primary mb-2">Free On-Site Consultation & Detailed Quote</h3>
+                                        <p class="text-gray-700">One of our fence experts visits your property to discuss your vision, measure the perimeter, and assess the terrain. You receive a detailed, transparent quote with no hidden fees.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">2</div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-buda-primary mb-2">Design, Planning, and Permit Handling</h3>
+                                        <p class="text-gray-700">We finalize the design and materials, then handle all permits required by your municipality. We contact 811 to have underground utility lines marked for safety.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">3</div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-buda-primary mb-2">Professional Installation with Premium Materials</h3>
+                                        <p class="text-gray-700">Our experienced crew sets heavy-gauge galvanized steel posts in concrete for a rock-solid foundation that won't rot. We custom-build the framework and attach each picket with quality screws.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">4</div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-buda-primary mb-2">Old Fence Removal & Complete Cleanup</h3>
+                                        <p class="text-gray-700">We demo and haul away your old existing fence at no extra charge. Our team thoroughly cleans the job site, leaving your property looking better than we found it.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">5</div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-buda-primary mb-2">Final Walk-Through & 5-Year Guarantee</h3>
+                                        <p class="text-gray-700">We conduct a final walk-through to ensure every detail is perfect. Every installation is backed by our 5-year installation guarantee for your peace of mind.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Wood Fence Gallery</h2>
+
+                            <p class="text-gray-700 leading-relaxed mb-6">See for yourself the quality and craftsmanship that goes into every Buda Fence Company project. Here are wood fences we've recently installed for satisfied customers throughout the Austin area.</p>
+
+                            <!-- Photo Gallery -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                                <div class="rounded-lg overflow-hidden shadow-lg">
+                                    <img src="/images/stained-cedar-fence.webp" alt="Stained cedar privacy fence with metal posts in Austin, TX" class="w-full h-64 object-cover" width="400" height="256" loading="lazy">
+                                    <div class="p-4 bg-white">
+                                        <p class="font-semibold text-buda-primary">Stained Cedar Privacy Fence</p>
+                                        <p class="text-sm text-gray-600">6ft cedar with metal posts and professional staining</p>
+                                    </div>
+                                </div>
+                                <div class="rounded-lg overflow-hidden shadow-lg">
+                                    <img src="/images/shadow-box.webp" alt="Shadow box wood fence installation in Austin, TX" class="w-full h-64 object-cover" width="400" height="256" loading="lazy">
+                                    <div class="p-4 bg-white">
+                                        <p class="font-semibold text-buda-primary">Shadow Box Style Fence</p>
+                                        <p class="text-sm text-gray-600">Alternating pickets with beautiful landscaping</p>
+                                    </div>
+                                </div>
+                                <div class="rounded-lg overflow-hidden shadow-lg">
+                                    <img src="/images/board-on-board.webp" alt="Board-on-board cedar fence in Austin, TX" class="w-full h-64 object-cover" width="400" height="256" loading="lazy">
+                                    <div class="p-4 bg-white">
+                                        <p class="font-semibold text-buda-primary">Board-on-Board Cedar Fence</p>
+                                        <p class="text-sm text-gray-600">Premium overlapping picket design</p>
+                                    </div>
+                                </div>
+                                <div class="rounded-lg overflow-hidden shadow-lg">
+                                    <img src="/images/cedar-cap-and-trim.webp" alt="Cedar fence with cap and trim in Austin, TX" class="w-full h-64 object-cover" width="400" height="256" loading="lazy">
+                                    <div class="p-4 bg-white">
+                                        <p class="font-semibold text-buda-primary">Cedar with Cap & Trim</p>
+                                        <p class="text-sm text-gray-600">Premium finish with decorative hardware</p>
+                                    </div>
+                                </div>
+                                <div class="rounded-lg overflow-hidden shadow-lg">
+                                    <img src="/images/privacy-fence.webp" alt="Cedar privacy fence with custom gate in Austin, TX" class="w-full h-64 object-cover" width="400" height="256" loading="lazy">
+                                    <div class="p-4 bg-white">
+                                        <p class="font-semibold text-buda-primary">Privacy Fence with Custom Gate</p>
+                                        <p class="text-sm text-gray-600">Complete backyard enclosure</p>
+                                    </div>
+                                </div>
+                                <div class="rounded-lg overflow-hidden shadow-lg">
+                                    <img src="/images/cedar-shadowbox.webp" alt="Cedar shadowbox fence installation in Austin, TX" class="w-full h-64 object-cover" width="400" height="256" loading="lazy">
+                                    <div class="p-4 bg-white">
+                                        <p class="font-semibold text-buda-primary">Cedar Shadowbox Fence</p>
+                                        <p class="text-sm text-gray-600">Semi-private style with airflow</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Before/After Section -->
+                            <div class="bg-gray-100 p-8 rounded-lg mb-12">
+                                <h3 class="text-2xl font-bold text-buda-primary mb-6 text-center">Fence Replacement Transformation</h3>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <img src="/images/cedar-fence-before.webp" alt="Old deteriorated wood fence before replacement in Austin, TX" class="w-full rounded-lg shadow-lg mb-3" width="400" height="300" loading="lazy">
+                                        <p class="text-center font-semibold text-gray-700">Before: Old, Deteriorated Fence</p>
+                                    </div>
+                                    <div>
+                                        <img src="/images/cedar-fence-after.webp" alt="New cedar fence after professional installation in Austin, TX" class="w-full rounded-lg shadow-lg mb-3" width="400" height="300" loading="lazy">
+                                        <p class="text-center font-semibold text-buda-primary">After: Beautiful New Cedar Fence</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">What Our Customers Say</h2>
+
+                            <div class="space-y-6 mb-12">
+                                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-buda-secondary">
+                                    <div class="flex items-center mb-3">
+                                        <div class="text-yellow-500 text-xl mr-2">★★★★★</div>
+                                        <span class="font-semibold text-buda-primary">Sylvia C.</span>
+                                        <span class="text-gray-600 text-sm ml-2">- Mountain City</span>
+                                    </div>
+                                    <p class="text-gray-700 italic">"We have the most beautiful fence. Very sturdy and we love the Postmaster Post. We highly recommend Buda Fence Co."</p>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-buda-secondary">
+                                    <div class="flex items-center mb-3">
+                                        <div class="text-yellow-500 text-xl mr-2">★★★★★</div>
+                                        <span class="font-semibold text-buda-primary">Harvest B.</span>
+                                        <span class="text-gray-600 text-sm ml-2">- Buda</span>
+                                    </div>
+                                    <p class="text-gray-700 italic">"We are very pleased with Buda Fence. They are reliable and are very good at communicating. The project quote included a breakdown of all of the details. They were careful to clean up the site after construction. The new fence looks great. They didn't cut any corners and paid attention to detail. Highly recommend."</p>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-buda-secondary">
+                                    <div class="flex items-center mb-3">
+                                        <div class="text-yellow-500 text-xl mr-2">★★★★★</div>
+                                        <span class="font-semibold text-buda-primary">Aaron R.</span>
+                                        <span class="text-gray-600 text-sm ml-2">- Buda</span>
+                                    </div>
+                                    <p class="text-gray-700 italic">"Not only were we scheduled quickly for an estimate after we called... the work started within a few days after we approved the estimate. The pictures you see of their work are not just stock pictures. They do quality work and take care of the smallest details on the install. Removal of my old fence was swift and done right. William and his crew were extremely helpful and responsive. Highly recommend!!!"</p>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-buda-secondary">
+                                    <div class="flex items-center mb-3">
+                                        <div class="text-yellow-500 text-xl mr-2">★★★★★</div>
+                                        <span class="font-semibold text-buda-primary">Kenneth D.</span>
+                                        <span class="text-gray-600 text-sm ml-2">- Austin</span>
+                                    </div>
+                                    <p class="text-gray-700 italic">"This company was so thorough from start to finish. They were transparent and communicated every step of the way. Their craftsmanship was professional with the highest quality of skill. They definitely know what they're doing!"</p>
+                                </div>
+                            </div>
+
+                            <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Frequently Asked Questions</h2>
+
+                            <div class="space-y-4 mb-12">
+                                <div class="border border-gray-200 rounded-lg p-6 bg-white">
+                                    <h3 class="font-bold text-lg text-buda-primary mb-2">How long does a cedar fence last in Texas?</h3>
+                                    <p class="text-gray-700">A well-built cedar fence can last 20-25 years in the Central Texas climate. The key factors are the quality of the materials and the installation. Using steel posts, which we do on all our fences, can significantly extend the life of the fence by preventing rot at the base.</p>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-lg p-6 bg-white">
+                                    <h3 class="font-bold text-lg text-buda-primary mb-2">How long does wood fence installation take?</h3>
+                                    <p class="text-gray-700">Most residential wood fence projects under 100 linear feet are completed in one day. Larger projects may take 2-3 days depending on terrain, complexity, and weather conditions. We'll provide an accurate timeline during your free consultation.</p>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-lg p-6 bg-white">
+                                    <h3 class="font-bold text-lg text-buda-primary mb-2">Do I need to stain my wood fence?</h3>
+                                    <p class="text-gray-700">While not required, staining your wood fence protects it from UV rays and moisture, significantly extending its lifespan and maintaining its appearance. We recommend staining within the first year and reapplying every 2-3 years. We offer professional fence staining as an optional upgrade service.</p>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-lg p-6 bg-white">
+                                    <h3 class="font-bold text-lg text-buda-primary mb-2">What is the difference between cedar and treated pine?</h3>
+                                    <p class="text-gray-700">Cedar is naturally rot-resistant with a premium appearance and better dimensional stability, while treated pine is more budget-friendly with chemical preservatives for durability. Both are excellent choices for the Texas climate. Cedar ages to a beautiful silver-gray, while pine requires staining to prevent graying.</p>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-lg p-6 bg-white">
+                                    <h3 class="font-bold text-lg text-buda-primary mb-2">Do you remove and haul away old fences?</h3>
+                                    <p class="text-gray-700">Yes! We demo and haul away your old existing fence at no extra charge. This is included in all our installation quotes. We'll remove the old fence, dispose of it properly, and leave your property clean.</p>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-lg p-6 bg-white">
+                                    <h3 class="font-bold text-lg text-buda-primary mb-2">Do you handle permits?</h3>
+                                    <p class="text-gray-700">Absolutely. Any permits required by your municipality are handled by Buda Fence Company. We take care of all the paperwork and coordination with local authorities so you don't have to worry about it.</p>
+                                </div>
+
+                                <div class="border border-gray-200 rounded-lg p-6 bg-white">
+                                    <h3 class="font-bold text-lg text-buda-primary mb-2">What is your installation guarantee?</h3>
+                                    <p class="text-gray-700">Every wood fence installation is backed by our 5-year installation guarantee. This covers workmanship and structural integrity. We stand behind our work because we build fences to last.</p>
+                                </div>
+                            </div>
+
+                            <!-- CTA Section -->
+                            <div class="bg-buda-primary text-white p-8 rounded-lg text-center">
+                                <h2 class="text-3xl font-bold text-white mb-4">Ready for Your New Wood Fence?</h2>
+                                <p class="text-xl text-white mb-6">Get a free, no-obligation estimate today. Most projects under 100 linear feet completed in one day!</p>
+                                <div class="flex flex-wrap justify-center gap-4">
+                                    <a class="bg-buda-secondary text-white px-8 py-4 rounded-lg hover:bg-red-700 transition font-semibold text-lg" href="/contact">Get Free Estimate</a>
+                                    <a href="tel:+15127107116" class="bg-white text-buda-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition font-semibold text-lg">(512) 710-7116</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="md:col-span-1">
+                        <div class="sticky top-24">
+                            <!-- Quick Contact -->
+                            <div class="bg-buda-secondary text-white p-6 rounded-lg mb-6">
+                                <h3 class="text-2xl font-bold text-white mb-4">Get Your Free Estimate</h3>
+                                <p class="text-white mb-4">Call us today for a free on-site consultation and detailed quote.</p>
+                                <a href="tel:+15127107116" class="block bg-white text-buda-secondary text-center py-3 rounded-lg font-bold text-xl hover:bg-gray-100 transition">(512) 710-7116</a>
+                                <a class="block bg-buda-primary text-white text-center py-3 rounded-lg font-bold mt-3 hover:bg-gray-800 transition" href="/contact">Request Online Quote</a>
+                            </div>
+
+                            <!-- Service Areas -->
+                            <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+                                <h3 class="text-xl font-bold text-buda-primary mb-4">Service Areas</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Austin, TX</li>
+                                    <li>• Buda, TX</li>
+                                    <li>• Kyle, TX</li>
+                                    <li>• Dripping Springs, TX</li>
+                                    <li>• South Austin</li>
+                                    <li>• Hays County</li>
                                 </ul>
-                                <p class="font-semibold text-red-600 mb-2">Cons:</p>
-                                <ul class="text-sm text-gray-700 space-y-1">
-                                    <li>• Can warp or crack as it dries</li>
-                                    <li>• Requires staining for best appearance</li>
+                            </div>
+
+                            <!-- Why Choose Us -->
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <h3 class="text-xl font-bold text-buda-primary mb-4">Why Choose Buda Fence?</h3>
+                                <ul class="space-y-3 text-sm text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-2">✓</span>
+                                        <span>5-year installation guarantee</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-2">✓</span>
+                                        <span>1-day installation for most projects</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-2">✓</span>
+                                        <span>Free old fence removal & haul away</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-2">✓</span>
+                                        <span>We handle all permits</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-2">✓</span>
+                                        <span>Steel posts on every fence</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-2">✓</span>
+                                        <span>5,000+ fences installed</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-buda-secondary mr-2">✓</span>
+                                        <span>Licensed & insured</span>
+                                    </li>
                                 </ul>
                             </div>
-                        </div>
-
-                        <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Popular Wood Fence Styles in Austin</h2>
-
-                        <p class="text-gray-700 leading-relaxed mb-6">We can build any style of wood fence you can imagine. Here are some of the most popular choices among Austin homeowners:</p>
-
-                        <div class="space-y-4 mb-8">
-                            <div class="border-l-4 border-buda-secondary pl-4">
-                                <h3 class="font-bold text-lg text-buda-primary">Privacy Fence</h3>
-                                <p class="text-gray-700">The most common style, featuring pickets placed side-by-side to create a solid, gap-free barrier. Best for privacy and security.</p>
-                            </div>
-                            <div class="border-l-4 border-buda-secondary pl-4">
-                                <h3 class="font-bold text-lg text-buda-primary">Board-on-Board Fence</h3>
-                                <p class="text-gray-700">Enhanced privacy with overlapping pickets creating a completely solid screen that looks great from both sides. Adds depth and premium look.</p>
-                            </div>
-                            <div class="border-l-4 border-buda-secondary pl-4">
-                                <h3 class="font-bold text-lg text-buda-primary">Shadow Box Fence</h3>
-                                <p class="text-gray-700">Alternating pickets on both sides of the rails create a semi-private fence with airflow and visual interest from both sides.</p>
-                            </div>
-                            <div class="border-l-4 border-buda-secondary pl-4">
-                                <h3 class="font-bold text-lg text-buda-primary">Horizontal Fence</h3>
-                                <p class="text-gray-700">Modern and stylish with boards run horizontally instead of vertically. Creates a unique, contemporary look popular in Austin's modern homes.</p>
-                            </div>
-                            <div class="border-l-4 border-buda-secondary pl-4">
-                                <h3 class="font-bold text-lg text-buda-primary">Picture Frame Fence</h3>
-                                <p class="text-gray-700">Trim added around each fence section creates a clean, finished look. Adds elegance to a standard privacy fence.</p>
-                            </div>
-                        </div>
-
-                        <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Our Expert Wood Fence Installation Process</h2>
-
-                        <p class="text-gray-700 leading-relaxed mb-6">A beautiful, long-lasting fence starts with a professional installation process. We have refined our methods over 5,000+ fence installations to ensure maximum quality, efficiency, and customer satisfaction.</p>
-
-                        <div class="space-y-6 mb-8">
-                            <div class="flex items-start">
-                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
-                                <div>
-                                    <h3 class="font-bold text-lg text-buda-primary mb-2">Free On-Site Consultation & Detailed Quote</h3>
-                                    <p class="text-gray-700">One of our fence experts visits your property to discuss your vision, measure the perimeter, and assess the terrain. You receive a detailed, transparent quote with no hidden fees.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">2</div>
-                                <div>
-                                    <h3 class="font-bold text-lg text-buda-primary mb-2">Design, Planning, and Permit Handling</h3>
-                                    <p class="text-gray-700">We finalize the design and materials, then handle all permits required by your municipality. We contact 811 to have underground utility lines marked for safety.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">3</div>
-                                <div>
-                                    <h3 class="font-bold text-lg text-buda-primary mb-2">Professional Installation with Premium Materials</h3>
-                                    <p class="text-gray-700">Our experienced crew sets heavy-gauge galvanized steel posts in concrete for a rock-solid foundation that won't rot. We custom-build the framework and attach each picket with quality screws.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">4</div>
-                                <div>
-                                    <h3 class="font-bold text-lg text-buda-primary mb-2">Old Fence Removal & Complete Cleanup</h3>
-                                    <p class="text-gray-700">We demo and haul away your old existing fence at no extra charge. Our team thoroughly cleans the job site, leaving your property looking better than we found it.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">5</div>
-                                <div>
-                                    <h3 class="font-bold text-lg text-buda-primary mb-2">Final Walk-Through & 5-Year Guarantee</h3>
-                                    <p class="text-gray-700">We conduct a final walk-through to ensure every detail is perfect. Every installation is backed by our 5-year installation guarantee for your peace of mind.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Wood Fence Gallery</h2>
-
-                        <p class="text-gray-700 leading-relaxed mb-6">See for yourself the quality and craftsmanship that goes into every Buda Fence Company project. Here are wood fences we've recently installed for satisfied customers throughout the Austin area.</p>
-
-                        <!-- Photo Gallery -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                            <div class="rounded-lg overflow-hidden shadow-lg">
-                                <img src="../images/stained-cedar-fence.jpg" alt="Stained cedar privacy fence with metal posts in Austin, TX" class="w-full h-64 object-cover">
-                                <div class="p-4 bg-white">
-                                    <p class="font-semibold text-buda-primary">Stained Cedar Privacy Fence</p>
-                                    <p class="text-sm text-gray-600">6ft cedar with metal posts and professional staining</p>
-                                </div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden shadow-lg">
-                                <img src="../images/shadow-box.jpg" alt="Shadow box wood fence installation in Austin, TX" class="w-full h-64 object-cover">
-                                <div class="p-4 bg-white">
-                                    <p class="font-semibold text-buda-primary">Shadow Box Style Fence</p>
-                                    <p class="text-sm text-gray-600">Alternating pickets with beautiful landscaping</p>
-                                </div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden shadow-lg">
-                                <img src="../images/board-on-board.JPG" alt="Board-on-board cedar fence in Austin, TX" class="w-full h-64 object-cover">
-                                <div class="p-4 bg-white">
-                                    <p class="font-semibold text-buda-primary">Board-on-Board Cedar Fence</p>
-                                    <p class="text-sm text-gray-600">Premium overlapping picket design</p>
-                                </div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden shadow-lg">
-                                <img src="../images/cedar-cap-and-trim.jpg" alt="Cedar fence with cap and trim in Austin, TX" class="w-full h-64 object-cover">
-                                <div class="p-4 bg-white">
-                                    <p class="font-semibold text-buda-primary">Cedar with Cap & Trim</p>
-                                    <p class="text-sm text-gray-600">Premium finish with decorative hardware</p>
-                                </div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden shadow-lg">
-                                <img src="../images/privacy-fence.JPG" alt="Cedar privacy fence with custom gate in Austin, TX" class="w-full h-64 object-cover">
-                                <div class="p-4 bg-white">
-                                    <p class="font-semibold text-buda-primary">Privacy Fence with Custom Gate</p>
-                                    <p class="text-sm text-gray-600">Complete backyard enclosure</p>
-                                </div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden shadow-lg">
-                                <img src="../images/cedar-shadowbox.JPG" alt="Cedar shadowbox fence installation in Austin, TX" class="w-full h-64 object-cover">
-                                <div class="p-4 bg-white">
-                                    <p class="font-semibold text-buda-primary">Cedar Shadowbox Fence</p>
-                                    <p class="text-sm text-gray-600">Semi-private style with airflow</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Before/After Section -->
-                        <div class="bg-gray-100 p-8 rounded-lg mb-12">
-                            <h3 class="text-2xl font-bold text-buda-primary mb-6 text-center">Fence Replacement Transformation</h3>
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <img src="../images/cedar-fence-before.JPG" alt="Old deteriorated wood fence before replacement in Austin, TX" class="w-full rounded-lg shadow-lg mb-3">
-                                    <p class="text-center font-semibold text-gray-700">Before: Old, Deteriorated Fence</p>
-                                </div>
-                                <div>
-                                    <img src="../images/cedar-fence-after.JPG" alt="New cedar fence after professional installation in Austin, TX" class="w-full rounded-lg shadow-lg mb-3">
-                                    <p class="text-center font-semibold text-buda-primary">After: Beautiful New Cedar Fence</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">What Our Customers Say</h2>
-
-                        <div class="space-y-6 mb-12">
-                            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-buda-secondary">
-                                <div class="flex items-center mb-3">
-                                    <div class="text-yellow-400 text-xl mr-2">★★★★★</div>
-                                    <span class="font-semibold text-buda-primary">Sylvia C.</span>
-                                    <span class="text-gray-500 text-sm ml-2">- Mountain City</span>
-                                </div>
-                                <p class="text-gray-700 italic">"We have the most beautiful fence. Very sturdy and we love the Postmaster Post. We highly recommend Buda Fence Co."</p>
-                            </div>
-
-                            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-buda-secondary">
-                                <div class="flex items-center mb-3">
-                                    <div class="text-yellow-400 text-xl mr-2">★★★★★</div>
-                                    <span class="font-semibold text-buda-primary">Harvest B.</span>
-                                    <span class="text-gray-500 text-sm ml-2">- Buda</span>
-                                </div>
-                                <p class="text-gray-700 italic">"We are very pleased with Buda Fence. They are reliable and are very good at communicating. The project quote included a breakdown of all of the details. They were careful to clean up the site after construction. The new fence looks great. They didn't cut any corners and paid attention to detail. Highly recommend."</p>
-                            </div>
-
-                            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-buda-secondary">
-                                <div class="flex items-center mb-3">
-                                    <div class="text-yellow-400 text-xl mr-2">★★★★★</div>
-                                    <span class="font-semibold text-buda-primary">Aaron R.</span>
-                                    <span class="text-gray-500 text-sm ml-2">- Buda</span>
-                                </div>
-                                <p class="text-gray-700 italic">"Not only were we scheduled quickly for an estimate after we called... the work started within a few days after we approved the estimate. The pictures you see of their work are not just stock pictures. They do quality work and take care of the smallest details on the install. Removal of my old fence was swift and done right. William and his crew were extremely helpful and responsive. Highly recommend!!!"</p>
-                            </div>
-
-                            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-buda-secondary">
-                                <div class="flex items-center mb-3">
-                                    <div class="text-yellow-400 text-xl mr-2">★★★★★</div>
-                                    <span class="font-semibold text-buda-primary">Kenneth D.</span>
-                                    <span class="text-gray-500 text-sm ml-2">- Austin</span>
-                                </div>
-                                <p class="text-gray-700 italic">"This company was so thorough from start to finish. They were transparent and communicated every step of the way. Their craftsmanship was professional with the highest quality of skill. They definitely know what they're doing!"</p>
-                            </div>
-                        </div>
-
-                        <h2 class="text-3xl font-bold text-buda-primary mt-12 mb-6">Frequently Asked Questions</h2>
-
-                        <div class="space-y-4 mb-12">
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="font-bold text-lg text-buda-primary mb-2">How long does a cedar fence last in Texas?</h3>
-                                <p class="text-gray-700">A well-built cedar fence can last 20-25 years in the Central Texas climate. The key factors are the quality of the materials and the installation. Using steel posts, which we do on all our fences, can significantly extend the life of the fence by preventing rot at the base.</p>
-                            </div>
-
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="font-bold text-lg text-buda-primary mb-2">How long does wood fence installation take?</h3>
-                                <p class="text-gray-700">Most residential wood fence projects under 100 linear feet are completed in one day. Larger projects may take 2-3 days depending on terrain, complexity, and weather conditions. We'll provide an accurate timeline during your free consultation.</p>
-                            </div>
-
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="font-bold text-lg text-buda-primary mb-2">Do I need to stain my wood fence?</h3>
-                                <p class="text-gray-700">While not required, staining your wood fence protects it from UV rays and moisture, significantly extending its lifespan and maintaining its appearance. We recommend staining within the first year and reapplying every 2-3 years. We offer professional fence staining as an optional upgrade service.</p>
-                            </div>
-
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="font-bold text-lg text-buda-primary mb-2">What is the difference between cedar and treated pine?</h3>
-                                <p class="text-gray-700">Cedar is naturally rot-resistant with a premium appearance and better dimensional stability, while treated pine is more budget-friendly with chemical preservatives for durability. Both are excellent choices for the Texas climate. Cedar ages to a beautiful silver-gray, while pine requires staining to prevent graying.</p>
-                            </div>
-
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="font-bold text-lg text-buda-primary mb-2">Do you remove and haul away old fences?</h3>
-                                <p class="text-gray-700">Yes! We demo and haul away your old existing fence at no extra charge. This is included in all our installation quotes. We'll remove the old fence, dispose of it properly, and leave your property clean.</p>
-                            </div>
-
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="font-bold text-lg text-buda-primary mb-2">Do you handle permits?</h3>
-                                <p class="text-gray-700">Absolutely. Any permits required by your municipality are handled by Buda Fence Company. We take care of all the paperwork and coordination with local authorities so you don't have to worry about it.</p>
-                            </div>
-
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="font-bold text-lg text-buda-primary mb-2">What is your installation guarantee?</h3>
-                                <p class="text-gray-700">Every wood fence installation is backed by our 5-year installation guarantee. This covers workmanship and structural integrity. We stand behind our work because we build fences to last.</p>
-                            </div>
-                        </div>
-
-                        <!-- CTA Section -->
-                        <div class="bg-buda-primary text-white p-8 rounded-lg text-center">
-                            <h2 class="text-3xl font-bold mb-4">Ready for Your New Wood Fence?</h2>
-                            <p class="text-xl mb-6">Get a free, no-obligation estimate today. Most projects under 100 linear feet completed in one day!</p>
-                            <div class="flex flex-wrap justify-center gap-4">
-                                <a href="/contact.html" class="bg-buda-secondary text-white px-8 py-4 rounded-lg hover:bg-red-700 transition font-semibold text-lg">Get Free Estimate</a>
-                                <a href="tel:+15127107116" class="bg-white text-buda-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition font-semibold text-lg">(512) 710-7116</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Sidebar -->
-                <div class="md:col-span-1">
-                    <div class="sticky top-24">
-                        <!-- Quick Contact -->
-                        <div class="bg-buda-secondary text-white p-6 rounded-lg mb-6">
-                            <h3 class="text-2xl font-bold mb-4">Get Your Free Estimate</h3>
-                            <p class="mb-4">Call us today for a free on-site consultation and detailed quote.</p>
-                            <a href="tel:+15127107116" class="block bg-white text-buda-secondary text-center py-3 rounded-lg font-bold text-xl hover:bg-gray-100 transition">(512) 710-7116</a>
-                            <a href="/contact.html" class="block bg-buda-primary text-white text-center py-3 rounded-lg font-bold mt-3 hover:bg-gray-800 transition">Request Online Quote</a>
-                        </div>
-
-                        <!-- Service Areas -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
-                            <h3 class="text-xl font-bold text-buda-primary mb-4">Service Areas</h3>
-                            <ul class="space-y-2 text-gray-700">
-                                <li>• Austin, TX</li>
-                                <li>• Buda, TX</li>
-                                <li>• Kyle, TX</li>
-                                <li>• Dripping Springs, TX</li>
-                                <li>• South Austin</li>
-                                <li>• Hays County</li>
-                            </ul>
-                        </div>
-
-                        <!-- Why Choose Us -->
-                        <div class="bg-gray-100 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold text-buda-primary mb-4">Why Choose Buda Fence?</h3>
-                            <ul class="space-y-3 text-sm text-gray-700">
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-2">✓</span>
-                                    <span>5-year installation guarantee</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-2">✓</span>
-                                    <span>1-day installation for most projects</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-2">✓</span>
-                                    <span>Free old fence removal & haul away</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-2">✓</span>
-                                    <span>We handle all permits</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-2">✓</span>
-                                    <span>Steel posts on every fence</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-2">✓</span>
-                                    <span>5,000+ fences installed</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-buda-secondary mr-2">✓</span>
-                                    <span>Licensed & insured</span>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-buda-primary text-white py-12">
+    <footer class="bg-buda-primary text-white py-12" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <img src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company" class="h-16 mb-4">
+                    <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company" class="h-16 mb-4" width="180" height="64">
                     <p class="text-gray-300">Building Budaful Fences in Austin, TX since 2019</p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <h4 class="font-bold text-lg text-white mb-4">Services</h4>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="/services/wood-fence-installation.html" class="hover:text-white">Wood Fences</a></li>
-                        <li><a href="/services/metal-fence-installation.html" class="hover:text-white">Metal Fences</a></li>
-                        <li><a href="/services/chain-link-fence.html" class="hover:text-white">Chain Link</a></li>
-                        <li><a href="/services/fence-repair.html" class="hover:text-white">Fence Repair</a></li>
+                        <li><a class="hover:text-white" href="/services/wood-fence-installation">Wood Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/metal-fence-installation">Metal Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/chain-link-fence-installation">Chain Link</a></li>
+                        <li><a class="hover:text-white" href="/services/fence-repair">Fence Repair</a></li>
+                        <li><a class="hover:text-white" href="/services/deck-construction">Deck Construction</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-lg mb-4">Company</h4>
+                    <h4 class="font-bold text-lg text-white mb-4">Company</h4>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="/about.html" class="hover:text-white">About Us</a></li>
-                        <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
-                        <li><a href="/blog.html" class="hover:text-white">Blog</a></li>
+                        <li><a class="hover:text-white" href="/about">About Us</a></li>
+                        <li><a class="hover:text-white" href="/gallery">Gallery</a></li>
+                        <li><a class="hover:text-white" href="/blog/">Blog</a></li>
+                        <li><a class="hover:text-white" href="/contact">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <h4 class="font-bold text-lg text-white mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-300">
                         <li>308 Wincliff Dr</li>
                         <li>Buda, TX 78610</li>
@@ -654,7 +712,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 Buda Fence Company. All rights reserved.</p>
+                <p>© 2026 Buda Fence Company. All rights reserved. | Serving Austin, Buda, Kyle, Dripping Springs & Hays County</p>
             </div>
         </div>
     </footer>
