@@ -6,43 +6,50 @@
     <title>About Us | Buda Fence Company - Family-Owned Fence Contractor in Austin, TX</title>
     <meta name="description" content="Meet the family behind Buda Fence Company. Since 2015, we've completed 5,000+ fence installations in Austin, Buda, Kyle & Dripping Springs. $1M insured. Call (512) 710-7116.">
     <link rel="canonical" href="https://budafenceco.com/about">
-    
+    <meta name="theme-color" content="#1e293b">
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="About Us | Buda Fence Company - Family-Owned Since 2015">
     <meta property="og:description" content="Meet the family behind Buda Fence Company. 5,000+ fence installations in Austin, Buda, Kyle & Dripping Springs. $1M insured. American Fence Association member.">
-    <meta property="og:image" content="https://budafenceco.com/images/william-espich-family.webp">
+    <meta property="og:image" content="https://budafenceco.com/images/william-espich-family-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://budafenceco.com/about">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Buda Fence Company">
-    
+
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About Us | Buda Fence Company - Family-Owned Since 2015">
     <meta name="twitter:description" content="Meet the family behind Buda Fence Company. 5,000+ fence installations. $1M insured. American Fence Association member.">
-    <meta name="twitter:image" content="https://budafenceco.com/images/william-espich-family.webp">
-    
+    <meta name="twitter:image" content="https://budafenceco.com/images/william-espich-family-og.jpg">
+
     <!-- Geo Tags -->
     <meta name="geo.region" content="US-TX">
     <meta name="geo.placename" content="Buda, Texas">
     <meta name="geo.position" content="30.09939;-97.86756">
     <meta name="ICBM" content="30.09939, -97.86756">
-    
+
     <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
-    
+
     <!-- Inlined Critical CSS -->
     <style>
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
         html,body{max-width:100vw;overflow-x:hidden}
         body{font-family:'Montserrat',ui-sans-serif,system-ui,sans-serif;background-color:#f9fafb;color:#374151;line-height:1.6}
-        
+
+        /* Brand-safe text links */
+        .text-link{color:#dc2626;text-decoration:underline;text-underline-offset:2px}
+        .text-link:hover{color:#b91c1c}
+
         /* Skip Link */
         .skip-link{position:absolute;top:-40px;left:0;background:#1e293b;color:#fff;padding:8px 16px;z-index:100;transition:top 0.3s}
         .skip-link:focus{top:0}
-        
+
         /* Navigation */
         nav{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.1);position:sticky;top:0;z-index:50}
         .nav-container{max-width:80rem;margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;height:5rem}
@@ -51,33 +58,33 @@
         .nav-link{color:#374151;font-weight:500;text-decoration:none;transition:color 0.2s}
         .nav-link:hover{color:#dc2626}
         .nav-link.active{color:#dc2626}
-        
-        /* CRITICAL: Navigation Button Reset */
-        nav button{background:none;background-color:transparent;border:none;border-width:0;border-style:none;box-shadow:none;cursor:pointer;padding:0;padding-bottom:16px;font-weight:500;color:#374151;font-family:inherit;font-size:inherit;line-height:inherit;outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+
+        /* Navigation Button Reset */
+        nav button{background:none;background-color:transparent;border:none;box-shadow:none;cursor:pointer;padding:0;padding-bottom:16px;font-weight:500;color:#374151;font-family:inherit;font-size:inherit;line-height:inherit;outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}
         nav button:hover{color:#dc2626}
         nav button:focus-visible{outline:2px solid #dc2626;outline-offset:2px}
         nav button:focus:not(:focus-visible){outline:none}
-        
+
         /* Dropdown */
         .dropdown{position:relative}
         .dropdown-menu{position:absolute;top:100%;left:0;background:#fff;box-shadow:0 10px 15px rgba(0,0,0,0.1);border-radius:0.5rem;padding:0.5rem 0;min-width:max-content;display:none;z-index:50}
         .dropdown:hover .dropdown-menu{display:block}
         .dropdown-item{display:block;padding:0.5rem 1rem;color:#374151;text-decoration:none;white-space:nowrap}
         .dropdown-item:hover{background:#f3f4f6}
-        
+
         /* Desktop Contact */
         .nav-contact{display:none;align-items:center;gap:1rem}
         .nav-phone{color:#1e293b;font-weight:600;text-decoration:none}
         .nav-cta{background:#dc2626;color:#fff;padding:0.5rem 1rem;border-radius:0.375rem;font-weight:600;text-decoration:none;transition:background 0.2s}
         .nav-cta:hover{background:#b91c1c}
-        
+
         /* Mobile Header */
         .mobile-header{display:flex;align-items:center;gap:0.5rem}
         .mobile-phone{color:#dc2626;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap}
         .mobile-cta{background:#dc2626;color:#fff;padding:0.375rem 0.75rem;border-radius:0.25rem;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap}
         .hamburger{background:none;border:none;cursor:pointer;padding:0.5rem}
         .hamburger svg{width:1.5rem;height:1.5rem;color:#374151}
-        
+
         /* Mobile Menu */
         .mobile-menu{display:none;background:#fff;border-top:1px solid #e5e7eb;padding:0.5rem}
         .mobile-menu.active{display:block}
@@ -87,37 +94,37 @@
         .mobile-section{padding:0.5rem 0.75rem}
         .mobile-section-title{color:#111827;font-weight:600;margin-bottom:0.5rem}
         .mobile-section a{padding:0.25rem 0 0.25rem 1rem;font-size:0.875rem;color:#4b5563;font-weight:400}
-        
+
         /* Hero Section */
         .hero{background:linear-gradient(to right,#1e293b,#334155);color:#fff;padding:4rem 1rem;text-align:center}
         .hero h1{font-size:2rem;font-weight:700;margin-bottom:1rem}
         .hero p{font-size:1.125rem;color:#e5e7eb;max-width:48rem;margin:0 auto}
-        
+
         /* Main Content */
         main{max-width:80rem;margin:0 auto;padding:3rem 1rem}
-        
+
         /* Section Spacing */
         section{margin-bottom:4rem}
-        
+
         /* Grid Layouts */
         .grid-2{display:grid;gap:3rem}
         .grid-2-md{display:grid;gap:2rem}
         .grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-        
+
         /* Story Section */
         .story-content h2{font-size:1.875rem;font-weight:700;color:#111827;margin-bottom:1.5rem}
         .story-content p{font-size:1.125rem;color:#374151;margin-bottom:1rem}
         .story-quote{background:#1e293b;color:#fff;padding:1.5rem;border-radius:0.5rem;margin-top:1.5rem}
         .story-quote p{font-style:italic;font-size:1.125rem;color:#fff;margin-bottom:0.5rem}
         .story-quote .author{font-weight:600;color:#e5e7eb}
-        .story-image img{width:100%;border-radius:0.5rem;box-shadow:0 10px 15px rgba(0,0,0,0.1)}
+        .story-image img{width:100%;height:auto;border-radius:0.5rem;box-shadow:0 10px 15px rgba(0,0,0,0.1)}
         .story-image p{text-align:center;color:#6b7280;font-size:0.875rem;margin-top:1rem}
-        
+
         /* Trust Badges */
         .badge{background:#fff;border-radius:0.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);padding:1.5rem;text-align:center}
         .badge-number{font-size:2rem;font-weight:700;color:#dc2626;margin-bottom:0.5rem}
         .badge-label{color:#374151}
-        
+
         /* Credentials */
         .credentials{background:#f3f4f6;border-radius:0.5rem;padding:2rem}
         .credentials h2{font-size:1.875rem;font-weight:700;color:#111827;text-align:center;margin-bottom:2rem}
@@ -129,15 +136,17 @@
         .credential-icon.blue svg{color:#2563eb}
         .credential-card h3{font-size:1.25rem;font-weight:700;color:#111827;margin-bottom:0.5rem}
         .credential-card p{color:#374151}
-        
+
         /* Values */
         .values h2{font-size:1.875rem;font-weight:700;color:#111827;text-align:center;margin-bottom:1rem}
         .values>p{font-size:1.125rem;color:#6b7280;text-align:center;max-width:48rem;margin:0 auto 2.5rem}
+        .values-grid{display:grid;gap:2rem;grid-template-columns:1fr}
+
         .value-card{background:#fff;border-radius:0.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);padding:2rem;text-align:center}
         .value-icon{background:#dc2626;color:#fff;width:4rem;height:4rem;border-radius:9999px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
         .value-card h3{font-size:1.25rem;font-weight:700;color:#111827;margin-bottom:0.75rem}
         .value-card p{color:#374151}
-        
+
         /* Meet Owner */
         .owner-section{background:#fff;border-radius:0.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);overflow:hidden}
         .owner-grid{display:grid}
@@ -152,7 +161,7 @@
         .owner-why li{display:flex;align-items:flex-start;margin-bottom:1rem}
         .owner-why li svg{width:1.5rem;height:1.5rem;color:#22c55e;margin-right:0.75rem;flex-shrink:0;margin-top:0.125rem}
         .owner-why li span{color:#374151}
-        
+
         /* Service Areas */
         .areas h2{font-size:1.875rem;font-weight:700;color:#111827;text-align:center;margin-bottom:1rem}
         .areas>p{font-size:1.125rem;color:#6b7280;text-align:center;max-width:48rem;margin:0 auto 2.5rem}
@@ -161,7 +170,7 @@
         .area-card svg{width:2rem;height:2rem;color:#dc2626;margin:0 auto 0.5rem}
         .area-card h3{font-weight:700;color:#111827}
         .area-card p{font-size:0.875rem;color:#6b7280}
-        
+
         /* CTA Section */
         .cta{background:linear-gradient(to right,#1e293b,#334155);border-radius:0.5rem;padding:2rem;text-align:center;color:#fff}
         .cta h2{font-size:1.875rem;font-weight:700;margin-bottom:1rem;color:#fff}
@@ -171,11 +180,11 @@
         .cta-primary:hover{background:#b91c1c}
         .cta-secondary{background:#fff;color:#1e293b;padding:0.75rem 2rem;border-radius:0.375rem;font-weight:600;font-size:1.125rem;text-decoration:none;transition:background 0.2s}
         .cta-secondary:hover{background:#f3f4f6}
-        
+
         /* Footer */
         footer{background:#0f172a;color:#fff;margin-top:4rem;padding:3rem 1rem}
         .footer-grid{max-width:80rem;margin:0 auto;display:grid;gap:2rem}
-        .footer-brand img{height:4rem;margin-bottom:1rem}
+        .footer-brand img{height:4rem;width:auto;margin-bottom:1rem}
         .footer-brand p{color:#9ca3af}
         .footer-section h4{font-weight:700;font-size:1.125rem;margin-bottom:1rem;color:#fff}
         .footer-section ul{list-style:none}
@@ -183,7 +192,7 @@
         .footer-section a{color:#9ca3af;text-decoration:none;transition:color 0.2s}
         .footer-section a:hover{color:#fff}
         .footer-bottom{max-width:80rem;margin:0 auto;border-top:1px solid #1e293b;margin-top:2rem;padding-top:2rem;text-align:center;color:#9ca3af}
-        
+
         /* Responsive */
         @media(min-width:768px){
             .nav-links{display:flex;align-items:center;gap:2rem}
@@ -201,14 +210,15 @@
             .cta h2{font-size:2.25rem}
             .cta-buttons{flex-direction:row}
             .footer-grid{grid-template-columns:repeat(4,1fr)}
+            .values-grid{grid-template-columns:repeat(3,1fr)}
         }
-        
+
         @media(min-width:1024px){
             .story-content h2{font-size:2.25rem}
         }
     </style>
-    
-    <!-- Schema Markup -->
+
+    <!-- Schema Markup (Option A: aggregateRating removed) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -259,11 +269,6 @@
         {"@type": "City", "name": "Kyle", "containedInPlace": {"@type": "State", "name": "Texas"}},
         {"@type": "City", "name": "Dripping Springs", "containedInPlace": {"@type": "State", "name": "Texas"}}
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "122"
-      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Fence Services",
@@ -277,7 +282,7 @@
       }
     }
     </script>
-    
+
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {
@@ -293,19 +298,28 @@
 <body>
     <!-- Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <!-- Navigation -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <!-- Logo -->
-            <a href="/" class="nav-logo">
-                <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company Logo" width="150" height="48">
+            <!-- Logo (Option 1: responsive logo) -->
+            <a href="/" class="nav-logo" aria-label="Buda Fence Company Home">
+                <img
+                    src="/images/buda-fence-logo-150.webp"
+                    srcset="/images/buda-fence-logo-150.webp 150w, /images/buda-fence-logo.webp 300w"
+                    sizes="150px"
+                    alt="Buda Fence Company Logo"
+                    width="150"
+                    height="74"
+                    loading="eager"
+                    decoding="async"
+                    fetchpriority="high">
             </a>
-            
+
             <!-- Desktop Navigation -->
             <div class="nav-links">
                 <a href="/" class="nav-link">Home</a>
-                <a href="/about" class="nav-link active">About</a>
+                <a href="/about" class="nav-link active" aria-current="page">About</a>
                 <div class="dropdown">
                     <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
                     <div class="dropdown-menu" role="menu">
@@ -330,13 +344,13 @@
                 <a href="/blog/" class="nav-link">Blog</a>
                 <a href="/contact" class="nav-link">Contact</a>
             </div>
-            
+
             <!-- Desktop Contact -->
             <div class="nav-contact">
                 <a href="tel:5127107116" class="nav-phone">(512) 710-7116</a>
                 <a href="/contact" class="nav-cta">Free Quote</a>
             </div>
-            
+
             <!-- Mobile Header -->
             <div class="mobile-header">
                 <a href="tel:5127107116" class="mobile-phone">(512) 710-7116</a>
@@ -348,11 +362,11 @@
                 </button>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu" role="menu">
             <a href="/" role="menuitem">Home</a>
-            <a href="/about" class="active" role="menuitem">About</a>
+            <a href="/about" class="active" role="menuitem" aria-current="page">About</a>
             <div class="mobile-section">
                 <p class="mobile-section-title">Services</p>
                 <a href="/services" role="menuitem">All Services</a>
@@ -383,21 +397,33 @@
 
     <!-- Main Content -->
     <main id="main-content" role="main">
-        
+
         <!-- Our Story Section -->
         <section class="grid-2">
             <div class="story-content">
                 <h2>Our Story</h2>
                 <p>Buda Fence Company was founded in 2015 by William Espich, a Buda native with a passion for quality craftsmanship. What started as a one-man operation has grown into a trusted team of fence professionals serving Central Texas.</p>
                 <p>Over the years, we've completed more than <strong>5,000 fence installations</strong>, earning a reputation for exceptional craftsmanship, reliable service, and customer satisfaction. Our commitment to quality has made us the go-to choice for homeowners throughout Buda, Austin, Kyle, and Dripping Springs.</p>
-                <p>We're a small family business located right here in Buda, and we strive to provide exceptional service to our community. We build relationships that last through professional, honest, and reliable services at a fair price.</p>
+                <p>We're a small family business located right here in Buda, and we strive to provide exceptional service to our community. We build relationships that last through professional, honest, and reliable services at a fair price. Learn more about our <a class="text-link" href="/services/wood-fence-installation">wood fence installation</a> and <a class="text-link" href="/services/fence-repair">fence repair</a> services.</p>
                 <div class="story-quote">
                     <p>"We're not the cheapest, but we guarantee we'll build it better than anyone else with no shortcuts."</p>
                     <p class="author">— William Espich, Founder</p>
                 </div>
             </div>
             <div class="story-image">
-                <img src="/images/william-espich-family.webp" alt="William Espich and family - Buda Fence Company owners" width="600" height="400" loading="lazy">
+                <img
+                    src="/images/william-espich-family-640.webp"
+                    srcset="/images/william-espich-family-320.webp 320w,
+                            /images/william-espich-family-480.webp 480w,
+                            /images/william-espich-family-640.webp 640w,
+                            /images/william-espich-family.webp 800w"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    alt="William Espich and family - Buda Fence Company owners"
+                    width="800"
+                    height="800"
+                    loading="eager"
+                    decoding="async"
+                    fetchpriority="high">
                 <p>William Espich with his family - the heart behind Buda Fence Company</p>
             </div>
         </section>
@@ -455,7 +481,8 @@
         <section class="values">
             <h2>Our Values</h2>
             <p>We're committed to transforming your property with beautiful, durable fencing while providing an exceptional customer experience.</p>
-            <div class="grid-2-md" style="grid-template-columns:repeat(3,1fr)">
+
+            <div class="values-grid">
                 <div class="value-card">
                     <div class="value-icon">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -580,7 +607,15 @@
     <footer role="contentinfo">
         <div class="footer-grid">
             <div class="footer-brand">
-                <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company" width="150" height="48">
+                <img
+                    src="/images/buda-fence-logo-150.webp"
+                    srcset="/images/buda-fence-logo-150.webp 150w, /images/buda-fence-logo.webp 300w"
+                    sizes="150px"
+                    alt="Buda Fence Company"
+                    width="150"
+                    height="74"
+                    loading="lazy"
+                    decoding="async">
                 <p>Building Budaful fences for Central Texas families since 2015.</p>
             </div>
             <div class="footer-section">
