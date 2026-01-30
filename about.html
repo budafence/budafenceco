@@ -4,37 +4,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Buda Fence Company - Family-Owned Fence Contractor in Austin, TX</title>
-    <meta name="description" content="Meet the family behind Buda Fence Company. Since 2015, we've completed 5,000+ fence installations in Austin, Buda, Kyle & Dripping Springs. $1M insured. American Fence Association member.">
-    <link rel="canonical" href="https://budafenceco.com/about.html">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'buda-primary': '#1e3a5f',
-                        'buda-secondary': '#dc2626',
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="description" content="Meet the family behind Buda Fence Company. Since 2015, we've completed 5,000+ fence installations in Austin, Buda, Kyle & Dripping Springs. $1M insured. Call (512) 710-7116.">
+    <link rel="canonical" href="https://budafenceco.com/about">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About Us | Buda Fence Company - Family-Owned Since 2015">
+    <meta property="og:description" content="Meet the family behind Buda Fence Company. 5,000+ fence installations in Austin, Buda, Kyle & Dripping Springs. $1M insured. American Fence Association member.">
+    <meta property="og:image" content="https://budafenceco.com/images/william-espich-family.webp">
+    <meta property="og:url" content="https://budafenceco.com/about">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Buda Fence Company">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | Buda Fence Company - Family-Owned Since 2015">
+    <meta name="twitter:description" content="Meet the family behind Buda Fence Company. 5,000+ fence installations. $1M insured. American Fence Association member.">
+    <meta name="twitter:image" content="https://budafenceco.com/images/william-espich-family.webp">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Buda, Texas">
+    <meta name="geo.position" content="30.09939;-97.86756">
+    <meta name="ICBM" content="30.09939, -97.86756">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
+    
+    <!-- Inlined Critical CSS -->
     <style>
-        html, body {
-            max-width: 100vw;
-            overflow-x: hidden;
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html,body{max-width:100vw;overflow-x:hidden}
+        body{font-family:'Montserrat',ui-sans-serif,system-ui,sans-serif;background-color:#f9fafb;color:#374151;line-height:1.6}
+        
+        /* Skip Link */
+        .skip-link{position:absolute;top:-40px;left:0;background:#1e293b;color:#fff;padding:8px 16px;z-index:100;transition:top 0.3s}
+        .skip-link:focus{top:0}
+        
+        /* Navigation */
+        nav{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.1);position:sticky;top:0;z-index:50}
+        .nav-container{max-width:80rem;margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;height:5rem}
+        .nav-logo img{height:4rem;width:auto}
+        .nav-links{display:none}
+        .nav-link{color:#374151;font-weight:500;text-decoration:none;transition:color 0.2s}
+        .nav-link:hover{color:#dc2626}
+        .nav-link.active{color:#dc2626}
+        
+        /* CRITICAL: Navigation Button Reset */
+        nav button{background:none;background-color:transparent;border:none;border-width:0;border-style:none;box-shadow:none;cursor:pointer;padding:0;padding-bottom:16px;font-weight:500;color:#374151;font-family:inherit;font-size:inherit;line-height:inherit;outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+        nav button:hover{color:#dc2626}
+        nav button:focus-visible{outline:2px solid #dc2626;outline-offset:2px}
+        nav button:focus:not(:focus-visible){outline:none}
+        
+        /* Dropdown */
+        .dropdown{position:relative}
+        .dropdown-menu{position:absolute;top:100%;left:0;background:#fff;box-shadow:0 10px 15px rgba(0,0,0,0.1);border-radius:0.5rem;padding:0.5rem 0;min-width:max-content;display:none;z-index:50}
+        .dropdown:hover .dropdown-menu{display:block}
+        .dropdown-item{display:block;padding:0.5rem 1rem;color:#374151;text-decoration:none;white-space:nowrap}
+        .dropdown-item:hover{background:#f3f4f6}
+        
+        /* Desktop Contact */
+        .nav-contact{display:none;align-items:center;gap:1rem}
+        .nav-phone{color:#1e293b;font-weight:600;text-decoration:none}
+        .nav-cta{background:#dc2626;color:#fff;padding:0.5rem 1rem;border-radius:0.375rem;font-weight:600;text-decoration:none;transition:background 0.2s}
+        .nav-cta:hover{background:#b91c1c}
+        
+        /* Mobile Header */
+        .mobile-header{display:flex;align-items:center;gap:0.5rem}
+        .mobile-phone{color:#dc2626;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap}
+        .mobile-cta{background:#dc2626;color:#fff;padding:0.375rem 0.75rem;border-radius:0.25rem;font-size:0.75rem;font-weight:600;text-decoration:none;white-space:nowrap}
+        .hamburger{background:none;border:none;cursor:pointer;padding:0.5rem}
+        .hamburger svg{width:1.5rem;height:1.5rem;color:#374151}
+        
+        /* Mobile Menu */
+        .mobile-menu{display:none;background:#fff;border-top:1px solid #e5e7eb;padding:0.5rem}
+        .mobile-menu.active{display:block}
+        .mobile-menu a{display:block;padding:0.5rem 0.75rem;color:#374151;text-decoration:none;font-weight:500}
+        .mobile-menu a:hover{color:#dc2626}
+        .mobile-menu a.active{color:#dc2626}
+        .mobile-section{padding:0.5rem 0.75rem}
+        .mobile-section-title{color:#111827;font-weight:600;margin-bottom:0.5rem}
+        .mobile-section a{padding:0.25rem 0 0.25rem 1rem;font-size:0.875rem;color:#4b5563;font-weight:400}
+        
+        /* Hero Section */
+        .hero{background:linear-gradient(to right,#1e293b,#334155);color:#fff;padding:4rem 1rem;text-align:center}
+        .hero h1{font-size:2rem;font-weight:700;margin-bottom:1rem}
+        .hero p{font-size:1.125rem;color:#e5e7eb;max-width:48rem;margin:0 auto}
+        
+        /* Main Content */
+        main{max-width:80rem;margin:0 auto;padding:3rem 1rem}
+        
+        /* Section Spacing */
+        section{margin-bottom:4rem}
+        
+        /* Grid Layouts */
+        .grid-2{display:grid;gap:3rem}
+        .grid-2-md{display:grid;gap:2rem}
+        .grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+        
+        /* Story Section */
+        .story-content h2{font-size:1.875rem;font-weight:700;color:#111827;margin-bottom:1.5rem}
+        .story-content p{font-size:1.125rem;color:#374151;margin-bottom:1rem}
+        .story-quote{background:#1e293b;color:#fff;padding:1.5rem;border-radius:0.5rem;margin-top:1.5rem}
+        .story-quote p{font-style:italic;font-size:1.125rem;color:#fff;margin-bottom:0.5rem}
+        .story-quote .author{font-weight:600;color:#e5e7eb}
+        .story-image img{width:100%;border-radius:0.5rem;box-shadow:0 10px 15px rgba(0,0,0,0.1)}
+        .story-image p{text-align:center;color:#6b7280;font-size:0.875rem;margin-top:1rem}
+        
+        /* Trust Badges */
+        .badge{background:#fff;border-radius:0.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);padding:1.5rem;text-align:center}
+        .badge-number{font-size:2rem;font-weight:700;color:#dc2626;margin-bottom:0.5rem}
+        .badge-label{color:#374151}
+        
+        /* Credentials */
+        .credentials{background:#f3f4f6;border-radius:0.5rem;padding:2rem}
+        .credentials h2{font-size:1.875rem;font-weight:700;color:#111827;text-align:center;margin-bottom:2rem}
+        .credential-card{background:#fff;border-radius:0.5rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);display:flex;align-items:flex-start}
+        .credential-icon{flex-shrink:0;width:3.5rem;height:3.5rem;border-radius:9999px;display:flex;align-items:center;justify-content:center;margin-right:1rem}
+        .credential-icon.green{background:#dcfce7}
+        .credential-icon.green svg{color:#16a34a}
+        .credential-icon.blue{background:#dbeafe}
+        .credential-icon.blue svg{color:#2563eb}
+        .credential-card h3{font-size:1.25rem;font-weight:700;color:#111827;margin-bottom:0.5rem}
+        .credential-card p{color:#374151}
+        
+        /* Values */
+        .values h2{font-size:1.875rem;font-weight:700;color:#111827;text-align:center;margin-bottom:1rem}
+        .values>p{font-size:1.125rem;color:#6b7280;text-align:center;max-width:48rem;margin:0 auto 2.5rem}
+        .value-card{background:#fff;border-radius:0.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);padding:2rem;text-align:center}
+        .value-icon{background:#dc2626;color:#fff;width:4rem;height:4rem;border-radius:9999px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+        .value-card h3{font-size:1.25rem;font-weight:700;color:#111827;margin-bottom:0.75rem}
+        .value-card p{color:#374151}
+        
+        /* Meet Owner */
+        .owner-section{background:#fff;border-radius:0.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);overflow:hidden}
+        .owner-grid{display:grid}
+        .owner-bio{background:#1e293b;padding:2rem;color:#fff}
+        .owner-bio h2{font-size:1.875rem;font-weight:700;margin-bottom:1.5rem;color:#fff}
+        .owner-bio h3{font-size:1.5rem;font-weight:600;margin-bottom:0.5rem;color:#fff}
+        .owner-bio .title{color:#dc2626;font-weight:500;margin-bottom:1rem}
+        .owner-bio p{color:#e5e7eb;margin-bottom:1rem}
+        .owner-why{padding:2rem}
+        .owner-why h3{font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:1.5rem}
+        .owner-why ul{list-style:none}
+        .owner-why li{display:flex;align-items:flex-start;margin-bottom:1rem}
+        .owner-why li svg{width:1.5rem;height:1.5rem;color:#22c55e;margin-right:0.75rem;flex-shrink:0;margin-top:0.125rem}
+        .owner-why li span{color:#374151}
+        
+        /* Service Areas */
+        .areas h2{font-size:1.875rem;font-weight:700;color:#111827;text-align:center;margin-bottom:1rem}
+        .areas>p{font-size:1.125rem;color:#6b7280;text-align:center;max-width:48rem;margin:0 auto 2.5rem}
+        .area-card{background:#fff;border-radius:0.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);padding:1.5rem;text-align:center;text-decoration:none;transition:box-shadow 0.2s}
+        .area-card:hover{box-shadow:0 4px 6px rgba(0,0,0,0.1)}
+        .area-card svg{width:2rem;height:2rem;color:#dc2626;margin:0 auto 0.5rem}
+        .area-card h3{font-weight:700;color:#111827}
+        .area-card p{font-size:0.875rem;color:#6b7280}
+        
+        /* CTA Section */
+        .cta{background:linear-gradient(to right,#1e293b,#334155);border-radius:0.5rem;padding:2rem;text-align:center;color:#fff}
+        .cta h2{font-size:1.875rem;font-weight:700;margin-bottom:1rem;color:#fff}
+        .cta p{font-size:1.125rem;color:#e5e7eb;max-width:42rem;margin:0 auto 2rem}
+        .cta-buttons{display:flex;flex-direction:column;gap:1rem;justify-content:center}
+        .cta-primary{background:#dc2626;color:#fff;padding:0.75rem 2rem;border-radius:0.375rem;font-weight:600;font-size:1.125rem;text-decoration:none;transition:background 0.2s}
+        .cta-primary:hover{background:#b91c1c}
+        .cta-secondary{background:#fff;color:#1e293b;padding:0.75rem 2rem;border-radius:0.375rem;font-weight:600;font-size:1.125rem;text-decoration:none;transition:background 0.2s}
+        .cta-secondary:hover{background:#f3f4f6}
+        
+        /* Footer */
+        footer{background:#0f172a;color:#fff;margin-top:4rem;padding:3rem 1rem}
+        .footer-grid{max-width:80rem;margin:0 auto;display:grid;gap:2rem}
+        .footer-brand img{height:4rem;margin-bottom:1rem}
+        .footer-brand p{color:#9ca3af}
+        .footer-section h4{font-weight:700;font-size:1.125rem;margin-bottom:1rem;color:#fff}
+        .footer-section ul{list-style:none}
+        .footer-section li{margin-bottom:0.5rem}
+        .footer-section a{color:#9ca3af;text-decoration:none;transition:color 0.2s}
+        .footer-section a:hover{color:#fff}
+        .footer-bottom{max-width:80rem;margin:0 auto;border-top:1px solid #1e293b;margin-top:2rem;padding-top:2rem;text-align:center;color:#9ca3af}
+        
+        /* Responsive */
+        @media(min-width:768px){
+            .nav-links{display:flex;align-items:center;gap:2rem}
+            .nav-contact{display:flex}
+            .mobile-header{display:none}
+            .mobile-menu{display:none !important}
+            .hero{padding:5rem 1rem}
+            .hero h1{font-size:3rem}
+            .hero p{font-size:1.25rem}
+            .grid-2{grid-template-columns:repeat(2,1fr)}
+            .grid-2-md{grid-template-columns:repeat(2,1fr)}
+            .grid-4{grid-template-columns:repeat(4,1fr)}
+            .owner-grid{grid-template-columns:repeat(2,1fr)}
+            .cta{padding:3rem}
+            .cta h2{font-size:2.25rem}
+            .cta-buttons{flex-direction:row}
+            .footer-grid{grid-template-columns:repeat(4,1fr)}
         }
-        * {
-            max-width: 100%;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-        @media (max-width: 768px) {
-            .container, .mx-auto, [class*="max-w"] {
-                max-width: 100vw !important;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
+        
+        @media(min-width:1024px){
+            .story-content h2{font-size:2.25rem}
         }
     </style>
     
@@ -44,10 +214,11 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Buda Fence Company",
-      "image": "https://budafenceco.com/images/BudaFenceLogo.jpeg",
+      "image": "https://budafenceco.com/images/buda-fence-logo.webp",
       "@id": "https://budafenceco.com",
       "url": "https://budafenceco.com",
       "telephone": "(512) 710-7116",
+      "email": "info@budafenceco.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "308 Wincliff Dr",
@@ -61,12 +232,20 @@
         "latitude": 30.09939,
         "longitude": -97.86756
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "07:00",
-        "closes": "19:00"
-      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
       "sameAs": ["https://www.facebook.com/BudaFenceCo"],
       "founder": {
         "@type": "Person",
@@ -84,286 +263,262 @@
         "@type": "AggregateRating",
         "ratingValue": "4.9",
         "reviewCount": "122"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Fence Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wood Fence Installation"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Metal Fence Installation"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chain Link Fence Installation"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fence Repair"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deck Construction"}}
+        ]
       }
     }
     </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://budafenceco.com"},
+        {"@type": "ListItem", "position": 2, "name": "About Us", "item": "https://budafenceco.com/about"}
+      ]
+    }
+    </script>
 </head>
-<body class="bg-gray-50">
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="index.html">
-                        <img class="h-16 w-auto" src="images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo">
-                    </a>
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="/" class="nav-logo">
+                <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company Logo" width="150" height="48">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link active">About</a>
+                <div class="dropdown">
+                    <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="/services" class="dropdown-item" role="menuitem">All Services</a>
+                        <a href="/services/deck-construction" class="dropdown-item" role="menuitem">Deck Construction</a>
+                        <a href="/services/wood-fence-installation" class="dropdown-item" role="menuitem">Wood Fence Installation</a>
+                        <a href="/services/metal-fence-installation" class="dropdown-item" role="menuitem">Metal Fence Installation</a>
+                        <a href="/services/chain-link-fence-installation" class="dropdown-item" role="menuitem">Chain Link Fence Installation</a>
+                        <a href="/services/fence-repair" class="dropdown-item" role="menuitem">Fence Repair</a>
+                    </div>
                 </div>
-                
-             <!-- Desktop Navigation -->
-<div class="hidden md:flex space-x-8">
-    <a href="index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-    <a href="about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
-    <div class="relative group">
-        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Services ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
-            <a href="services/deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
-            <a href="services/wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
-            <a href="services/metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
-            <a href="services/chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
-            <a href="services/fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
-        </div>
-    </div>
-    <div class="relative group">
-        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="service-areas/austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
-            <a href="service-areas/buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
-            <a href="service-areas/kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
-            <a href="service-areas/dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
-        </div>
-    </div>
-    <a href="gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-    <a href="blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-    <a href="contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-</div>
-                
-                <!-- Desktop Contact -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
-                    <a href="contact.html" class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold">Free Quote</a>
+                <div class="dropdown">
+                    <button aria-haspopup="true" aria-expanded="false">Service Areas ▾</button>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="/service-areas/austin" class="dropdown-item" role="menuitem">Austin</a>
+                        <a href="/service-areas/buda" class="dropdown-item" role="menuitem">Buda</a>
+                        <a href="/service-areas/kyle" class="dropdown-item" role="menuitem">Kyle</a>
+                        <a href="/service-areas/dripping-springs" class="dropdown-item" role="menuitem">Dripping Springs</a>
+                    </div>
                 </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center space-x-2">
-                    <a href="tel:5127107116" class="text-buda-secondary text-xs font-semibold whitespace-nowrap">(512) 710-7116</a>
-                    <a href="contact.html" class="bg-buda-secondary text-white px-3 py-1.5 rounded text-xs font-semibold whitespace-nowrap">Quote</a>
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-buda-secondary">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
+                <a href="/gallery" class="nav-link">Gallery</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="/contact" class="nav-link">Contact</a>
+            </div>
+            
+            <!-- Desktop Contact -->
+            <div class="nav-contact">
+                <a href="tel:5127107116" class="nav-phone">(512) 710-7116</a>
+                <a href="/contact" class="nav-cta">Free Quote</a>
+            </div>
+            
+            <!-- Mobile Header -->
+            <div class="mobile-header">
+                <a href="tel:5127107116" class="mobile-phone">(512) 710-7116</a>
+                <a href="/contact" class="mobile-cta">Quote</a>
+                <button class="hamburger" id="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
             </div>
         </div>
         
-       <!-- Mobile Navigation Menu -->
-<div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="index.html" class="block px-3 py-2 text-buda-secondary font-medium">Home</a>
-        <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
-        <div class="px-3 py-2">
-            <p class="text-gray-900 font-semibold mb-2">Services</p>
-            <a href="services.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">All Services</a>
-            <a href="services/deck-construction.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Deck Construction</a>
-            <a href="services/wood-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Wood Fence</a>
-            <a href="services/metal-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Metal Fence</a>
-            <a href="services/chain-link-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Chain Link</a>
-            <a href="services/fence-repair.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Fence Repair</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu" role="menu">
+            <a href="/" role="menuitem">Home</a>
+            <a href="/about" class="active" role="menuitem">About</a>
+            <div class="mobile-section">
+                <p class="mobile-section-title">Services</p>
+                <a href="/services" role="menuitem">All Services</a>
+                <a href="/services/deck-construction" role="menuitem">Deck Construction</a>
+                <a href="/services/wood-fence-installation" role="menuitem">Wood Fence</a>
+                <a href="/services/metal-fence-installation" role="menuitem">Metal Fence</a>
+                <a href="/services/chain-link-fence-installation" role="menuitem">Chain Link</a>
+                <a href="/services/fence-repair" role="menuitem">Fence Repair</a>
+            </div>
+            <div class="mobile-section">
+                <p class="mobile-section-title">Service Areas</p>
+                <a href="/service-areas/austin" role="menuitem">Austin</a>
+                <a href="/service-areas/buda" role="menuitem">Buda</a>
+                <a href="/service-areas/kyle" role="menuitem">Kyle</a>
+                <a href="/service-areas/dripping-springs" role="menuitem">Dripping Springs</a>
+            </div>
+            <a href="/gallery" role="menuitem">Gallery</a>
+            <a href="/blog/" role="menuitem">Blog</a>
+            <a href="/contact" role="menuitem">Contact</a>
         </div>
-        <div class="px-3 py-2">
-            <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-            <a href="service-areas/austin.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Austin</a>
-            <a href="service-areas/buda.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Buda</a>
-            <a href="service-areas/kyle.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Kyle</a>
-            <a href="service-areas/dripping-springs.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Dripping Springs</a>
-        </div>
-        <a href="gallery.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-        <a href="blog/" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-        <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-    </div>
-</div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-buda-primary to-slate-800 text-white py-16 md:py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">About Buda Fence Company</h1>
-            <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
-                A family-owned fence company building lasting relationships and Budaful fences since 2015
-            </p>
-        </div>
+    <section class="hero" role="banner">
+        <h1>About Buda Fence Company</h1>
+        <p>A family-owned fence company building lasting relationships and Budaful fences since 2015</p>
     </section>
 
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main id="main-content" role="main">
         
         <!-- Our Story Section -->
-        <section class="mb-16">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
-                    <p class="text-lg text-gray-700 mb-4">
-                        Founded in 2015, Buda Fence Company began with a simple mission: to provide Central Texas homeowners with high-quality fencing solutions that combine durability, beauty, and value. What started as a small family business has grown into one of the most trusted fence installation companies in the Austin area.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-4">
-                        Over the years, we've completed more than <strong>5,000 fence installations</strong>, earning a reputation for exceptional craftsmanship, reliable service, and customer satisfaction. Our commitment to quality has made us the go-to choice for homeowners throughout Buda, Austin, Kyle, and Dripping Springs.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-6">
-                        We're a small family business located right here in Buda, and we strive to provide exceptional service to our community. We build relationships that last through professional, honest, and reliable services at a fair price.
-                    </p>
-                    <div class="bg-buda-primary text-white p-6 rounded-lg">
-                        <p class="text-lg italic">
-                            "We're not the cheapest, but we guarantee we'll build it better than anyone else with no shortcuts."
-                        </p>
-                        <p class="mt-2 font-semibold">— William Espich, Founder</p>
-                    </div>
+        <section class="grid-2">
+            <div class="story-content">
+                <h2>Our Story</h2>
+                <p>Buda Fence Company was founded in 2015 by William Espich, a Buda native with a passion for quality craftsmanship. What started as a one-man operation has grown into a trusted team of fence professionals serving Central Texas.</p>
+                <p>Over the years, we've completed more than <strong>5,000 fence installations</strong>, earning a reputation for exceptional craftsmanship, reliable service, and customer satisfaction. Our commitment to quality has made us the go-to choice for homeowners throughout Buda, Austin, Kyle, and Dripping Springs.</p>
+                <p>We're a small family business located right here in Buda, and we strive to provide exceptional service to our community. We build relationships that last through professional, honest, and reliable services at a fair price.</p>
+                <div class="story-quote">
+                    <p>"We're not the cheapest, but we guarantee we'll build it better than anyone else with no shortcuts."</p>
+                    <p class="author">— William Espich, Founder</p>
                 </div>
-                <div>
-                    <img src="images/william-espich-family.jpg" alt="William Espich and family - Buda Fence Company owners" class="rounded-lg shadow-xl w-full">
-                    <p class="text-center text-gray-600 mt-4 text-sm">William Espich with his family - the heart behind Buda Fence Company</p>
-                </div>
+            </div>
+            <div class="story-image">
+                <img src="/images/william-espich-family.webp" alt="William Espich and family - Buda Fence Company owners" width="600" height="400" loading="lazy">
+                <p>William Espich with his family - the heart behind Buda Fence Company</p>
             </div>
         </section>
 
         <!-- Trust Badges -->
-        <section class="mb-16">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <div class="text-4xl font-bold text-buda-secondary mb-2">5,000+</div>
-                    <p class="text-gray-700">Fences Installed</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <div class="text-4xl font-bold text-buda-secondary mb-2">10+</div>
-                    <p class="text-gray-700">Years Experience</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <div class="text-4xl font-bold text-buda-secondary mb-2">4.9★</div>
-                    <p class="text-gray-700">Average Rating</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <div class="text-4xl font-bold text-buda-secondary mb-2">122+</div>
-                    <p class="text-gray-700">5-Star Reviews</p>
-                </div>
+        <section class="grid-4">
+            <div class="badge">
+                <div class="badge-number">5,000+</div>
+                <p class="badge-label">Fences Installed</p>
+            </div>
+            <div class="badge">
+                <div class="badge-number">10+</div>
+                <p class="badge-label">Years Experience</p>
+            </div>
+            <div class="badge">
+                <div class="badge-number">4.9★</div>
+                <p class="badge-label">Average Rating</p>
+            </div>
+            <div class="badge">
+                <div class="badge-number">122+</div>
+                <p class="badge-label">5-Star Reviews</p>
             </div>
         </section>
 
         <!-- Credentials Section -->
-        <section class="mb-16 bg-gray-100 rounded-lg p-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Our Credentials</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg p-6 shadow-md flex items-start">
-                    <div class="flex-shrink-0 bg-green-100 rounded-full p-3 mr-4">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <section class="credentials">
+            <h2>Our Credentials</h2>
+            <div class="grid-2-md">
+                <div class="credential-card">
+                    <div class="credential-icon green">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">$1 Million Insurance Policy</h3>
-                        <p class="text-gray-700">
-                            We carry comprehensive liability insurance to protect your property and give you peace of mind. Every project is fully covered.
-                        </p>
+                        <h3>$1 Million Insurance Policy</h3>
+                        <p>We carry comprehensive liability insurance to protect your property and give you peace of mind. Every project is fully covered.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg p-6 shadow-md flex items-start">
-                    <div class="flex-shrink-0 bg-blue-100 rounded-full p-3 mr-4">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="credential-card">
+                    <div class="credential-icon blue">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">American Fence Association Member</h3>
-                        <p class="text-gray-700">
-                            We're proud members of the American Fence Association and have attended their professional training programs to stay current with industry best practices.
-                        </p>
+                        <h3>American Fence Association Member</h3>
+                        <p>We're proud members of the American Fence Association and have attended their professional training programs to stay current with industry best practices.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Our Values Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Our Values</h2>
-            <p class="text-lg text-gray-600 text-center mb-10 max-w-3xl mx-auto">
-                We're committed to transforming your property with beautiful, durable fencing while providing an exceptional customer experience.
-            </p>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-8 text-center">
-                    <div class="bg-buda-secondary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+        <section class="values">
+            <h2>Our Values</h2>
+            <p>We're committed to transforming your property with beautiful, durable fencing while providing an exceptional customer experience.</p>
+            <div class="grid-2-md" style="grid-template-columns:repeat(3,1fr)">
+                <div class="value-card">
+                    <div class="value-icon">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Quality First</h3>
-                    <p class="text-gray-700">
-                        We use only premium materials and proven installation techniques to ensure your fence stands the test of time. No shortcuts, ever.
-                    </p>
+                    <h3>Quality First</h3>
+                    <p>We use only premium materials and proven installation techniques to ensure your fence stands the test of time. No shortcuts, ever.</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-8 text-center">
-                    <div class="bg-buda-secondary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <div class="value-card">
+                    <div class="value-icon">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Timely Service</h3>
-                    <p class="text-gray-700">
-                        We respect your time and complete most projects under 100 linear feet in a single day. We show up when we say we will.
-                    </p>
+                    <h3>Timely Service</h3>
+                    <p>We respect your time and complete most projects under 100 linear feet in a single day. We show up when we say we will.</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-8 text-center">
-                    <div class="bg-buda-secondary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <div class="value-card">
+                    <div class="value-icon">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Customer Care</h3>
-                    <p class="text-gray-700">
-                        Your satisfaction is our priority. We're not done until you're completely happy with your new fence. We build relationships, not just fences.
-                    </p>
+                    <h3>Customer Care</h3>
+                    <p>Your satisfaction is our priority. We're not done until you're completely happy with your new fence. We build relationships, not just fences.</p>
                 </div>
             </div>
         </section>
 
         <!-- Meet the Owner Section -->
-        <section class="mb-16 bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="grid md:grid-cols-2">
-                <div class="bg-buda-primary p-8 md:p-12 text-white">
-                    <h2 class="text-3xl font-bold mb-6">Meet the Owner</h2>
-                    <h3 class="text-2xl font-semibold mb-2">William Espich</h3>
-                    <p class="text-buda-secondary font-medium mb-4">Founder & Owner</p>
-                    <p class="text-gray-200 mb-4">
-                        With over 15 years in the fencing industry, William founded Buda Fence Company in 2015 to bring quality craftsmanship to Central Texas. His hands-on approach means he's involved in every project, ensuring the same high standards that built the company's reputation.
-                    </p>
-                    <p class="text-gray-200 mb-4">
-                        As a Buda resident and family man, William understands what homeowners need: a fence that's built right, looks great, and lasts for years. He takes pride in treating every customer's property like his own.
-                    </p>
-                    <p class="text-gray-200">
-                        When he's not building fences, William enjoys spending time with his family and being an active member of the Buda community.
-                    </p>
+        <section class="owner-section">
+            <div class="owner-grid">
+                <div class="owner-bio">
+                    <h2>Meet the Owner</h2>
+                    <h3>William Espich</h3>
+                    <p class="title">Founder & Owner</p>
+                    <p>With over 15 years in the fencing industry, William founded Buda Fence Company in 2015 to bring quality craftsmanship to Central Texas. His hands-on approach means he's involved in every project, ensuring the same high standards that built the company's reputation.</p>
+                    <p>As a Buda resident and family man, William understands what homeowners need: a fence that's built right, looks great, and lasts for years. He takes pride in treating every customer's property like his own.</p>
+                    <p>When he's not building fences, William enjoys spending time with his family and being an active member of the Buda community.</p>
                 </div>
-                <div class="p-8 md:p-12 flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Why Customers Choose Us</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>Owner on every job</strong> - William personally oversees each project</span>
+                <div class="owner-why">
+                    <h3>Why Customers Choose Us</h3>
+                    <ul>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span><strong>Owner on every job</strong> - William personally oversees each project</span>
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>Local & accountable</strong> - We live and work in your community</span>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span><strong>Local & accountable</strong> - We live and work in your community</span>
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>Honest pricing</strong> - Fair quotes with no hidden fees or surprises</span>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span><strong>Honest pricing</strong> - Fair quotes with no hidden fees or surprises</span>
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>5-year guarantee</strong> - We stand behind our work</span>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span><strong>5-year guarantee</strong> - We stand behind our work</span>
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>Premium materials</strong> - Steel posts, quality cedar, no cheap substitutes</span>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span><strong>Premium materials</strong> - Steel posts, quality cedar, no cheap substitutes</span>
                         </li>
                     </ul>
                 </div>
@@ -371,117 +526,103 @@
         </section>
 
         <!-- Service Areas -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Service Areas</h2>
-            <p class="text-lg text-gray-600 text-center mb-10 max-w-3xl mx-auto">
-                Proudly serving Central Texas communities with professional fence installation and repair services.
-            </p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <a href="service-areas/buda.html" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                    <div class="text-buda-secondary mb-2">
-                        <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-gray-900">Buda, TX</h3>
-                    <p class="text-sm text-gray-600">Our Home Base</p>
+        <section class="areas">
+            <h2>Service Areas</h2>
+            <p>Proudly serving Central Texas communities with professional fence installation and repair services.</p>
+            <div class="grid-4">
+                <a href="/service-areas/buda" class="area-card">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <h3>Buda, TX</h3>
+                    <p>Our Home Base</p>
                 </a>
-                <a href="service-areas/austin.html" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                    <div class="text-buda-secondary mb-2">
-                        <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-gray-900">Austin, TX</h3>
-                    <p class="text-sm text-gray-600">All Neighborhoods</p>
+                <a href="/service-areas/austin" class="area-card">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <h3>Austin, TX</h3>
+                    <p>All Neighborhoods</p>
                 </a>
-                <a href="service-areas/kyle.html" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                    <div class="text-buda-secondary mb-2">
-                        <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-gray-900">Kyle, TX</h3>
-                    <p class="text-sm text-gray-600">Full Service</p>
+                <a href="/service-areas/kyle" class="area-card">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <h3>Kyle, TX</h3>
+                    <p>Full Service</p>
                 </a>
-                <a href="service-areas/dripping-springs.html" class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                    <div class="text-buda-secondary mb-2">
-                        <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-gray-900">Dripping Springs</h3>
-                    <p class="text-sm text-gray-600">Full Service</p>
+                <a href="/service-areas/dripping-springs" class="area-card">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <h3>Dripping Springs</h3>
+                    <p>Full Service</p>
                 </a>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="bg-gradient-to-r from-buda-primary to-slate-800 rounded-lg shadow-md p-8 md:p-12 text-white text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for Your Budaful Transformation?</h2>
-            <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
-                Join over 5,000 satisfied customers who trust Buda Fence Company for their fencing needs. Get a free, no-obligation quote today.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="contact.html" class="bg-buda-secondary text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg">
-                    Get Free Estimate
-                </a>
-                <a href="tel:5127107116" class="bg-white text-buda-primary px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg">
-                    Call (512) 710-7116
-                </a>
+        <section class="cta">
+            <h2>Ready for Your Budaful Transformation?</h2>
+            <p>Join over 5,000 satisfied customers who trust Buda Fence Company for their fencing needs. Get a free, no-obligation quote today.</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="cta-primary">Get Free Estimate</a>
+                <a href="tel:5127107116" class="cta-secondary">Call (512) 710-7116</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <img src="images/BudaFenceLogo.jpeg" alt="Buda Fence Company" class="h-16 mb-4">
-                    <p class="text-gray-400">Building Budaful fences for Central Texas families since 2015.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="services/wood-fence-installation.html" class="hover:text-white">Wood Fences</a></li>
-                        <li><a href="services/metal-fence-installation.html" class="hover:text-white">Metal Fences</a></li>
-                        <li><a href="services/chain-link-fence-installation.html" class="hover:text-white">Chain Link</a></li>
-                        <li><a href="services/fence-repair.html" class="hover:text-white">Fence Repair</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
-                        <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
-                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></li>
-                        <li><a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></li>
-                        <li>Buda, TX 78610</li>
-                    </ul>
-                </div>
+    <footer role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company" width="150" height="48">
+                <p>Building Budaful fences for Central Texas families since 2015.</p>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Buda Fence Company. All rights reserved.</p>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/services/deck-construction">Deck Construction</a></li>
+                    <li><a href="/services/wood-fence-installation">Wood Fences</a></li>
+                    <li><a href="/services/metal-fence-installation">Metal Fences</a></li>
+                    <li><a href="/services/chain-link-fence-installation">Chain Link</a></li>
+                    <li><a href="/services/fence-repair">Fence Repair</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:5127107116">(512) 710-7116</a></li>
+                    <li><a href="mailto:info@budafenceco.com">info@budafenceco.com</a></li>
+                    <li>Buda, TX 78610</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Buda Fence Company. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Mobile Menu Script -->
     <script>
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+            var menu = document.getElementById('mobile-menu');
+            var button = this;
+            menu.classList.toggle('active');
+            button.setAttribute('aria-expanded', menu.classList.contains('active'));
         });
     </script>
 </body>
