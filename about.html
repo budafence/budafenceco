@@ -54,21 +54,65 @@
         nav{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.1);position:sticky;top:0;z-index:50}
         .nav-container{max-width:80rem;margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;height:5rem}
         .nav-logo img{height:4rem;width:auto}
+
         .nav-links{display:none}
         .nav-link{color:#374151;font-weight:500;text-decoration:none;transition:color 0.2s}
         .nav-link:hover{color:#dc2626}
         .nav-link.active{color:#dc2626}
 
-        /* Navigation Button Reset */
-        nav button{background:none;background-color:transparent;border:none;box-shadow:none;cursor:pointer;padding:0;padding-bottom:16px;font-weight:500;color:#374151;font-family:inherit;font-size:inherit;line-height:inherit;outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+        /* ✅ FIX: Make nav items (links + dropdown buttons) align perfectly */
+        @media(min-width:768px){
+            .nav-links{height:100%}
+            .nav-links > *{height:100%}
+            .nav-link{display:flex;align-items:center;height:100%}
+        }
+
+        /* ✅ FIX: Button reset WITHOUT padding-bottom (this caused misalignment) */
+        nav button{
+            background:none;
+            background-color:transparent;
+            border:none;
+            box-shadow:none;
+            cursor:pointer;
+            padding:0;
+            margin:0;
+            font-weight:500;
+            color:#374151;
+            font-family:inherit;
+            font-size:inherit;
+            line-height:inherit;
+            outline:none;
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            appearance:none
+        }
         nav button:hover{color:#dc2626}
         nav button:focus-visible{outline:2px solid #dc2626;outline-offset:2px}
         nav button:focus:not(:focus-visible){outline:none}
 
         /* Dropdown */
         .dropdown{position:relative}
-        .dropdown-menu{position:absolute;top:100%;left:0;background:#fff;box-shadow:0 10px 15px rgba(0,0,0,0.1);border-radius:0.5rem;padding:0.5rem 0;min-width:max-content;display:none;z-index:50}
-        .dropdown:hover .dropdown-menu{display:block}
+        @media(min-width:768px){
+            .dropdown{display:flex;align-items:center;height:100%}
+            .dropdown > button{display:flex;align-items:center;height:100%}
+        }
+
+        .dropdown-menu{
+            position:absolute;
+            top:100%;
+            left:0;
+            background:#fff;
+            box-shadow:0 10px 15px rgba(0,0,0,0.1);
+            border-radius:0.5rem;
+            padding:0.5rem 0;
+            min-width:max-content;
+            display:none;
+            z-index:50
+        }
+        /* ✅ Accessibility improvement: open on hover OR keyboard focus */
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu{display:block}
+
         .dropdown-item{display:block;padding:0.5rem 1rem;color:#374151;text-decoration:none;white-space:nowrap}
         .dropdown-item:hover{background:#f3f4f6}
 
@@ -141,7 +185,6 @@
         .values h2{font-size:1.875rem;font-weight:700;color:#111827;text-align:center;margin-bottom:1rem}
         .values>p{font-size:1.125rem;color:#6b7280;text-align:center;max-width:48rem;margin:0 auto 2.5rem}
         .values-grid{display:grid;gap:2rem;grid-template-columns:1fr}
-
         .value-card{background:#fff;border-radius:0.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);padding:2rem;text-align:center}
         .value-icon{background:#dc2626;color:#fff;width:4rem;height:4rem;border-radius:9999px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
         .value-card h3{font-size:1.25rem;font-weight:700;color:#111827;margin-bottom:0.75rem}
@@ -296,13 +339,12 @@
     </script>
 </head>
 <body>
-    <!-- Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <!-- Logo (Option 1: responsive logo) -->
+            <!-- Logo (responsive) -->
             <a href="/" class="nav-logo" aria-label="Buda Fence Company Home">
                 <img
                     src="/images/buda-fence-logo-150.webp"
@@ -320,6 +362,7 @@
             <div class="nav-links">
                 <a href="/" class="nav-link">Home</a>
                 <a href="/about" class="nav-link active" aria-current="page">About</a>
+
                 <div class="dropdown">
                     <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
                     <div class="dropdown-menu" role="menu">
@@ -331,6 +374,7 @@
                         <a href="/services/fence-repair" class="dropdown-item" role="menuitem">Fence Repair</a>
                     </div>
                 </div>
+
                 <div class="dropdown">
                     <button aria-haspopup="true" aria-expanded="false">Service Areas ▾</button>
                     <div class="dropdown-menu" role="menu">
@@ -340,6 +384,7 @@
                         <a href="/service-areas/dripping-springs" class="dropdown-item" role="menuitem">Dripping Springs</a>
                     </div>
                 </div>
+
                 <a href="/gallery" class="nav-link">Gallery</a>
                 <a href="/blog/" class="nav-link">Blog</a>
                 <a href="/contact" class="nav-link">Contact</a>
@@ -397,7 +442,6 @@
 
     <!-- Main Content -->
     <main id="main-content" role="main">
-
         <!-- Our Story Section -->
         <section class="grid-2">
             <div class="story-content">
@@ -481,7 +525,6 @@
         <section class="values">
             <h2>Our Values</h2>
             <p>We're committed to transforming your property with beautiful, durable fencing while providing an exceptional customer experience.</p>
-
             <div class="values-grid">
                 <div class="value-card">
                     <div class="value-icon">
