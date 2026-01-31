@@ -1,52 +1,998 @@
-<script>
-(function () {
-  // --- Force Quote to navigate (fixes iOS tap conflicts) ---
-  function forceNavigate(el, url) {
-    if (!el) return;
-    ["click", "touchend"].forEach(function(evt) {
-      el.addEventListener(evt, function(e) {
-        // Kill anything else trying to hijack this tap
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags (SEO Optimized) -->
+  <title>Buda Fence Company | Fence Installation & Repair in Buda, Austin & Central Texas</title>
+  <meta name="description" content="Buda Fence Company - trusted fence contractors in Buda & Austin, TX. Wood, metal & chain link fence installation and repair. 5,000+ fences installed. $1MM insured. 5-year workmanship warranty. Call (512) 710-7116 for your free quote." />
+  <meta name="keywords" content="fence company buda tx, fence contractors buda tx, fence installation buda tx, fence company austin, fence installation austin, fence repair austin, wood fence installation, metal fence installation, chain link fence" />
+  <meta name="author" content="Buda Fence Company" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://budafenceco.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://budafenceco.com/" />
+  <meta property="og:title" content="Buda Fence Company | Fence Installation & Repair in Buda & Austin TX" />
+  <meta property="og:description" content="Professional fence installation & repair in Buda, Austin, Kyle & Central Texas. Wood, metal & chain link fences. 5,000+ fences installed. Call for your free quote." />
+  <meta property="og:image" content="https://budafenceco.com/images/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Buda Fence Company" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://budafenceco.com/" />
+  <meta name="twitter:title" content="Buda Fence Company | Fence Installation & Repair in Buda & Austin TX" />
+  <meta name="twitter:description" content="Professional fence installation & repair. 5,000+ fences installed. Call for your free quote." />
+  <meta name="twitter:image" content="https://budafenceco.com/images/og-image.webp" />
+
+  <!-- Local SEO Meta Tags -->
+  <meta name="geo.region" content="US-TX" />
+  <meta name="geo.placename" content="Buda, Texas" />
+  <meta name="geo.position" content="30.09939;-97.86756" />
+  <meta name="ICBM" content="30.09939, -97.86756" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+
+  <!-- Preload Hero (helps LCP on mobile/desktop) -->
+  <link rel="preload" as="image"
+        href="/images/hero-section-960.webp"
+        imagesrcset="/images/hero-section-640.webp 640w, /images/hero-section-960.webp 960w, /images/hero-section-1280.webp 1280w, /images/hero-section-1440.webp 1440w"
+        imagesizes="100vw" />
+
+  <!-- Enhanced LocalBusiness Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://budafenceco.com/#organization",
+    "name": "Buda Fence Company",
+    "alternateName": "Buda Fence Co",
+    "description": "Professional fence installation and repair services in Austin, Buda, Kyle, and Central Texas. Specializing in wood, metal, and chain link fences.",
+    "image": "https://budafenceco.com/images/buda-fence-logo.webp",
+    "logo": "https://budafenceco.com/images/buda-fence-logo.webp",
+    "url": "https://budafenceco.com",
+    "telephone": "+1-512-710-7116",
+    "email": "info@budafenceco.com",
+    "foundingDate": "2015",
+    "founder": { "@type": "Person", "name": "William Espich" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "308 Wincliff Dr",
+      "addressLocality": "Buda",
+      "addressRegion": "TX",
+      "postalCode": "78610",
+      "addressCountry": "US"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "30.09939", "longitude": "-97.86756" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "06:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ],
+    "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Check",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "122", "bestRating": "5", "worstRating": "1" },
+    "areaServed": [
+      { "@type": "City", "name": "Austin", "sameAs": "https://en.wikipedia.org/wiki/Austin,_Texas" },
+      { "@type": "City", "name": "Buda", "sameAs": "https://en.wikipedia.org/wiki/Buda,_Texas" },
+      { "@type": "City", "name": "Kyle", "sameAs": "https://en.wikipedia.org/wiki/Kyle,_Texas" },
+      { "@type": "City", "name": "Dripping Springs", "sameAs": "https://en.wikipedia.org/wiki/Dripping_Springs,_Texas" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/budafenceco",
+      "https://www.google.com/maps/place/Buda+Fence+Company"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Fence Installation Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wood Fence Installation", "description": "Premium cedar and pine wood fence installation with strong posts built for Texas weather." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Metal Fence Installation", "description": "Wrought iron and aluminum fence installation, including pool fences and ranch fencing." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chain Link Fence Installation", "description": "Galvanized and vinyl-coated chain link fence installation for residential and commercial properties." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fence Repair", "description": "Fence repairs for storm damage, broken posts, sagging gates, and more." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck Construction", "description": "Custom deck building and construction services." } }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --primary:#1e293b;           /* slate-800 */
+      --secondary:#dc2626;         /* red-600 */
+      --secondary-dark:#b91c1c;    /* red-700 */
+      --bg:#f8fafc;                /* slate-50 */
+      --text:#0f172a;              /* slate-900 */
+      --muted:#475569;             /* slate-600 */
+      --card:#ffffff;
+      --shadow:0 10px 30px rgba(2,6,23,.10);
+      --radius:16px;
+      --max:1100px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); }
+
+    a{ color:inherit; text-decoration:none; }
+    a:focus, button:focus, summary:focus{ outline:2px solid var(--secondary); outline-offset:2px; border-radius:10px; }
+
+    .container{ max-width:var(--max); margin:0 auto; padding:0 18px; }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+    /* Skip link */
+    .skip-link{
+      position:absolute; left:0; top:-48px;
+      background:var(--secondary); color:#fff; padding:10px 12px; z-index:1000;
+      border-radius:10px;
+    }
+    .skip-link:focus{ top:10px; left:10px; }
+
+    /* Header */
+    header{ position:sticky; top:0; z-index:999; background:#fff; border-bottom:1px solid #e2e8f0; }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; min-width:140px;
+    }
+    .brand img{ height:42px; width:auto; display:block; }
+    .nav-desktop{ display:none; align-items:center; gap:18px; }
+    .nav-desktop a, .nav-desktop summary{
+      font-weight:600; color:#334155;
+      padding:10px 10px; border-radius:12px;
+      transition:background .15s ease, color .15s ease;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .nav-desktop a:hover, .nav-desktop summary:hover{
+      background:#f1f5f9; color:var(--secondary);
+    }
+
+    details.dropdown{ position:relative; }
+    details.dropdown > summary{ list-style:none; }
+    details.dropdown > summary::-webkit-details-marker{ display:none; }
+    .menu-panel{
+      position:absolute; top:46px; left:0;
+      background:#fff; border:1px solid #e2e8f0;
+      border-radius:14px; box-shadow:var(--shadow);
+      padding:8px;
+      min-width:260px;
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .menu-panel a{
+      padding:10px 10px; border-radius:10px; color:#334155; font-weight:600;
+    }
+    .menu-panel a:hover{ background:#f1f5f9; color:var(--secondary); }
+
+    .header-cta{ display:none; align-items:center; gap:12px; }
+    .phone-link{ color:var(--secondary); font-weight:800; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px;
+      border-radius:14px;
+      font-weight:800;
+      border:2px solid transparent;
+      cursor:pointer;
+      transition:transform .05s ease, background .15s ease, border-color .15s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:active{ transform:translateY(1px); }
+    .btn-primary{ background:var(--secondary); color:#fff; }
+    .btn-primary:hover{ background:var(--secondary-dark); }
+    .btn-outline{
+      background:#fff; color:var(--primary);
+      border-color:#e2e8f0;
+    }
+    .btn-outline:hover{ border-color:var(--secondary); color:var(--secondary); }
+
+    /* Mobile controls */
+    .mobile-controls{ display:flex; align-items:center; gap:10px; }
+    .icon-btn{
+      width:44px; height:44px; border-radius:14px;
+      border:1px solid #e2e8f0; background:#fff;
+      display:inline-flex; align-items:center; justify-content:center;
+      cursor:pointer;
+    }
+    .icon-btn:hover{ border-color:#cbd5e1; }
+    .quote-btn{ padding:10px 14px; border-radius:14px; font-weight:900; }
+
+    /* Dedicated phone bar on mobile (fixes “missing phone number” without crowding header) */
+    .mobile-phonebar{
+      display:flex; align-items:center; justify-content:center;
+      padding:8px 12px;
+      background:#fff7ed; /* warm light */
+      border-top:1px solid #e2e8f0;
+      border-bottom:1px solid #e2e8f0;
+    }
+    .mobile-phonebar a{
+      font-weight:900; color:var(--secondary);
+    }
+
+    /* Mobile menu */
+    .mobile-menu{
+      display:none;
+      padding:12px 0 18px 0;
+      border-top:1px solid #e2e8f0;
+    }
+    .mobile-menu.open{ display:block; }
+    .mobile-menu a, .mobile-menu summary{
+      display:block;
+      padding:12px 12px;
+      border-radius:14px;
+      font-weight:800;
+      color:#334155;
+    }
+    .mobile-menu a:hover, .mobile-menu summary:hover{ background:#f1f5f9; color:var(--secondary); }
+    .mobile-menu details{ padding:0 6px; }
+    .mobile-sub a{ padding-left:22px; font-weight:700; color:#475569; }
+
+    /* Hero */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:var(--primary);
+    }
+    .hero-media{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+    }
+    .hero-media img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .hero-overlay{
+      position:absolute; inset:0;
+      background:linear-gradient(90deg, rgba(15,23,42,.82), rgba(220,38,38,.70));
+    }
+    .hero-inner{
+      position:relative;
+      padding:70px 0 54px 0;
+      color:#fff;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:10px;
+      background:#f59e0b;
+      color:#111827;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:900;
+      width:fit-content;
+    }
+    .hero h1{
+      font-size:42px;
+      line-height:1.05;
+      margin:14px 0 12px 0;
+      letter-spacing:-.02em;
+    }
+    .hero p{
+      font-size:18px;
+      line-height:1.55;
+      color:rgba(255,255,255,.92);
+      margin:0 0 18px 0;
+      max-width:58ch;
+    }
+    .hero-actions{ display:flex; flex-direction:column; gap:12px; max-width:460px; }
+    .hero-actions .btn{ padding:14px 16px; font-size:16px; border-radius:16px; }
+    .btn-hero-call{ background:#fff; color:var(--primary); }
+    .btn-hero-call:hover{ background:#f1f5f9; }
+    .btn-hero-quote{ background:transparent; color:#fff; border-color:#fff; }
+    .btn-hero-quote:hover{ background:rgba(255,255,255,.10); }
+
+    .hero-card{
+      margin-top:8px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:var(--radius);
+      padding:18px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-card h2{ margin:0 0 12px 0; font-size:22px; }
+    .checklist{ display:flex; flex-direction:column; gap:10px; margin:0; padding:0; list-style:none; }
+    .checklist li{ display:flex; gap:10px; align-items:flex-start; }
+    .check{
+      width:24px; height:24px; border-radius:999px; background:#f59e0b;
+      display:inline-flex; align-items:center; justify-content:center; color:#111827; font-weight:900;
+      flex:0 0 24px;
+      margin-top:2px;
+    }
+    .checklist strong{ display:block; }
+    .checklist span{ color:rgba(255,255,255,.90); font-size:14px; line-height:1.35; }
+
+    /* Stats bar */
+    .stats{
+      background:#f59e0b;
+      color:#111827;
+      padding:16px 0;
+    }
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+      text-align:center;
+    }
+    .stat-num{ font-size:28px; font-weight:1000; }
+    .stat-label{ font-size:13px; font-weight:800; opacity:.85; }
+
+    /* Sections */
+    section{ padding:54px 0; }
+    .section-head{ text-align:center; margin-bottom:22px; }
+    .section-head h2{ margin:0; font-size:32px; letter-spacing:-.01em; }
+    .section-head p{ margin:10px auto 0 auto; max-width:70ch; color:var(--muted); font-size:16px; line-height:1.6; }
+
+    /* Cards */
+    .cards{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid #e2e8f0;
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:0 1px 0 rgba(2,6,23,.02);
+      transition:transform .06s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .card:hover{ border-color:rgba(220,38,38,.35); box-shadow:var(--shadow); }
+    .card-body{ padding:16px; }
+    .card h3{ margin:0 0 8px 0; font-size:22px; }
+    .card p{ margin:0 0 10px 0; color:var(--muted); line-height:1.6; }
+    .features{ margin:0 0 12px 0; padding:0; list-style:none; display:grid; gap:8px; }
+    .features li{ color:#475569; font-weight:700; }
+    .card .btn{ width:100%; }
+
+    .card-media{ background:#0b1220; }
+    .card-media img{ width:100%; height:auto; display:block; }
+
+    /* Service areas */
+    .areas{ background:#f1f5f9; }
+    .area-grid{ display:grid; grid-template-columns:1fr; gap:14px; }
+    .area{
+      background:#fff;
+      border:1px solid #e2e8f0;
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow:0 1px 0 rgba(2,6,23,.02);
+      transition:box-shadow .15s ease, border-color .15s ease, transform .06s ease;
+    }
+    .area:hover{ border-color:rgba(220,38,38,.35); box-shadow:var(--shadow); }
+    .area h3{ margin:0 0 6px 0; font-size:20px; }
+    .area p{ margin:0 0 10px 0; color:var(--muted); line-height:1.5; }
+    .area span{ color:var(--secondary); font-weight:900; }
+
+    .radius-box{
+      margin-top:14px;
+      background:#fff;
+      border:1px solid #e2e8f0;
+      border-radius:var(--radius);
+      padding:16px;
+    }
+    .radius-box p{ margin:0; color:var(--muted); line-height:1.6; }
+    .radius-box a{ color:var(--secondary); font-weight:900; }
+
+    /* Testimonials */
+    .stars{ color:#f59e0b; font-size:26px; letter-spacing:2px; }
+    .quotes{ display:grid; grid-template-columns:1fr; gap:14px; }
+    blockquote{
+      margin:0;
+      background:#fff;
+      border:1px solid #e2e8f0;
+      border-left:6px solid var(--secondary);
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow:0 1px 0 rgba(2,6,23,.02);
+    }
+    blockquote p{ margin:0 0 10px 0; color:#334155; line-height:1.6; }
+    blockquote cite{ font-style:normal; font-weight:1000; color:var(--primary); }
+    blockquote footer{ color:#64748b; font-weight:700; font-size:13px; }
+
+    /* CTA */
+    .cta{
+      background:linear-gradient(90deg, var(--primary), #0b1220);
+      color:#fff;
+      text-align:center;
+      padding:60px 0;
+    }
+    .cta h2{ margin:0 0 10px 0; font-size:32px; letter-spacing:-.01em; }
+    .cta p{ margin:0 auto 18px auto; max-width:72ch; color:rgba(255,255,255,.90); line-height:1.65; }
+    .cta-actions{ display:flex; flex-direction:column; gap:12px; max-width:520px; margin:0 auto; }
+    .cta-actions .btn{ padding:14px 16px; border-radius:16px; font-size:16px; }
+
+    /* Footer */
+    footer{
+      background:#0b1220;
+      color:#fff;
+      padding:44px 0 24px 0;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .footer-grid h3{ margin:0 0 10px 0; font-size:16px; }
+    .footer-grid p, .footer-grid a, .footer-grid li{ color:rgba(255,255,255,.78); }
+    .footer-grid a:hover{ color:#fff; }
+    .footer-grid ul{ margin:0; padding-left:18px; }
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.12);
+      padding-top:16px;
+      text-align:center;
+      color:rgba(255,255,255,.70);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    /* Desktop breakpoints */
+    @media (min-width: 900px){
+      .nav-desktop{ display:flex; }
+      .header-cta{ display:flex; }
+      .mobile-controls{ display:none; }
+      .mobile-phonebar{ display:none; }
+
+      .hero-inner{ padding:84px 0 64px 0; }
+      .hero-grid{ grid-template-columns:1.2fr .9fr; gap:20px; align-items:center; }
+      .hero h1{ font-size:56px; }
+      .hero-actions{ flex-direction:row; }
+      .hero-actions .btn{ width:auto; }
+
+      .stats-grid{ grid-template-columns:repeat(4,1fr); }
+
+      .cards{ grid-template-columns:repeat(3,1fr); }
+      .area-grid{ grid-template-columns:repeat(4,1fr); }
+      .quotes{ grid-template-columns:repeat(3,1fr); }
+
+      .footer-grid{ grid-template-columns:1.3fr 1fr 1fr 1fr; }
+    }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto; transition:none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header aria-label="Site header">
+    <div class="container">
+      <div class="topbar">
+        <!-- Logo -->
+        <a class="brand" href="/" aria-label="Buda Fence Company Home">
+          <img
+            src="/images/buda-fence-logo.webp"
+            alt="Buda Fence Company logo"
+            width="180"
+            height="60"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="nav-desktop" aria-label="Primary navigation">
+          <a href="/" aria-current="page">Home</a>
+          <a href="/about">About</a>
+
+          <details class="dropdown">
+            <summary>Services ▾</summary>
+            <div class="menu-panel" role="menu">
+              <a href="/services" role="menuitem">All Services</a>
+              <a href="/services/wood-fence-installation" role="menuitem">Wood Fence Installation</a>
+              <a href="/services/metal-fence-installation" role="menuitem">Metal Fence Installation</a>
+              <a href="/services/chain-link-fence-installation" role="menuitem">Chain Link Fence Installation</a>
+              <a href="/services/fence-repair" role="menuitem">Fence Repair</a>
+              <a href="/services/deck-construction" role="menuitem">Deck Construction</a>
+            </div>
+          </details>
+
+          <details class="dropdown">
+            <summary>Service Areas ▾</summary>
+            <div class="menu-panel" role="menu">
+              <a href="/service-areas/austin" role="menuitem">Austin</a>
+              <a href="/service-areas/buda" role="menuitem">Buda</a>
+              <a href="/service-areas/kyle" role="menuitem">Kyle</a>
+              <a href="/service-areas/dripping-springs" role="menuitem">Dripping Springs</a>
+            </div>
+          </details>
+
+          <a href="/gallery">Gallery</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact">Contact</a>
+        </nav>
+
+        <!-- Desktop CTA -->
+        <div class="header-cta" aria-label="Header contact actions">
+          <a class="phone-link" href="tel:5127107116" aria-label="Call Buda Fence Company (512) 710-7116">(512) 710-7116</a>
+          <a class="btn btn-primary" href="/contact" aria-label="Get a free quote">Free Quote</a>
+        </div>
+
+        <!-- Mobile controls -->
+        <div class="mobile-controls" aria-label="Mobile header controls">
+          <a class="btn btn-primary quote-btn" id="mobileQuoteBtn" href="/contact" aria-label="Free quote">Quote</a>
+          <button class="icon-btn" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile phone bar (phone is ALWAYS visible on mobile without crowding header) -->
+    <div class="mobile-phonebar" aria-label="Mobile call bar">
+      <a href="tel:5127107116" aria-label="Call (512) 710-7116">Call (512) 710-7116</a>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="container">
+      <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+
+        <details>
+          <summary>Services</summary>
+          <div class="mobile-sub">
+            <a href="/services">All Services</a>
+            <a href="/services/wood-fence-installation">Wood Fence</a>
+            <a href="/services/metal-fence-installation">Metal Fence</a>
+            <a href="/services/chain-link-fence-installation">Chain Link</a>
+            <a href="/services/fence-repair">Fence Repair</a>
+            <a href="/services/deck-construction">Deck Construction</a>
+          </div>
+        </details>
+
+        <details>
+          <summary>Service Areas</summary>
+          <div class="mobile-sub">
+            <a href="/service-areas/austin">Austin</a>
+            <a href="/service-areas/buda">Buda</a>
+            <a href="/service-areas/kyle">Kyle</a>
+            <a href="/service-areas/dripping-springs">Dripping Springs</a>
+          </div>
+        </details>
+
+        <a href="/gallery">Gallery</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact">Contact</a>
+
+        <div style="padding:12px 6px 0 6px;">
+          <a class="btn btn-outline" href="tel:5127107116" style="width:100%;">Call (512) 710-7116</a>
+          <div style="height:10px;"></div>
+          <a class="btn btn-primary" href="/contact" style="width:100%;">Get Free Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero" aria-label="Welcome to Buda Fence Company">
+      <div class="hero-media" aria-hidden="true">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="/images/hero-section-640.webp 640w, /images/hero-section-960.webp 960w, /images/hero-section-1280.webp 1280w, /images/hero-section-1440.webp 1440w"
+            sizes="100vw"
+          />
+          <img
+            src="/images/hero-section.webp"
+            alt=""
+            width="1440"
+            height="810"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </picture>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-grid">
+          <div>
+            <div class="badge" aria-label="Company trust badge">
+              <span aria-hidden="true">🏆</span>
+              <span>Over 5,000 Fences Installed • Serving Central Texas Since 2015</span>
+            </div>
+
+            <h1>Buda Fence Company: Trusted Fence Installation & Repair in Buda and Austin</h1>
+
+            <p>
+              Professional <strong>wood fence installation</strong>, <strong>metal fencing</strong>, and <strong>chain link fencing</strong>
+              for homeowners in Buda, Austin, Kyle, and Dripping Springs. Built right—clean lines, strong posts, and zero shortcuts.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-hero-call" href="tel:5127107116" aria-label="Call (512) 710-7116">Call (512) 710-7116</a>
+              <a class="btn btn-hero-quote" href="/contact" aria-label="Contact us for your free quote">Contact us today for your free quote.</a>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Why homeowners choose us">
+            <h2>Why Homeowners Choose Us</h2>
+            <ul class="checklist">
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>One-day installs (when possible)</strong>
+                  <span>Many projects under 100 linear feet can be completed in a day</span>
+                </div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Materials that hold up in Texas</strong>
+                  <span>Quality cedar + strong posts built for heat, wind, and shifting soil</span>
+                </div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Family & pet safety first</strong>
+                  <span>Secure enclosures and gates that don’t sag</span>
+                </div>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>$1MM insured + 5-year workmanship warranty</strong>
+                  <span>Fence installs backed by protection and accountability</span>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" aria-label="Company statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div>
+            <div class="stat-num">5,000+</div>
+            <div class="stat-label">Fences Installed</div>
+          </div>
+          <div>
+            <div class="stat-num">10+ Years</div>
+            <div class="stat-label">Serving Central Texas</div>
+          </div>
+          <div>
+            <div class="stat-num">$1MM</div>
+            <div class="stat-label">Liability Insured</div>
+          </div>
+          <div>
+            <div class="stat-num">5 Years</div>
+            <div class="stat-label">Workmanship Warranty</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="services-heading">Fence Installation Services Built for Texas</h2>
+          <p>Residential and commercial fencing solutions crafted for security, durability, and curb appeal across Buda, Austin, and nearby communities.</p>
+        </div>
+
+        <div class="cards" role="list">
+          <!-- Wood -->
+          <article class="card" role="listitem">
+            <div class="card-media">
+              <picture>
+                <source type="image/webp"
+                        srcset="/images/cedar-fence-320.webp 320w, /images/cedar-fence-480.webp 480w, /images/cedar-fence-533.webp 533w"
+                        sizes="(min-width: 900px) 320px, 100vw" />
+                <img src="/images/cedar-fence.webp"
+                     alt="Cedar wood fence installation in Central Texas by Buda Fence Company"
+                     width="533" height="400"
+                     loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="card-body">
+              <h3>Wood Fences</h3>
+              <p>Premium cedar or pressure-treated pine with clean lines and customization options that boost privacy and curb appeal.</p>
+              <ul class="features" aria-label="Wood fence features">
+                <li>✓ Cedar & Pine Options</li>
+                <li>✓ Privacy & Picket Styles</li>
+                <li>✓ Strong Posts for Longevity</li>
+                <li>✓ Staining Services Available</li>
+              </ul>
+              <a class="btn btn-primary" href="/services/wood-fence-installation">Learn More</a>
+            </div>
+          </article>
+
+          <!-- Metal -->
+          <article class="card" role="listitem">
+            <div class="card-media">
+              <picture>
+                <source type="image/webp"
+                        srcset="/images/metal-fence-320.webp 320w, /images/metal-fence-480.webp 480w, /images/metal-fence-533.webp 533w"
+                        sizes="(min-width: 900px) 320px, 100vw" />
+                <img src="/images/metal-fence.webp"
+                     alt="Black metal fence installation (pool safety fencing) in Central Texas"
+                     width="533" height="400"
+                     loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="card-body">
+              <h3>Metal Fences</h3>
+              <p>Wrought iron and aluminum fencing designed for safety, strength, and a clean, modern look—great for pools and ranch-style properties.</p>
+              <ul class="features" aria-label="Metal fence features">
+                <li>✓ Wrought Iron & Aluminum</li>
+                <li>✓ Low-Maintenance</li>
+                <li>✓ Pool Fence Specialist</li>
+                <li>✓ Built for Long-Term Durability</li>
+              </ul>
+              <a class="btn btn-primary" href="/services/metal-fence-installation">Learn More</a>
+            </div>
+          </article>
+
+          <!-- Chain link -->
+          <article class="card" role="listitem">
+            <div class="card-media">
+              <picture>
+                <source type="image/webp"
+                        srcset="/images/chain-link-fence-320.webp 320w, /images/chain-link-fence-480.webp 480w, /images/chain-link-fence-533.webp 533w"
+                        sizes="(min-width: 900px) 320px, 100vw" />
+                <img src="/images/chain-link-fence.webp"
+                     alt="Black vinyl-coated chain link fence installation in Central Texas"
+                     width="533" height="400"
+                     loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="card-body">
+              <h3>Chain Link Fences</h3>
+              <p>Galvanized or vinyl-coated options for pet safety, security, and value—ideal for side yards and commercial spaces.</p>
+              <ul class="features" aria-label="Chain link fence features">
+                <li>✓ Galvanized & Vinyl-Coated</li>
+                <li>✓ Budget-Friendly</li>
+                <li>✓ Commercial Grade Available</li>
+                <li>✓ Secure for Pets & Kids</li>
+              </ul>
+              <a class="btn btn-primary" href="/services/chain-link-fence-installation">Learn More</a>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top:18px;">
+          <a class="btn btn-outline" href="/services">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="areas" aria-labelledby="areas-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="areas-heading">Serving Central Texas</h2>
+          <p>Professional fence installation and repair within 25 miles of Buda, TX.</p>
+        </div>
+
+        <div class="area-grid">
+          <a class="area" href="/service-areas/austin" aria-label="Fence installation in Austin, Texas">
+            <h3>Austin</h3>
+            <p>Serving Austin neighborhoods with premium fencing, repairs, and gates built right the first time.</p>
+            <span>Learn More →</span>
+          </a>
+
+          <a class="area" href="/service-areas/buda" aria-label="Fence installation in Buda, Texas">
+            <h3>Buda</h3>
+            <p>Our home base—fast scheduling, clean installs, and strong builds across Buda communities.</p>
+            <span>Learn More →</span>
+          </a>
+
+          <a class="area" href="/service-areas/kyle" aria-label="Fence installation in Kyle, Texas">
+            <h3>Kyle</h3>
+            <p>Quick service for repairs, replacements, and new installs across Kyle and nearby neighborhoods.</p>
+            <span>Learn More →</span>
+          </a>
+
+          <a class="area" href="/service-areas/dripping-springs" aria-label="Fence installation in Dripping Springs, Texas">
+            <h3>Dripping Springs</h3>
+            <p>Hill Country fence specialists for homes and ranch-style properties.</p>
+            <span>Learn More →</span>
+          </a>
+        </div>
+
+        <div class="radius-box" aria-label="Service radius">
+          <p>
+            <strong>Service Radius:</strong> We provide fence installation and repair services within a 25-mile radius of Buda, TX (78610).
+            Not sure if we serve your area?
+            <a href="/contact">Contact us today for your free quote.</a>
+            or call <a href="tel:5127107116">(512) 710-7116</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="testimonials-heading">What Our Customers Say</h2>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>4.9 out of 5 stars (122+ reviews)</p>
+        </div>
+
+        <div class="quotes">
+          <blockquote>
+            <div class="stars" aria-hidden="true" style="font-size:18px;">★★★★★</div>
+            <p>“Great fence installation service company. If you're looking for true craftsmanship, I would highly recommend Buda Fence Co. Fair price, excellent customer service, quick installation and kept us in the loop during the entire process.”</p>
+            <footer>
+              <cite>— Brian Stevenson</cite><br />
+              <span>Austin, TX</span>
+            </footer>
+          </blockquote>
+
+          <blockquote>
+            <div class="stars" aria-hidden="true" style="font-size:18px;">★★★★★</div>
+            <p>“Truly an awesome company from estimate thru fence completion. Completed the job in less than a day, left no mess; hauled all the old fence away. The owner William listened to what I expected for a reasonable cost.”</p>
+            <footer>
+              <cite>— Rosanne Hatheway</cite><br />
+              <span>Buda, TX</span>
+            </footer>
+          </blockquote>
+
+          <blockquote>
+            <div class="stars" aria-hidden="true" style="font-size:18px;">★★★★★</div>
+            <p>“Buda Fence Company are first class. I've dealt with a few fence companies over the years but none are close to the integrity and quality of workmanship BFC provides. I am really impressed with my new fence.”</p>
+            <footer>
+              <cite>— Keith Melrose</cite><br />
+              <span>Kyle, TX</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready for Your Budaful Transformation?</h2>
+        <p>
+          Join 5,000+ satisfied customers in the Austin area. Contact us today for your free quote.
+        </p>
+        <div class="cta-actions">
+          <a class="btn btn-hero-call" href="tel:5127107116">Call (512) 710-7116</a>
+          <a class="btn btn-primary" href="/contact">Schedule Free Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img
+            src="/images/buda-fence-logo.webp"
+            alt="Buda Fence Company"
+            width="180"
+            height="60"
+            loading="lazy"
+            decoding="async"
+            style="height:42px; width:auto; display:block; margin-bottom:10px;"
+          />
+          <p>Professional fence installation and repair services in Austin, Buda, and Central Texas. Family-owned and operated since 2015.</p>
+        </div>
+
+        <div>
+          <h3>Contact Us</h3>
+          <p>
+            <strong>Address:</strong><br />
+            308 Wincliff Dr<br />
+            Buda, TX 78610
+          </p>
+          <p><strong>Phone:</strong> <a href="tel:5127107116">(512) 710-7116</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@budafenceco.com">info@budafenceco.com</a></p>
+        </div>
+
+        <div>
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="/services/wood-fence-installation">Wood Fences</a></li>
+            <li><a href="/services/metal-fence-installation">Metal Fences</a></li>
+            <li><a href="/services/chain-link-fence-installation">Chain Link Fences</a></li>
+            <li><a href="/services/fence-repair">Fence Repair</a></li>
+            <li><a href="/services">View All Services</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Service Areas</h3>
+          <ul>
+            <li><a href="/service-areas/austin">Austin, TX</a></li>
+            <li><a href="/service-areas/buda">Buda, TX</a></li>
+            <li><a href="/service-areas/kyle">Kyle, TX</a></li>
+            <li><a href="/service-areas/dripping-springs">Dripping Springs, TX</a></li>
+          </ul>
+          <h3 style="margin-top:12px;">Business Hours</h3>
+          <p>
+            Mon–Fri: 6 AM – 6 PM<br />
+            Saturday: 9 AM – 2 PM<br />
+            <span style="font-size:12px; opacity:.85;">(Emergency service available)</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Buda Fence Company. All Rights Reserved. | <a href="/contact">Contact us today for your free quote.</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      function closeMenu() {
+        mobileMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      function toggleMenu() {
+        const isOpen = mobileMenu.classList.contains('open');
+        if (isOpen) closeMenu();
+        else {
+          mobileMenu.classList.add('open');
+          menuToggle.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      // Only the hamburger toggles the menu (prevents Quote button from opening menu)
+      menuToggle.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        e.stopImmediatePropagation();
+        toggleMenu();
+      });
 
-        // Navigate
-        window.location.href = url;
-      }, { passive: false });
-    });
-  }
+      // Close menu when tapping outside
+      document.addEventListener('click', function (e) {
+        if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          closeMenu();
+        }
+      });
 
-  // Mobile quote button
-  var quoteBtn = document.getElementById("mobileQuoteBtn");
-  forceNavigate(quoteBtn, "/contact");
+      // Close menu after clicking a link inside
+      mobileMenu.addEventListener('click', function (e) {
+        const target = e.target;
+        if (target && target.tagName === 'A') closeMenu();
+      });
 
-  // OPTIONAL: if your menu quote button exists too
-  // (uncomment if you add id="mobileMenuQuoteBtn" inside the dropdown)
-  // var menuQuoteBtn = document.getElementById("mobileMenuQuoteBtn");
-  // forceNavigate(menuQuoteBtn, "/contact");
-
-  // --- Make sure ONLY the menu button toggles the menu ---
-  var menu = document.getElementById("mobile-menu");
-  var menuButton = document.getElementById("menuButton");
-
-  if (menuButton && menu) {
-    menuButton.addEventListener("click", function(e) {
-      e.stopPropagation();
-      e.preventDefault();
-      menu.classList.toggle("active");
-      menuButton.setAttribute("aria-expanded", menu.classList.contains("active") ? "true" : "false");
-    }, { passive: false });
-  }
-
-  // Close menu when clicking a link in it
-  if (menu) {
-    menu.addEventListener("click", function(e) {
-      var t = e.target;
-      if (t && t.tagName === "A") {
-        menu.classList.remove("active");
-        if (menuButton) menuButton.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-})();
-</script>
+      // Close open desktop dropdowns when clicking elsewhere
+      document.addEventListener('click', function (e) {
+        const openDropdowns = document.querySelectorAll('details.dropdown[open]');
+        openDropdowns.forEach(function (d) {
+          if (!d.contains(e.target)) d.removeAttribute('open');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
