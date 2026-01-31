@@ -501,9 +501,64 @@
 
     <!-- Mobile Menu Script -->
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
+  (function () {
+    const menu = document.getElementById('mobile-menu');
+    const button = document.querySelector('[aria-controls="mobile-menu"]');
+
+    if (!menu || !button) return;
+
+    function isOpen() {
+      return menu.classList.contains('active');
+    }
+
+    function openMenu() {
+      menu.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      menu.classList.remove('active');
+      button.setAttribute('aria-expanded', 'false');
+    }
+
+    // ✅ Safari / iOS: force menu closed on page restore + load
+    window.addEventListener('pageshow', closeMenu);
+    window.addEventListener('load', closeMenu);
+
+    // ✅ Toggle menu (only from hamburger)
+    button.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (isOpen()) closeMenu();
+      else openMenu();
+    });
+
+    // ✅ Close menu before navigating anywhere (prevents “menu follows me”)
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a');
+      if (!link) return;
+
+      // If menu is open and user clicks ANY link (header, hero, menu links), close it first.
+      if (isOpen()) closeMenu();
+    }, { capture: true });
+
+    // ✅ Click outside closes menu (but never blocks link navigation)
+    document.addEventListener('click', function (event) {
+      if (!isOpen()) return;
+
+      // Let links do their job
+      if (event.target.closest('a')) return;
+
+      // Ignore clicks in menu or on hamburger
+      if (menu.contains(event.target) || button.contains(event.target)) return;
+
+      closeMenu();
+    }, { passive: true });
+
+    // ✅ ESC closes menu
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && isOpen()) closeMenu();
+    });
+  })();
+</script>
 </body>
 </html>
