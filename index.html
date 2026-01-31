@@ -359,14 +359,14 @@
                 <!-- Desktop Contact -->
                 <div class="hidden md:flex space-x-4 items-center">
                     <a href="tel:5127107116" class="text-buda-secondary font-medium hover:underline">(512) 710-7116</a>
-                    <a href="/contact" class="bg-buda-secondary text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">Free Quote</a>
+                    <a class="bg-buda-secondary text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors" href="/contact">Free Quote</a>
                 </div>
                 
                 <!-- Mobile Contact & Menu -->
                 <div class="md:hidden flex items-center space-x-3">
                     <a href="tel:5127107116" class="text-buda-secondary font-medium text-sm">(512) 710-7116</a>
-                    <a href="/contact" class="bg-buda-secondary text-white px-3 py-2 rounded-lg text-sm">Free Quote</a>
-                    <button id="mobile-menu-toggle" 
+                    <a class="bg-buda-secondary text-white px-3 py-2 rounded-lg text-sm" href="/contact">Free Quote</a>
+                    <button onclick="toggleMobileMenu()" 
                             class="text-gray-700 hover:text-buda-secondary focus:outline-none ml-2 p-2" 
                             aria-label="Toggle mobile menu"
                             aria-expanded="false"
@@ -427,7 +427,7 @@
                             <a href="tel:5127107116" class="bg-white text-slate-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 text-center transition-colors">
                                 📞 Call (512) 710-7116
                             </a>
-                            <a href="/contact" class="bg-red-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-900 text-center border-2 border-white transition-colors">
+                            <a class="bg-red-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-900 text-center border-2 border-white transition-colors" href="/contact">
                                 Get Free Instant Quote
                             </a>
                         </div>
@@ -660,7 +660,7 @@
                     <a href="tel:5127107116" class="bg-white text-slate-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors">
                         📞 Call (512) 710-7116
                     </a>
-                    <a href="/contact" class="bg-red-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-900 text-lg border-2 border-white transition-colors">
+                    <a class="bg-red-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-900 text-lg border-2 border-white transition-colors" href="/contact">
                         Schedule Free Estimate
                     </a>
                 </div>
@@ -733,33 +733,25 @@
         </div>
     </footer>
 
-    <!-- Mobile Menu Toggle Script - FIXED VERSION -->
+    <!-- Mobile Menu Toggle Script -->
     <script>
-        // Get references to menu elements
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuToggleBtn = document.getElementById('mobile-menu-toggle');
-        
-        // Toggle mobile menu function - only triggered by hamburger button
-        menuToggleBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const isExpanded = mobileMenu.classList.contains('active');
-            mobileMenu.classList.toggle('active');
-            this.setAttribute('aria-expanded', String(!isExpanded));
-        });
-        
-        // Close menu when clicking outside - but NOT when clicking links
-        document.addEventListener('click', function(event) {
-            // If clicking on a link, let it navigate normally - don't interfere
-            if (event.target.tagName === 'A' || event.target.closest('a')) {
-                return;
-            }
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.querySelector('[aria-controls="mobile-menu"]');
+            const isExpanded = menu.classList.contains('active');
             
-            // If clicking outside menu and toggle button, close the menu
-            if (mobileMenu && menuToggleBtn) {
-                if (!mobileMenu.contains(event.target) && !menuToggleBtn.contains(event.target)) {
-                    mobileMenu.classList.remove('active');
-                    menuToggleBtn.setAttribute('aria-expanded', 'false');
-                }
+            menu.classList.toggle('active');
+            button.setAttribute('aria-expanded', !isExpanded);
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.querySelector('[aria-controls="mobile-menu"]');
+            
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.remove('active');
+                button.setAttribute('aria-expanded', 'false');
             }
         });
     </script>
