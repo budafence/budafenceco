@@ -1,564 +1,652 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Buda Fence Company - Free Estimates in Austin, TX</title>
-    <meta name="description" content="Get a free fence estimate from Buda Fence Company. Call (512) 710-7116 or fill out our form. Serving Austin, Buda, Kyle & Dripping Springs. Response within 24 hours.">
-    <link rel="canonical" href="https://budafenceco.com/contact.html">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'buda-primary': '#1e3a5f',
-                        'buda-secondary': '#dc2626',
-                    }
-                }
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Us | Buda Fence Company - Free Estimates in Austin, TX</title>
+  <meta name="description" content="Get a free fence estimate from Buda Fence Company. Call (512) 710-7116 or fill out our form. Serving Austin, Buda, Kyle & Dripping Springs. Response within 24 hours." />
+  <link rel="canonical" href="https://budafenceco.com/contact" />
+  <meta name="theme-color" content="#1e293b" />
+
+  <!-- Tailwind (keeps your contact layout the same) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'buda-primary': '#1e3a5f',
+            'buda-secondary': '#dc2626'
+          }
         }
-    </script>
-    <style>
-        html, body {
-            max-width: 100vw;
-            overflow-x: hidden;
-        }
-        * {
-            max-width: 100%;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-        @media (max-width: 768px) {
-            .container, .mx-auto, [class*="max-w"] {
-                max-width: 100vw !important;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-        }
-    </style>
-    
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Buda Fence Company",
-      "image": "https://budafenceco.com/images/BudaFenceLogo.jpeg",
-      "@id": "https://budafenceco.com",
-      "url": "https://budafenceco.com",
-      "telephone": "(512) 710-7116",
-      "email": "Info@BudaFenceCo.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Buda",
-        "addressRegion": "TX",
-        "postalCode": "78610",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 30.0849,
-        "longitude": -97.8403
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "06:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "09:00",
-          "closes": "14:00"
-        }
-      ],
-      "sameAs": ["https://www.facebook.com/BudaFenceCo"],
-      "priceRange": "$$",
-      "areaServed": [
-        {"@type": "City", "name": "Austin"},
-        {"@type": "City", "name": "Buda"},
-        {"@type": "City", "name": "Kyle"},
-        {"@type": "City", "name": "Dripping Springs"}
-      ]
+      }
     }
-    </script>
+  </script>
+
+  <!-- Prevent horizontal overflow on mobile (same intent as your current fix) -->
+  <style>
+    html, body { max-width: 100vw; overflow-x: hidden; }
+    * { max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }
+
+    /* ====== Header/Nav + Footer (MATCHES ABOUT/HOME STYLE + IMAGES) ====== */
+    *,*::before,*::after{box-sizing:border-box}
+    .skip-link{position:absolute;top:-40px;left:0;background:#1e293b;color:#fff;padding:8px 16px;z-index:100;transition:top .3s}
+    .skip-link:focus{top:0}
+
+    nav.site-nav{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.1);position:sticky;top:0;z-index:50}
+    .nav-container{max-width:80rem;margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;height:5rem}
+    .nav-logo img{height:4rem;width:auto}
+    .nav-links{display:none}
+    .nav-link{color:#374151;font-weight:500;text-decoration:none;transition:color .2s;display:flex;align-items:center;height:100%}
+    .nav-link:hover{color:#dc2626}
+    .nav-link.active{color:#dc2626}
+
+    nav.site-nav button{
+      background:none;border:none;box-shadow:none;cursor:pointer;padding:0;margin:0;
+      font-weight:500;color:#374151;font-family:inherit;font-size:inherit;line-height:inherit;
+      -webkit-appearance:none;-moz-appearance:none;appearance:none
+    }
+    nav.site-nav button:hover{color:#dc2626}
+    nav.site-nav button:focus-visible{outline:2px solid #dc2626;outline-offset:2px}
+
+    .dropdown{position:relative}
+    .dropdown-menu{
+      position:absolute;top:100%;left:0;background:#fff;box-shadow:0 10px 15px rgba(0,0,0,.1);
+      border-radius:.5rem;padding:.5rem 0;min-width:max-content;display:none;z-index:50
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu{display:block}
+    .dropdown-item{display:block;padding:.5rem 1rem;color:#374151;text-decoration:none;white-space:nowrap}
+    .dropdown-item:hover{background:#f3f4f6}
+
+    .nav-contact{display:none;align-items:center;gap:1rem}
+    .nav-phone{color:#1e293b;font-weight:600;text-decoration:none}
+    .nav-cta{background:#dc2626;color:#fff;padding:.5rem 1rem;border-radius:.375rem;font-weight:600;text-decoration:none;transition:background .2s}
+    .nav-cta:hover{background:#b91c1c}
+
+    .mobile-header{display:flex;align-items:center;gap:.5rem}
+    .mobile-phone{color:#dc2626;font-size:.75rem;font-weight:600;text-decoration:none;white-space:nowrap}
+    .mobile-cta{background:#dc2626;color:#fff;padding:.375rem .75rem;border-radius:.25rem;font-size:.75rem;font-weight:600;text-decoration:none;white-space:nowrap}
+    .hamburger{background:none;border:none;cursor:pointer;padding:.5rem}
+    .hamburger svg{width:1.5rem;height:1.5rem;color:#374151}
+
+    .mobile-menu{background:#fff;border-top:1px solid #e5e7eb;padding:.5rem}
+    .mobile-menu a{display:block;padding:.5rem .75rem;color:#374151;text-decoration:none;font-weight:500}
+    .mobile-menu a:hover{color:#dc2626}
+    .mobile-menu a.active{color:#dc2626}
+    .mobile-section{padding:.5rem .75rem}
+    .mobile-section-title{color:#111827;font-weight:600;margin-bottom:.5rem}
+    .mobile-section a{padding:.25rem 0 .25rem 1rem;font-size:.875rem;color:#4b5563;font-weight:400}
+
+    footer.site-footer{background:#0f172a;color:#fff;margin-top:4rem;padding:3rem 1rem}
+    .footer-grid{max-width:80rem;margin:0 auto;display:grid;gap:2rem}
+    .footer-brand img{height:4rem;width:auto;margin-bottom:1rem}
+    .footer-brand p{color:#9ca3af}
+    .footer-section h4{font-weight:700;font-size:1.125rem;margin-bottom:1rem;color:#fff}
+    .footer-section ul{list-style:none;padding:0;margin:0}
+    .footer-section li{margin-bottom:.5rem}
+    .footer-section a{color:#9ca3af;text-decoration:none;transition:color .2s}
+    .footer-section a:hover{color:#fff}
+    .footer-bottom{max-width:80rem;margin:0 auto;border-top:1px solid #1e293b;margin-top:2rem;padding-top:2rem;text-align:center;color:#9ca3af}
+
+    @media(min-width:768px){
+      .nav-links{display:flex;align-items:center;gap:2rem;height:100%}
+      .nav-contact{display:flex}
+      .mobile-header{display:none}
+      .mobile-menu{display:none !important}
+      .footer-grid{grid-template-columns:repeat(4,1fr)}
+    }
+  </style>
+
+  <!-- LocalBusiness Schema (kept consistent with About page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Buda Fence Company",
+    "image": "https://budafenceco.com/images/buda-fence-logo.webp",
+    "@id": "https://budafenceco.com",
+    "url": "https://budafenceco.com",
+    "telephone": "(512) 710-7116",
+    "email": "info@budafenceco.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "308 Wincliff Dr",
+      "addressLocality": "Buda",
+      "addressRegion": "TX",
+      "postalCode": "78610",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.09939,
+      "longitude": -97.86756
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "06:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ],
+    "sameAs": ["https://www.facebook.com/BudaFenceCo"],
+    "foundingDate": "2015",
+    "areaServed": [
+      {"@type": "City", "name": "Buda", "containedInPlace": {"@type": "State", "name": "Texas"}},
+      {"@type": "City", "name": "Austin", "containedInPlace": {"@type": "State", "name": "Texas"}},
+      {"@type": "City", "name": "Kyle", "containedInPlace": {"@type": "State", "name": "Texas"}},
+      {"@type": "City", "name": "Dripping Springs", "containedInPlace": {"@type": "State", "name": "Texas"}}
+    ]
+  }
+  </script>
 </head>
+
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="index.html">
-                        <img class="h-16 w-auto" src="images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo">
-                    </a>
-                </div>
-                
-               <!-- Desktop Navigation -->
-<div class="hidden md:flex space-x-8">
-    <a href="index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-    <a href="about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
-    <div class="relative group">
-        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Services ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
-            <a href="services/deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
-            <a href="services/wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
-            <a href="services/metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
-            <a href="services/chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
-            <a href="services/fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation (now matches About/Home + optimized WebP logos) -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="/" class="nav-logo" aria-label="Buda Fence Company Home">
+        <img
+          src="/images/buda-fence-logo-150.webp"
+          srcset="/images/buda-fence-logo-150.webp 150w, /images/buda-fence-logo.webp 300w"
+          sizes="150px"
+          alt="Buda Fence Company Logo"
+          width="150"
+          height="74"
+          loading="eager"
+          decoding="async">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/about" class="nav-link">About</a>
+
+        <div class="dropdown">
+          <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
+          <div class="dropdown-menu" role="menu">
+            <a href="/services" class="dropdown-item" role="menuitem">All Services</a>
+            <a href="/services/deck-construction" class="dropdown-item" role="menuitem">Deck Construction</a>
+            <a href="/services/wood-fence-installation" class="dropdown-item" role="menuitem">Wood Fence Installation</a>
+            <a href="/services/metal-fence-installation" class="dropdown-item" role="menuitem">Metal Fence Installation</a>
+            <a href="/services/chain-link-fence-installation" class="dropdown-item" role="menuitem">Chain Link Fence Installation</a>
+            <a href="/services/fence-repair" class="dropdown-item" role="menuitem">Fence Repair</a>
+          </div>
         </div>
+
+        <div class="dropdown">
+          <button aria-haspopup="true" aria-expanded="false">Service Areas ▾</button>
+          <div class="dropdown-menu" role="menu">
+            <a href="/service-areas/austin" class="dropdown-item" role="menuitem">Austin</a>
+            <a href="/service-areas/buda" class="dropdown-item" role="menuitem">Buda</a>
+            <a href="/service-areas/kyle" class="dropdown-item" role="menuitem">Kyle</a>
+            <a href="/service-areas/dripping-springs" class="dropdown-item" role="menuitem">Dripping Springs</a>
+          </div>
+        </div>
+
+        <a href="/gallery" class="nav-link">Gallery</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/contact" class="nav-link active" aria-current="page">Contact</a>
+      </div>
+
+      <!-- Desktop Contact -->
+      <div class="nav-contact">
+        <a href="tel:5127107116" class="nav-phone">(512) 710-7116</a>
+        <a href="/contact" class="nav-cta">Free Quote</a>
+      </div>
+
+      <!-- Mobile Header -->
+      <div class="mobile-header">
+        <a href="tel:5127107116" class="mobile-phone">(512) 710-7116</a>
+        <a href="/contact" class="mobile-cta">Quote</a>
+        <button
+          class="hamburger"
+          id="mobile-menu-button"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="relative group">
-        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="service-areas/austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
-            <a href="service-areas/buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
-            <a href="service-areas/kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
-            <a href="service-areas/dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
-        </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="mobile-menu hidden" role="menu">
+      <a href="/" role="menuitem">Home</a>
+      <a href="/about" role="menuitem">About</a>
+
+      <div class="mobile-section">
+        <p class="mobile-section-title">Services</p>
+        <a href="/services" role="menuitem">All Services</a>
+        <a href="/services/deck-construction" role="menuitem">Deck Construction</a>
+        <a href="/services/wood-fence-installation" role="menuitem">Wood Fence</a>
+        <a href="/services/metal-fence-installation" role="menuitem">Metal Fence</a>
+        <a href="/services/chain-link-fence-installation" role="menuitem">Chain Link</a>
+        <a href="/services/fence-repair" role="menuitem">Fence Repair</a>
+      </div>
+
+      <div class="mobile-section">
+        <p class="mobile-section-title">Service Areas</p>
+        <a href="/service-areas/austin" role="menuitem">Austin</a>
+        <a href="/service-areas/buda" role="menuitem">Buda</a>
+        <a href="/service-areas/kyle" role="menuitem">Kyle</a>
+        <a href="/service-areas/dripping-springs" role="menuitem">Dripping Springs</a>
+      </div>
+
+      <a href="/gallery" role="menuitem">Gallery</a>
+      <a href="/blog/" role="menuitem">Blog</a>
+      <a href="/contact" class="active" role="menuitem" aria-current="page">Contact</a>
     </div>
-    <a href="gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-    <a href="blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-    <a href="contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-</div>
-                
-                <!-- Desktop Contact -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
-                    <a href="contact.html" class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold">Free Quote</a>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center space-x-2">
-                    <a href="tel:5127107116" class="text-buda-secondary text-xs font-semibold whitespace-nowrap">(512) 710-7116</a>
-                    <a href="contact.html" class="bg-buda-secondary text-white px-3 py-1.5 rounded text-xs font-semibold whitespace-nowrap">Quote</a>
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-buda-secondary">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Navigation Menu -->
-<div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="index.html" class="block px-3 py-2 text-buda-secondary font-medium">Home</a>
-        <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
-        <div class="px-3 py-2">
-            <p class="text-gray-900 font-semibold mb-2">Services</p>
-            <a href="services.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">All Services</a>
-            <a href="services/deck-construction.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Deck Construction</a>
-            <a href="services/wood-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Wood Fence</a>
-            <a href="services/metal-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Metal Fence</a>
-            <a href="services/chain-link-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Chain Link</a>
-            <a href="services/fence-repair.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Fence Repair</a>
-        </div>
-        <div class="px-3 py-2">
-            <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-            <a href="service-areas/austin.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Austin</a>
-            <a href="service-areas/buda.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Buda</a>
-            <a href="service-areas/kyle.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Kyle</a>
-            <a href="service-areas/dripping-springs.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Dripping Springs</a>
-        </div>
-        <a href="gallery.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-        <a href="blog/" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-        <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+  </nav>
+
+  <!-- Hero Section (kept same layout) -->
+  <section class="bg-gradient-to-r from-buda-primary to-slate-800 text-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Get Your Free Estimate</h1>
+      <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
+        Ready for your Budaful transformation? Contact us today for expert fence installation and repair services.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg inline-flex items-center justify-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Call (512) 710-7116
+        </a>
+        <a href="mailto:info@budafenceco.com" class="bg-white text-buda-primary px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg inline-flex items-center justify-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Email Us
+        </a>
+      </div>
     </div>
-</div>
-    </nav>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-buda-primary to-slate-800 text-white py-12 md:py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Get Your Free Estimate</h1>
-            <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-                Ready for your Budaful transformation? Contact us today for expert fence installation and repair services.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:5127107116" class="bg-buda-secondary text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg inline-flex items-center justify-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                    </svg>
-                    Call (512) 710-7116
-                </a>
-                <a href="mailto:Info@BudaFenceCo.com" class="bg-white text-buda-primary px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg inline-flex items-center justify-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                    Email Us
-                </a>
+  <!-- Main Content (kept same layout) -->
+  <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid lg:grid-cols-3 gap-8">
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-2">
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-2">Request Your Free Estimate</h2>
+          <p class="text-gray-600 mb-6">
+            Fill out the form below and we'll contact you within 24 hours to schedule your free on-site estimate.
+            The more details you provide, the more accurate your estimate will be.
+          </p>
+
+          <form action="https://formspree.io/f/xdkdgqlg" method="POST" class="space-y-6">
+            <!-- Contact Information -->
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Contact Information</h3>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                  <input type="text" id="name" name="name" required placeholder="Enter your full name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                  <input type="email" id="email" name="email" required placeholder="Enter your email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                </div>
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required placeholder="(512) 555-0123" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                </div>
+                <div>
+                  <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Project Address *</label>
+                  <input type="text" id="address" name="address" required placeholder="Enter project address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                </div>
+              </div>
             </div>
+
+            <!-- Project Details -->
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Project Details</h3>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label for="project-type" class="block text-sm font-medium text-gray-700 mb-1">Project Type *</label>
+                  <select id="project-type" name="project-type" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                    <option value="">Select project type</option>
+                    <option value="new-installation">New Fence Installation</option>
+                    <option value="fence-repair">Fence Repair</option>
+                    <option value="fence-replacement">Fence Replacement</option>
+                    <option value="gate-installation">Gate Installation</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="fence-type" class="block text-sm font-medium text-gray-700 mb-1">Fence Type</label>
+                  <select id="fence-type" name="fence-type" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                    <option value="">Select fence type</option>
+                    <option value="wood-cedar">Wood - Cedar</option>
+                    <option value="wood-pine">Wood - Pressure Treated Pine</option>
+                    <option value="metal-aluminum">Metal - Aluminum</option>
+                    <option value="metal-steel">Metal - Steel</option>
+                    <option value="metal-wrought-iron">Metal - Wrought Iron Style</option>
+                    <option value="chain-link">Chain Link</option>
+                    <option value="chain-link-vinyl">Chain Link - Vinyl Coated</option>
+                    <option value="not-sure">Not Sure - Need Advice</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="linear-feet" class="block text-sm font-medium text-gray-700 mb-1">Approximate Linear Feet</label>
+                  <input type="number" id="linear-feet" name="linear-feet" placeholder="e.g., 150" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                </div>
+                <div>
+                  <label for="height" class="block text-sm font-medium text-gray-700 mb-1">Desired Height</label>
+                  <select id="height" name="height" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                    <option value="">Select height</option>
+                    <option value="4-feet">4 feet</option>
+                    <option value="5-feet">5 feet</option>
+                    <option value="6-feet">6 feet</option>
+                    <option value="7-feet">7 feet</option>
+                    <option value="8-feet">8 feet</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="timeline" class="block text-sm font-medium text-gray-700 mb-1">Timeline</label>
+                  <select id="timeline" name="timeline" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                    <option value="">Select timeline</option>
+                    <option value="asap">ASAP</option>
+                    <option value="1-2-weeks">1-2 weeks</option>
+                    <option value="1-month">Within 1 month</option>
+                    <option value="2-3-months">2-3 months</option>
+                    <option value="researching">Just researching</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
+                  <select id="budget" name="budget" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
+                    <option value="">Select budget range</option>
+                    <option value="under-3000">Under $3,000</option>
+                    <option value="3000-5000">$3,000 - $5,000</option>
+                    <option value="5000-8000">$5,000 - $8,000</option>
+                    <option value="8000-12000">$8,000 - $12,000</option>
+                    <option value="over-12000">$12,000+</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Details -->
+            <div>
+              <label for="details" class="block text-sm font-medium text-gray-700 mb-1">Additional Details</label>
+              <textarea id="details" name="details" rows="4" placeholder="Tell us about any specific requirements, challenges, or questions you have about your project..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+              <button type="submit" class="w-full bg-buda-secondary text-white px-6 py-3 rounded-md hover:bg-red-700 font-semibold text-lg transition-colors">
+                Get My Free Estimate
+              </button>
+              <p class="text-sm text-gray-500 mt-2 text-center">We'll respond within 24 hours. No spam, ever.</p>
+            </div>
+          </form>
         </div>
-    </section>
+      </div>
 
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid lg:grid-cols-3 gap-8">
-            
-            <!-- Contact Form - Takes 2 columns -->
-            <div class="lg:col-span-2">
-                <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Request Your Free Estimate</h2>
-                    <p class="text-gray-600 mb-6">Fill out the form below and we'll contact you within 24 hours to schedule your free on-site estimate. The more details you provide, the more accurate your estimate will be.</p>
-                    
-                    <form action="https://formspree.io/f/xdkdgqlg" method="POST" class="space-y-6">
-                        <!-- Contact Information -->
-                        <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Contact Information</h3>
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
-                                    <input type="text" id="name" name="name" required placeholder="Enter your full name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
-                                    <input type="email" id="email" name="email" required placeholder="Enter your email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                </div>
-                                <div>
-                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" required placeholder="(512) 555-0123" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                </div>
-                                <div>
-                                    <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Project Address *</label>
-                                    <input type="text" id="address" name="address" required placeholder="Enter project address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Project Details -->
-                        <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Project Details</h3>
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="project-type" class="block text-sm font-medium text-gray-700 mb-1">Project Type *</label>
-                                    <select id="project-type" name="project-type" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                        <option value="">Select project type</option>
-                                        <option value="new-installation">New Fence Installation</option>
-                                        <option value="fence-repair">Fence Repair</option>
-                                        <option value="fence-replacement">Fence Replacement</option>
-                                        <option value="gate-installation">Gate Installation</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="fence-type" class="block text-sm font-medium text-gray-700 mb-1">Fence Type</label>
-                                    <select id="fence-type" name="fence-type" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                        <option value="">Select fence type</option>
-                                        <option value="wood-cedar">Wood - Cedar</option>
-                                        <option value="wood-pine">Wood - Pressure Treated Pine</option>
-                                        <option value="metal-aluminum">Metal - Aluminum</option>
-                                        <option value="metal-steel">Metal - Steel</option>
-                                        <option value="metal-wrought-iron">Metal - Wrought Iron Style</option>
-                                        <option value="chain-link">Chain Link</option>
-                                        <option value="chain-link-vinyl">Chain Link - Vinyl Coated</option>
-                                        <option value="not-sure">Not Sure - Need Advice</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="linear-feet" class="block text-sm font-medium text-gray-700 mb-1">Approximate Linear Feet</label>
-                                    <input type="number" id="linear-feet" name="linear-feet" placeholder="e.g., 150" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                </div>
-                                <div>
-                                    <label for="height" class="block text-sm font-medium text-gray-700 mb-1">Desired Height</label>
-                                    <select id="height" name="height" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                        <option value="">Select height</option>
-                                        <option value="4-feet">4 feet</option>
-                                        <option value="5-feet">5 feet</option>
-                                        <option value="6-feet">6 feet</option>
-                                        <option value="7-feet">7 feet</option>
-                                        <option value="8-feet">8 feet</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="timeline" class="block text-sm font-medium text-gray-700 mb-1">Timeline</label>
-                                    <select id="timeline" name="timeline" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                        <option value="">Select timeline</option>
-                                        <option value="asap">ASAP</option>
-                                        <option value="1-2-weeks">1-2 weeks</option>
-                                        <option value="1-month">Within 1 month</option>
-                                        <option value="2-3-months">2-3 months</option>
-                                        <option value="researching">Just researching</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
-                                    <select id="budget" name="budget" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                                        <option value="">Select budget range</option>
-                                        <option value="under-3000">Under $3,000</option>
-                                        <option value="3000-5000">$3,000 - $5,000</option>
-                                        <option value="5000-8000">$5,000 - $8,000</option>
-                                        <option value="8000-12000">$8,000 - $12,000</option>
-                                        <option value="over-12000">$12,000+</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Additional Details -->
-                        <div>
-                            <label for="details" class="block text-sm font-medium text-gray-700 mb-1">Additional Details</label>
-                            <textarea id="details" name="details" rows="4" placeholder="Tell us about any specific requirements, challenges, or questions you have about your project..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent"></textarea>
-                        </div>
-                        
-                        <!-- Submit Button -->
-                        <div>
-                            <button type="submit" class="w-full bg-buda-secondary text-white px-6 py-3 rounded-md hover:bg-red-700 font-semibold text-lg transition-colors">
-                                Get My Free Estimate
-                            </button>
-                            <p class="text-sm text-gray-500 mt-2 text-center">We'll respond within 24 hours. No spam, ever.</p>
-                        </div>
-                    </form>
-                </div>
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <!-- Contact Information -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Contact Information</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-buda-secondary text-white rounded-full p-2 mr-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Phone</p>
+                <a href="tel:5127107116" class="text-buda-secondary hover:underline">(512) 710-7116</a>
+                <p class="text-sm text-gray-600">Call or text anytime</p>
+              </div>
             </div>
-            
-            <!-- Sidebar -->
-            <div class="space-y-6">
-                <!-- Contact Information -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-buda-secondary text-white rounded-full p-2 mr-3">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-gray-900">Phone</p>
-                                <a href="tel:5127107116" class="text-buda-secondary hover:underline">(512) 710-7116</a>
-                                <p class="text-sm text-gray-600">Call or text anytime</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-buda-secondary text-white rounded-full p-2 mr-3">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-gray-900">Email</p>
-                                <a href="mailto:Info@BudaFenceCo.com" class="text-buda-secondary hover:underline">Info@BudaFenceCo.com</a>
-                                <p class="text-sm text-gray-600">We respond within 24 hours</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-buda-secondary text-white rounded-full p-2 mr-3">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-gray-900">Business Hours</p>
-                                <p class="text-gray-700">Mon - Fri: 6 AM - 6 PM</p>
-                                <p class="text-gray-700">Saturday: 9 AM - 2 PM</p>
-                                <p class="text-gray-700">Sunday: Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service Areas -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Service Areas</h3>
-                    <p class="text-gray-600 mb-4">We proudly serve:</p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Buda, TX
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Austin, TX
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Kyle, TX
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Dripping Springs, TX
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Hays County
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Travis County
-                        </li>
-                    </ul>
-                    <p class="text-sm text-gray-500 mt-4">Not sure if we serve your area? Give us a call!</p>
-                </div>
-                
-                <!-- Why Choose Us -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Why Choose Buda Fence?</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>15+ Years Experience</strong> in Central Texas</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>5,000+ Satisfied Customers</strong> across Austin area</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>Same-Day Installation</strong> for projects under 100 linear feet</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>$1 Million Insurance</strong> for your peace of mind</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-gray-700"><strong>Free Estimates</strong> with no obligation</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Emergency Repairs -->
-                <div class="bg-buda-secondary text-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-bold mb-3">Emergency Repairs</h3>
-                    <p class="mb-4">Storm damage or urgent fence repairs? We offer same-day emergency services for immediate needs.</p>
-                    <a href="tel:5127107116" class="bg-white text-buda-secondary px-6 py-2 rounded-md hover:bg-gray-100 font-semibold inline-flex items-center">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                        </svg>
-                        Emergency Service
-                    </a>
-                </div>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-buda-secondary text-white rounded-full p-2 mr-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Email</p>
+                <a href="mailto:info@budafenceco.com" class="text-buda-secondary hover:underline">info@budafenceco.com</a>
+                <p class="text-sm text-gray-600">We respond within 24 hours</p>
+              </div>
             </div>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-buda-secondary text-white rounded-full p-2 mr-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Business Hours</p>
+                <p class="text-gray-700">Mon - Fri: 6 AM - 6 PM</p>
+                <p class="text-gray-700">Saturday: 9 AM - 2 PM</p>
+                <p class="text-gray-700">Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <img src="images/BudaFenceLogo.jpeg" alt="Buda Fence Company" class="h-16 mb-4">
-                    <p class="text-gray-400">Building Budaful fences for Central Texas families since 2015.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="services/wood-fence-installation.html" class="hover:text-white">Wood Fences</a></li>
-                        <li><a href="services/metal-fence-installation.html" class="hover:text-white">Metal Fences</a></li>
-                        <li><a href="services/chain-link-fence-installation.html" class="hover:text-white">Chain Link</a></li>
-                        <li><a href="services/fence-repair.html" class="hover:text-white">Fence Repair</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
-                        <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
-                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></li>
-                        <li><a href="mailto:Info@BudaFenceCo.com" class="hover:text-white">Info@BudaFenceCo.com</a></li>
-                        <li>Buda, TX 78610</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Buda Fence Company. All rights reserved.</p>
-            </div>
+        <!-- Service Areas -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Service Areas</h3>
+          <p class="text-gray-600 mb-4">We proudly serve:</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-gray-700">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Buda, TX
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Austin, TX
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Kyle, TX
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Dripping Springs, TX
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Hays County
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Travis County
+            </li>
+          </ul>
+          <p class="text-sm text-gray-500 mt-4">Not sure if we serve your area? Give us a call!</p>
         </div>
-    </footer>
 
-    <!-- Mobile Menu Script -->
-    <script>
-  (function () {
-    const menu = document.getElementById('mobile-menu');
-    const button = document.querySelector('[aria-controls="mobile-menu"]');
+        <!-- Why Choose Us -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Why Choose Buda Fence?</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-gray-700"><strong>15+ Years Experience</strong> in Central Texas</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-gray-700"><strong>5,000+ Satisfied Customers</strong> across Austin area</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-gray-700"><strong>Same-Day Installation</strong> for projects under 100 linear feet</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-gray-700"><strong>$1 Million Insurance</strong> for your peace of mind</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="text-gray-700"><strong>Free Estimates</strong> with no obligation</span>
+            </li>
+          </ul>
+        </div>
 
-    if (!menu || !button) return;
+        <!-- Emergency Repairs -->
+        <div class="bg-buda-secondary text-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-bold mb-3">Emergency Repairs</h3>
+          <p class="mb-4">Storm damage or urgent fence repairs? We offer same-day emergency services for immediate needs.</p>
+          <a href="tel:5127107116" class="bg-white text-buda-secondary px-6 py-2 rounded-md hover:bg-gray-100 font-semibold inline-flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            Emergency Service
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
 
-    function isOpen() {
-      return menu.classList.contains('active');
-    }
+  <!-- Footer (now matches About/Home + optimized WebP logo) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img
+          src="/images/buda-fence-logo-150.webp"
+          srcset="/images/buda-fence-logo-150.webp 150w, /images/buda-fence-logo.webp 300w"
+          sizes="150px"
+          alt="Buda Fence Company"
+          width="150"
+          height="74"
+          loading="lazy"
+          decoding="async">
+        <p>Building Budaful fences for Central Texas families since 2015.</p>
+      </div>
 
-    function openMenu() {
-      menu.classList.add('active');
-      button.setAttribute('aria-expanded', 'true');
-    }
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/deck-construction">Deck Construction</a></li>
+          <li><a href="/services/wood-fence-installation">Wood Fences</a></li>
+          <li><a href="/services/metal-fence-installation">Metal Fences</a></li>
+          <li><a href="/services/chain-link-fence-installation">Chain Link</a></li>
+          <li><a href="/services/fence-repair">Fence Repair</a></li>
+        </ul>
+      </div>
 
-    function closeMenu() {
-      menu.classList.remove('active');
-      button.setAttribute('aria-expanded', 'false');
-    }
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
 
-    // ✅ Safari / iOS: force menu closed on page restore + load
-    window.addEventListener('pageshow', closeMenu);
-    window.addEventListener('load', closeMenu);
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:5127107116">(512) 710-7116</a></li>
+          <li><a href="mailto:info@budafenceco.com">info@budafenceco.com</a></li>
+          <li>Buda, TX 78610</li>
+        </ul>
+      </div>
+    </div>
 
-    // ✅ Toggle menu (only from hamburger)
-    button.addEventListener('click', function (e) {
-      e.stopPropagation();
-      if (isOpen()) closeMenu();
-      else openMenu();
-    });
+    <div class="footer-bottom">
+      <p>&copy; 2026 Buda Fence Company. All rights reserved.</p>
+    </div>
+  </footer>
 
-    // ✅ Close menu before navigating anywhere (prevents “menu follows me”)
-    document.addEventListener('click', function (e) {
-      const link = e.target.closest('a');
-      if (!link) return;
+  <!-- Mobile Menu Script (prevents “menu follows me” + closes on navigation) -->
+  <script>
+    (function () {
+      const menu = document.getElementById('mobile-menu');
+      const button = document.getElementById('mobile-menu-button');
 
-      // If menu is open and user clicks ANY link (header, hero, menu links), close it first.
-      if (isOpen()) closeMenu();
-    }, { capture: true });
+      if (!menu || !button) return;
 
-    // ✅ Click outside closes menu (but never blocks link navigation)
-    document.addEventListener('click', function (event) {
-      if (!isOpen()) return;
+      function isOpen() {
+        return !menu.classList.contains('hidden');
+      }
 
-      // Let links do their job
-      if (event.target.closest('a')) return;
+      function openMenu() {
+        menu.classList.remove('hidden');
+        button.setAttribute('aria-expanded', 'true');
+      }
 
-      // Ignore clicks in menu or on hamburger
-      if (menu.contains(event.target) || button.contains(event.target)) return;
+      function closeMenu() {
+        menu.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+      }
 
-      closeMenu();
-    }, { passive: true });
+      // Force closed on load + BFCache restore (Safari/iOS)
+      window.addEventListener('pageshow', closeMenu);
+      window.addEventListener('load', closeMenu);
 
-    // ✅ ESC closes menu
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && isOpen()) closeMenu();
-    });
-  })();
-</script>
+      // Toggle from hamburger only
+      button.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (isOpen()) closeMenu();
+        else openMenu();
+      });
+
+      // Close before navigating anywhere (prevents “menu follows me” to other pages)
+      document.addEventListener('click', function (e) {
+        const link = e.target.closest('a');
+        if (!link) return;
+        if (isOpen()) closeMenu();
+      }, { capture: true });
+
+      // Click outside closes menu
+      document.addEventListener('click', function (e) {
+        if (!isOpen()) return;
+        if (menu.contains(e.target) || button.contains(e.target)) return;
+        closeMenu();
+      }, { passive: true });
+
+      // ESC closes menu
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen()) closeMenu();
+      });
+    })();
+  </script>
 </body>
 </html>
