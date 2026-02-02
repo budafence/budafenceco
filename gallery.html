@@ -4,107 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Primary SEO -->
-  <title>Fence Gallery Austin TX | Wood, Metal & Chain Link Fence Photos | Buda Fence Company</title>
-  <meta name="description" content="Browse real fence projects by Buda Fence Company—wood, metal, and chain link installs + repairs across Austin, Buda, Kyle & Dripping Springs. Call (512) 710-7116." />
+  <title>Fence Gallery | Wood, Metal & Chain Link Fence Photos | Buda Fence Company</title>
+  <meta name="description" content="Browse real fence projects completed by Buda Fence Company across Buda, Austin, Kyle & Dripping Springs. Wood fences, metal fences, chain link, and repairs. Call (512) 710-7116." />
   <link rel="canonical" href="https://budafenceco.com/gallery" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#1e293b" />
+  <meta name="robots" content="index, follow" />
 
-  <!-- Social (OG/Twitter) -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fence Gallery | Buda Fence Company" />
+  <meta property="og:description" content="Browse wood, metal, chain link and repair projects completed across Central Texas." />
+  <meta property="og:url" content="https://budafenceco.com/gallery" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Buda Fence Company" />
-  <meta property="og:title" content="Fence Gallery | Buda Fence Company" />
-  <meta property="og:description" content="See our real fence projects—wood, metal, chain link, and repairs across Central Texas." />
-  <meta property="og:url" content="https://budafenceco.com/gallery" />
-  <!-- If you have a dedicated share image, replace this with it -->
-  <meta property="og:image" content="https://budafenceco.com/images/CedarFence.jpg" />
-  <meta property="og:image:alt" content="Fence project photo gallery - Buda Fence Company" />
+  <meta property="og:image" content="https://budafenceco.com/images/william-espich-family-og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Fence Gallery | Buda Fence Company" />
-  <meta name="twitter:description" content="See our real fence installs and repairs across Central Texas." />
-  <meta name="twitter:image" content="https://budafenceco.com/images/CedarFence.jpg" />
+  <meta name="twitter:description" content="Browse wood, metal, chain link and repair projects completed across Central Texas." />
+  <meta name="twitter:image" content="https://budafenceco.com/images/william-espich-family-og.jpg" />
 
-  <!-- Performance -->
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
-
-  <!-- Tailwind (kept as-is to avoid breaking layout) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'buda-primary': '#1e3a5f',
-            'buda-secondary': '#dc2626'
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Preconnect / Fonts (matches About page approach) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
 
   <style>
-    html, body { max-width: 100vw; overflow-x: hidden; }
-    * { max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }
-    @media (max-width: 768px) {
-      .container, .mx-auto, [class*="max-w"] {
-        max-width: 100vw !important;
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{max-width:100vw;overflow-x:hidden}
+    body{font-family:'Montserrat',ui-sans-serif,system-ui,sans-serif;background:#f9fafb;color:#374151;line-height:1.6}
 
-    /* Gallery hover */
-    .gallery-img { transition: transform 0.25s ease, box-shadow 0.25s ease; }
-    .gallery-img:hover { transform: scale(1.02); box-shadow: 0 10px 40px rgba(0,0,0,0.20); }
-
-    /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.9);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-      padding: 24px;
-    }
-    .lightbox.active { display: flex; }
-    .lightbox img { max-width: 92vw; max-height: 88vh; object-fit: contain; }
-    .lightbox-close {
-      position: absolute;
-      top: 12px; right: 18px;
-      color: white;
-      font-size: 40px;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    /* ====== Consistent Header/Nav + Footer (same as your updated Contact page) ====== */
-    *,*::before,*::after{box-sizing:border-box}
+    /* Skip link */
     .skip-link{position:absolute;top:-40px;left:0;background:#1e293b;color:#fff;padding:8px 16px;z-index:100;transition:top .3s}
     .skip-link:focus{top:0}
 
-    nav.site-nav{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.1);position:sticky;top:0;z-index:50}
+    /* NAV (consistent with About page) */
+    nav{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.1);position:sticky;top:0;z-index:80}
     .nav-container{max-width:80rem;margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;height:5rem}
     .nav-logo img{height:4rem;width:auto}
     .nav-links{display:none}
-    .nav-link{color:#374151;font-weight:500;text-decoration:none;transition:color .2s;display:flex;align-items:center;height:100%}
+    .nav-link{color:#374151;font-weight:500;text-decoration:none;transition:color .2s}
     .nav-link:hover{color:#dc2626}
     .nav-link.active{color:#dc2626}
 
-    nav.site-nav button{
-      background:none;border:none;box-shadow:none;cursor:pointer;padding:0;margin:0;
+    nav button{
+      background:none;border:none;cursor:pointer;padding:0;margin:0;
       font-weight:500;color:#374151;font-family:inherit;font-size:inherit;line-height:inherit;
-      -webkit-appearance:none;-moz-appearance:none;appearance:none
+      -webkit-appearance:none;appearance:none
     }
-    nav.site-nav button:hover{color:#dc2626}
-    nav.site-nav button:focus-visible{outline:2px solid #dc2626;outline-offset:2px}
+    nav button:hover{color:#dc2626}
+    nav button:focus-visible{outline:2px solid #dc2626;outline-offset:2px}
 
     .dropdown{position:relative}
     .dropdown-menu{
-      position:absolute;top:100%;left:0;background:#fff;box-shadow:0 10px 15px rgba(0,0,0,.1);
-      border-radius:.5rem;padding:.5rem 0;min-width:max-content;display:none;z-index:50
+      position:absolute;top:100%;left:0;background:#fff;
+      box-shadow:0 10px 15px rgba(0,0,0,0.1);
+      border-radius:.5rem;padding:.5rem 0;min-width:max-content;display:none;z-index:90
     }
     .dropdown:hover .dropdown-menu,
     .dropdown:focus-within .dropdown-menu{display:block}
@@ -122,7 +80,8 @@
     .hamburger{background:none;border:none;cursor:pointer;padding:.5rem}
     .hamburger svg{width:1.5rem;height:1.5rem;color:#374151}
 
-    .mobile-menu{background:#fff;border-top:1px solid #e5e7eb;padding:.5rem}
+    .mobile-menu{display:none;background:#fff;border-top:1px solid #e5e7eb;padding:.5rem}
+    .mobile-menu.active{display:block}
     .mobile-menu a{display:block;padding:.5rem .75rem;color:#374151;text-decoration:none;font-weight:500}
     .mobile-menu a:hover{color:#dc2626}
     .mobile-menu a.active{color:#dc2626}
@@ -130,64 +89,175 @@
     .mobile-section-title{color:#111827;font-weight:600;margin-bottom:.5rem}
     .mobile-section a{padding:.25rem 0 .25rem 1rem;font-size:.875rem;color:#4b5563;font-weight:400}
 
-    footer.site-footer{background:#0f172a;color:#fff;margin-top:4rem;padding:3rem 1rem}
+    @media(min-width:768px){
+      .nav-links{display:flex;align-items:center;gap:2rem}
+      .nav-contact{display:flex}
+      .mobile-header{display:none}
+      .mobile-menu{display:none !important}
+      .nav-links{height:100%}
+      .nav-links > *{height:100%}
+      .nav-link{display:flex;align-items:center;height:100%}
+      .dropdown{display:flex;align-items:center;height:100%}
+      .dropdown > button{display:flex;align-items:center;height:100%}
+    }
+
+    /* HERO */
+    .hero{background:linear-gradient(to right,#1e293b,#334155);color:#fff;padding:3.5rem 1rem;text-align:center}
+    .hero h1{font-size:2rem;font-weight:800;margin-bottom:.75rem}
+    .hero p{font-size:1.125rem;color:#e5e7eb;max-width:60rem;margin:0 auto}
+    .hero .sub{margin-top:.5rem;color:#bfdbfe;font-weight:500}
+
+    @media(min-width:768px){
+      .hero{padding:4.5rem 1rem}
+      .hero h1{font-size:3rem}
+      .hero p{font-size:1.25rem}
+    }
+
+    /* FILTER BAR */
+    .filters-wrap{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:5rem;z-index:60}
+    .filters{max-width:80rem;margin:0 auto;padding:1rem;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+    .filter-btn{
+      border:1px solid #e5e7eb;background:#f3f4f6;color:#374151;
+      padding:.55rem 1rem;border-radius:9999px;font-weight:700;cursor:pointer;
+      transition:background .2s,color .2s,border-color .2s
+    }
+    .filter-btn:hover{background:#1e293b;color:#fff;border-color:#1e293b}
+    .filter-btn.active{background:#1e293b;color:#fff;border-color:#1e293b}
+    .filter-hint{max-width:80rem;margin:0 auto;padding:0 1rem 1rem;text-align:center;color:#6b7280;font-size:.95rem}
+
+    /* MAIN */
+    main{max-width:80rem;margin:0 auto;padding:2.5rem 1rem}
+    .section{margin-bottom:3.25rem}
+    .section h2{font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:1rem}
+    .section p.section-note{color:#6b7280;margin-top:-.25rem;margin-bottom:1rem}
+
+    .grid{display:grid;gap:1rem}
+    @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr);gap:1.25rem}}
+    @media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr);gap:1.5rem}}
+
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+    .img-wrap{width:100%;aspect-ratio:4/3;background:#e5e7eb}
+    .gallery-img{
+      width:100%;height:100%;object-fit:cover;display:block;
+      transition:transform .25s ease, box-shadow .25s ease
+    }
+    .card:hover .gallery-img{transform:scale(1.02)}
+    .caption{padding:.75rem 1rem;color:#4b5563;font-size:.95rem}
+
+    .learn-more{margin-top:1.25rem;text-align:center}
+    .btn{
+      display:inline-block;text-decoration:none;font-weight:800;
+      padding:.7rem 1.1rem;border-radius:.6rem;transition:background .2s,color .2s,border-color .2s
+    }
+    .btn-primary{background:#1e293b;color:#fff}
+    .btn-primary:hover{background:#0f172a}
+    .btn-secondary{background:#dc2626;color:#fff}
+    .btn-secondary:hover{background:#b91c1c}
+
+    /* CTA */
+    .cta{background:linear-gradient(to right,#1e293b,#334155);border-radius:.75rem;padding:2rem;color:#fff;text-align:center;margin-top:2rem}
+    .cta h2{font-size:1.875rem;font-weight:900;margin-bottom:.5rem}
+    .cta p{color:#e5e7eb;max-width:52rem;margin:0 auto 1.25rem}
+    .cta-actions{display:flex;flex-direction:column;gap:.75rem;justify-content:center}
+    .cta-actions a{font-size:1.05rem}
+    .cta-actions .cta-white{background:#fff;color:#1e293b}
+    .cta-actions .cta-white:hover{background:#f3f4f6}
+    @media(min-width:640px){.cta-actions{flex-direction:row}}
+
+    /* LIGHTBOX */
+    .lightbox{
+      display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);
+      z-index:200;align-items:center;justify-content:center;padding:1rem
+    }
+    .lightbox.active{display:flex}
+    .lightbox img{max-width:92vw;max-height:90vh;object-fit:contain;border-radius:.5rem}
+    .lightbox-close{
+      position:absolute;top:14px;right:18px;color:#fff;font-size:40px;line-height:1;cursor:pointer;
+      background:transparent;border:none
+    }
+
+    /* FOOTER (consistent info) */
+    footer{background:#0f172a;color:#fff;margin-top:4rem;padding:3rem 1rem}
     .footer-grid{max-width:80rem;margin:0 auto;display:grid;gap:2rem}
     .footer-brand img{height:4rem;width:auto;margin-bottom:1rem}
     .footer-brand p{color:#9ca3af}
-    .footer-section h4{font-weight:700;font-size:1.125rem;margin-bottom:1rem;color:#fff}
-    .footer-section ul{list-style:none;padding:0;margin:0}
+    .footer-section h4{font-weight:800;font-size:1.125rem;margin-bottom:1rem}
+    .footer-section ul{list-style:none}
     .footer-section li{margin-bottom:.5rem}
     .footer-section a{color:#9ca3af;text-decoration:none;transition:color .2s}
     .footer-section a:hover{color:#fff}
     .footer-bottom{max-width:80rem;margin:0 auto;border-top:1px solid #1e293b;margin-top:2rem;padding-top:2rem;text-align:center;color:#9ca3af}
-
-    @media(min-width:768px){
-      .nav-links{display:flex;align-items:center;gap:2rem;height:100%}
-      .nav-contact{display:flex}
-      .mobile-header{display:none}
-      .mobile-menu{display:none !important}
-      .footer-grid{grid-template-columns:repeat(4,1fr)}
-    }
+    @media(min-width:768px){.footer-grid{grid-template-columns:repeat(4,1fr)}}
   </style>
 
-  <!-- Schema: Gallery + Page + Breadcrumbs -->
+  <!-- LocalBusiness Schema (consistent) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "LocalBusiness",
+    "name": "Buda Fence Company",
+    "image": "https://budafenceco.com/images/buda-fence-logo-150.webp",
+    "@id": "https://budafenceco.com",
+    "url": "https://budafenceco.com",
+    "telephone": "(512) 710-7116",
+    "email": "info@budafenceco.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "308 Wincliff Dr",
+      "addressLocality": "Buda",
+      "addressRegion": "TX",
+      "postalCode": "78610",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
       {
-        "@type": "WebPage",
-        "@id": "https://budafenceco.com/gallery#webpage",
-        "url": "https://budafenceco.com/gallery",
-        "name": "Fence Gallery Austin TX | Buda Fence Company",
-        "description": "Browse real fence projects by Buda Fence Company—wood, metal, chain link installs + repairs across Central Texas.",
-        "isPartOf": { "@id": "https://budafenceco.com/#website" }
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "06:00",
+        "closes": "18:00"
       },
       {
-        "@type": "ImageGallery",
-        "@id": "https://budafenceco.com/gallery#gallery",
-        "name": "Buda Fence Company Project Gallery",
-        "description": "Gallery of completed fence projects including wood, metal, chain link, and repairs in Austin, Buda, Kyle, and Dripping Springs, Texas.",
-        "url": "https://budafenceco.com/gallery"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://budafenceco.com/gallery#breadcrumbs",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://budafenceco.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://budafenceco.com/gallery" }
-        ]
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
       }
+    ],
+    "sameAs": ["https://www.facebook.com/BudaFenceCo"],
+    "foundingDate": "2015",
+    "description": "Family-owned fence installation company serving Buda, Austin, Kyle, and Dripping Springs since 2015."
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://budafenceco.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://budafenceco.com/gallery" }
     ]
+  }
+  </script>
+
+  <!-- ImageGallery Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Buda Fence Company Project Gallery",
+    "description": "Gallery of completed fence projects including wood, metal, and chain link fences, plus fence repairs in Central Texas.",
+    "url": "https://budafenceco.com/gallery"
   }
   </script>
 </head>
 
-<body class="bg-gray-50">
+<body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Navigation (consistent across pages + WebP logo paths) -->
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="/" class="nav-logo" aria-label="Buda Fence Company Home">
         <img
@@ -201,6 +271,7 @@
           decoding="async">
       </a>
 
+      <!-- Desktop Navigation -->
       <div class="nav-links">
         <a href="/" class="nav-link">Home</a>
         <a href="/about" class="nav-link">About</a>
@@ -232,11 +303,13 @@
         <a href="/contact" class="nav-link">Contact</a>
       </div>
 
+      <!-- Desktop Contact -->
       <div class="nav-contact">
         <a href="tel:5127107116" class="nav-phone">(512) 710-7116</a>
         <a href="/contact" class="nav-cta">Free Quote</a>
       </div>
 
+      <!-- Mobile Header -->
       <div class="mobile-header">
         <a href="tel:5127107116" class="mobile-phone">(512) 710-7116</a>
         <a href="/contact" class="mobile-cta">Quote</a>
@@ -244,16 +317,17 @@
           class="hamburger"
           id="mobile-menu-button"
           aria-label="Toggle mobile menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          aria-controls="mobile-menu"
+          aria-expanded="false">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
     </div>
 
-    <div id="mobile-menu" class="mobile-menu hidden" role="menu">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu" role="menu">
       <a href="/" role="menuitem">Home</a>
       <a href="/about" role="menuitem">About</a>
 
@@ -282,295 +356,295 @@
   </nav>
 
   <!-- Hero -->
-  <section class="bg-gradient-to-r from-buda-primary to-slate-800 text-white py-12 md:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Fence Project Gallery</h1>
-      <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-4">
-        Browse completed fence projects throughout Austin, Buda, Kyle, and Dripping Springs.
-        See the craftsmanship behind our Budaful transformations.
-      </p>
-      <p class="text-blue-200">Click any image to enlarge</p>
-    </div>
+  <section class="hero" role="banner">
+    <h1>Our Fence Project Gallery</h1>
+    <p>Browse real projects built across Buda, Austin, Kyle & Dripping Springs — wood fences, metal fences, chain link, and repairs.</p>
+    <p class="sub">Click any image to enlarge</p>
   </section>
 
-  <!-- Filter Buttons -->
-  <section class="bg-white py-6 border-b sticky top-20 z-40">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex flex-wrap justify-center gap-3">
-        <button type="button" onclick="filterGallery('all')" class="filter-btn active px-6 py-2 rounded-full font-semibold bg-buda-primary text-white" data-filter="all">All Projects</button>
-        <button type="button" onclick="filterGallery('wood')" class="filter-btn px-6 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-buda-primary hover:text-white transition" data-filter="wood">Wood Fences</button>
-        <button type="button" onclick="filterGallery('metal')" class="filter-btn px-6 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-buda-primary hover:text-white transition" data-filter="metal">Metal Fences</button>
-        <button type="button" onclick="filterGallery('chainlink')" class="filter-btn px-6 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-buda-primary hover:text-white transition" data-filter="chainlink">Chain Link</button>
-        <button type="button" onclick="filterGallery('repair')" class="filter-btn px-6 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-buda-primary hover:text-white transition" data-filter="repair">Repairs</button>
+  <!-- Filters -->
+  <section class="filters-wrap" aria-label="Gallery filters">
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all" type="button">All Projects</button>
+      <button class="filter-btn" data-filter="wood" type="button">Wood Fences</button>
+      <button class="filter-btn" data-filter="metal" type="button">Metal Fences</button>
+      <button class="filter-btn" data-filter="chainlink" type="button">Chain Link</button>
+      <button class="filter-btn" data-filter="repair" type="button">Repairs</button>
+    </div>
+    <div class="filter-hint">Tip: filters hide/show sections instantly (no page reload)</div>
+  </section>
+
+  <main id="main-content" role="main">
+
+    <!-- WOOD -->
+    <section class="section gallery-section" data-category="wood">
+      <h2>Wood Fence Projects</h2>
+      <div class="grid">
+        <div class="card gallery-item" data-category="wood">
+          <div class="img-wrap">
+            <img src="/images/CedarFence.webp" alt="Cedar privacy fence installation Austin TX" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">6' Cedar Privacy Fence - Austin, TX</div>
+        </div>
+
+        <div class="card gallery-item" data-category="wood">
+          <div class="img-wrap">
+            <img src="/images/cedar-cap-and-trim.webp" alt="Cedar fence with cap and trim detail" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Cedar Fence with Cap &amp; Trim</div>
+        </div>
+
+        <div class="card gallery-item" data-category="wood">
+          <div class="img-wrap">
+            <img src="/images/shadow-box.webp" alt="Shadow box style wood fence" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Shadow Box Style Fence</div>
+        </div>
+
+        <div class="card gallery-item" data-category="wood">
+          <div class="img-wrap">
+            <img src="/images/stained-cedar-fence.webp" alt="Stained cedar fence project" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Stained Cedar Privacy Fence</div>
+        </div>
+
+        <div class="card gallery-item" data-category="wood">
+          <div class="img-wrap">
+            <img src="/images/treated-wood-post.webp" alt="Treated wood fence post installation" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Heavy-Duty Post Installation</div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Gallery Grid -->
-  <main id="main-content">
-    <section class="py-12">
-      <div class="max-w-7xl mx-auto px-4">
+      <div class="learn-more">
+        <a class="btn btn-primary" href="/services/wood-fence-installation">Learn About Wood Fences →</a>
+      </div>
+    </section>
 
-        <!-- Wood -->
-        <div class="gallery-section mb-16" data-category="wood">
-          <h2 class="text-3xl font-bold text-buda-primary mb-6">Wood Fence Projects</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- NOTE: Add width/height + lazy/async for speed. First image uses fetchpriority high. -->
-            <div class="gallery-item" data-category="wood">
-              <img
-                src="images/CedarFence.jpg"
-                alt="Cedar privacy fence installation in Austin, Texas"
-                class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">6' Cedar Privacy Fence - Austin, TX</p>
-            </div>
-
-            <div class="gallery-item" data-category="wood">
-              <img
-                src="images/cedar-cap-and-trim.jpg"
-                alt="Cedar fence with cap and trim detail"
-                class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800"
-                loading="lazy"
-                decoding="async"
-                onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Cedar Fence with Cap &amp; Trim</p>
-            </div>
-
-            <div class="gallery-item" data-category="wood">
-              <img
-                src="images/shadow-box.jpg"
-                alt="Shadow box style wood fence"
-                class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800"
-                loading="lazy"
-                decoding="async"
-                onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Shadow Box Style Fence</p>
-            </div>
-
-            <div class="gallery-item" data-category="wood">
-              <img
-                src="images/stained-cedar-fence.jpg"
-                alt="Stained cedar privacy fence project"
-                class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800"
-                loading="lazy"
-                decoding="async"
-                onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Stained Cedar Privacy Fence</p>
-            </div>
-
-            <div class="gallery-item" data-category="wood">
-              <img
-                src="images/treated-wood-post.jpg"
-                alt="Heavy-duty fence post installation detail"
-                class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800"
-                loading="lazy"
-                decoding="async"
-                onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Heavy-Duty Post Installation</p>
-            </div>
-
+    <!-- METAL -->
+    <section class="section gallery-section" data-category="metal">
+      <h2>Metal Fence Projects</h2>
+      <div class="grid">
+        <div class="card gallery-item" data-category="metal">
+          <div class="img-wrap">
+            <img src="/images/black-metal-fence.webp" alt="Black ornamental metal fence Austin" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
           </div>
-
-          <div class="mt-6 text-center">
-            <a href="/services/wood-fence-installation" class="inline-block bg-buda-primary hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition">
-              Learn About Wood Fences →
-            </a>
-          </div>
+          <div class="caption">Black Ornamental Iron Fence</div>
         </div>
 
-        <!-- Metal -->
-        <div class="gallery-section mb-16" data-category="metal">
-          <h2 class="text-3xl font-bold text-buda-primary mb-6">Metal Fence Projects</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <div class="gallery-item" data-category="metal">
-              <img src="images/black-metal-fence.jpg" alt="Black ornamental metal fence in Austin" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Black Ornamental Iron Fence</p>
-            </div>
-
-            <div class="gallery-item" data-category="metal">
-              <img src="images/black-metal-fence-6ft-tall.jpg" alt="Six foot tall black metal fence" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">6' Tall Black Metal Fence</p>
-            </div>
-
-            <div class="gallery-item" data-category="metal">
-              <img src="images/black-metal-fence-5ft-tall.jpg" alt="Five foot tall black metal fence" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">5' Tall Flat Top Metal Fence</p>
-            </div>
-
-            <div class="gallery-item" data-category="metal">
-              <img src="images/black-metal-fence-4ft-tall.jpg" alt="Four foot tall black metal fence for front yard" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">4' Tall Metal Fence - Front Yard</p>
-            </div>
-
-            <div class="gallery-item" data-category="metal">
-              <img src="images/black-metal-pool-4ft-fence.jpg" alt="Pool-code compliant black metal fence" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Pool-Code Compliant Metal Fence</p>
-            </div>
-
-            <div class="gallery-item" data-category="metal">
-              <img src="images/black-metal-gate.jpg" alt="Custom black metal gate installation" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Custom Metal Gate</p>
-            </div>
-
-            <div class="gallery-item" data-category="metal">
-              <img src="images/black-metal-fence-4ft-tall-on-retainingwall.jpg" alt="Metal fence installed on retaining wall" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Metal Fence on Retaining Wall</p>
-            </div>
-
-            <div class="gallery-item" data-category="metal">
-              <img src="images/metal-puppy-panel-fence.jpg" alt="Metal fence with puppy panel for pets" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Metal Fence with Puppy Panel</p>
-            </div>
-
+        <div class="card gallery-item" data-category="metal">
+          <div class="img-wrap">
+            <img src="/images/black-metal-fence-6ft-tall.webp" alt="6 foot tall black metal fence" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
           </div>
-
-          <div class="mt-6 text-center">
-            <a href="/services/metal-fence-installation" class="inline-block bg-buda-primary hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition">
-              Learn About Metal Fences →
-            </a>
-          </div>
+          <div class="caption">6' Tall Black Metal Fence</div>
         </div>
 
-        <!-- Chain Link -->
-        <div class="gallery-section mb-16" data-category="chainlink">
-          <h2 class="text-3xl font-bold text-buda-primary mb-6">Chain Link Fence Projects</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <div class="gallery-item" data-category="chainlink">
-              <img src="images/black-vinyl-chainlink-backyard.jpg" alt="Black vinyl chain link fence backyard" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Black Vinyl Chain Link - Backyard</p>
-            </div>
-
-            <div class="gallery-item" data-category="chainlink">
-              <img src="images/black-vinyl-chainlink-gate.jpg" alt="Black vinyl chain link gate" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Black Vinyl Chain Link with Gate</p>
-            </div>
-
-            <div class="gallery-item" data-category="chainlink">
-              <img src="images/black-chainlink-double-gate.jpg" alt="Black chain link double gate" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Double Gate Installation</p>
-            </div>
-
-            <div class="gallery-item" data-category="chainlink">
-              <img src="images/chain-link-privacy-slats.jpg" alt="Chain link fence with privacy slats" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Chain Link with Privacy Slats</p>
-            </div>
-
-            <div class="gallery-item" data-category="chainlink">
-              <img src="images/chainlink-with-dogs.jpg" alt="Pet-friendly chain link fence for dogs" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Pet-Friendly Chain Link</p>
-            </div>
-
-            <div class="gallery-item" data-category="chainlink">
-              <img src="images/galvanized-commercial-chainlink.jpg" alt="Commercial galvanized chain link fence" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Commercial Galvanized Chain Link</p>
-            </div>
-
-            <div class="gallery-item" data-category="chainlink">
-              <img src="images/commercial-chainlink-pathway.jpg" alt="Commercial chain link pathway fence" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Commercial Pathway Fence</p>
-            </div>
-
-            <div class="gallery-item" data-category="chainlink">
-              <img src="images/commercial-security-chainlink.jpg" alt="Commercial security chain link fence" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Commercial Security Fence</p>
-            </div>
-
+        <div class="card gallery-item" data-category="metal">
+          <div class="img-wrap">
+            <img src="/images/black-metal-fence-5ft-tall.webp" alt="5 foot tall black metal fence" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
           </div>
-
-          <div class="mt-6 text-center">
-            <a href="/services/chain-link-fence-installation" class="inline-block bg-buda-primary hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-lg transition">
-              Learn About Chain Link Fences →
-            </a>
-          </div>
+          <div class="caption">5' Tall Flat Top Metal Fence</div>
         </div>
 
-        <!-- Repairs -->
-        <div class="gallery-section mb-16" data-category="repair">
-          <h2 class="text-3xl font-bold text-buda-primary mb-6">Fence Repair Projects</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <div class="gallery-item" data-category="repair">
-              <img src="images/fence-repair-completed.jpg" alt="Completed fence repair project" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Completed Fence Repair</p>
-            </div>
-
-            <div class="gallery-item" data-category="repair">
-              <img src="images/fence-repair-before-after.webp" alt="Fence repair before and after comparison" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Before &amp; After Repair</p>
-            </div>
-
-            <div class="gallery-item" data-category="repair">
-              <img src="images/metal-fence-repair.jpg" alt="Metal fence repair project" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Metal Fence Repair</p>
-            </div>
-
-            <div class="gallery-item" data-category="repair">
-              <img src="images/sagging-gate-repair.jpg" alt="Gate repair and sagging gate adjustment" class="gallery-img w-full h-64 object-cover rounded-lg shadow-lg cursor-pointer"
-                width="1200" height="800" loading="lazy" decoding="async" onclick="openLightbox(this.src, this.alt)">
-              <p class="mt-2 text-gray-600 text-sm">Gate Repair &amp; Adjustment</p>
-            </div>
-
+        <div class="card gallery-item" data-category="metal">
+          <div class="img-wrap">
+            <img src="/images/black-metal-fence-4ft-tall.webp" alt="4 foot tall black metal fence" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
           </div>
-
-          <div class="mt-6 text-center">
-            <a href="/services/fence-repair" class="inline-block bg-buda-secondary hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg transition">
-              Learn About Fence Repair →
-            </a>
-          </div>
+          <div class="caption">4' Tall Metal Fence - Front Yard</div>
         </div>
 
+        <div class="card gallery-item" data-category="metal">
+          <div class="img-wrap">
+            <img src="/images/black-metal-pool-4ft-fence.webp" alt="Pool fence black metal 4 foot" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Pool-Code Compliant Metal Fence</div>
+        </div>
+
+        <div class="card gallery-item" data-category="metal">
+          <div class="img-wrap">
+            <img src="/images/black-metal-gate.webp" alt="Black metal gate installation" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Custom Metal Gate</div>
+        </div>
+
+        <div class="card gallery-item" data-category="metal">
+          <div class="img-wrap">
+            <img src="/images/metal-puppy-panel-fence.webp" alt="Metal fence with puppy panel" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Metal Fence with Puppy Panel</div>
+        </div>
+
+        <div class="card gallery-item" data-category="metal">
+          <div class="img-wrap">
+            <img src="/images/black-metal-fence-4ft-tall-on-retainingwall.webp" alt="Metal fence on retaining wall" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Metal Fence on Retaining Wall</div>
+        </div>
+      </div>
+
+      <div class="learn-more">
+        <a class="btn btn-primary" href="/services/metal-fence-installation">Learn About Metal Fences →</a>
+      </div>
+    </section>
+
+    <!-- CHAIN LINK -->
+    <section class="section gallery-section" data-category="chainlink">
+      <h2>Chain Link Fence Projects</h2>
+      <div class="grid">
+        <div class="card gallery-item" data-category="chainlink">
+          <div class="img-wrap">
+            <img src="/images/black-vinyl-chainlink-backyard.webp" alt="Black vinyl chain link fence backyard" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Black Vinyl Chain Link - Backyard</div>
+        </div>
+
+        <div class="card gallery-item" data-category="chainlink">
+          <div class="img-wrap">
+            <img src="/images/black-vinyl-chainlink-gate.webp" alt="Black vinyl chain link gate" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Black Vinyl Chain Link with Gate</div>
+        </div>
+
+        <div class="card gallery-item" data-category="chainlink">
+          <div class="img-wrap">
+            <img src="/images/black-chainlink-double-gate.webp" alt="Black chain link double gate" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Double Gate Installation</div>
+        </div>
+
+        <div class="card gallery-item" data-category="chainlink">
+          <div class="img-wrap">
+            <img src="/images/chain-link-privacy-slats.webp" alt="Chain link fence with privacy slats" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Chain Link with Privacy Slats</div>
+        </div>
+
+        <div class="card gallery-item" data-category="chainlink">
+          <div class="img-wrap">
+            <img src="/images/chainlink-with-dogs.webp" alt="Chain link fence for dogs" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Pet-Friendly Chain Link</div>
+        </div>
+
+        <div class="card gallery-item" data-category="chainlink">
+          <div class="img-wrap">
+            <img src="/images/galvanized-commercial-chainlink.webp" alt="Commercial galvanized chain link fence" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Commercial Galvanized Chain Link</div>
+        </div>
+
+        <div class="card gallery-item" data-category="chainlink">
+          <div class="img-wrap">
+            <img src="/images/commercial-chainlink-pathway.webp" alt="Commercial chain link pathway fence" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Commercial Pathway Fence</div>
+        </div>
+
+        <div class="card gallery-item" data-category="chainlink">
+          <div class="img-wrap">
+            <img src="/images/commercial-security-chainlink.webp" alt="Security chain link fence commercial" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Commercial Security Fence</div>
+        </div>
+      </div>
+
+      <div class="learn-more">
+        <a class="btn btn-primary" href="/services/chain-link-fence-installation">Learn About Chain Link Fences →</a>
+      </div>
+    </section>
+
+    <!-- REPAIR -->
+    <section class="section gallery-section" data-category="repair">
+      <h2>Fence Repair Projects</h2>
+      <div class="grid">
+        <div class="card gallery-item" data-category="repair">
+          <div class="img-wrap">
+            <img src="/images/fence-repair-completed.webp" alt="Completed fence repair project" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Completed Fence Repair</div>
+        </div>
+
+        <div class="card gallery-item" data-category="repair">
+          <div class="img-wrap">
+            <img src="/images/metal-fence-repair.webp" alt="Metal fence repair" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Metal Fence Repair</div>
+        </div>
+
+        <div class="card gallery-item" data-category="repair">
+          <div class="img-wrap">
+            <img src="/images/sagging-gate-repair.webp" alt="Gate repair sagging gate fix" class="gallery-img"
+                 loading="lazy" decoding="async" fetchpriority="low"
+                 onclick="openLightbox(this.src, this.alt)" />
+          </div>
+          <div class="caption">Gate Repair &amp; Adjustment</div>
+        </div>
+      </div>
+
+      <div class="learn-more">
+        <a class="btn btn-secondary" href="/services/fence-repair">Learn About Fence Repair →</a>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="bg-buda-primary text-white py-16">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-4">Ready for Your Own Budaful Fence?</h2>
-        <p class="text-xl mb-8 text-blue-200">Contact us today for your free quote.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:5127107116" class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
-            Call (512) 710-7116
-          </a>
-          <a href="/contact" class="bg-white hover:bg-gray-100 text-buda-primary font-bold py-3 px-8 rounded-lg text-lg transition">
-            Get Free Estimate
-          </a>
-        </div>
+    <section class="cta" aria-label="Call to action">
+      <h2>Ready for Your Budaful Transformation?</h2>
+      <p>Get a free estimate and let’s build a fence you’re proud of — built right, clean, and designed to last.</p>
+      <div class="cta-actions">
+        <a class="btn btn-secondary" href="tel:5127107116">Call (512) 710-7116</a>
+        <a class="btn cta-white" href="/contact">Get Free Estimate</a>
       </div>
     </section>
   </main>
 
-  <!-- Footer (consistent across pages + WebP logo paths) -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- Footer -->
+  <footer role="contentinfo">
     <div class="footer-grid">
       <div class="footer-brand">
         <img
@@ -611,6 +685,7 @@
         <ul>
           <li><a href="tel:5127107116">(512) 710-7116</a></li>
           <li><a href="mailto:info@budafenceco.com">info@budafenceco.com</a></li>
+          <li>308 Wincliff Dr</li>
           <li>Buda, TX 78610</li>
         </ul>
       </div>
@@ -622,38 +697,47 @@
   </footer>
 
   <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-    <button class="lightbox-close" type="button" aria-label="Close image viewer" onclick="closeLightbox(event)">&times;</button>
-    <img id="lightbox-img" src="" alt="" decoding="async">
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close image" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
   </div>
 
-  <!-- Scripts -->
   <script>
-    /* ===== Mobile Menu Script (same behavior as Contact page) ===== */
+    /* ===============================
+       Mobile menu (fix “menu follows me”)
+       =============================== */
     (function () {
       const menu = document.getElementById('mobile-menu');
       const button = document.getElementById('mobile-menu-button');
       if (!menu || !button) return;
 
-      function isOpen() { return !menu.classList.contains('hidden'); }
-      function openMenu() { menu.classList.remove('hidden'); button.setAttribute('aria-expanded', 'true'); }
-      function closeMenu() { menu.classList.add('hidden'); button.setAttribute('aria-expanded', 'false'); }
+      function isOpen() { return menu.classList.contains('active'); }
+      function openMenu() {
+        menu.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+      }
+      function closeMenu() {
+        menu.classList.remove('active');
+        button.setAttribute('aria-expanded', 'false');
+      }
 
+      // iOS/Safari bfcache + normal load: force closed
       window.addEventListener('pageshow', closeMenu);
       window.addEventListener('load', closeMenu);
 
       button.addEventListener('click', function (e) {
         e.stopPropagation();
-        if (isOpen()) closeMenu();
-        else openMenu();
+        isOpen() ? closeMenu() : openMenu();
       });
 
+      // Close before navigating anywhere (prevents state carryover)
       document.addEventListener('click', function (e) {
         const link = e.target.closest('a');
         if (!link) return;
         if (isOpen()) closeMenu();
       }, { capture: true });
 
+      // Click outside closes menu (but never blocks link navigation)
       document.addEventListener('click', function (e) {
         if (!isOpen()) return;
         if (e.target.closest('a')) return;
@@ -661,87 +745,75 @@
         closeMenu();
       }, { passive: true });
 
+      // ESC closes
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && isOpen()) closeMenu();
       });
+
+      // If user rotates / resizes to desktop, keep it closed
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) closeMenu();
+      }, { passive: true });
     })();
 
-    /* ===== Lightbox ===== */
+    /* ===============================
+       Lightbox
+       =============================== */
     function openLightbox(src, alt) {
       const lb = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
-
       img.src = src;
-      img.alt = alt;
-
+      img.alt = alt || 'Gallery image';
       lb.classList.add('active');
       lb.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     }
 
-    function closeLightbox(e) {
-      if (e) e.stopPropagation();
+    function closeLightbox() {
       const lb = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
-
       lb.classList.remove('active');
       lb.setAttribute('aria-hidden', 'true');
-      img.src = "";
-      img.alt = "";
-
+      img.src = '';
       document.body.style.overflow = 'auto';
     }
 
-    // Click outside image closes (but clicking image does not)
-    document.getElementById('lightbox').addEventListener('click', function () {
-      closeLightbox();
-    });
-    document.getElementById('lightbox-img').addEventListener('click', function (e) {
-      e.stopPropagation();
-    });
-
-    // Escape closes lightbox
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeLightbox();
     });
 
-    /* ===== Gallery Filter ===== */
-    function filterGallery(category) {
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.remove('bg-buda-primary', 'text-white');
-        btn.classList.add('bg-gray-200', 'text-gray-700');
-      });
+    // Clicking backdrop closes
+    document.getElementById('lightbox').addEventListener('click', function(e){
+      if (e.target.id === 'lightbox' || e.target.id === 'lightbox-img') closeLightbox();
+    });
 
-      const activeBtn = document.querySelector(`[data-filter="${category}"]`);
-      if (activeBtn) {
-        activeBtn.classList.remove('bg-gray-200', 'text-gray-700');
-        activeBtn.classList.add('bg-buda-primary', 'text-white');
+    /* ===============================
+       Filters
+       =============================== */
+    (function () {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const sections = document.querySelectorAll('.gallery-section');
+
+      function setActive(btn) {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
       }
 
-      document.querySelectorAll('.gallery-section').forEach(section => {
-        section.style.display = (category === 'all' || section.dataset.category === category) ? 'block' : 'none';
+      function applyFilter(filter) {
+        sections.forEach(section => {
+          const cat = section.getAttribute('data-category');
+          section.style.display = (filter === 'all' || filter === cat) ? 'block' : 'none';
+        });
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const filter = btn.getAttribute('data-filter');
+          setActive(btn);
+          applyFilter(filter);
+        });
       });
-
-      // Optional: scroll back to top of gallery after selecting a filter on mobile
-      // document.getElementById('main-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    })();
   </script>
-
-  <!--
-    IMAGE OPTIMIZATION (next step that will materially boost PageSpeed):
-    1) Convert each gallery image to WebP (keep originals as fallback) and resize to sane max dimensions:
-       - Target: 1600px max width for originals, plus a 900px version for mobile.
-    2) Use filenames like:
-       images/cedar-fence-1600.webp and images/cedar-fence-900.webp
-    3) Then I’ll update each <img> to use srcset + sizes properly (no risk of 404s until files exist).
-  -->
-
-  <!--
-    NOTE ABOUT URLS:
-    This page uses extensionless URLs (/gallery, /contact, etc) for consistency (same as the Contact page update).
-    If your site is still strictly using .html files without redirects, change:
-      /gallery -> gallery.html, /contact -> contact.html, /about -> about.html, etc
-    and update the canonical back to https://budafenceco.com/gallery.html
-  -->
 </body>
 </html>
