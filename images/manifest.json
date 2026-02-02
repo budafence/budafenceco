@@ -1,0 +1,818 @@
+{
+  "black-chainlink-double-gate.webp": {
+    "base": {
+      "file": "black-chainlink-double-gate.webp",
+      "w": 600,
+      "h": 345,
+      "bytes": 70664
+    },
+    "srcset": [
+      {
+        "file": "black-chainlink-double-gate-320.webp",
+        "w": 320,
+        "h": 184,
+        "bytes": 18626
+      },
+      {
+        "file": "black-chainlink-double-gate-480.webp",
+        "w": 480,
+        "h": 276,
+        "bytes": 42202
+      },
+      {
+        "file": "black-chainlink-double-gate-640.webp",
+        "w": 600,
+        "h": 345,
+        "bytes": 70664
+      }
+    ],
+    "original": {
+      "file": "originals/black-chainlink-double-gate.webp",
+      "w": 600,
+      "h": 345,
+      "bytes": 82144
+    }
+  },
+  "black-metal-fence-4ft-tall.webp": {
+    "base": {
+      "file": "black-metal-fence-4ft-tall.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 113310
+    },
+    "srcset": [
+      {
+        "file": "black-metal-fence-4ft-tall-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 26516
+      },
+      {
+        "file": "black-metal-fence-4ft-tall-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 62190
+      },
+      {
+        "file": "black-metal-fence-4ft-tall-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 113310
+      }
+    ],
+    "original": {
+      "file": "originals/black-metal-fence-4ft-tall.webp",
+      "w": 1200,
+      "h": 900,
+      "bytes": 451508
+    }
+  },
+  "black-metal-fence-5ft-tall.webp": {
+    "base": {
+      "file": "black-metal-fence-5ft-tall.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 59220
+    },
+    "srcset": [
+      {
+        "file": "black-metal-fence-5ft-tall-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 15936
+      },
+      {
+        "file": "black-metal-fence-5ft-tall-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 34966
+      },
+      {
+        "file": "black-metal-fence-5ft-tall-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 59220
+      }
+    ],
+    "original": {
+      "file": "originals/black-metal-fence-5ft-tall.webp",
+      "w": 1200,
+      "h": 900,
+      "bytes": 224664
+    }
+  },
+  "black-metal-fence-6ft-tall.webp": {
+    "base": {
+      "file": "black-metal-fence-6ft-tall.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 72030
+    },
+    "srcset": [
+      {
+        "file": "black-metal-fence-6ft-tall-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 19648
+      },
+      {
+        "file": "black-metal-fence-6ft-tall-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 42834
+      },
+      {
+        "file": "black-metal-fence-6ft-tall-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 72030
+      }
+    ],
+    "original": {
+      "file": "originals/black-metal-fence-6ft-tall.webp",
+      "w": 1200,
+      "h": 900,
+      "bytes": 249412
+    }
+  },
+  "black-metal-fence.webp": {
+    "base": {
+      "file": "black-metal-fence.webp",
+      "w": 640,
+      "h": 637,
+      "bytes": 100674
+    },
+    "srcset": [
+      {
+        "file": "black-metal-fence-320.webp",
+        "w": 320,
+        "h": 319,
+        "bytes": 25554
+      },
+      {
+        "file": "black-metal-fence-480.webp",
+        "w": 480,
+        "h": 478,
+        "bytes": 57864
+      },
+      {
+        "file": "black-metal-fence-640.webp",
+        "w": 640,
+        "h": 637,
+        "bytes": 100674
+      }
+    ],
+    "original": {
+      "file": "originals/black-metal-fence.webp",
+      "w": 1200,
+      "h": 1195,
+      "bytes": 342094
+    }
+  },
+  "black-metal-gate.webp": {
+    "base": {
+      "file": "black-metal-gate.webp",
+      "w": 551,
+      "h": 1200,
+      "bytes": 108486
+    },
+    "srcset": [
+      {
+        "file": "black-metal-gate-320.webp",
+        "w": 320,
+        "h": 697,
+        "bytes": 43742
+      },
+      {
+        "file": "black-metal-gate-480.webp",
+        "w": 480,
+        "h": 1045,
+        "bytes": 80972
+      },
+      {
+        "file": "black-metal-gate-640.webp",
+        "w": 551,
+        "h": 1200,
+        "bytes": 108486
+      }
+    ],
+    "original": {
+      "file": "originals/black-metal-gate.webp",
+      "w": 551,
+      "h": 1200,
+      "bytes": 124222
+    }
+  },
+  "black-metal-pool-4ft-fence.webp": {
+    "base": {
+      "file": "black-metal-pool-4ft-fence.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 61690
+    },
+    "srcset": [
+      {
+        "file": "black-metal-pool-4ft-fence-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 16338
+      },
+      {
+        "file": "black-metal-pool-4ft-fence-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 35520
+      },
+      {
+        "file": "black-metal-pool-4ft-fence-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 61690
+      }
+    ],
+    "original": {
+      "file": "originals/black-metal-pool-4ft-fence.webp",
+      "w": 1200,
+      "h": 900,
+      "bytes": 265738
+    }
+  },
+  "black-vinyl-chainlink-backyard.webp": {
+    "base": {
+      "file": "black-vinyl-chainlink-backyard.webp",
+      "w": 640,
+      "h": 427,
+      "bytes": 50572
+    },
+    "srcset": [
+      {
+        "file": "black-vinyl-chainlink-backyard-320.webp",
+        "w": 320,
+        "h": 213,
+        "bytes": 13020
+      },
+      {
+        "file": "black-vinyl-chainlink-backyard-480.webp",
+        "w": 480,
+        "h": 320,
+        "bytes": 28698
+      },
+      {
+        "file": "black-vinyl-chainlink-backyard-640.webp",
+        "w": 640,
+        "h": 427,
+        "bytes": 50572
+      }
+    ],
+    "original": {
+      "file": "originals/black-vinyl-chainlink-backyard.webp",
+      "w": 1060,
+      "h": 707,
+      "bytes": 159714
+    }
+  },
+  "black-vinyl-chainlink-gate.webp": {
+    "base": {
+      "file": "black-vinyl-chainlink-gate.webp",
+      "w": 640,
+      "h": 648,
+      "bytes": 158008
+    },
+    "srcset": [
+      {
+        "file": "black-vinyl-chainlink-gate-320.webp",
+        "w": 320,
+        "h": 324,
+        "bytes": 35722
+      },
+      {
+        "file": "black-vinyl-chainlink-gate-480.webp",
+        "w": 480,
+        "h": 486,
+        "bytes": 85896
+      },
+      {
+        "file": "black-vinyl-chainlink-gate-640.webp",
+        "w": 640,
+        "h": 648,
+        "bytes": 158008
+      }
+    ],
+    "original": {
+      "file": "originals/black-vinyl-chainlink-gate.webp",
+      "w": 1185,
+      "h": 1200,
+      "bytes": 625032
+    }
+  },
+  "buda-fence-logo-150.webp": {
+    "base": {
+      "file": "buda-fence-logo-150.webp",
+      "w": 150,
+      "h": 74,
+      "bytes": 1992
+    },
+    "srcset": [
+      {
+        "file": "buda-fence-logo-150-320.webp",
+        "w": 150,
+        "h": 74,
+        "bytes": 1992
+      },
+      {
+        "file": "buda-fence-logo-150-480.webp",
+        "w": 150,
+        "h": 74,
+        "bytes": 1992
+      },
+      {
+        "file": "buda-fence-logo-150-640.webp",
+        "w": 150,
+        "h": 74,
+        "bytes": 1992
+      }
+    ],
+    "original": {
+      "file": "originals/buda-fence-logo-150.webp",
+      "w": 150,
+      "h": 74,
+      "bytes": 2294
+    }
+  },
+  "cedar-cap-and-trim.webp": {
+    "base": {
+      "file": "cedar-cap-and-trim.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 51428
+    },
+    "srcset": [
+      {
+        "file": "cedar-cap-and-trim-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 13950
+      },
+      {
+        "file": "cedar-cap-and-trim-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 30248
+      },
+      {
+        "file": "cedar-cap-and-trim-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 51428
+      }
+    ],
+    "original": {
+      "file": "originals/cedar-cap-and-trim.webp",
+      "w": 1200,
+      "h": 900,
+      "bytes": 198524
+    }
+  },
+  "CedarFence.webp": {
+    "base": {
+      "file": "CedarFence.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 77434
+    },
+    "srcset": [
+      {
+        "file": "CedarFence-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 19722
+      },
+      {
+        "file": "CedarFence-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 44062
+      },
+      {
+        "file": "CedarFence-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 77434
+      }
+    ],
+    "original": {
+      "file": "originals/CedarFence.webp",
+      "w": 1200,
+      "h": 900,
+      "bytes": 320342
+    }
+  },
+  "chain-link-privacy-slats.webp": {
+    "base": {
+      "file": "chain-link-privacy-slats.webp",
+      "w": 640,
+      "h": 853,
+      "bytes": 138682
+    },
+    "srcset": [
+      {
+        "file": "chain-link-privacy-slats-320.webp",
+        "w": 320,
+        "h": 427,
+        "bytes": 36068
+      },
+      {
+        "file": "chain-link-privacy-slats-480.webp",
+        "w": 480,
+        "h": 640,
+        "bytes": 81010
+      },
+      {
+        "file": "chain-link-privacy-slats-640.webp",
+        "w": 640,
+        "h": 853,
+        "bytes": 138682
+      }
+    ],
+    "original": {
+      "file": "originals/chain-link-privacy-slats.webp",
+      "w": 900,
+      "h": 1200,
+      "bytes": 306156
+    }
+  },
+  "chainlink-with-dogs.webp": {
+    "base": {
+      "file": "chainlink-with-dogs.webp",
+      "w": 400,
+      "h": 300,
+      "bytes": 32970
+    },
+    "srcset": [
+      {
+        "file": "chainlink-with-dogs-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 21094
+      },
+      {
+        "file": "chainlink-with-dogs-480.webp",
+        "w": 400,
+        "h": 300,
+        "bytes": 32970
+      },
+      {
+        "file": "chainlink-with-dogs-640.webp",
+        "w": 400,
+        "h": 300,
+        "bytes": 32970
+      }
+    ],
+    "original": {
+      "file": "originals/chainlink-with-dogs.webp",
+      "w": 400,
+      "h": 300,
+      "bytes": 37958
+    }
+  },
+  "commercial-chainlink-pathway.webp": {
+    "base": {
+      "file": "commercial-chainlink-pathway.webp",
+      "w": 640,
+      "h": 427,
+      "bytes": 71666
+    },
+    "srcset": [
+      {
+        "file": "commercial-chainlink-pathway-320.webp",
+        "w": 320,
+        "h": 213,
+        "bytes": 17196
+      },
+      {
+        "file": "commercial-chainlink-pathway-480.webp",
+        "w": 480,
+        "h": 320,
+        "bytes": 40294
+      },
+      {
+        "file": "commercial-chainlink-pathway-640.webp",
+        "w": 640,
+        "h": 427,
+        "bytes": 71666
+      }
+    ],
+    "original": {
+      "file": "originals/commercial-chainlink-pathway.webp",
+      "w": 1024,
+      "h": 683,
+      "bytes": 223676
+    }
+  },
+  "commercial-security-chainlink.webp": {
+    "base": {
+      "file": "commercial-security-chainlink.webp",
+      "w": 640,
+      "h": 499,
+      "bytes": 46798
+    },
+    "srcset": [
+      {
+        "file": "commercial-security-chainlink-320.webp",
+        "w": 320,
+        "h": 249,
+        "bytes": 14820
+      },
+      {
+        "file": "commercial-security-chainlink-480.webp",
+        "w": 480,
+        "h": 374,
+        "bytes": 30906
+      },
+      {
+        "file": "commercial-security-chainlink-640.webp",
+        "w": 640,
+        "h": 499,
+        "bytes": 46798
+      }
+    ],
+    "original": {
+      "file": "originals/commercial-security-chainlink.webp",
+      "w": 661,
+      "h": 515,
+      "bytes": 64442
+    }
+  },
+  "fence-repair-completed.webp": {
+    "base": {
+      "file": "fence-repair-completed.webp",
+      "w": 640,
+      "h": 427,
+      "bytes": 30078
+    },
+    "srcset": [
+      {
+        "file": "fence-repair-completed-320.webp",
+        "w": 320,
+        "h": 213,
+        "bytes": 10044
+      },
+      {
+        "file": "fence-repair-completed-480.webp",
+        "w": 480,
+        "h": 320,
+        "bytes": 18752
+      },
+      {
+        "file": "fence-repair-completed-640.webp",
+        "w": 640,
+        "h": 427,
+        "bytes": 30078
+      }
+    ],
+    "original": {
+      "file": "originals/fence-repair-completed.webp",
+      "w": 1200,
+      "h": 800,
+      "bytes": 103636
+    }
+  },
+  "galvanized-commercial-chainlink.webp": {
+    "base": {
+      "file": "galvanized-commercial-chainlink.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 95244
+    },
+    "srcset": [
+      {
+        "file": "galvanized-commercial-chainlink-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 22694
+      },
+      {
+        "file": "galvanized-commercial-chainlink-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 53680
+      },
+      {
+        "file": "galvanized-commercial-chainlink-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 95244
+      }
+    ],
+    "original": {
+      "file": "originals/galvanized-commercial-chainlink.webp",
+      "w": 1200,
+      "h": 900,
+      "bytes": 349338
+    }
+  },
+  "metal-fence-repair.webp": {
+    "base": {
+      "file": "metal-fence-repair.webp",
+      "w": 640,
+      "h": 426,
+      "bytes": 43694
+    },
+    "srcset": [
+      {
+        "file": "metal-fence-repair-320.webp",
+        "w": 320,
+        "h": 213,
+        "bytes": 15552
+      },
+      {
+        "file": "metal-fence-repair-480.webp",
+        "w": 480,
+        "h": 320,
+        "bytes": 29290
+      },
+      {
+        "file": "metal-fence-repair-640.webp",
+        "w": 640,
+        "h": 426,
+        "bytes": 43694
+      }
+    ],
+    "original": {
+      "file": "originals/metal-fence-repair.webp",
+      "w": 1200,
+      "h": 799,
+      "bytes": 130798
+    }
+  },
+  "metal-puppy-panel-fence.webp": {
+    "base": {
+      "file": "metal-puppy-panel-fence.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 25100
+    },
+    "srcset": [
+      {
+        "file": "metal-puppy-panel-fence-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 8932
+      },
+      {
+        "file": "metal-puppy-panel-fence-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 16258
+      },
+      {
+        "file": "metal-puppy-panel-fence-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 25100
+      }
+    ],
+    "original": {
+      "file": "originals/metal-puppy-panel-fence.webp",
+      "w": 1200,
+      "h": 900,
+      "bytes": 83316
+    }
+  },
+  "sagging-gate-repair.webp": {
+    "base": {
+      "file": "sagging-gate-repair.webp",
+      "w": 640,
+      "h": 537,
+      "bytes": 90940
+    },
+    "srcset": [
+      {
+        "file": "sagging-gate-repair-320.webp",
+        "w": 320,
+        "h": 268,
+        "bytes": 20338
+      },
+      {
+        "file": "sagging-gate-repair-480.webp",
+        "w": 480,
+        "h": 402,
+        "bytes": 48006
+      },
+      {
+        "file": "sagging-gate-repair-640.webp",
+        "w": 640,
+        "h": 537,
+        "bytes": 90940
+      }
+    ],
+    "original": {
+      "file": "originals/sagging-gate-repair.webp",
+      "w": 1200,
+      "h": 1006,
+      "bytes": 359894
+    }
+  },
+  "shadow-box.webp": {
+    "base": {
+      "file": "shadow-box.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 89170
+    },
+    "srcset": [
+      {
+        "file": "shadow-box-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 23436
+      },
+      {
+        "file": "shadow-box-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 51664
+      },
+      {
+        "file": "shadow-box-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 89170
+      }
+    ],
+    "original": {
+      "file": "originals/shadow-box.webp",
+      "w": 1080,
+      "h": 810,
+      "bytes": 269026
+    }
+  },
+  "stained-cedar-fence.webp": {
+    "base": {
+      "file": "stained-cedar-fence.webp",
+      "w": 640,
+      "h": 480,
+      "bytes": 63634
+    },
+    "srcset": [
+      {
+        "file": "stained-cedar-fence-320.webp",
+        "w": 320,
+        "h": 240,
+        "bytes": 17422
+      },
+      {
+        "file": "stained-cedar-fence-480.webp",
+        "w": 480,
+        "h": 360,
+        "bytes": 37752
+      },
+      {
+        "file": "stained-cedar-fence-640.webp",
+        "w": 640,
+        "h": 480,
+        "bytes": 63634
+      }
+    ],
+    "original": {
+      "file": "originals/stained-cedar-fence.webp",
+      "w": 1200,
+      "h": 900,
+      "bytes": 245978
+    }
+  },
+  "treated-wood-post.webp": {
+    "base": {
+      "file": "treated-wood-post.webp",
+      "w": 640,
+      "h": 853,
+      "bytes": 135682
+    },
+    "srcset": [
+      {
+        "file": "treated-wood-post-320.webp",
+        "w": 320,
+        "h": 427,
+        "bytes": 32696
+      },
+      {
+        "file": "treated-wood-post-480.webp",
+        "w": 480,
+        "h": 640,
+        "bytes": 75852
+      },
+      {
+        "file": "treated-wood-post-640.webp",
+        "w": 640,
+        "h": 853,
+        "bytes": 135682
+      }
+    ],
+    "original": {
+      "file": "originals/treated-wood-post.webp",
+      "w": 900,
+      "h": 1200,
+      "bytes": 315670
+    }
+  }
+}
