@@ -3,116 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chain Link Fence Installation in Austin, TX | Galvanized & Vinyl | Buda Fence Company</title>
-    <meta name="description" content="Affordable and secure chain link fence installation in Austin. Galvanized and vinyl-coated options for residential and commercial properties. 150-200 ft/day installation. Get your free quote today!">
-    <link rel="canonical" href="https://budafenceco.com/services/chain-link-fence-installation.html">
+
+    <!-- Primary Meta Tags (SEO Optimized) -->
+    <title>Chain Link Fence Installation in Austin, TX | Galvanized & Vinyl-Coated | Buda Fence Company</title>
+    <meta name="description" content="Chain link fence installation in Austin, Buda, Kyle & Dripping Springs. Galvanized or black vinyl-coated options, residential & commercial. Fast install (150–200 ft/day). Call (512) 710-7116 for your free quote.">
+    <meta name="keywords" content="chain link fence installation austin tx, vinyl coated chain link fence, galvanized chain link fence, chain link fence contractor, chain link fence repair, commercial chain link fence, buda tx chain link fence, kyle tx chain link fence, dripping springs chain link fence">
+    <meta name="author" content="Buda Fence Company">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://budafenceco.com/services/chain-link-fence-installation">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://budafenceco.com/services/chain-link-fence-installation">
+    <meta property="og:title" content="Chain Link Fence Installation | Austin, Buda & Central Texas | Buda Fence Company">
+    <meta property="og:description" content="Affordable, secure chain link fencing for residential & commercial properties. Galvanized and vinyl-coated options. Call (512) 710-7116 for your free quote.">
+    <meta property="og:image" content="https://budafenceco.com/images/chainlink-og.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Buda Fence Company">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://budafenceco.com/services/chain-link-fence-installation">
+    <meta name="twitter:title" content="Chain Link Fence Installation | Buda Fence Company">
+    <meta name="twitter:description" content="Galvanized or vinyl-coated chain link fences. Residential & commercial. Call (512) 710-7116 for your free quote.">
+    <meta name="twitter:image" content="https://budafenceco.com/images/chainlink-og.webp">
+
+    <!-- Local SEO Meta Tags -->
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Buda, Texas">
+    <meta name="geo.position" content="30.09939;-97.86756">
+    <meta name="ICBM" content="30.09939, -97.86756">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/images/chainlink-hero.webp" as="image" type="image/webp">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        /* Mobile text overflow prevention */
-        html, body {
-            max-width: 100vw;
-            overflow-x: hidden;
+        /* Brand Colors (match home page) */
+        .bg-buda-primary { background-color: #1e293b; }
+        .text-buda-primary { color: #1e293b; }
+        .bg-buda-secondary { background-color: #dc2626; }
+        .text-buda-secondary { color: #dc2626; }
+        .border-buda-secondary { border-color: #dc2626; }
+
+        /* Mobile Menu (match home page behavior) */
+        .mobile-menu {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
         }
-        * {
-            max-width: 100%;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            word-break: break-word;
+        .mobile-menu.active {
+            display: block;
+            max-height: 900px;
         }
-        @media (max-width: 768px) {
-            .container, .mx-auto, [class*="max-w"] {
-                max-width: 100vw !important;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            h1, h2, h3, h4, h5, h6, p, li, td, th, div, span {
-                word-wrap: break-word !important;
-                overflow-wrap: break-word !important;
-                word-break: break-word !important;
-            }
-            table {
-                font-size: 0.75rem;
-            }
-            .table-scroll {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            .table-scroll table {
-                min-width: 600px;
+
+        /* Hero Background */
+        .hero-bg {
+            background-image:
+              linear-gradient(rgba(30, 41, 59, 0.78), rgba(220, 38, 38, 0.65)),
+              url('/images/chainlink-hero.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @media (min-width: 768px) {
+            .hero-bg {
+                background-attachment: fixed;
+                background-image:
+                  linear-gradient(rgba(30, 41, 59, 0.70), rgba(220, 38, 38, 0.55)),
+                  url('/images/chainlink-hero.webp');
             }
         }
+        @media (max-width: 767px) {
+            .hero-bg { background-attachment: scroll; }
+        }
+
+        html { scroll-behavior: smooth; }
+
+        a:focus, button:focus {
+            outline: 2px solid #dc2626;
+            outline-offset: 2px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #dc2626;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+        }
+        .skip-link:focus { top: 0; }
     </style>
-    
-    <!-- Schema Markup -->
+
+    <!-- Enhanced LocalBusiness Schema (consistent with home) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://budafenceco.com/#organization",
+      "name": "Buda Fence Company",
+      "alternateName": "Buda Fence Co",
+      "description": "Professional fence installation and repair services in Austin, Buda, Kyle, and Central Texas. Specializing in wood, metal, and chain link fences.",
+      "image": "https://budafenceco.com/images/buda-fence-logo.webp",
+      "logo": "https://budafenceco.com/images/buda-fence-logo.webp",
+      "url": "https://budafenceco.com",
+      "telephone": "+1-512-710-7116",
+      "email": "info@budafenceco.com",
+      "foundingDate": "2015",
+      "founder": { "@type": "Person", "name": "William Espich" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "308 Wincliff Dr",
+        "addressLocality": "Buda",
+        "addressRegion": "TX",
+        "postalCode": "78610",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": "30.09939", "longitude": "-97.86756" },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "06:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Check",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "122",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Austin", "sameAs": "https://en.wikipedia.org/wiki/Austin,_Texas" },
+        { "@type": "City", "name": "Buda", "sameAs": "https://en.wikipedia.org/wiki/Buda,_Texas" },
+        { "@type": "City", "name": "Kyle", "sameAs": "https://en.wikipedia.org/wiki/Kyle,_Texas" },
+        { "@type": "City", "name": "Dripping Springs", "sameAs": "https://en.wikipedia.org/wiki/Dripping_Springs,_Texas" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/budafenceco",
+        "https://www.google.com/maps/place/Buda+Fence+Company"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
+      "@id": "https://budafenceco.com/services/chain-link-fence-installation#service",
+      "name": "Chain Link Fence Installation",
       "serviceType": "Chain Link Fence Installation",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Buda Fence Company",
-        "image": "https://budafenceco.com/images/BudaFenceLogo.jpeg",
-        "@id": "https://budafenceco.com",
-        "url": "https://budafenceco.com",
-        "telephone": "(512) 710-7116",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "308 Wincliff Dr",
-          "addressLocality": "Buda",
-          "addressRegion": "TX",
-          "postalCode": "78610",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 30.09939,
-          "longitude": -97.86756
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "00:00",
-          "closes": "23:59"
-        },
-        "sameAs": [
-          "https://www.facebook.com/BudaFenceCo"
-        ]
-      },
+      "provider": { "@id": "https://budafenceco.com/#organization" },
       "areaServed": [
-        {
-          "@type": "City",
-          "name": "Austin",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Buda",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        }
+        { "@type": "City", "name": "Austin" },
+        { "@type": "City", "name": "Buda" },
+        { "@type": "City", "name": "Kyle" },
+        { "@type": "City", "name": "Dripping Springs" }
       ],
-      "description": "Professional chain link fence installation services in Austin, TX. We offer galvanized and vinyl-coated chain link fencing for residential, commercial, and agricultural properties. Fast installation: 150-200 linear feet per day.",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock"
-      }
+      "description": "Professional chain link fence installation in Central Texas. Galvanized and vinyl-coated chain link fencing for residential and commercial properties, with fast installation and heavy-duty materials.",
+      "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
     }
     </script>
-    
+
+    <!-- WebPage + BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "@id":"https://budafenceco.com/services/chain-link-fence-installation#webpage",
+      "url":"https://budafenceco.com/services/chain-link-fence-installation",
+      "name":"Chain Link Fence Installation in Austin, TX | Buda Fence Company",
+      "isPartOf": { "@type":"WebSite", "@id":"https://budafenceco.com/#website" },
+      "about": { "@id":"https://budafenceco.com/services/chain-link-fence-installation#service" }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        { "@type":"ListItem", "position":1, "name":"Home", "item":"https://budafenceco.com/" },
+        { "@type":"ListItem", "position":2, "name":"Services", "item":"https://budafenceco.com/services" },
+        { "@type":"ListItem", "position":3, "name":"Chain Link Fence Installation", "item":"https://budafenceco.com/services/chain-link-fence-installation" }
+      ]
+    }
+    </script>
+
     <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
@@ -124,7 +225,7 @@
           "name": "How long does a chain link fence last?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A professionally installed galvanized chain link fence can easily last 20-30 years. A vinyl-coated fence can last even longer due to its extra layer of protection against rust and corrosion."
+            "text": "A professionally installed galvanized chain link fence can last 20–30 years. A vinyl-coated chain link fence can last even longer due to the extra layer of protection against rust and corrosion."
           }
         },
         {
@@ -132,7 +233,7 @@
           "name": "What heights are available for chain link fences?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We install chain link fences from 4 feet tall up to 10 feet tall. Standard residential heights are 4, 5, and 6 feet. For commercial or security applications, we can install fences 8-10 feet tall, often with the addition of barbed wire for added security."
+            "text": "We install chain link fences from 4 feet up to 10 feet tall. Common residential heights are 4, 5, and 6 feet. Commercial and security fences are often 8–10 feet and can include barbed wire for added security."
           }
         },
         {
@@ -140,7 +241,7 @@
           "name": "Can you add privacy slats to a chain link fence?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, privacy slats and windscreen fabric are popular additions to chain link fences. These vinyl strips are inserted into the mesh to obstruct the view, providing privacy. They're especially nice in areas like trash can enclosures and are available in various colors."
+            "text": "Yes. Privacy slats and windscreen fabric are popular add-ons for chain link fences. Slats insert into the mesh to improve privacy while maintaining airflow and durability."
           }
         },
         {
@@ -148,23 +249,7 @@
           "name": "Is chain link a good choice for dogs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Chain link is an excellent choice for dog enclosures. It's strong, durable, and provides a secure area for your pets to run and play. We can ensure the fence is installed flush with the ground to prevent digging underneath."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does the cost compare to a wood fence?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A standard 4-foot galvanized chain link fence can be 30-50% less expensive than a standard 6-foot wood privacy fence, making it an extremely economical choice, especially for large properties."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you install commercial chain link fences?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we install chain link fences for residential, commercial, agricultural, and security applications. We offer heavy-duty options with higher gauge steel and can add barbed wire for enhanced security."
+            "text": "Chain link is a great choice for dogs because it’s strong, durable, and secure. We can install it tight to grade and recommend solutions to reduce digging or gaps at the bottom."
           }
         },
         {
@@ -172,592 +257,619 @@
           "name": "How fast can you install a chain link fence?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Chain link fences are faster to install than wood or metal fences. We can typically install 150-200 linear feet in one day for standard residential projects."
+            "text": "For standard residential projects, chain link installs quickly. We typically complete about 150–200 linear feet per day depending on terrain, access, and gate layout."
           }
         }
       ]
     }
     </script>
 </head>
+
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header / Navigation (consistent styling + spacing across site) -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="../index.html">
-                        <img class="h-16 w-auto" src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo">
+                <div class="flex items-center">
+                    <a href="/" aria-label="Buda Fence Company Home">
+                        <img src="/images/buda-fence-logo.webp"
+                             alt="Buda Fence Company"
+                             class="h-12 w-auto"
+                             width="97"
+                             height="48"
+                             decoding="async">
                     </a>
                 </div>
-                
+
                 <!-- Desktop Navigation -->
-<div class="hidden md:flex space-x-8">
-    <a href="../index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-    <a href="../about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
-    <div class="relative group">
-        <button class="text-buda-secondary font-medium pb-4">Services ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="../services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
-            <a href="deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
-            <a href="wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
-            <a href="metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
-            <a href="chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
-            <a href="fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
-        </div>
-    </div>
-    <div class="relative group">
-        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="../service-areas/austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
-            <a href="../service-areas/buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
-            <a href="../service-areas/kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
-            <a href="../service-areas/dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
-        </div>
-    </div>
-    <a href="../gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-    <a href="../blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-    <a href="../contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-</div>
-                    
-                    <a href="../gallery.html" class="text-gray-700 hover:text-red-600 font-medium">Gallery</a>
-                    <a href="../contact.html" class="text-gray-700 hover:text-red-600 font-medium">Contact</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
+                    <a href="/about" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false">
+                            Services ▾
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+                            <a href="/services" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
+                            <a href="/services/deck-construction" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
+                            <a href="/services/wood-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
+                            <a href="/services/metal-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
+                            <a href="/services/chain-link-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold text-buda-secondary">Chain Link Fence Installation</a>
+                            <a href="/services/fence-repair" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
+                        </div>
+                    </div>
+
+                    <!-- Service Areas Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false">
+                            Service Areas ▾
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
+                            <a href="/service-areas/austin" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
+                            <a href="/service-areas/buda" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
+                            <a href="/service-areas/kyle" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
+                            <a href="/service-areas/dripping-springs" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
+                        </div>
+                    </div>
+
+                    <a href="/gallery" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
+                    <a href="/contact" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
                 </div>
-                
+
                 <!-- Desktop Contact -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
-                    <a href="../contact.html" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold">Free Quote</a>
+                    <a href="tel:+15127107116" class="text-buda-secondary font-medium">(512) 710-7116</a>
+                    <a href="/contact" class="bg-buda-secondary text-white px-4 py-2 rounded-lg hover:bg-red-700 font-semibold">Free Quote</a>
                 </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center space-x-2">
-                    <a href="tel:5127107116" class="text-red-600 text-xs font-semibold whitespace-nowrap">(512) 710-7116</a>
-                    <a href="../contact.html" class="bg-red-600 text-white px-3 py-1.5 rounded text-xs font-semibold whitespace-nowrap">Quote</a>
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-red-600">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <!-- Mobile Contact & Menu -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+15127107116" class="text-buda-secondary font-medium text-sm">(512) 710-7116</a>
+                    <a href="/contact" class="bg-buda-secondary text-white px-3 py-2 rounded-lg text-sm font-semibold">Quote</a>
+                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-buda-secondary focus:outline-none ml-2" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 pt-2 pb-4 space-y-2">
-                <a href="../index.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Home</a>
-                <a href="../about.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">About</a>
-                
-                <div class="py-2">
-                    <div class="font-medium text-gray-900 mb-2">Services</div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
+            <div class="px-6 pt-4 pb-5 space-y-2">
+                <a href="/" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Home</a>
+                <a href="/about" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
+
+                <div class="pt-2">
+                    <p class="text-gray-900 font-semibold mb-2">Services</p>
                     <div class="pl-4 space-y-2">
-                        <a href="../services.html" class="block py-1 text-gray-600 hover:text-red-600">All Services</a>
-                        <a href="wood-fence-installation.html" class="block py-1 text-gray-600 hover:text-red-600">Wood Fence</a>
-                        <a href="metal-fence-installation.html" class="block py-1 text-gray-600 hover:text-red-600">Metal Fence</a>
-                        <a href="chain-link-fence-installation.html" class="block py-1 text-red-600 font-semibold">Chain Link Fence</a>
+                        <a href="/services" class="block py-1 text-gray-600 hover:text-buda-secondary">All Services</a>
+                        <a href="/services/deck-construction" class="block py-1 text-gray-600 hover:text-buda-secondary">Deck Construction</a>
+                        <a href="/services/wood-fence-installation" class="block py-1 text-gray-600 hover:text-buda-secondary">Wood Fence Installation</a>
+                        <a href="/services/metal-fence-installation" class="block py-1 text-gray-600 hover:text-buda-secondary">Metal Fence Installation</a>
+                        <a href="/services/chain-link-fence-installation" class="block py-1 font-semibold text-buda-secondary">Chain Link Fence Installation</a>
+                        <a href="/services/fence-repair" class="block py-1 text-gray-600 hover:text-buda-secondary">Fence Repair</a>
                     </div>
                 </div>
-                
-                <div class="py-2">
-                    <div class="font-medium text-gray-900 mb-2">Service Areas</div>
+
+                <div class="pt-4">
+                    <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
                     <div class="pl-4 space-y-2">
-                        <a href="../locations/austin.html" class="block py-1 text-gray-600 hover:text-red-600">Austin</a>
-                        <a href="../locations/buda.html" class="block py-1 text-gray-600 hover:text-red-600">Buda</a>
-                        <a href="../locations/kyle.html" class="block py-1 text-gray-600 hover:text-red-600">Kyle</a>
-                        <a href="../locations/dripping-springs.html" class="block py-1 text-gray-600 hover:text-red-600">Dripping Springs</a>
+                        <a href="/service-areas/austin" class="block py-1 text-gray-600 hover:text-buda-secondary">Austin</a>
+                        <a href="/service-areas/buda" class="block py-1 text-gray-600 hover:text-buda-secondary">Buda</a>
+                        <a href="/service-areas/kyle" class="block py-1 text-gray-600 hover:text-buda-secondary">Kyle</a>
+                        <a href="/service-areas/dripping-springs" class="block py-1 text-gray-600 hover:text-buda-secondary">Dripping Springs</a>
                     </div>
                 </div>
-                
-                <a href="../gallery.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Gallery</a>
-                <a href="../contact.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Contact</a>
+
+                <div class="pt-4 space-y-2">
+                    <a href="/gallery" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
+                    <a href="/blog/" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
+                    <a href="/contact" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-    </script>
-
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Chain Link Fence Installation in Austin, TX</h1>
-                <p class="text-xl mb-8">Affordable, secure, and durable fencing for residential, commercial, and agricultural properties. Galvanized and vinyl-coated options available.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="../contact.html" class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg">
-                        Get Free Estimate
-                    </a>
-                    <a href="tel:5127107116" class="bg-white text-slate-800 px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg">
-                        (512) 710-7116
-                    </a>
-                </div>
+    <header class="hero-bg text-white py-16 md:py-20" role="banner">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm mb-6">
+                <span class="font-semibold">Chain Link Fence Installation</span>
+                <span class="text-white/70">•</span>
+                <span class="text-white/90">Austin • Buda • Kyle • Dripping Springs</span>
+            </p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Chain Link Fence Installation in Central Texas</h1>
+            <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                Affordable, secure, and built to last. Choose galvanized or black vinyl-coated chain link fencing for residential yards, dog runs, commercial lots, and security applications.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
+                    Get Free Quote
+                </a>
+                <a href="tel:+15127107116" class="bg-white hover:bg-gray-100 text-buda-primary font-bold py-3 px-8 rounded-lg text-lg transition">
+                    Call (512) 710-7116
+                </a>
+            </div>
+
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-sm">
+                <div class="bg-white/10 rounded-lg p-3">150–200 ft/day typical installs</div>
+                <div class="bg-white/10 rounded-lg p-3">Galvanized + Vinyl-Coated options</div>
+                <div class="bg-white/10 rounded-lg p-3">Heavy-duty posts + extra concrete</div>
+                <div class="bg-white/10 rounded-lg p-3">5-year installation warranty</div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Main Content Column -->
-            <div class="lg:col-span-2">
-                <!-- Introduction -->
-                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+    <main id="main-content">
+        <!-- Intro -->
+        <section class="py-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="bg-white rounded-xl shadow-lg p-8">
                     <p class="text-lg text-gray-700 mb-4">
-                        When you need a fencing solution that prioritizes strength, security, and value, a chain link fence is the undisputed champion. At Buda Fence Company, we offer professional chain link fence installation for both residential and commercial properties throughout the Austin area. Forget the rusty, flimsy fences of the past; modern chain link is a durable, long-lasting, and surprisingly versatile option.
+                        If you need fencing that prioritizes strength, security, and value, chain link is the workhorse that delivers. At Buda Fence Company, we install modern chain link fencing that’s clean, tight, and professional—no sagging mesh, no flimsy posts, no shortcuts.
                     </p>
-                    <p class="text-lg text-gray-700 mb-4">
-                        Chain link fencing is the workhorse of the industry, providing a secure and reliable enclosure at a fraction of the cost of wood or metal. It's the perfect choice for defining property lines, creating a safe play area for kids and pets, securing a commercial lot, or enclosing a sports court. This guide will cover the benefits and options for chain link fencing in Central Texas.
+                    <p class="text-lg text-gray-700 mb-0">
+                        From residential backyards and pet containment to commercial lots and security fencing, we’ll help you choose the right height, gauge, and finish for your property—and we’ll install it the right way.
                     </p>
                 </div>
+            </div>
+        </section>
 
-                <!-- Why Choose Chain Link -->
-                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choose a Chain Link Fence?</h2>
-                    <p class="text-gray-700 mb-4">
-                        Chain link fences are chosen for their practical benefits. They offer an unbeatable combination of affordability, durability, and low maintenance that makes them a smart choice for a wide range of applications.
-                    </p>
-                    
-                    <div class="space-y-6 mt-6">
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Unbeatable Value</h3>
-                            <p class="text-gray-700">
-                                Chain link is the most cost-effective fencing material available. It provides a high level of security and durability for a significantly lower initial investment compared to other fence types, making it perfect for large areas or budget-conscious projects. A standard 4-foot galvanized chain link fence can be 30-50% less expensive than a 6-foot wood privacy fence.
-                            </p>
+        <!-- Benefits -->
+        <section class="pb-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-buda-primary mb-6">Why Homeowners and Businesses Choose Chain Link</h2>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="border rounded-xl p-6">
+                            <h3 class="text-xl font-semibold text-buda-primary mb-2">Unbeatable Value</h3>
+                            <p class="text-gray-700">Chain link is one of the most cost-effective ways to secure property—especially for large areas—without sacrificing durability.</p>
                         </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Durability and Longevity</h3>
-                            <p class="text-gray-700">
-                                Built to last, our chain link fences are made from heavy-gauge steel (9-gauge or 11-gauge options) that has been galvanized (coated in zinc) to prevent rust and corrosion. This tough material can withstand the harsh Texas weather and requires virtually no maintenance to keep performing for 20-30 years or more.
-                            </p>
+                        <div class="border rounded-xl p-6">
+                            <h3 class="text-xl font-semibold text-buda-primary mb-2">Durable and Long-Lasting</h3>
+                            <p class="text-gray-700">Galvanized steel resists rust and handles Texas weather. Vinyl-coated options add even more protection and a cleaner look.</p>
                         </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">High Security</h3>
-                            <p class="text-gray-700">
-                                The interwoven steel mesh creates a formidable barrier that is difficult to cut or climb. It's an excellent choice for securing commercial properties, industrial sites, and backyards, providing a clear line of sight while keeping intruders out. For enhanced security, we can add barbed wire to the top.
-                            </p>
+                        <div class="border rounded-xl p-6">
+                            <h3 class="text-xl font-semibold text-buda-primary mb-2">Secure Without Blocking Views</h3>
+                            <p class="text-gray-700">You get a strong perimeter while still keeping visibility for safety, pets, and property monitoring.</p>
                         </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Zero Maintenance</h3>
-                            <p class="text-gray-700">
-                                A chain link fence is the definition of "set it and forget it." It never needs painting, staining, or sealing. It won't rot, warp, or be damaged by insects. An occasional rinse is all that's needed to keep it looking its best.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Fast Installation</h3>
-                            <p class="text-gray-700">
-                                Chain link fences are faster to install than wood or metal fences. We can typically complete 150-200 linear feet in one day for standard residential projects, getting your property secured quickly.
-                            </p>
+                        <div class="border rounded-xl p-6">
+                            <h3 class="text-xl font-semibold text-buda-primary mb-2">Low Maintenance</h3>
+                            <p class="text-gray-700">No staining, no painting, no rot. Just a rinse if it gets dusty—done.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Chain Link Options -->
-                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Chain Link Fence Options</h2>
-                    <p class="text-gray-700 mb-6">
-                        Modern chain link comes in several varieties, allowing you to choose the right balance of performance and aesthetics for your needs.
-                    </p>
-                    
+        <!-- Options -->
+        <section class="pb-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-buda-primary mb-6">Chain Link Fence Options</h2>
+
                     <div class="space-y-8">
-                        <!-- Galvanized Chain Link -->
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Galvanized Chain Link</h3>
+                        <div class="border rounded-xl p-6">
+                            <h3 class="text-2xl font-semibold text-buda-primary mb-3">Galvanized Chain Link</h3>
                             <p class="text-gray-700 mb-4">
-                                This is the traditional and most common type of chain link fence. The steel components are hot-dipped in zinc, a process called galvanization, which provides a thick, durable coating that protects the steel from rust and corrosion for many years.
+                                Classic silver/gray chain link with a zinc coating to protect against rust. Great for large properties, commercial sites, and budget-focused installs.
                             </p>
                             <div class="grid md:grid-cols-2 gap-4">
                                 <div>
-                                    <h4 class="font-semibold text-green-700 mb-2">Pros:</h4>
+                                    <h4 class="font-semibold text-green-700 mb-2">Pros</h4>
                                     <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                        <li>Most affordable option - lowest cost per linear foot</li>
-                                        <li>Highly durable with excellent rust protection</li>
-                                        <li>Classic, utilitarian look - standard for commercial use</li>
-                                        <li>20-30 year lifespan</li>
+                                        <li>Lowest cost per linear foot</li>
+                                        <li>Strong rust protection</li>
+                                        <li>Great for large areas</li>
+                                        <li>20–30 year lifespan</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-red-700 mb-2">Cons:</h4>
+                                    <h4 class="font-semibold text-red-700 mb-2">Cons</h4>
                                     <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                        <li>Industrial appearance with silver/gray finish</li>
-                                        <li>May not suit all residential aesthetics</li>
+                                        <li>More “industrial” appearance</li>
+                                        <li>Not as hidden in landscaping</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Vinyl-Coated Chain Link -->
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Vinyl-Coated Chain Link</h3>
+
+                        <div class="border rounded-xl p-6">
+                            <h3 class="text-2xl font-semibold text-buda-primary mb-3">Black Vinyl-Coated Chain Link</h3>
                             <p class="text-gray-700 mb-4">
-                                For a more refined look, consider a vinyl-coated chain link fence. In this option, the galvanized steel core is coated in a layer of colored vinyl (PVC). This provides an extra layer of protection against rust and a more attractive finish.
+                                A premium option with a PVC coating over galvanized steel. It looks cleaner, blends into landscaping, and adds another layer of protection.
                             </p>
                             <div class="grid md:grid-cols-2 gap-4">
                                 <div>
-                                    <h4 class="font-semibold text-green-700 mb-2">Pros:</h4>
+                                    <h4 class="font-semibold text-green-700 mb-2">Pros</h4>
                                     <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                        <li>Enhanced aesthetics - available in black, green, brown, and custom colors</li>
-                                        <li>Superior durability with double rust protection</li>
-                                        <li>Smoother finish - more comfortable to touch</li>
-                                        <li>Blends naturally into landscaping</li>
-                                        <li>30+ year lifespan</li>
+                                        <li>Best aesthetics (popular for homes)</li>
+                                        <li>Extra rust protection</li>
+                                        <li>Smoother finish</li>
+                                        <li>Often 30+ year lifespan</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-red-700 mb-2">Cons:</h4>
+                                    <h4 class="font-semibold text-red-700 mb-2">Cons</h4>
                                     <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                        <li>Higher cost than standard galvanized</li>
-                                        <li>Vinyl coating can fade slightly over time in direct sun</li>
+                                        <li>Higher initial cost</li>
+                                        <li>May fade slightly over many years</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Privacy Slats & Windscreen -->
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Privacy Slats & Windscreen Fabric</h3>
-                            <p class="text-gray-700 mb-4">
-                                Want the durability of chain link with the privacy of a solid fence? Add privacy slats or windscreen fabric to your chain link fence. These vinyl strips are inserted into the mesh to obstruct the view, providing privacy while maintaining airflow. They're especially popular for trash can enclosures, pool areas, and residential backyards.
-                            </p>
+
+                        <div class="border rounded-xl p-6">
+                            <h3 class="text-2xl font-semibold text-buda-primary mb-3">Privacy Slats & Windscreen</h3>
                             <p class="text-gray-700">
-                                Available in multiple colors to match your fence or blend with your surroundings. Windscreen fabric is also excellent for reducing wind exposure in open areas.
+                                Want privacy without a full wood fence? Slats and windscreen fabric can reduce visibility while keeping chain link’s strength and airflow. Perfect for trash enclosures, pool areas, and backyards.
                             </p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Photo Gallery -->
-                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Chain Link Fence Gallery</h2>
-                    <p class="text-gray-700 mb-6">
-                        Discover the versatility of modern chain link fencing in our gallery of recent projects in the Austin area.
-                    </p>
-                    
+        <!-- Gallery -->
+        <section class="pb-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-buda-primary mb-3">Chain Link Fence Gallery</h2>
+                    <p class="text-gray-700 mb-8">Real projects showing galvanized and black vinyl chain link fences, gates, and privacy solutions.</p>
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <img src="../images/chain-link-privacy-slats.jpg" alt="Black vinyl-coated chain link fence with privacy slats for trash enclosure in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md">
-                            <p class="text-sm text-gray-600 mt-2">Black vinyl chain link with privacy slats - trash enclosure</p>
-                        </div>
-                        <div>
-                            <img src="../images/black-vinyl-chainlink-gate.jpg" alt="Black vinyl-coated chain link fence with gate for residential backyard in Austin" class="w-full h-64 object-cover rounded-lg shadow-md">
-                            <p class="text-sm text-gray-600 mt-2">Black vinyl chain link with decorative gate</p>
-                        </div>
-                        <div>
-                            <img src="../images/black-vinyl-chainlink-backyard.jpg" alt="Black vinyl chain link fence for residential backyard privacy in Buda, TX" class="w-full h-64 object-cover rounded-lg shadow-md">
-                            <p class="text-sm text-gray-600 mt-2">Black vinyl chain link - residential backyard</p>
-                        </div>
-                        <div>
-                            <img src="../images/galvanized-commercial-chainlink.jpg" alt="Galvanized commercial chain link fence 8ft tall for security in Austin" class="w-full h-64 object-cover rounded-lg shadow-md">
-                            <p class="text-sm text-gray-600 mt-2">Galvanized commercial chain link - 8ft tall</p>
-                        </div>
-                        <div>
-                            <img src="../images/black-chainlink-double-gate.jpg" alt="Black chain link double gate for residential driveway in Kyle, TX" class="w-full h-64 object-cover rounded-lg shadow-md">
-                            <p class="text-sm text-gray-600 mt-2">Black chain link double gate - residential driveway</p>
-                        </div>
-                        <div>
-                            <img src="../images/chainlink-with-dogs.jpg" alt="Chain link fence for dog containment and pet safety in Austin backyard" class="w-full h-64 object-cover rounded-lg shadow-md">
-                            <p class="text-sm text-gray-600 mt-2">Chain link fence - perfect for pet containment</p>
-                        </div>
-                        <div>
-                            <img src="../images/commercial-security-chainlink.jpg" alt="Commercial security chain link fence with barbed wire in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md">
-                            <p class="text-sm text-gray-600 mt-2">Commercial security fence with barbed wire</p>
-                        </div>
-                        <div>
-                            <img src="../images/commercial-chainlink-pathway.jpg" alt="Galvanized chain link fence along commercial pathway in Austin" class="w-full h-64 object-cover rounded-lg shadow-md">
-                            <p class="text-sm text-gray-600 mt-2">Commercial chain link - pathway installation</p>
-                        </div>
+                        <!-- 1 -->
+                        <figure class="rounded-xl overflow-hidden border bg-gray-50">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="/images/chain-link-privacy-slats-320.webp 320w, /images/chain-link-privacy-slats-480.webp 480w, /images/chain-link-privacy-slats-640.webp 640w, /images/chain-link-privacy-slats.webp 1200w"
+                                        sizes="(max-width: 768px) 100vw, 50vw">
+                                <img src="/images/chain-link-privacy-slats.webp"
+                                     alt="Black vinyl-coated chain link fence with privacy slats for enclosure in Austin, TX"
+                                     class="w-full h-64 object-cover"
+                                     width="1200"
+                                     height="1600"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                            <figcaption class="text-sm text-gray-600 p-3">Black vinyl chain link with privacy slats</figcaption>
+                        </figure>
+
+                        <!-- 2 -->
+                        <figure class="rounded-xl overflow-hidden border bg-gray-50">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="/images/black-vinyl-chainlink-gate-320.webp 320w, /images/black-vinyl-chainlink-gate-480.webp 480w, /images/black-vinyl-chainlink-gate-640.webp 640w, /images/black-vinyl-chainlink-gate.webp 1200w"
+                                        sizes="(max-width: 768px) 100vw, 50vw">
+                                <img src="/images/black-vinyl-chainlink-gate.webp"
+                                     alt="Black vinyl-coated chain link fence and gate for residential backyard in Central Texas"
+                                     class="w-full h-64 object-cover"
+                                     width="1200"
+                                     height="1214"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                            <figcaption class="text-sm text-gray-600 p-3">Black vinyl chain link with gate</figcaption>
+                        </figure>
+
+                        <!-- 3 -->
+                        <figure class="rounded-xl overflow-hidden border bg-gray-50">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="/images/black-vinyl-chainlink-backyard-320.webp 320w, /images/black-vinyl-chainlink-backyard-480.webp 480w, /images/black-vinyl-chainlink-backyard-640.webp 640w, /images/black-vinyl-chainlink-backyard.webp 1060w"
+                                        sizes="(max-width: 768px) 100vw, 50vw">
+                                <img src="/images/black-vinyl-chainlink-backyard.webp"
+                                     alt="Black vinyl chain link fence for residential backyard in Buda, TX"
+                                     class="w-full h-64 object-cover"
+                                     width="1060"
+                                     height="707"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                            <figcaption class="text-sm text-gray-600 p-3">Black vinyl chain link backyard install</figcaption>
+                        </figure>
+
+                        <!-- 4 -->
+                        <figure class="rounded-xl overflow-hidden border bg-gray-50">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="/images/galvanized-commercial-chainlink-320.webp 320w, /images/galvanized-commercial-chainlink-480.webp 480w, /images/galvanized-commercial-chainlink-640.webp 640w, /images/galvanized-commercial-chainlink.webp 1200w"
+                                        sizes="(max-width: 768px) 100vw, 50vw">
+                                <img src="/images/galvanized-commercial-chainlink.webp"
+                                     alt="Galvanized commercial chain link gate installation for security in Austin, TX"
+                                     class="w-full h-64 object-cover"
+                                     width="1200"
+                                     height="900"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                            <figcaption class="text-sm text-gray-600 p-3">Galvanized commercial gate & fencing</figcaption>
+                        </figure>
+
+                        <!-- 5 -->
+                        <figure class="rounded-xl overflow-hidden border bg-gray-50">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="/images/black-chainlink-double-gate-320.webp 320w, /images/black-chainlink-double-gate-480.webp 480w, /images/black-chainlink-double-gate-640.webp 640w, /images/black-chainlink-double-gate.webp 600w"
+                                        sizes="(max-width: 768px) 100vw, 50vw">
+                                <img src="/images/black-chainlink-double-gate.webp"
+                                     alt="Black chain link double gate for residential access in Kyle, TX"
+                                     class="w-full h-64 object-cover"
+                                     width="600"
+                                     height="345"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                            <figcaption class="text-sm text-gray-600 p-3">Black chain link double gate</figcaption>
+                        </figure>
+
+                        <!-- 6 -->
+                        <figure class="rounded-xl overflow-hidden border bg-gray-50">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="/images/chainlink-with-dogs-320.webp 320w, /images/chainlink-with-dogs-480.webp 480w, /images/chainlink-with-dogs-640.webp 640w, /images/chainlink-with-dogs.webp 400w"
+                                        sizes="(max-width: 768px) 100vw, 50vw">
+                                <img src="/images/chainlink-with-dogs.webp"
+                                     alt="Chain link fence for dog containment and pet safety in Austin backyard"
+                                     class="w-full h-64 object-cover"
+                                     width="400"
+                                     height="300"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                            <figcaption class="text-sm text-gray-600 p-3">Great for pet containment</figcaption>
+                        </figure>
+
+                        <!-- 7 -->
+                        <figure class="rounded-xl overflow-hidden border bg-gray-50">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="/images/commercial-security-chainlink-320.webp 320w, /images/commercial-security-chainlink-480.webp 480w, /images/commercial-security-chainlink-640.webp 640w, /images/commercial-security-chainlink.webp 1200w"
+                                        sizes="(max-width: 768px) 100vw, 50vw">
+                                <img src="/images/commercial-security-chainlink.webp"
+                                     alt="Commercial chain link security fencing installation in Central Texas"
+                                     class="w-full h-64 object-cover"
+                                     width="1200"
+                                     height="900"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                            <figcaption class="text-sm text-gray-600 p-3">Commercial security chain link fencing</figcaption>
+                        </figure>
+
+                        <!-- 8 -->
+                        <figure class="rounded-xl overflow-hidden border bg-gray-50">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="/images/commercial-chainlink-pathway-320.webp 320w, /images/commercial-chainlink-pathway-480.webp 480w, /images/commercial-chainlink-pathway-640.webp 640w, /images/commercial-chainlink-pathway.webp 1200w"
+                                        sizes="(max-width: 768px) 100vw, 50vw">
+                                <img src="/images/commercial-chainlink-pathway.webp"
+                                     alt="Galvanized chain link fence installed along a commercial pathway in Austin, TX"
+                                     class="w-full h-64 object-cover"
+                                     width="1200"
+                                     height="800"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
+                            <figcaption class="text-sm text-gray-600 p-3">Commercial chain link along pathway</figcaption>
+                        </figure>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Installation Process -->
-                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Professional Installation Process</h2>
-                    <p class="text-gray-700 mb-6">
-                        A chain link fence is only as strong as its installation. Our process ensures your fence is taut, secure, and built to last.
-                    </p>
-                    
+        <!-- Process -->
+        <section class="pb-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-buda-primary mb-6">Our Professional Installation Process</h2>
+                    <p class="text-gray-700 mb-8">A chain link fence is only as good as the install. We build a rigid framework, stretch the mesh tight, and finish clean.</p>
+
                     <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                1
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Consultation and Layout</h3>
-                                <p class="text-gray-700">
-                                    We start by understanding your needs and accurately measuring your property. We help you choose the right height (4ft to 10ft), gauge (9 or 11), and coating (galvanized or vinyl) for your application.
-                                </p>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">1</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-buda-primary mb-1">Layout & Planning</h3>
+                                <p class="text-gray-700">We confirm boundaries, grade, gate locations, and help you choose the best height, gauge, and finish.</p>
                             </div>
                         </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                2
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Setting the Foundation</h3>
-                                <p class="text-gray-700">
-                                    The strength of a chain link fence is in its terminal posts (corner, end, and gate posts). We use heavy-duty corner posts and line posts, setting them deep in extra concrete to create a rigid framework that will not sag. This is a critical step that many competitors skip.
-                                </p>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">2</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-buda-primary mb-1">Heavy-Duty Posts + Extra Concrete</h3>
+                                <p class="text-gray-700">Terminal posts (corners/ends/gates) get the strength. Proper depth and concrete volume prevents lean and future sag.</p>
                             </div>
                         </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                3
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Installing Top Rail and Hardware</h3>
-                                <p class="text-gray-700">
-                                    We install a 1-5/8" top rail (not the cheaper 1-3/8" that some companies use) for superior strength and stability. We then attach all necessary hardware, including tension bands and wires to hold the mesh tight.
-                                </p>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">3</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-buda-primary mb-1">Top Rail & Hardware</h3>
+                                <p class="text-gray-700">We use a stronger top rail and solid hardware so your fence stays tight and stable for years.</p>
                             </div>
                         </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                4
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Stretching the Mesh</h3>
-                                <p class="text-gray-700">
-                                    This is where expertise matters. We use specialized tools to stretch the chain link mesh until it is perfectly taut between the terminal posts. A properly stretched fence will not sag or rattle. We then secure the mesh to the posts and rails with steel ties.
-                                </p>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">4</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-buda-primary mb-1">Stretch the Mesh Tight</h3>
+                                <p class="text-gray-700">We stretch chain link properly with the right tools—no loose fabric, no rattling, no sloppy finish.</p>
                             </div>
                         </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                5
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Final Inspection and Cleanup</h3>
-                                <p class="text-gray-700">
-                                    We conduct a thorough inspection to ensure the fence is perfectly aligned, taut, and secure. We clean up all debris and materials, leaving your property clean and your new fence ready to use.
-                                </p>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-buda-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">5</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-buda-primary mb-1">Final Walkthrough & Cleanup</h3>
+                                <p class="text-gray-700">We verify alignment, gate swing/latch, and leave your property clean. Then we back it with our warranty.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- What Sets Us Apart -->
-                <div class="bg-gradient-to-r from-red-600 to-red-700 rounded-lg shadow-md p-8 mb-8 text-white">
+        <!-- What Sets Us Apart -->
+        <section class="pb-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="bg-gradient-to-r from-buda-secondary to-red-700 rounded-xl shadow-lg p-8 text-white">
                     <h2 class="text-3xl font-bold mb-6">What Sets Buda Fence Company Apart</h2>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">✓ Heavy-Duty Corner Posts</h3>
-                            <p>We use larger diameter corner and gate posts for superior strength and stability.</p>
+                            <h3 class="text-xl font-semibold mb-2">✓ Heavy-Duty Terminal Posts</h3>
+                            <p class="text-white/90">Corners and gate posts are built for strength so your fence stays straight and solid.</p>
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold mb-2">✓ Extra Concrete</h3>
-                            <p>Posts are set with extra concrete to proper depth, ensuring your fence won't lean or sag.</p>
+                            <p class="text-white/90">We don’t “bare minimum” your footing. Proper depth and volume prevents lean and sag.</p>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">✓ 1-5/8" Top Rail</h3>
-                            <p>We use the stronger 1-5/8" top rail instead of the cheaper 1-3/8" option.</p>
+                            <h3 class="text-xl font-semibold mb-2">✓ Tight, Professional Stretch</h3>
+                            <p class="text-white/90">A clean, taut chain link install looks better and performs better.</p>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">✓ Rust-Resistant Coatings</h3>
-                            <p>All our chain link fences feature galvanized or vinyl-coated fabric for maximum longevity.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">✓ 5-Year Installation Guarantee</h3>
-                            <p>We stand behind our work with a comprehensive 5-year installation warranty.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">✓ Lifetime Material Warranty</h3>
-                            <p>Most manufacturers provide lifetime warranties on chain link materials.</p>
+                            <h3 class="text-xl font-semibold mb-2">✓ 5-Year Installation Warranty</h3>
+                            <p class="text-white/90">We stand behind our work and take care of our customers.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- FAQs -->
-                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-                    
+        <!-- FAQs (on-page) -->
+        <section class="pb-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-buda-primary mb-6">Frequently Asked Questions</h2>
+
                     <div class="space-y-6">
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">How long does a chain link fence last?</h3>
-                            <p class="text-gray-700">
-                                A professionally installed galvanized chain link fence can easily last 20-30 years. A vinyl-coated fence can last even longer due to its extra layer of protection against rust and corrosion.
-                            </p>
+                            <h3 class="text-xl font-semibold text-buda-primary mb-2">How long does a chain link fence last?</h3>
+                            <p class="text-gray-700">Galvanized chain link typically lasts 20–30 years. Vinyl-coated options often last even longer.</p>
                         </div>
-                        
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">What heights are available for chain link fences?</h3>
-                            <p class="text-gray-700">
-                                We install chain link fences from 4 feet tall up to 10 feet tall. Standard residential heights are 4, 5, and 6 feet. For commercial or security applications, we can install fences 8-10 feet tall, often with the addition of barbed wire for added security.
-                            </p>
+                            <h3 class="text-xl font-semibold text-buda-primary mb-2">What heights are available?</h3>
+                            <p class="text-gray-700">We install 4–10 ft chain link fencing. Most residential jobs are 4–6 ft; commercial/security is often 8–10 ft.</p>
                         </div>
-                        
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Can you add privacy slats to a chain link fence?</h3>
-                            <p class="text-gray-700">
-                                Yes, privacy slats and windscreen fabric are popular additions to chain link fences. These vinyl strips are inserted into the mesh to obstruct the view, providing privacy. They're especially nice in areas like trash can enclosures and are available in various colors to match your fence or surroundings.
-                            </p>
+                            <h3 class="text-xl font-semibold text-buda-primary mb-2">Can I add privacy?</h3>
+                            <p class="text-gray-700">Yes. Privacy slats and windscreen fabric are common upgrades for backyards and enclosures.</p>
                         </div>
-                        
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Is chain link a good choice for dogs?</h3>
-                            <p class="text-gray-700">
-                                Chain link is an excellent choice for dog enclosures. It's strong, durable, and provides a secure area for your pets to run and play. We can ensure the fence is installed flush with the ground to prevent digging underneath.
-                            </p>
+                            <h3 class="text-xl font-semibold text-buda-primary mb-2">Is chain link good for dogs?</h3>
+                            <p class="text-gray-700">Absolutely. It’s strong, secure, and great for pet containment. We can also recommend options to reduce digging.</p>
                         </div>
-                        
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">How does the cost compare to a wood fence?</h3>
-                            <p class="text-gray-700">
-                                A standard 4-foot galvanized chain link fence can be 30-50% less expensive than a standard 6-foot wood privacy fence, making it an extremely economical choice, especially for large properties or commercial applications.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Do you install commercial chain link fences?</h3>
-                            <p class="text-gray-700">
-                                Yes, we install chain link fences for residential, commercial, agricultural, and security applications. We offer heavy-duty options with higher gauge steel and can add barbed wire for enhanced security on commercial and industrial properties.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">How fast can you install a chain link fence?</h3>
-                            <p class="text-gray-700">
-                                Chain link fences are faster to install than wood or metal fences. We can typically install 150-200 linear feet in one day for standard residential projects, getting your property secured quickly without sacrificing quality.
-                            </p>
+                            <h3 class="text-xl font-semibold text-buda-primary mb-2">How fast can you install it?</h3>
+                            <p class="text-gray-700">Many residential projects install around 150–200 ft/day depending on terrain, access, and gate layout.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Customer Testimonials -->
-                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">What Our Customers Say</h2>
-                    
-                    <div class="space-y-6">
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <p class="text-gray-700 italic mb-2">
-                                "We had a great experience with Buda Fence Co! Timely, responsive & did a great job on our fence replacement! The quality of materials & work shows! Thank you!!"
-                            </p>
-                            <p class="text-gray-900 font-semibold">— Amber Light</p>
-                        </div>
-                        
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <p class="text-gray-700 italic mb-2">
-                                "Communication was amazing and construction was so quick!"
-                            </p>
-                            <p class="text-gray-900 font-semibold">— Shalen Adrenalen</p>
-                        </div>
-                        
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <p class="text-gray-700 italic mb-2">
-                                "Will and his team did a great job! He was very responsive and helpful with any questions I had whether about the quote or types of fencing. This was my first fence to have built and I would definitely use Will again!"
-                            </p>
-                            <p class="text-gray-900 font-semibold">— Mallory Buxie</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CTA Section -->
-                <div class="bg-gradient-to-r from-slate-800 to-slate-900 rounded-lg shadow-md p-8 text-white text-center">
-                    <h2 class="text-3xl font-bold mb-4">Ready for Your Chain Link Fence?</h2>
-                    <p class="text-xl mb-6">
-                        Get a durable, secure, and affordable chain link fence installed by Austin's trusted fence company.
+        <!-- CTA -->
+        <section class="pb-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="bg-buda-primary rounded-xl shadow-lg p-10 text-white text-center">
+                    <h2 class="text-3xl font-bold mb-3">Ready for Your Chain Link Fence?</h2>
+                    <p class="text-white/90 text-lg mb-8">
+                        Contact us today for your free quote. We’ll give you straight answers, solid options, and a clean install.
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="../contact.html" class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg">
-                            Get Free Estimate
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="/contact" class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
+                            Get Free Quote
                         </a>
-                        <a href="tel:5127107116" class="bg-white text-slate-800 px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg">
+                        <a href="tel:+15127107116" class="bg-white hover:bg-gray-100 text-buda-primary font-bold py-3 px-8 rounded-lg text-lg transition">
                             Call (512) 710-7116
                         </a>
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Sidebar -->
-            <div class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Quick Contact</h3>
-                    <div class="space-y-4">
-                        <a href="tel:5127107116" class="block bg-red-600 text-white text-center px-6 py-3 rounded-md hover:bg-red-700 font-semibold">
-                            (512) 710-7116
-                        </a>
-                        <a href="../contact.html" class="block bg-slate-800 text-white text-center px-6 py-3 rounded-md hover:bg-slate-700 font-semibold">
-                            Get Free Quote
-                        </a>
-                    </div>
-                    
-                    <div class="mt-8 pt-6 border-t">
-                        <h4 class="font-semibold text-gray-900 mb-3">Service Areas</h4>
-                        <ul class="space-y-2 text-gray-700">
-                            <li><a href="../locations/austin.html" class="hover:text-red-600">Austin, TX</a></li>
-                            <li><a href="../locations/buda.html" class="hover:text-red-600">Buda, TX</a></li>
-                            <li><a href="../locations/kyle.html" class="hover:text-red-600">Kyle, TX</a></li>
-                            <li><a href="../locations/dripping-springs.html" class="hover:text-red-600">Dripping Springs, TX</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mt-6 pt-6 border-t">
-                        <h4 class="font-semibold text-gray-900 mb-3">Other Services</h4>
-                        <ul class="space-y-2 text-gray-700">
-                            <li><a href="wood-fence-installation.html" class="hover:text-red-600">Wood Fence Installation</a></li>
-                            <li><a href="metal-fence-installation.html" class="hover:text-red-600">Metal Fence Installation</a></li>
-                            <li><a href="../services.html" class="hover:text-red-600">View All Services</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mt-6 pt-6 border-t">
-                        <h4 class="font-semibold text-gray-900 mb-3">Why Choose Us?</h4>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li>✓ 5-Year Installation Guarantee</li>
-                            <li>✓ Lifetime Material Warranty</li>
-                            <li>✓ Fast Installation (150-200 ft/day)</li>
-                            <li>✓ Heavy-Duty Posts & Extra Concrete</li>
-                            <li>✓ 1-5/8" Top Rail (Not 1-3/8")</li>
-                            <li>✓ Licensed & Insured</li>
-                        </ul>
-                    </div>
+    <!-- Footer (exact code you provided) -->
+    <footer class="bg-gray-900 text-white py-12" role="contentinfo">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="/images/buda-fence-logo.webp"
+                         alt="Buda Fence Company"
+                         class="h-12 w-auto mb-4"
+                         width="97"
+                         height="48"
+                         loading="lazy"
+                         decoding="async">
+                    <p class="text-gray-400 text-sm">Professional fence installation and repair services in Austin, Buda, and Central Texas. Family-owned and operated since 2015.</p>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Buda Fence Company</h3>
-                    <p class="text-gray-300 mb-4">Building beautiful fences in Austin, TX since day one.</p>
-                    <p class="text-gray-300">308 Wincliff Dr<br>Buda, TX 78610</p>
+                    <h3 class="font-bold mb-4">Contact Us</h3>
+                    <address class="text-gray-400 text-sm not-italic">
+                        <p class="mb-2">
+                            <strong>Address:</strong><br>
+                            308 Wincliff Dr<br>
+                            Buda, TX 78610
+                        </p>
+                        <p class="mb-2">
+                            <strong>Phone:</strong> <a href="tel:+15127107116" class="hover:text-white">(512) 710-7116</a>
+                        </p>
+                        <p>
+                            <strong>Email:</strong> <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a>
+                        </p>
+                    </address>
                 </div>
+
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-300 hover:text-white">Home</a></li>
-                        <li><a href="../about.html" class="text-gray-300 hover:text-white">About</a></li>
-                        <li><a href="../services.html" class="text-gray-300 hover:text-white">Services</a></li>
-                        <li><a href="../gallery.html" class="text-gray-300 hover:text-white">Gallery</a></li>
-                        <li><a href="../contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    <h3 class="font-bold mb-4">Our Services</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a class="hover:text-white" href="/services/wood-fence-installation">Wood Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/metal-fence-installation">Metal Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/chain-link-fence-installation">Chain Link Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/fence-repair">Fence Repair</a></li>
+                        <li><a class="hover:text-white" href="/services">View All Services</a></li>
                     </ul>
                 </div>
+
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-                    <p class="text-gray-300 mb-2">Phone: <a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></p>
-                    <p class="text-gray-300 mb-4">Email: <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></p>
-                    <p class="text-gray-300">Hours: 24/7 (Installation: 7am-6pm)</p>
+                    <h3 class="font-bold mb-4">Service Areas</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a class="hover:text-white" href="/service-areas/austin">Austin, TX</a></li>
+                        <li><a class="hover:text-white" href="/service-areas/buda">Buda, TX</a></li>
+                        <li><a class="hover:text-white" href="/service-areas/kyle">Kyle, TX</a></li>
+                        <li><a class="hover:text-white" href="/service-areas/dripping-springs">Dripping Springs, TX</a></li>
+                    </ul>
+                    <h3 class="font-bold mb-2 mt-4">Business Hours</h3>
+                    <p class="text-gray-400 text-sm">
+                        Mon-Fri: 6 AM - 6 PM<br>
+                        Saturday: 9 AM - 2 PM<br>
+                        <span class="text-xs">(Emergency service available)</span>
+                    </p>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 Buda Fence Company. All rights reserved.</p>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2026 Buda Fence Company. All Rights Reserved. | <a class="hover:text-white" href="/contact">Contact Us</a></p>
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
