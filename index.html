@@ -605,11 +605,18 @@
             </div>
             
             <!-- Mobile Contact & Menu -->
-            <div class="md:hidden flex items-center space-x-3">
-                <a href="tel:5127107116" class="text-buda-secondary font-semibold text-sm" data-close-mobile-menu>(512) 710-7116</a>
-                <a class="bg-buda-secondary text-white px-4 py-2 rounded-lg text-sm font-semibold" href="/contact" data-close-mobile-menu>Quote</a>
+            <div class="md:hidden flex items-center gap-2">
+                <a href="tel:5127107116" 
+                   class="text-buda-secondary font-semibold whitespace-nowrap" 
+                   style="font-size: 0.8125rem;"
+                   data-close-mobile-menu>(512) 710-7116</a>
+                <a class="bg-buda-secondary text-white rounded-lg font-semibold" 
+                   style="padding: 0.4rem 0.65rem; font-size: 0.8125rem;"
+                   href="/contact" 
+                   data-close-mobile-menu>Quote</a>
                 <button id="mobile-menu-button"
-                        class="text-gray-700 hover:text-buda-secondary p-2" 
+                        class="text-gray-700 hover:text-buda-secondary" 
+                        style="padding: 0.35rem;"
                         aria-label="Toggle mobile menu"
                         aria-expanded="false"
                         aria-controls="mobile-menu">
@@ -932,7 +939,7 @@
                             <strong>Phone:</strong> <a href="tel:+15127107116" class="hover:text-white">(512) 710-7116</a>
                         </p>
                         <p>
-                            <strong>Email:</strong> <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a>
+                            <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#dcb5b2bab39cbea9b8bdbab9b2bfb9bfb3f2bfb3b1" class="hover:text-white"><span class="__cf_email__" data-cfemail="ee87808881ae8c9b8a8f888b808d8b8d81c08d8183">[email&#160;protected]</span></a>
                         </p>
                     </address>
                 </div>
@@ -973,7 +980,7 @@
     </footer>
 
     <!-- JavaScript for Mobile Menu and Accessibility -->
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         (function () {
             'use strict';
             
@@ -1111,12 +1118,4 @@
                 });
             });
 
-            // Dynamic Copyright Year
-            var yearSpan = document.getElementById('copyright-year');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
-        })();
-    </script>
-</body>
-</html>
+            //
