@@ -260,15 +260,11 @@
         /* Mobile Menu */
         .mobile-menu { 
             display: none;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
             background-color: #ffffff;
             border-top: 1px solid #e5e7eb;
         }
         .mobile-menu.active { 
             display: block;
-            max-height: 600px;
         }
         
         /* Dropdown Menu - CRITICAL FIX */
@@ -1586,78 +1582,67 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu and Accessibility -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        (function () {
-            'use strict';
+    <script>
+        // Simple, bulletproof mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuButton = document.getElementById('mobile-menu-button');
+            var mobileMenu = document.getElementById('mobile-menu');
             
-            // Mobile Menu Functionality
-            var menu = document.getElementById('mobile-menu');
-            var button = document.getElementById('mobile-menu-button');
-
-            if (!menu || !button) return;
-
-            function openMobileMenu() {
-                menu.classList.add('active');
-                button.setAttribute('aria-expanded', 'true');
-                document.body.style.overflow = 'hidden';
+            if (!menuButton || !mobileMenu) {
+                console.error('Mobile menu elements not found');
+                return;
             }
-
-            function closeMobileMenu() {
-                menu.classList.remove('active');
-                button.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            }
-
-            function toggleMobileMenu() {
-                var isOpen = menu.classList.contains('active');
+            
+            // Toggle menu on button click
+            menuButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var isOpen = mobileMenu.classList.contains('active');
+                
                 if (isOpen) {
-                    closeMobileMenu();
+                    mobileMenu.classList.remove('active');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
                 } else {
-                    openMobileMenu();
+                    mobileMenu.classList.add('active');
+                    menuButton.setAttribute('aria-expanded', 'true');
+                    document.body.style.overflow = 'hidden';
                 }
-            }
-
-            button.addEventListener('click', toggleMobileMenu);
-
-            menu.querySelectorAll('a').forEach(function (link) {
-                link.addEventListener('click', function () {
-                    closeMobileMenu();
+            });
+            
+            // Close menu when clicking any link
+            var menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
                 });
             });
-
-            document.querySelectorAll('[data-close-mobile-menu]').forEach(function (el) {
-                el.addEventListener('click', function () {
-                    closeMobileMenu();
-                });
-            });
-
-            document.addEventListener('click', function (event) {
-                if (!menu.classList.contains('active')) return;
-                var clickedInsideMenu = menu.contains(event.target);
-                var clickedHamburger = button.contains(event.target);
-                if (!clickedInsideMenu && !clickedHamburger) {
-                    closeMobileMenu();
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+                    if (mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        menuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    }
                 }
             });
-
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape') {
-                    closeMobileMenu();
+            
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
                 }
             });
-
-            window.addEventListener('pageshow', function () {
-                closeMobileMenu();
-            });
-
-            window.addEventListener('resize', function () {
-                if (window.innerWidth >= 768) {
-                    closeMobileMenu();
-                }
-            });
-
-            // Keyboard Accessible Dropdowns
+        });
+        
+        // Dropdown menus for desktop
+        document.addEventListener('DOMContentLoaded', function() {
             var dropdowns = document.querySelectorAll('.dropdown');
             
             dropdowns.forEach(function(dropdown) {
@@ -1666,32 +1651,31 @@
                 
                 if (!btn || !menu) return;
                 
+                // Toggle on click
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
                     var isOpen = menu.classList.contains('active');
                     
+                    // Close all other dropdowns
                     document.querySelectorAll('.dropdown-menu.active').forEach(function(m) {
-                        if (m !== menu) {
-                            m.classList.remove('active');
-                            m.previousElementSibling.setAttribute('aria-expanded', 'false');
-                        }
+                        m.classList.remove('active');
+                        m.previousElementSibling.setAttribute('aria-expanded', 'false');
                     });
                     
+                    // Toggle current dropdown
                     if (!isOpen) {
                         menu.classList.add('active');
                         btn.setAttribute('aria-expanded', 'true');
+                        // Focus first link
                         var firstLink = menu.querySelector('a');
-                        if (firstLink) {
-                            setTimeout(function() {
-                                firstLink.focus();
-                            }, 100);
-                        }
+                        if (firstLink) setTimeout(function() { firstLink.focus(); }, 100);
                     } else {
                         menu.classList.remove('active');
                         btn.setAttribute('aria-expanded', 'false');
                     }
                 });
                 
+                // Open on Enter/Space when focused
                 btn.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
@@ -1699,6 +1683,7 @@
                     }
                 });
                 
+                // Close on Escape
                 menu.addEventListener('keydown', function(e) {
                     if (e.key === 'Escape') {
                         menu.classList.remove('active');
@@ -1707,6 +1692,7 @@
                     }
                 });
                 
+                // Close when clicking outside
                 document.addEventListener('click', function(e) {
                     if (!dropdown.contains(e.target)) {
                         menu.classList.remove('active');
@@ -1714,5 +1700,13 @@
                     }
                 });
             });
-
-            //
+            
+            // Dynamic Copyright Year
+            var yearSpan = document.getElementById('copyright-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
