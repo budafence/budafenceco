@@ -41,29 +41,326 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="/images/chainlink-hero.webp" as="image" type="image/webp" fetchpriority="high">
-    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="/images/chainlink-hero.webp" as="image" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- Optimized Inline Critical CSS -->
     <style>
-        /* Brand Colors (MATCH HOME) */
+        /* CSS Reset & Base Styles */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html { 
+            scroll-behavior: smooth; 
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f9fafb;
+            overflow-x: hidden;
+        }
+        
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        
+        /* Brand Colors */
         .bg-buda-primary { background-color: #1e293b; }
         .text-buda-primary { color: #1e293b; }
         .bg-buda-secondary { background-color: #dc2626; }
         .text-buda-secondary { color: #dc2626; }
         .border-buda-secondary { border-color: #dc2626; }
-
-        /* Smooth scrolling */
-        html { scroll-behavior: smooth; }
-
+        
+        /* Utility Classes - Custom Tailwind Replacement */
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        .font-medium { font-weight: 500; }
+        .text-white { color: #ffffff; }
+        .bg-white { background-color: #ffffff; }
+        .bg-gray-50 { background-color: #f9fafb; }
+        .bg-gray-100 { background-color: #f3f4f6; }
+        .bg-gray-900 { background-color: #111827; }
+        .text-gray-200 { color: #e5e7eb; }
+        .text-gray-300 { color: #d1d5db; }
+        .text-gray-400 { color: #9ca3af; }
+        .text-gray-500 { color: #6b7280; }
+        .text-gray-600 { color: #4b5563; }
+        .text-gray-700 { color: #374151; }
+        .text-gray-800 { color: #1f2937; }
+        .text-yellow-500 { color: #eab308; }
+        .text-green-700 { color: #15803d; }
+        .text-red-700 { color: #b91c1c; }
+        .bg-yellow-500 { background-color: #eab308; }
+        .bg-slate-800 { background-color: #1e293b; }
+        .text-slate-700 { color: #334155; }
+        .text-slate-800 { color: #1e293b; }
+        .text-slate-900 { color: #0f172a; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-full { border-radius: 9999px; }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
+        .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
+        .transition-all { transition: all 0.3s ease; }
+        .transition-colors { transition: color 0.2s ease, background-color 0.2s ease; }
+        .transition-shadow { transition: box-shadow 0.3s ease; }
+        
+        /* Layout Grid */
+        .grid { display: grid; gap: 2rem; }
+        .grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        
+        @media (min-width: 640px) {
+            .sm\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+            .sm\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+            .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        /* Flexbox */
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
+        .justify-between { justify-content: space-between; }
+        .justify-center { justify-content: center; }
+        .space-x-2 > * + * { margin-left: 0.5rem; }
+        .space-x-3 > * + * { margin-left: 0.75rem; }
+        .space-x-4 > * + * { margin-left: 1rem; }
+        .space-x-8 > * + * { margin-left: 2rem; }
+        .space-y-1 > * + * { margin-top: 0.25rem; }
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+        
+        /* Spacing */
+        .p-2 { padding: 0.5rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .p-10 { padding: 2.5rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .pt-2 { padding-top: 0.5rem; }
+        .pt-3 { padding-top: 0.75rem; }
+        .pb-3 { padding-bottom: 0.75rem; }
+        .pb-4 { padding-bottom: 1rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-4 { margin-top: 1rem; }
+        .mt-5 { margin-top: 1.25rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mr-3 { margin-right: 0.75rem; }
+        .ml-1 { margin-left: 0.25rem; }
+        
+        /* Typography */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .leading-tight { line-height: 1.25; }
+        
+        @media (min-width: 640px) {
+            .sm\:text-5xl { font-size: 3rem; line-height: 1; }
+            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .sm\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        }
+        
+        /* Borders */
+        .border { border-width: 1px; }
+        .border-t { border-top-width: 1px; }
+        .border-b { border-bottom-width: 1px; }
+        .border-gray-200 { border-color: #e5e7eb; }
+        .border-gray-800 { border-color: #1f2937; }
+        .border-white { border-color: #ffffff; }
+        
+        /* Positioning */
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .sticky { position: sticky; }
+        .top-0 { top: 0; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .z-50 { z-index: 50; }
+        .z-100 { z-index: 100; }
+        
+        /* Display */
+        .block { display: block; }
+        .inline-block { display: inline-block; }
+        .inline-flex { display: inline-flex; }
+        .hidden { display: none; }
+        
+        /* Sizing */
+        .h-12 { height: 3rem; }
+        .h-44 { height: 11rem; }
+        .w-6 { width: 1.5rem; }
+        .w-12 { width: 3rem; }
+        .w-auto { width: auto; }
+        .w-full { width: 100%; }
+        .min-w-max { min-width: max-content; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        
+        /* Object Fit */
+        .object-cover { object-fit: cover; }
+        .overflow-hidden { overflow: hidden; }
+        
+        /* List Styles */
+        .list-disc { list-style-type: disc; }
+        .list-inside { list-style-position: inside; }
+        
+        /* Hover States */
+        .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+        .hover\:bg-gray-700:hover { background-color: #374151; }
+        .hover\:bg-red-700:hover { background-color: #b91c1c; }
+        .hover\:bg-slate-700:hover { background-color: #334155; }
+        .hover\:bg-slate-800:hover { background-color: #1e293b; }
+        .hover\:text-white:hover { color: #ffffff; }
+        .hover\:text-buda-secondary:hover { color: #dc2626; }
+        
+        /* Mobile Responsive */
+        @media (max-width: 767px) {
+            .md\:hidden { display: block !important; }
+            .hidden.md\:flex { display: none !important; }
+            .mobile-menu.active { display: block; }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:flex { display: flex; }
+            .md\:hidden { display: none; }
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        @media (min-width: 640px) {
+            .sm\:flex-row { flex-direction: row; }
+        }
+        
+        /* Navigation */
+        nav { background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem; }
+        
+        /* Desktop Navigation */
+        .desktop-nav { display: none; }
+        @media (min-width: 768px) {
+            .desktop-nav { display: flex; align-items: center; gap: 2rem; }
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu { 
+            display: none;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e7eb;
+        }
+        .mobile-menu.active { 
+            display: block;
+        }
+        
+        /* Dropdown Menu */
+        .dropdown { position: relative; }
+        .dropdown button {
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            font: inherit !important;
+            color: inherit !important;
+            text-align: inherit !important;
+            cursor: pointer;
+            line-height: inherit !important;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border-radius: 0.5rem;
+            padding: 0.5rem 0;
+            min-width: max-content;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+        }
+        .dropdown:hover .dropdown-menu,
+        .dropdown-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            white-space: nowrap;
+            color: #374151;
+            transition: background-color 0.2s ease;
+        }
+        .dropdown-menu a:hover,
+        .dropdown-menu a:focus {
+            background-color: #f3f4f6;
+            color: #dc2626;
+        }
+        
+        /* Hero Gradient Overlay */
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.65), rgba(185, 28, 28, 0.6));
+        }
+        
         /* Focus states for accessibility */
         a:focus, button:focus {
             outline: 2px solid #dc2626;
             outline-offset: 2px;
         }
-
+        
         /* Skip to main content link */
         .skip-link {
             position: absolute;
@@ -71,26 +368,49 @@
             left: 0;
             background: #dc2626;
             color: white;
-            padding: 8px 12px;
+            padding: 8px;
             z-index: 100;
-            border-radius: 0 0 8px 0;
+            border-radius: 0 0 4px 0;
         }
         .skip-link:focus { top: 0; }
-
-        /* Mobile Menu (MATCH HOME BEHAVIOR) */
-        .mobile-menu {
-            display: none;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
         }
-        .mobile-menu.active {
-            display: block;
-            max-height: 700px;
+        .btn-primary {
+            background-color: #dc2626;
+            color: #ffffff;
         }
+        .btn-primary:hover {
+            background-color: #b91c1c;
+        }
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+        .btn-secondary:hover {
+            background-color: #f3f4f6;
+        }
+        
+        /* List Reset */
+        ul { list-style: none; }
+        
+        /* Address Reset */
+        address { font-style: normal; }
+        .not-italic { font-style: normal; }
+        
+        /* Whitespace */
+        .whitespace-nowrap { white-space: nowrap; }
     </style>
 
-    <!-- Structured Data: LocalBusiness (consistent org id), Service, FAQ, Breadcrumbs -->
+    <!-- Structured Data: LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -144,6 +464,7 @@
     }
     </script>
 
+    <!-- Structured Data: Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -170,6 +491,7 @@
     }
     </script>
 
+    <!-- Structured Data: FAQ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -204,7 +526,7 @@
           "name": "Is chain link a good choice for dogs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Chain link is one of the best options for dog containment because it’s strong, durable, and provides a secure enclosure. We can also help prevent gaps at the bottom to discourage digging."
+            "text": "Yes. Chain link is one of the best options for dog containment because it's strong, durable, and provides a secure enclosure. We can also help prevent gaps at the bottom to discourage digging."
           }
         },
         {
@@ -219,6 +541,7 @@
     }
     </script>
 
+    <!-- Structured Data: Breadcrumb -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -233,165 +556,175 @@
 </head>
 
 <body class="bg-gray-50">
-    <a class="skip-link" href="#main">Skip to main content</a>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header / Navigation (Built to match home-page style + spacing) -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Primary">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="/" aria-label="Buda Fence Company Home">
-                        <img src="/images/buda-fence-logo.webp"
-                             alt="Buda Fence Company Logo"
-                             class="h-12 w-auto"
-                             width="97"
-                             height="48"
-                             decoding="async"
-                             fetchpriority="high">
-                    </a>
-                </div>
-
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-                    <a href="/about" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
-
-                    <!-- Services Dropdown -->
-                    <div class="relative group">
-                        <button class="text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false">
-                            Services ▾
-                        </button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-                            <a href="/services" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">All Services</a>
-                            <a href="/services/deck-construction" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
-                            <a href="/services/wood-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
-                            <a href="/services/metal-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
-                            <a href="/services/chain-link-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold text-buda-secondary">Chain Link Fence Installation</a>
-                            <a href="/services/fence-repair" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
-                        </div>
-                    </div>
-
-                    <!-- Service Areas Dropdown -->
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false">
-                            Service Areas ▾
-                        </button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-                            <a href="/service-areas/austin" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
-                            <a href="/service-areas/buda" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
-                            <a href="/service-areas/kyle" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
-                            <a href="/service-areas/dripping-springs" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
-                        </div>
-                    </div>
-
-                    <a href="/gallery" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-                    <a href="/blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-                    <a href="/contact" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-                </div>
-
-                <!-- Desktop Contact -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="tel:+15127107116" class="text-buda-secondary font-semibold">(512) 710-7116</a>
-                    <a href="/contact" class="bg-buda-secondary text-white px-4 py-2 rounded-lg hover:bg-red-700 font-semibold">
-                        Free Quote
-                    </a>
-                </div>
-
-                <!-- Mobile Contact & Menu -->
-                <div class="md:hidden flex items-center space-x-3">
-                    <a href="tel:+15127107116" class="text-buda-secondary font-semibold text-sm whitespace-nowrap">(512) 710-7116</a>
-                    <a href="/contact" class="bg-buda-secondary text-white px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap">Quote</a>
-                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-buda-secondary focus:outline-none ml-1" aria-label="Open menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="/" aria-label="Buda Fence Company Home">
+                    <img src="/images/buda-fence-logo.webp" 
+                         alt="Buda Fence Company - Professional Fence Installation in Austin & Buda, TX" 
+                         class="h-12 w-auto"
+                         width="97"
+                         height="48"
+                         loading="eager">
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="desktop-nav">
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/">Home</a>
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/about">About</a>
+                
+                <div class="dropdown">
+                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" 
+                            style="background: none; border: none; padding: 0; cursor: pointer;"
+                            aria-haspopup="true" 
+                            aria-expanded="false"
+                            id="services-dropdown-btn">
+                        Services ▾
                     </button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="services-dropdown-btn">
+                        <a href="/services" role="menuitem">All Services</a>
+                        <a href="/services/deck-construction" role="menuitem">Deck Construction</a>
+                        <a href="/services/wood-fence-installation" role="menuitem">Wood Fence Installation</a>
+                        <a href="/services/metal-fence-installation" role="menuitem">Metal Fence Installation</a>
+                        <a href="/services/chain-link-fence-installation" role="menuitem" class="text-buda-secondary font-semibold" aria-current="page">Chain Link Fence Installation</a>
+                        <a href="/services/fence-repair" role="menuitem">Fence Repair</a>
+                    </div>
                 </div>
+                
+                <div class="dropdown">
+                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" 
+                            style="background: none; border: none; padding: 0; cursor: pointer;"
+                            aria-haspopup="true" 
+                            aria-expanded="false"
+                            id="areas-dropdown-btn">
+                        Service Areas ▾
+                    </button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="areas-dropdown-btn">
+                        <a href="/service-areas/austin" role="menuitem">Austin</a>
+                        <a href="/service-areas/buda" role="menuitem">Buda</a>
+                        <a href="/service-areas/kyle" role="menuitem">Kyle</a>
+                        <a href="/service-areas/dripping-springs" role="menuitem">Dripping Springs</a>
+                    </div>
+                </div>
+                
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/gallery">Gallery</a>
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/blog/">Blog</a>
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/contact">Contact</a>
+            </div>
+            
+            <!-- Desktop Contact -->
+            <div class="desktop-nav">
+                <a href="tel:5127107116" class="text-buda-secondary font-medium hover:underline">(512) 710-7116</a>
+                <a class="btn btn-primary" href="/contact">Free Quote</a>
+            </div>
+            
+            <!-- Mobile Contact & Menu -->
+            <div class="md:hidden flex items-center gap-2">
+                <a href="tel:5127107116" 
+                   class="text-buda-secondary font-semibold whitespace-nowrap" 
+                   style="font-size: 0.8125rem;"
+                   data-close-mobile-menu>(512) 710-7116</a>
+                <a class="bg-buda-secondary text-white rounded-lg font-semibold" 
+                   style="padding: 0.4rem 0.65rem; font-size: 0.8125rem;"
+                   href="/contact" 
+                   data-close-mobile-menu>Quote</a>
+                <button id="mobile-menu-button"
+                        class="text-gray-700 hover:text-buda-secondary" 
+                        style="padding: 0.35rem;"
+                        aria-label="Toggle mobile menu"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-
+        
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
-            <div class="max-w-6xl mx-auto px-6 pt-3 pb-4 space-y-1">
-                <a href="/" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-                <a href="/about" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
-
+        <div id="mobile-menu" class="mobile-menu" role="menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/" role="menuitem">Home</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/about" role="menuitem">About</a>
                 <div class="px-3 py-2">
                     <p class="text-gray-900 font-semibold mb-2">Services</p>
-                    <a href="/services" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">All Services</a>
-                    <a href="/services/deck-construction" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Deck Construction</a>
-                    <a href="/services/wood-fence-installation" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Wood Fence</a>
-                    <a href="/services/metal-fence-installation" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Metal Fence</a>
-                    <a href="/services/chain-link-fence-installation" class="block pl-4 py-1 text-buda-secondary font-semibold text-sm">Chain Link</a>
-                    <a href="/services/fence-repair" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Fence Repair</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/services" role="menuitem">All Services</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/services/deck-construction" role="menuitem">Deck Construction</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/services/wood-fence-installation" role="menuitem">Wood Fence</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/services/metal-fence-installation" role="menuitem">Metal Fence</a>
+                    <a class="block pl-4 py-1 text-buda-secondary font-semibold text-sm" href="/services/chain-link-fence-installation" role="menuitem" aria-current="page">Chain Link</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/services/fence-repair" role="menuitem">Fence Repair</a>
                 </div>
-
                 <div class="px-3 py-2">
                     <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-                    <a href="/service-areas/austin" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Austin</a>
-                    <a href="/service-areas/buda" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Buda</a>
-                    <a href="/service-areas/kyle" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Kyle</a>
-                    <a href="/service-areas/dripping-springs" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Dripping Springs</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/austin" role="menuitem">Austin</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/buda" role="menuitem">Buda</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/kyle" role="menuitem">Kyle</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/dripping-springs" role="menuitem">Dripping Springs</a>
                 </div>
-
-                <a href="/gallery" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-                <a href="/blog/" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-                <a href="/contact" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/gallery" role="menuitem">Gallery</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/blog/" role="menuitem">Blog</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/contact" role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero (Commercial Gate Hero Image) -->
-    <header class="relative overflow-hidden" role="banner">
-        <div class="absolute inset-0">
-            <picture>
-                <source srcset="/images/chainlink-hero.webp" type="image/webp">
-                <img src="/images/chainlink-hero.webp"
-                     alt="Commercial chain link double gate installation in Central Texas"
-                     class="w-full h-full object-cover"
-                     width="1600"
-                     height="900"
-                     decoding="async"
-                     fetchpriority="high">
-            </picture>
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/65 to-red-700/60"></div>
-        </div>
-
-        <div class="relative max-w-6xl mx-auto px-6 py-16 sm:py-20 text-white">
-            <div class="max-w-3xl">
-                <p class="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-2 text-sm">
-                    <span class="font-semibold">Fast installs:</span> 150–200 ft/day • <span class="font-semibold">Heavy-duty build</span>
-                </p>
-
-                <h1 class="text-4xl sm:text-5xl font-bold mt-5 leading-tight">
-                    Chain Link Fence Installation in Austin & Central Texas
-                </h1>
-                <p class="text-lg sm:text-xl mt-4 text-white/90">
-                    Affordable, secure, and durable fencing for residential, commercial, and agricultural properties.
-                    Choose galvanized or black vinyl-coated chain link—installed the right way with heavy posts and extra concrete.
-                </p>
-
-                <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                    <a href="/contact" class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition text-center">
-                        Get Free Estimate
-                    </a>
-                    <a href="tel:+15127107116" class="bg-white hover:bg-gray-100 text-buda-primary font-bold py-3 px-8 rounded-lg text-lg transition text-center">
-                        Call (512) 710-7116
-                    </a>
-                </div>
-
-                <p class="mt-6 text-sm text-white/80">
-                    $1M insured • 5-year installation warranty • Serving Austin, Buda, Kyle, Dripping Springs + nearby areas
-                </p>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <header class="relative overflow-hidden" role="banner">
+            <div class="absolute inset-0">
+                <picture>
+                    <source srcset="/images/chainlink-hero.webp" type="image/webp">
+                    <img src="/images/chainlink-hero.webp"
+                         alt="Commercial chain link double gate installation in Central Texas"
+                         class="w-full h-full object-cover"
+                         width="1600"
+                         height="900"
+                         loading="eager">
+                </picture>
+                <div class="absolute inset-0 hero-overlay"></div>
             </div>
-        </div>
-    </header>
 
-    <main id="main">
+            <div class="relative container py-16 sm:py-20 text-white">
+                <div class="max-w-3xl">
+                    <p class="inline-flex items-center gap-2 border border-white rounded-full px-4 py-2 text-sm mb-6" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.15);">
+                        <span class="font-semibold">Fast installs:</span> 150–200 ft/day • <span class="font-semibold">Heavy-duty build</span>
+                    </p>
+
+                    <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
+                        Chain Link Fence Installation in Austin & Central Texas
+                    </h1>
+                    <p class="text-lg sm:text-xl mb-8" style="color: rgba(255, 255, 255, 0.9);">
+                        Affordable, secure, and durable fencing for residential, commercial, and agricultural properties.
+                        Choose galvanized or black vinyl-coated chain link—installed the right way with heavy posts and extra concrete.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                        <a href="/contact" class="btn btn-primary text-lg">
+                            Get Free Estimate
+                        </a>
+                        <a href="tel:5127107116" class="btn btn-secondary text-lg">
+                            Call (512) 710-7116
+                        </a>
+                    </div>
+
+                    <p class="text-sm" style="color: rgba(255, 255, 255, 0.8);">
+                        $1M insured • 5-year installation warranty • Serving Austin, Buda, Kyle, Dripping Springs + nearby areas
+                    </p>
+                </div>
+            </div>
+        </header>
+
         <!-- Trust Badges -->
         <section class="bg-white py-8 border-b">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="container">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                     <div>
                         <div class="text-3xl font-bold text-buda-primary">5,000+</div>
@@ -415,7 +748,7 @@
 
         <!-- Intro -->
         <section class="py-12">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="container">
                 <div class="bg-white rounded-xl shadow-lg p-8">
                     <h2 class="text-3xl font-bold text-buda-primary mb-4">The Smart Choice for Security + Value</h2>
                     <p class="text-gray-700 text-lg mb-4">
@@ -423,7 +756,7 @@
                         At Buda Fence Company, we build modern chain link fences that are tight, straight, and built to last—without the shortcuts.
                     </p>
                     <p class="text-gray-700 text-lg">
-                        From backyards and dog runs to commercial lots and long property lines, we’ll help you choose the right height, gauge, coating,
+                        From backyards and dog runs to commercial lots and long property lines, we'll help you choose the right height, gauge, coating,
                         and add-ons (privacy slats, windscreen, barbed wire where appropriate).
                     </p>
                 </div>
@@ -432,7 +765,7 @@
 
         <!-- Why Choose Chain Link -->
         <section class="py-12 bg-gray-100">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="container">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-buda-primary">Why Choose a Chain Link Fence?</h2>
                     <p class="text-xl text-gray-600 mt-3">Practical benefits that make chain link a no-brainer for many properties.</p>
@@ -472,7 +805,7 @@
 
         <!-- Options -->
         <section class="py-12">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="container">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-buda-primary">Chain Link Fence Options</h2>
                     <p class="text-xl text-gray-600 mt-3">Pick the right combination of performance + aesthetics.</p>
@@ -498,7 +831,7 @@
                                 <h4 class="font-bold text-red-700 mb-2">Cons</h4>
                                 <ul class="list-disc list-inside text-gray-700 space-y-1">
                                     <li>More industrial look</li>
-                                    <li>Less “hidden” in landscaping</li>
+                                    <li>Less "hidden" in landscaping</li>
                                 </ul>
                             </div>
                         </div>
@@ -529,7 +862,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-xl shadow-lg p-8 lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-lg p-8" style="grid-column: span 2 / span 2;">
                         <h3 class="text-2xl font-bold text-buda-primary mb-3">Privacy Slats & Windscreen Fabric</h3>
                         <p class="text-gray-700">
                             Add privacy without losing airflow. Privacy slats are popular for trash enclosures, pool areas, and backyards. Windscreen fabric is great for wind reduction and added visual screening.
@@ -539,133 +872,84 @@
             </div>
         </section>
 
-        <!-- Gallery (WebP + srcset) -->
+        <!-- Gallery -->
         <section class="py-12 bg-gray-100">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="container">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-buda-primary">Chain Link Fence Gallery</h2>
                     <p class="text-xl text-gray-600 mt-3">Recent installs across Central Texas.</p>
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Helper: each card uses srcset 320/480/640 and lazy loads -->
                     <figure class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <picture>
-                            <source
-                                srcset="/images/galvanized-commercial-chainlink-320.webp 320w, /images/galvanized-commercial-chainlink-480.webp 480w, /images/galvanized-commercial-chainlink-640.webp 640w"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                type="image/webp">
-                            <img src="/images/galvanized-commercial-chainlink.webp"
-                                 alt="Galvanized commercial chain link fence installation"
-                                 class="w-full h-44 object-cover"
-                                 width="640" height="352"
-                                 loading="lazy" decoding="async">
-                        </picture>
+                        <img src="/images/galvanized-commercial-chainlink.webp"
+                             alt="Galvanized commercial chain link fence installation"
+                             class="w-full h-44 object-cover"
+                             width="640" height="352"
+                             loading="lazy">
                         <figcaption class="p-4 text-sm text-gray-600">Galvanized commercial chain link</figcaption>
                     </figure>
 
                     <figure class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <picture>
-                            <source
-                                srcset="/images/commercial-security-chainlink-320.webp 320w, /images/commercial-security-chainlink-480.webp 480w, /images/commercial-security-chainlink-640.webp 640w"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                type="image/webp">
-                            <img src="/images/commercial-security-chainlink.webp"
-                                 alt="Commercial security chain link fence installation"
-                                 class="w-full h-44 object-cover"
-                                 width="640" height="352"
-                                 loading="lazy" decoding="async">
-                        </picture>
+                        <img src="/images/commercial-security-chainlink.webp"
+                             alt="Commercial security chain link fence installation"
+                             class="w-full h-44 object-cover"
+                             width="640" height="352"
+                             loading="lazy">
                         <figcaption class="p-4 text-sm text-gray-600">Commercial security fence</figcaption>
                     </figure>
 
                     <figure class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <picture>
-                            <source
-                                srcset="/images/black-vinyl-chainlink-backyard-320.webp 320w, /images/black-vinyl-chainlink-backyard-480.webp 480w, /images/black-vinyl-chainlink-backyard-640.webp 640w"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                type="image/webp">
-                            <img src="/images/black-vinyl-chainlink-backyard.webp"
-                                 alt="Black vinyl-coated chain link fence for residential backyard"
-                                 class="w-full h-44 object-cover"
-                                 width="640" height="352"
-                                 loading="lazy" decoding="async">
-                        </picture>
+                        <img src="/images/black-vinyl-chainlink-backyard.webp"
+                             alt="Black vinyl-coated chain link fence for residential backyard"
+                             class="w-full h-44 object-cover"
+                             width="640" height="352"
+                             loading="lazy">
                         <figcaption class="p-4 text-sm text-gray-600">Black vinyl backyard fence</figcaption>
                     </figure>
 
                     <figure class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <picture>
-                            <source
-                                srcset="/images/black-vinyl-chainlink-gate-320.webp 320w, /images/black-vinyl-chainlink-gate-480.webp 480w, /images/black-vinyl-chainlink-gate-640.webp 640w"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                type="image/webp">
-                            <img src="/images/black-vinyl-chainlink-gate.webp"
-                                 alt="Black vinyl chain link fence with gate"
-                                 class="w-full h-44 object-cover"
-                                 width="640" height="352"
-                                 loading="lazy" decoding="async">
-                        </picture>
+                        <img src="/images/black-vinyl-chainlink-gate.webp"
+                             alt="Black vinyl chain link fence with gate"
+                             class="w-full h-44 object-cover"
+                             width="640" height="352"
+                             loading="lazy">
                         <figcaption class="p-4 text-sm text-gray-600">Black vinyl gate</figcaption>
                     </figure>
 
                     <figure class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <picture>
-                            <source
-                                srcset="/images/black-chainlink-double-gate-320.webp 320w, /images/black-chainlink-double-gate-480.webp 480w, /images/black-chainlink-double-gate-640.webp 640w"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                type="image/webp">
-                            <img src="/images/black-chainlink-double-gate.webp"
-                                 alt="Black chain link double gate installation"
-                                 class="w-full h-44 object-cover"
-                                 width="640" height="352"
-                                 loading="lazy" decoding="async">
-                        </picture>
+                        <img src="/images/black-chainlink-double-gate.webp"
+                             alt="Black chain link double gate installation"
+                             class="w-full h-44 object-cover"
+                             width="640" height="352"
+                             loading="lazy">
                         <figcaption class="p-4 text-sm text-gray-600">Black double gate</figcaption>
                     </figure>
 
                     <figure class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <picture>
-                            <source
-                                srcset="/images/chainlink-with-dogs-320.webp 320w, /images/chainlink-with-dogs-480.webp 480w, /images/chainlink-with-dogs-640.webp 640w"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                type="image/webp">
-                            <img src="/images/chainlink-with-dogs.webp"
-                                 alt="Chain link fence for dog containment and pet safety"
-                                 class="w-full h-44 object-cover"
-                                 width="640" height="352"
-                                 loading="lazy" decoding="async">
-                        </picture>
+                        <img src="/images/chainlink-with-dogs.webp"
+                             alt="Chain link fence for dog containment and pet safety"
+                             class="w-full h-44 object-cover"
+                             width="640" height="352"
+                             loading="lazy">
                         <figcaption class="p-4 text-sm text-gray-600">Great for pets</figcaption>
                     </figure>
 
                     <figure class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <picture>
-                            <source
-                                srcset="/images/commercial-chainlink-pathway-320.webp 320w, /images/commercial-chainlink-pathway-480.webp 480w, /images/commercial-chainlink-pathway-640.webp 640w"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                type="image/webp">
-                            <img src="/images/commercial-chainlink-pathway.webp"
-                                 alt="Commercial chain link fence along pathway"
-                                 class="w-full h-44 object-cover"
-                                 width="640" height="352"
-                                 loading="lazy" decoding="async">
-                        </picture>
+                        <img src="/images/commercial-chainlink-pathway.webp"
+                             alt="Commercial chain link fence along pathway"
+                             class="w-full h-44 object-cover"
+                             width="640" height="352"
+                             loading="lazy">
                         <figcaption class="p-4 text-sm text-gray-600">Pathway installation</figcaption>
                     </figure>
 
                     <figure class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <picture>
-                            <source
-                                srcset="/images/chain-link-privacy-slats-320.webp 320w, /images/chain-link-privacy-slats-480.webp 480w, /images/chain-link-privacy-slats-640.webp 640w"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                type="image/webp">
-                            <img src="/images/chain-link-privacy-slats.webp"
-                                 alt="Chain link fence with privacy slats"
-                                 class="w-full h-44 object-cover"
-                                 width="640" height="352"
-                                 loading="lazy" decoding="async">
-                        </picture>
+                        <img src="/images/chain-link-privacy-slats.webp"
+                             alt="Chain link fence with privacy slats"
+                             class="w-full h-44 object-cover"
+                             width="640" height="352"
+                             loading="lazy">
                         <figcaption class="p-4 text-sm text-gray-600">Privacy slats enclosure</figcaption>
                     </figure>
                 </div>
@@ -674,7 +958,7 @@
 
         <!-- Process -->
         <section class="py-12">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="container">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-buda-primary">Our Professional Installation Process</h2>
                     <p class="text-xl text-gray-600 mt-3">Straight, tight, secure—built to last.</p>
@@ -683,7 +967,7 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <div class="flex items-start gap-4">
-                            <div class="bg-buda-secondary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                            <div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height: 3rem; min-width: 3rem;">1</div>
                             <div>
                                 <h3 class="text-xl font-bold text-buda-primary">Consultation & Layout</h3>
                                 <p class="text-gray-700 mt-1">We confirm layout, property lines, gate needs, and recommend height + gauge + coating based on your goals.</p>
@@ -693,7 +977,7 @@
 
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <div class="flex items-start gap-4">
-                            <div class="bg-buda-secondary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                            <div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height: 3rem; min-width: 3rem;">2</div>
                             <div>
                                 <h3 class="text-xl font-bold text-buda-primary">Heavy-Duty Posts + Extra Concrete</h3>
                                 <p class="text-gray-700 mt-1">Terminal posts (corners/ends/gates) get the strength they need—set deep and solid so your fence stays rigid.</p>
@@ -703,7 +987,7 @@
 
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <div class="flex items-start gap-4">
-                            <div class="bg-buda-secondary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                            <div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height: 3rem; min-width: 3rem;">3</div>
                             <div>
                                 <h3 class="text-xl font-bold text-buda-primary">Top Rail + Hardware</h3>
                                 <p class="text-gray-700 mt-1">We install the framework and hardware correctly so the mesh stays tight and performs long-term.</p>
@@ -713,10 +997,10 @@
 
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <div class="flex items-start gap-4">
-                            <div class="bg-buda-secondary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">4</div>
+                            <div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height: 3rem; min-width: 3rem;">4</div>
                             <div>
                                 <h3 class="text-xl font-bold text-buda-primary">Stretch Mesh Taut</h3>
-                                <p class="text-gray-700 mt-1">This is where quality shows. We stretch it correctly so it won’t sag, bow, or rattle.</p>
+                                <p class="text-gray-700 mt-1">This is where quality shows. We stretch it correctly so it won't sag, bow, or rattle.</p>
                             </div>
                         </div>
                     </div>
@@ -724,7 +1008,7 @@
 
                 <div class="mt-6 bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-start gap-4">
-                        <div class="bg-buda-secondary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">5</div>
+                        <div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height: 3rem; min-width: 3rem;">5</div>
                         <div>
                             <h3 class="text-xl font-bold text-buda-primary">Final Walkthrough & Cleanup</h3>
                             <p class="text-gray-700 mt-1">We verify alignment, gate swing/latch, and overall finish—then leave your property clean.</p>
@@ -734,30 +1018,30 @@
             </div>
         </section>
 
-        <!-- What sets us apart (ensure text visible + cohesive background) -->
+        <!-- What Sets Us Apart -->
         <section class="py-12 bg-buda-primary">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="container">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-white">What Sets Buda Fence Company Apart</h2>
-                    <p class="text-xl text-white/85 mt-3">No shortcuts—just a better build that lasts.</p>
+                    <p class="text-xl text-white mt-3" style="opacity: 0.85;">No shortcuts—just a better build that lasts.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white/10 border border-white/15 rounded-xl p-6 text-white">
+                    <div class="rounded-xl p-6 text-white border border-white" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.15);">
                         <h3 class="text-xl font-bold mb-2">✓ Heavy-Duty Corner & Gate Posts</h3>
-                        <p class="text-white/85">We size posts correctly so corners stay square and gates don’t drift over time.</p>
+                        <p style="color: rgba(255, 255, 255, 0.85);">We size posts correctly so corners stay square and gates don't drift over time.</p>
                     </div>
-                    <div class="bg-white/10 border border-white/15 rounded-xl p-6 text-white">
+                    <div class="rounded-xl p-6 text-white border border-white" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.15);">
                         <h3 class="text-xl font-bold mb-2">✓ Extra Concrete, Proper Depth</h3>
-                        <p class="text-white/85">Strong foundations keep fences from leaning or loosening.</p>
+                        <p style="color: rgba(255, 255, 255, 0.85);">Strong foundations keep fences from leaning or loosening.</p>
                     </div>
-                    <div class="bg-white/10 border border-white/15 rounded-xl p-6 text-white">
+                    <div class="rounded-xl p-6 text-white border border-white" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.15);">
                         <h3 class="text-xl font-bold mb-2">✓ Tight, Straight Mesh</h3>
-                        <p class="text-white/85">A properly stretched fence looks better and performs better.</p>
+                        <p style="color: rgba(255, 255, 255, 0.85);">A properly stretched fence looks better and performs better.</p>
                     </div>
-                    <div class="bg-white/10 border border-white/15 rounded-xl p-6 text-white">
+                    <div class="rounded-xl p-6 text-white border border-white" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.15);">
                         <h3 class="text-xl font-bold mb-2">✓ 5-Year Installation Warranty</h3>
-                        <p class="text-white/85">We stand behind our work with a real guarantee.</p>
+                        <p style="color: rgba(255, 255, 255, 0.85);">We stand behind our work with a real guarantee.</p>
                     </div>
                 </div>
             </div>
@@ -765,7 +1049,7 @@
 
         <!-- FAQs -->
         <section class="py-12 bg-gray-100">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="container">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl md:text-4xl font-bold text-buda-primary">Frequently Asked Questions</h2>
                 </div>
@@ -785,7 +1069,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-buda-primary">Is chain link good for dogs?</h3>
-                        <p class="text-gray-700 mt-2">Absolutely. It’s one of the best solutions for pet containment because it’s strong, durable, and secure.</p>
+                        <p class="text-gray-700 mt-2">Absolutely. It's one of the best solutions for pet containment because it's strong, durable, and secure.</p>
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-buda-primary">How fast can you install?</h3>
@@ -797,17 +1081,17 @@
 
         <!-- CTA -->
         <section class="py-12">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="container">
                 <div class="bg-white rounded-2xl shadow-xl p-10 text-center">
                     <h2 class="text-3xl md:text-4xl font-bold text-buda-primary">Ready for Your Chain Link Fence?</h2>
                     <p class="text-xl text-gray-600 mt-4 mb-8">
                         Contact us today for your free quote.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="/contact" class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
+                        <a href="/contact" class="btn btn-primary text-lg">
                             Get Free Estimate
                         </a>
-                        <a href="tel:+15127107116" class="bg-buda-primary hover:bg-slate-800 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
+                        <a href="tel:5127107116" class="bg-buda-primary hover:bg-slate-800 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
                             Call (512) 710-7116
                         </a>
                     </div>
@@ -816,49 +1100,33 @@
         </section>
     </main>
 
-    <!-- Footer (EXACT footer you provided from index) -->
+    <!-- Footer (WITH WHITE LOGO) -->
     <footer class="bg-gray-900 text-white py-12" role="contentinfo">
-        <div class="max-w-6xl mx-auto px-6">
+        <div class="container">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <img src="/images/buda-fence-logo.webp"
-                         alt="Buda Fence Company"
+                    <img src="/images/buda-fence-logo.webp" 
+                         alt="Buda Fence Company" 
                          class="h-12 w-auto mb-4"
                          width="97"
                          height="48"
-                         loading="lazy"
-                         decoding="async">
-                    <p class="text-gray-400 text-sm">Professional fence installation and repair services in Austin, Buda, and Central Texas. Family-owned and operated since 2015.</p>
+                         loading="lazy">
+                    <p class="text-gray-400 text-sm">Building Budaful fences for Central Texas homeowners since 2015. Quality craftsmanship, honest pricing, and exceptional service on every project.</p>
+                    <p class="text-gray-400 text-sm mt-4">Emergency fence repair available 24/7</p>
                 </div>
-
+                
                 <div>
-                    <h3 class="font-bold mb-4">Contact Us</h3>
-                    <address class="text-gray-400 text-sm not-italic">
-                        <p class="mb-2">
-                            <strong>Address:</strong><br>
-                            308 Wincliff Dr<br>
-                            Buda, TX 78610
-                        </p>
-                        <p class="mb-2">
-                            <strong>Phone:</strong> <a href="tel:+15127107116" class="hover:text-white">(512) 710-7116</a>
-                        </p>
-                        <p>
-                            <strong>Email:</strong> <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a>
-                        </p>
-                    </address>
-                </div>
-
-                <div>
-                    <h3 class="font-bold mb-4">Our Services</h3>
+                    <h3 class="font-bold mb-4">Services</h3>
                     <ul class="text-gray-400 text-sm space-y-2">
-                        <li><a class="hover:text-white" href="/services/wood-fence-installation">Wood Fences</a></li>
-                        <li><a class="hover:text-white" href="/services/metal-fence-installation">Metal Fences</a></li>
-                        <li><a class="hover:text-white" href="/services/chain-link-fence-installation">Chain Link Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/deck-construction">Deck Construction</a></li>
+                        <li><a class="hover:text-white" href="/services/wood-fence-installation">Wood Fence Installation</a></li>
+                        <li><a class="hover:text-white" href="/services/metal-fence-installation">Metal Fence Installation</a></li>
+                        <li><a class="hover:text-white" href="/services/chain-link-fence-installation">Chain Link Fence Installation</a></li>
                         <li><a class="hover:text-white" href="/services/fence-repair">Fence Repair</a></li>
                         <li><a class="hover:text-white" href="/services">View All Services</a></li>
                     </ul>
                 </div>
-
+                
                 <div>
                     <h3 class="font-bold mb-4">Service Areas</h3>
                     <ul class="text-gray-400 text-sm space-y-2">
@@ -867,26 +1135,152 @@
                         <li><a class="hover:text-white" href="/service-areas/kyle">Kyle, TX</a></li>
                         <li><a class="hover:text-white" href="/service-areas/dripping-springs">Dripping Springs, TX</a></li>
                     </ul>
-                    <h3 class="font-bold mb-2 mt-4">Business Hours</h3>
-                    <p class="text-gray-400 text-sm">
-                        Mon-Fri: 6 AM - 6 PM<br>
-                        Saturday: 9 AM - 2 PM<br>
-                        <span class="text-xs">(Emergency service available)</span>
-                    </p>
+                    <p class="text-gray-400 text-sm mt-4">25-mile service radius from Buda</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-4">Contact Us</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>📍 308 Wincliff Dr<br>&nbsp;&nbsp;&nbsp;&nbsp;Buda, TX 78610</li>
+                        <li>📞 <a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></li>
+                        <li>✉️ <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></li>
+                        <li>🕐 <strong>Hours:</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;Mon-Fri: 6 AM - 6 PM<br>&nbsp;&nbsp;&nbsp;&nbsp;Sat: 9 AM - 2 PM</li>
+                    </ul>
                 </div>
             </div>
-
+            
             <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400 text-sm">&copy; 2026 Buda Fence Company. All Rights Reserved. | <a class="hover:text-white" href="/contact">Contact Us</a></p>
+                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year">2026</span> Buda Fence Company. All rights reserved. | Serving Austin, Buda, Kyle, Dripping Springs & Surrounding Areas</p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript for Mobile Menu and Accessibility -->
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('active');
-        }
+        // Simple, bulletproof mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuButton = document.getElementById('mobile-menu-button');
+            var mobileMenu = document.getElementById('mobile-menu');
+            
+            if (!menuButton || !mobileMenu) {
+                console.error('Mobile menu elements not found');
+                return;
+            }
+            
+            // Toggle menu on button click
+            menuButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var isOpen = mobileMenu.classList.contains('active');
+                
+                if (isOpen) {
+                    mobileMenu.classList.remove('active');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                } else {
+                    mobileMenu.classList.add('active');
+                    menuButton.setAttribute('aria-expanded', 'true');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+            
+            // Close menu when clicking any link
+            var menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+                    if (mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        menuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+            
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        // Dropdown menus for desktop
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(function(dropdown) {
+                var btn = dropdown.querySelector('button');
+                var menu = dropdown.querySelector('.dropdown-menu');
+                
+                if (!btn || !menu) return;
+                
+                // Toggle on click
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var isOpen = menu.classList.contains('active');
+                    
+                    // Close all other dropdowns
+                    document.querySelectorAll('.dropdown-menu.active').forEach(function(m) {
+                        m.classList.remove('active');
+                        m.previousElementSibling.setAttribute('aria-expanded', 'false');
+                    });
+                    
+                    // Toggle current dropdown
+                    if (!isOpen) {
+                        menu.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                        // Focus first link
+                        var firstLink = menu.querySelector('a');
+                        if (firstLink) setTimeout(function() { firstLink.focus(); }, 100);
+                    } else {
+                        menu.classList.remove('active');
+                        btn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+                
+                // Open on Enter/Space when focused
+                btn.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+                
+                // Close on Escape
+                menu.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        menu.classList.remove('active');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.focus();
+                    }
+                });
+                
+                // Close when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        menu.classList.remove('active');
+                        btn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+            
+            // Dynamic Copyright Year
+            var yearSpan = document.getElementById('copyright-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
     </script>
 </body>
 </html>
