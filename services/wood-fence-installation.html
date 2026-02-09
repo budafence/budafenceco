@@ -298,18 +298,18 @@
             display: block;
         }
         
-        /* Dropdown Menu - CRITICAL FIX */
+        /* Dropdown Menu - JavaScript Driven */
         .dropdown { position: relative; }
         .dropdown button {
-            background: none !important;
-            border: none !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            font: inherit !important;
-            color: inherit !important;
-            text-align: inherit !important;
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font: inherit;
+            color: inherit;
             cursor: pointer;
-            line-height: inherit !important;
+            display: inline-flex;
+            align-items: center;
         }
         .dropdown-menu {
             position: absolute;
@@ -326,7 +326,6 @@
             transform: translateY(-10px);
             transition: all 0.2s ease;
         }
-        .dropdown:hover .dropdown-menu,
         .dropdown-menu.active {
             opacity: 1;
             visibility: visible;
@@ -413,6 +412,61 @@
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
     </style>
     
+    <!-- LocalBusiness Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://budafenceco.com/#organization",
+      "name": "Buda Fence Company",
+      "image": "https://budafenceco.com/images/buda-fence-logo.webp",
+      "telephone": "+15127107116",
+      "email": "info@budafenceco.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "308 Wincliff Dr",
+        "addressLocality": "Buda",
+        "addressRegion": "TX",
+        "postalCode": "78610",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "30.09939",
+        "longitude": "-97.86756"
+      },
+      "url": "https://budafenceco.com",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "areaServed": [
+        {"@type": "City", "name": "Austin", "sameAs": "https://en.wikipedia.org/wiki/Austin,_Texas"},
+        {"@type": "City", "name": "Buda", "sameAs": "https://en.wikipedia.org/wiki/Buda,_Texas"},
+        {"@type": "City", "name": "Kyle", "sameAs": "https://en.wikipedia.org/wiki/Kyle,_Texas"},
+        {"@type": "City", "name": "Dripping Springs", "sameAs": "https://en.wikipedia.org/wiki/Dripping_Springs,_Texas"}
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "122",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
     <!-- Service Schema Markup -->
     <script type="application/ld+json">
     {
@@ -421,46 +475,7 @@
       "serviceType": "Wood Fence Installation",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://budafenceco.com/#organization",
-        "name": "Buda Fence Company",
-        "image": "https://budafenceco.com/images/buda-fence-logo.webp",
-        "telephone": "+15127107116",
-        "email": "info@budafenceco.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "308 Wincliff Dr",
-          "addressLocality": "Buda",
-          "addressRegion": "TX",
-          "postalCode": "78610",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "30.09939",
-          "longitude": "-97.86756"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "122",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "priceRange": "$$",
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "06:00",
-            "closes": "18:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "14:00"
-          }
-        ]
+        "@id": "https://budafenceco.com/#organization"
       },
       "areaServed": [
         {"@type": "City", "name": "Austin", "sameAs": "https://en.wikipedia.org/wiki/Austin,_Texas"},
@@ -584,7 +599,7 @@
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Navigation (EXACT SAME AS HOMEPAGE) -->
+    <!-- Navigation -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="container">
             <!-- Logo -->
@@ -606,7 +621,6 @@
                 
                 <div class="dropdown">
                     <button class="text-buda-secondary font-medium transition-colors" 
-                            style="background: none; border: none; padding: 0; cursor: pointer;"
                             aria-haspopup="true" 
                             aria-expanded="false"
                             id="services-dropdown-btn">
@@ -624,7 +638,6 @@
                 
                 <div class="dropdown">
                     <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" 
-                            style="background: none; border: none; padding: 0; cursor: pointer;"
                             aria-haspopup="true" 
                             aria-expanded="false"
                             id="areas-dropdown-btn">
@@ -653,12 +666,10 @@
             <div class="md:hidden flex items-center gap-2">
                 <a href="tel:5127107116" 
                    class="text-buda-secondary font-semibold whitespace-nowrap" 
-                   style="font-size: 0.8125rem;"
-                   data-close-mobile-menu>(512) 710-7116</a>
+                   style="font-size: 0.8125rem;">(512) 710-7116</a>
                 <a class="bg-buda-secondary text-white rounded-lg font-semibold" 
                    style="padding: 0.4rem 0.65rem; font-size: 0.8125rem;"
-                   href="/contact" 
-                   data-close-mobile-menu>Quote</a>
+                   href="/contact">Quote</a>
                 <button id="mobile-menu-button"
                         class="text-gray-700 hover:text-buda-secondary" 
                         style="padding: 0.35rem;"
@@ -1081,7 +1092,7 @@
         </section>
     </main>
 
-    <!-- Footer (EXACT SAME AS HOMEPAGE) -->
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12" role="contentinfo">
         <div class="container">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
@@ -1092,72 +1103,62 @@
                          width="97"
                          height="48"
                          loading="lazy">
-                    <p class="text-gray-400 text-sm">Professional fence installation and repair services in Austin, Buda, and Central Texas. Family-owned and operated since 2015.</p>
-                </div>
-                
-                <div>
-                    <h3 class="font-bold mb-4">Contact Us</h3>
-                    <address class="text-gray-400 text-sm not-italic">
-                        <p class="mb-2">
-                            <strong>Address:</strong><br>
-                            308 Wincliff Dr<br>
-                            Buda, TX 78610
-                        </p>
-                        <p class="mb-2">
-                            <strong>Phone:</strong> <a href="tel:+15127107116" class="hover:text-white">(512) 710-7116</a>
-                        </p>
-                        <p>
-                            <strong>Email:</strong> <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a>
-                        </p>
-                    </address>
+                    <p class="text-gray-400 text-sm mb-4">Professional fence installation and repair services in Austin, Buda, and Central Texas. Family-owned and operated since 2015.</p>
+                    <p class="text-gray-400 text-xs italic">🚨 Emergency fence repair available</p>
                 </div>
                 
                 <div>
                     <h3 class="font-bold mb-4">Our Services</h3>
                     <ul class="text-gray-400 text-sm space-y-2">
-                        <li><a class="hover:text-white" href="/services/wood-fence-installation">Wood Fences</a></li>
-                        <li><a class="hover:text-white" href="/services/metal-fence-installation">Metal Fences</a></li>
-                        <li><a class="hover:text-white" href="/services/chain-link-fence-installation">Chain Link Fences</a></li>
-                        <li><a class="hover:text-white" href="/services/fence-repair">Fence Repair</a></li>
-                        <li><a class="hover:text-white" href="/services/deck-construction">Deck Construction</a></li>
-                        <li><a class="hover:text-white" href="/services">View All Services</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/services/deck-construction">Deck Construction</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/services/wood-fence-installation">Wood Fence</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/services/metal-fence-installation">Metal Fence</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/services/chain-link-fence-installation">Chain Link</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/services/fence-repair">Fence Repair</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/services">All Services</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="font-bold mb-4">Service Areas</h3>
-                    <ul class="text-gray-400 text-sm space-y-2">
-                        <li><a class="hover:text-white" href="/service-areas/austin">Austin, TX</a></li>
-                        <li><a class="hover:text-white" href="/service-areas/buda">Buda, TX</a></li>
-                        <li><a class="hover:text-white" href="/service-areas/kyle">Kyle, TX</a></li>
-                        <li><a class="hover:text-white" href="/service-areas/dripping-springs">Dripping Springs, TX</a></li>
+                    <ul class="text-gray-400 text-sm space-y-2 mb-4">
+                        <li><a class="hover:text-white transition-colors" href="/service-areas/austin">Austin</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/service-areas/buda">Buda</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/service-areas/kyle">Kyle</a></li>
+                        <li><a class="hover:text-white transition-colors" href="/service-areas/dripping-springs">Dripping Springs</a></li>
                     </ul>
-                    <h3 class="font-bold mb-2 mt-4">Business Hours</h3>
-                    <p class="text-gray-400 text-sm">
-                        Mon-Fri: 6 AM - 6 PM<br>
-                        Saturday: 9 AM - 2 PM<br>
-                        <span class="text-xs">(Emergency service available)</span>
-                    </p>
+                    <p class="text-gray-400 text-xs">+ 25-mile radius from Buda</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-4">Contact Us</h3>
+                    <address class="text-gray-400 text-sm not-italic space-y-2">
+                        <p>📍 308 Wincliff Dr<br>Buda, TX 78610</p>
+                        <p>📞 <a href="tel:+15127107116" class="hover:text-white transition-colors">(512) 710-7116</a></p>
+                        <p>✉️ <a href="mailto:info@budafenceco.com" class="hover:text-white transition-colors">info@budafenceco.com</a></p>
+                        <p class="pt-2">
+                            <strong class="text-white">Business Hours:</strong><br>
+                            Mon-Fri: 6 AM - 6 PM ☀️<br>
+                            Sat: 9 AM - 2 PM 🔨
+                        </p>
+                    </address>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year">2026</span> Buda Fence Company. All Rights Reserved. | <a class="hover:text-white" href="/contact">Contact Us</a></p>
+                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year">2026</span> Buda Fence Company. All Rights Reserved. | <a class="hover:text-white transition-colors" href="/contact">Contact Us</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu and Accessibility -->
+    <!-- JavaScript for Mobile Menu and Dropdowns -->
     <script>
-        // Simple, bulletproof mobile menu
+        // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             var menuButton = document.getElementById('mobile-menu-button');
             var mobileMenu = document.getElementById('mobile-menu');
             
-            if (!menuButton || !mobileMenu) {
-                console.error('Mobile menu elements not found');
-                return;
-            }
+            if (!menuButton || !mobileMenu) return;
             
             // Toggle menu on button click
             menuButton.addEventListener('click', function(e) {
@@ -1220,6 +1221,7 @@
                 // Toggle on click
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
+                    e.stopPropagation();
                     var isOpen = menu.classList.contains('active');
                     
                     // Close all other dropdowns
@@ -1234,18 +1236,13 @@
                     if (!isOpen) {
                         menu.classList.add('active');
                         btn.setAttribute('aria-expanded', 'true');
-                        var firstLink = menu.querySelector('a');
-                        if (firstLink) {
-                            setTimeout(function() {
-                                firstLink.focus();
-                            }, 100);
-                        }
                     } else {
                         menu.classList.remove('active');
                         btn.setAttribute('aria-expanded', 'false');
                     }
                 });
                 
+                // Keyboard navigation
                 btn.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
@@ -1253,6 +1250,7 @@
                     }
                 });
                 
+                // Close on Escape
                 menu.addEventListener('keydown', function(e) {
                     if (e.key === 'Escape') {
                         menu.classList.remove('active');
@@ -1261,6 +1259,7 @@
                     }
                 });
                 
+                // Close when clicking outside
                 document.addEventListener('click', function(e) {
                     if (!dropdown.contains(e.target)) {
                         menu.classList.remove('active');
