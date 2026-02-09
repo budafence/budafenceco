@@ -410,6 +410,64 @@
         
         /* Additional utility */
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+        
+        /* Hero Section with Responsive Background */
+        .hero-section {
+            position: relative;
+            background-color: #1e293b;
+            background-image: url('/images/hero-section-640.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Responsive background images */
+        @media (min-width: 640px) {
+            .hero-section {
+                background-image: url('/images/hero-section-960.webp');
+                min-height: 550px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-section {
+                background-image: url('/images/hero-section-1280.webp');
+                min-height: 600px;
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .hero-section {
+                background-image: url('/images/hero-section-1440.webp');
+            }
+        }
+        
+        /* Dark gradient overlay for text legibility */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.75) 50%, rgba(30, 41, 59, 0.85) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .hero-section h1,
+        .hero-section p {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
     </style>
     
     <!-- LocalBusiness Schema Markup -->
@@ -712,12 +770,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-buda-primary text-white py-16" role="banner">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="max-w-3xl">
+    <section class="hero-section" role="banner">
+        <div class="container hero-content">
+            <div style="max-width: 900px; margin: 0 auto;">
                 <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Professional Wood Fence Installation in Austin, TX</h1>
-                <p class="text-xl text-white mb-8">Premium cedar and pine fences built to last. 5-year installation guarantee. Most projects under 100 linear feet completed in one day.</p>
-                <div class="flex flex-wrap gap-4">
+                <p class="text-xl text-white mb-8" style="max-width: 800px; margin-left: auto; margin-right: auto;">Premium cedar and pine fences built to last. 5-year installation guarantee. Most projects under 100 linear feet completed in one day.</p>
+                <div class="flex flex-wrap justify-center gap-4">
                     <a class="bg-buda-secondary text-white px-8 py-4 rounded-lg hover:bg-red-700 transition font-semibold text-lg" href="/contact">Get Free Estimate</a>
                     <a href="tel:+15127107116" class="bg-white text-buda-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition font-semibold text-lg">(512) 710-7116</a>
                 </div>
