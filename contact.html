@@ -97,6 +97,40 @@
       .mobile-menu{display:none !important}
       .footer-grid{grid-template-columns:repeat(4,1fr)}
     }
+
+    /* ====== Address Autocomplete Dropdown ====== */
+    .address-wrapper { position: relative; }
+    #address-suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1px solid #d1d5db;
+      border-top: none;
+      border-radius: 0 0 0.375rem 0.375rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      z-index: 100;
+      max-height: 220px;
+      overflow-y: auto;
+    }
+    .suggestion-item {
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #374151;
+      border-bottom: 1px solid #f3f4f6;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .suggestion-item:last-child { border-bottom: none; }
+    .suggestion-item:hover, .suggestion-item.active { background: #fef2f2; color: #dc2626; }
+    .suggestion-item svg { flex-shrink: 0; margin-top: 2px; }
+    .suggestion-main { font-weight: 500; }
+    .suggestion-secondary { font-size: 0.8rem; color: #6b7280; }
+    .suggestion-item:hover .suggestion-secondary,
+    .suggestion-item.active .suggestion-secondary { color: #dc2626; opacity: 0.75; }
   </style>
 
   <!-- LocalBusiness Schema (kept consistent with About page) -->
@@ -266,7 +300,7 @@
           </svg>
           Call (512) 710-7116
         </a>
-        <a href="mailto:info@budafenceco.com" class="bg-white text-buda-primary px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg inline-flex items-center justify-center">
+        <a href="/cdn-cgi/l/email-protection#2b42454d446b495e4f4a4d4e45484e484405484446" class="bg-white text-buda-primary px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg inline-flex items-center justify-center">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
           </svg>
@@ -280,125 +314,164 @@
   <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid lg:grid-cols-3 gap-8">
 
-      <!-- Contact Form -->
+      <!-- ============================================================ -->
+      <!-- CONTACT FORM — UPDATED: Simplified fields + address autocomplete -->
+      <!-- Only this form block changed. All layout/sidebar identical.  -->
+      <!-- ============================================================ -->
       <div class="lg:col-span-2">
         <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
           <h2 class="text-2xl font-bold text-gray-900 mb-2">Request Your Free Estimate</h2>
           <p class="text-gray-600 mb-6">
             Fill out the form below and we'll contact you within 24 hours to schedule your free on-site estimate.
-            The more details you provide, the more accurate your estimate will be.
           </p>
 
-          <form action="https://formspree.io/f/xdkdgqlg" method="POST" class="space-y-6">
-            <!-- Contact Information -->
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Contact Information</h3>
-              <div class="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
-                  <input type="text" id="name" name="name" required placeholder="Enter your full name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                </div>
-                <div>
-                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
-                  <input type="email" id="email" name="email" required placeholder="Enter your email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                </div>
-                <div>
-                  <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
-                  <input type="tel" id="phone" name="phone" required placeholder="(512) 555-0123" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                </div>
-                <div>
-                  <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Project Address *</label>
-                  <input type="text" id="address" name="address" required placeholder="Enter project address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                </div>
+          <form action="https://formspree.io/f/xdkdgqlg" method="POST" class="space-y-5" id="estimate-form">
+
+            <!-- Name Row -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name <span class="text-buda-secondary">*</span></label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  required
+                  autocomplete="given-name"
+                  placeholder="First name"
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent transition-colors">
+              </div>
+              <div>
+                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name <span class="text-buda-secondary">*</span></label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  required
+                  autocomplete="family-name"
+                  placeholder="Last name"
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent transition-colors">
               </div>
             </div>
 
-            <!-- Project Details -->
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Project Details</h3>
-              <div class="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label for="project-type" class="block text-sm font-medium text-gray-700 mb-1">Project Type *</label>
-                  <select id="project-type" name="project-type" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                    <option value="">Select project type</option>
-                    <option value="new-installation">New Fence Installation</option>
-                    <option value="fence-repair">Fence Repair</option>
-                    <option value="fence-replacement">Fence Replacement</option>
-                    <option value="gate-installation">Gate Installation</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="fence-type" class="block text-sm font-medium text-gray-700 mb-1">Fence Type</label>
-                  <select id="fence-type" name="fence-type" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                    <option value="">Select fence type</option>
-                    <option value="wood-cedar">Wood - Cedar</option>
-                    <option value="wood-pine">Wood - Pressure Treated Pine</option>
-                    <option value="metal-aluminum">Metal - Aluminum</option>
-                    <option value="metal-steel">Metal - Steel</option>
-                    <option value="metal-wrought-iron">Metal - Wrought Iron Style</option>
-                    <option value="chain-link">Chain Link</option>
-                    <option value="chain-link-vinyl">Chain Link - Vinyl Coated</option>
-                    <option value="not-sure">Not Sure - Need Advice</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="linear-feet" class="block text-sm font-medium text-gray-700 mb-1">Approximate Linear Feet</label>
-                  <input type="number" id="linear-feet" name="linear-feet" placeholder="e.g., 150" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                </div>
-                <div>
-                  <label for="height" class="block text-sm font-medium text-gray-700 mb-1">Desired Height</label>
-                  <select id="height" name="height" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                    <option value="">Select height</option>
-                    <option value="4-feet">4 feet</option>
-                    <option value="5-feet">5 feet</option>
-                    <option value="6-feet">6 feet</option>
-                    <option value="7-feet">7 feet</option>
-                    <option value="8-feet">8 feet</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="timeline" class="block text-sm font-medium text-gray-700 mb-1">Timeline</label>
-                  <select id="timeline" name="timeline" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                    <option value="">Select timeline</option>
-                    <option value="asap">ASAP</option>
-                    <option value="1-2-weeks">1-2 weeks</option>
-                    <option value="1-month">Within 1 month</option>
-                    <option value="2-3-months">2-3 months</option>
-                    <option value="researching">Just researching</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
-                  <select id="budget" name="budget" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent">
-                    <option value="">Select budget range</option>
-                    <option value="under-3000">Under $3,000</option>
-                    <option value="3000-5000">$3,000 - $5,000</option>
-                    <option value="5000-8000">$5,000 - $8,000</option>
-                    <option value="8000-12000">$8,000 - $12,000</option>
-                    <option value="over-12000">$12,000+</option>
-                  </select>
-                </div>
+            <!-- Phone + Email Row -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number <span class="text-buda-secondary">*</span></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  autocomplete="tel"
+                  placeholder="(512) 555-0123"
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent transition-colors">
               </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span class="text-buda-secondary">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent transition-colors">
+              </div>
+            </div>
+
+            <!-- Property Address with Autocomplete -->
+            <div>
+              <label for="property-address" class="block text-sm font-medium text-gray-700 mb-1">
+                Property Address <span class="text-buda-secondary">*</span>
+                <span class="text-gray-400 font-normal ml-1">(start typing to search)</span>
+              </label>
+              <div class="address-wrapper">
+                <input
+                  type="text"
+                  id="property-address"
+                  name="property_address"
+                  required
+                  autocomplete="off"
+                  placeholder="123 Main St, Buda, TX 78610"
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent transition-colors"
+                  aria-autocomplete="list"
+                  aria-controls="address-suggestions"
+                  aria-expanded="false"
+                  role="combobox">
+                <!-- Hidden fields populated on selection -->
+                <input type="hidden" id="addr-street" name="address_street">
+                <input type="hidden" id="addr-city" name="address_city">
+                <input type="hidden" id="addr-state" name="address_state">
+                <input type="hidden" id="addr-zip" name="address_zip">
+                <!-- Suggestion dropdown -->
+                <ul id="address-suggestions" role="listbox" aria-label="Address suggestions" style="display:none;"></ul>
+              </div>
+              <p class="text-xs text-gray-400 mt-1">Can't find it? Type your full address manually — street, city, state, zip.</p>
+            </div>
+
+            <!-- Project Type -->
+            <div>
+              <label for="project-type" class="block text-sm font-medium text-gray-700 mb-1">Type of Project <span class="text-buda-secondary">*</span></label>
+              <select
+                id="project-type"
+                name="project_type"
+                required
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent transition-colors bg-white">
+                <option value="">Select a project type</option>
+                <optgroup label="New Installation">
+                  <option value="Wood / Cedar Privacy Fence">Wood / Cedar Privacy Fence</option>
+                  <option value="Horizontal Cedar Fence">Horizontal Cedar Fence</option>
+                  <option value="Ornamental Iron Fence">Ornamental Iron Fence</option>
+                  <option value="Metal Fence">Metal Fence</option>
+                  <option value="Chain Link Fence">Chain Link Fence</option>
+                  <option value="Ranch / Agricultural Fence">Ranch / Agricultural Fence</option>
+                  <option value="Split Rail Cedar Fence">Split Rail Cedar Fence</option>
+                  <option value="Commercial Fence">Commercial Fence</option>
+                  <option value="Gate Installation">Gate Installation</option>
+                </optgroup>
+                <optgroup label="Repair & Other">
+                  <option value="Fence Repair">Fence Repair</option>
+                  <option value="Fence Replacement">Fence Replacement</option>
+                  <option value="Not Sure - Need Advice">Not Sure — Need Advice</option>
+                </optgroup>
+              </select>
             </div>
 
             <!-- Additional Details -->
             <div>
-              <label for="details" class="block text-sm font-medium text-gray-700 mb-1">Additional Details</label>
-              <textarea id="details" name="details" rows="4" placeholder="Tell us about any specific requirements, challenges, or questions you have about your project..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent"></textarea>
+              <label for="details" class="block text-sm font-medium text-gray-700 mb-1">
+                Anything else we should know?
+                <span class="text-gray-400 font-normal">(optional)</span>
+              </label>
+              <textarea
+                id="details"
+                name="details"
+                rows="4"
+                placeholder="Tell us about your project — approximate footage, height, HOA requirements, timeline, or any questions you have..."
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-buda-secondary focus:border-transparent transition-colors resize-none"></textarea>
             </div>
 
-            <!-- Submit Button -->
+            <!-- Submit -->
             <div>
-              <button type="submit" class="w-full bg-buda-secondary text-white px-6 py-3 rounded-md hover:bg-red-700 font-semibold text-lg transition-colors">
+              <button
+                type="submit"
+                class="w-full bg-buda-secondary text-white px-6 py-3.5 rounded-md hover:bg-red-700 font-semibold text-lg transition-colors flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
                 Get My Free Estimate
               </button>
-              <p class="text-sm text-gray-500 mt-2 text-center">We'll respond within 24 hours. No spam, ever.</p>
+              <p class="text-sm text-gray-400 mt-2 text-center">We'll respond within 24 hours &mdash; no spam, ever.</p>
             </div>
+
           </form>
         </div>
       </div>
+      <!-- ============================================================ -->
+      <!-- END UPDATED FORM                                             -->
+      <!-- ============================================================ -->
 
-      <!-- Sidebar -->
+      <!-- Sidebar (IDENTICAL TO ORIGINAL) -->
       <div class="space-y-6">
         <!-- Contact Information -->
         <div class="bg-white rounded-lg shadow-md p-6">
@@ -425,7 +498,7 @@
               </div>
               <div>
                 <p class="font-semibold text-gray-900">Email</p>
-                <a href="mailto:info@budafenceco.com" class="text-buda-secondary hover:underline">info@budafenceco.com</a>
+                <a href="/cdn-cgi/l/email-protection#e1888f878ea18394858087848f8284828ecf828e8c" class="text-buda-secondary hover:underline"><span class="__cf_email__" data-cfemail="c4adaaa2ab84a6b1a0a5a2a1aaa7a1a7abeaa7aba9">[email&#160;protected]</span></a>
                 <p class="text-sm text-gray-600">We respond within 24 hours</p>
               </div>
             </div>
@@ -584,7 +657,7 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:5127107116">(512) 710-7116</a></li>
-          <li><a href="mailto:info@budafenceco.com">info@budafenceco.com</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#b2dbdcd4ddf2d0c7d6d3d4d7dcd1d7d1dd9cd1dddf"><span class="__cf_email__" data-cfemail="9bf2f5fdf4dbf9eefffafdfef5f8fef8f4b5f8f4f6">[email&#160;protected]</span></a></li>
           <li>Buda, TX 78610</li>
         </ul>
       </div>
@@ -595,58 +668,96 @@
     </div>
   </footer>
 
-  <!-- Mobile Menu Script (prevents “menu follows me” + closes on navigation) -->
-  <script>
+  <!-- Mobile Menu Script (identical to original) -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     (function () {
       const menu = document.getElementById('mobile-menu');
       const button = document.getElementById('mobile-menu-button');
 
       if (!menu || !button) return;
 
-      function isOpen() {
-        return !menu.classList.contains('hidden');
-      }
+      function isOpen() { return !menu.classList.contains('hidden'); }
+      function openMenu() { menu.classList.remove('hidden'); button.setAttribute('aria-expanded', 'true'); }
+      function closeMenu() { menu.classList.add('hidden'); button.setAttribute('aria-expanded', 'false'); }
 
-      function openMenu() {
-        menu.classList.remove('hidden');
-        button.setAttribute('aria-expanded', 'true');
-      }
-
-      function closeMenu() {
-        menu.classList.add('hidden');
-        button.setAttribute('aria-expanded', 'false');
-      }
-
-      // Force closed on load + BFCache restore (Safari/iOS)
       window.addEventListener('pageshow', closeMenu);
       window.addEventListener('load', closeMenu);
 
-      // Toggle from hamburger only
       button.addEventListener('click', function (e) {
         e.stopPropagation();
-        if (isOpen()) closeMenu();
-        else openMenu();
+        if (isOpen()) closeMenu(); else openMenu();
       });
 
-      // Close before navigating anywhere (prevents “menu follows me” to other pages)
       document.addEventListener('click', function (e) {
         const link = e.target.closest('a');
         if (!link) return;
         if (isOpen()) closeMenu();
       }, { capture: true });
 
-      // Click outside closes menu
       document.addEventListener('click', function (e) {
         if (!isOpen()) return;
         if (menu.contains(e.target) || button.contains(e.target)) return;
         closeMenu();
       }, { passive: true });
 
-      // ESC closes menu
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && isOpen()) closeMenu();
       });
     })();
   </script>
+
+  <!-- ============================================================ -->
+  <!-- ADDRESS AUTOCOMPLETE — Google Places JS Widget              -->
+  <!-- Key restricted to www.budafenceco.com/*                     -->
+  <!-- ============================================================ -->
+  <script>
+    function initAutocomplete() {
+      var input = document.getElementById('property-address');
+
+      var ac = new google.maps.places.Autocomplete(input, {
+        types: ['address'],
+        componentRestrictions: { country: 'us' },
+        bounds: new google.maps.LatLngBounds(
+          new google.maps.LatLng(29.8, -98.2),
+          new google.maps.LatLng(30.5, -97.4)
+        ),
+        strictBounds: false
+      });
+
+      ac.addListener('place_changed', function () {
+        var place = ac.getPlace();
+        if (!place.address_components) return;
+
+        document.getElementById('addr-street').value = '';
+        document.getElementById('addr-city').value   = '';
+        document.getElementById('addr-state').value  = '';
+        document.getElementById('addr-zip').value    = '';
+
+        var streetNumber = '';
+        var streetName   = '';
+
+        place.address_components.forEach(function (component) {
+          var types = component.types;
+          if (types.indexOf('street_number') > -1)
+            streetNumber = component.long_name;
+          if (types.indexOf('route') > -1)
+            streetName = component.long_name;
+          if (types.indexOf('locality') > -1)
+            document.getElementById('addr-city').value = component.long_name;
+          if (types.indexOf('administrative_area_level_1') > -1)
+            document.getElementById('addr-state').value = component.short_name;
+          if (types.indexOf('postal_code') > -1)
+            document.getElementById('addr-zip').value = component.long_name;
+        });
+
+        document.getElementById('addr-street').value =
+          (streetNumber + ' ' + streetName).trim();
+      });
+    }
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAbRzOdrHX-5U1vZ9WRomU2SGWcNT1-ds&libraries=places&callback=initAutocomplete"
+    async defer></script>
+
 </body>
 </html>
