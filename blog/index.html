@@ -21,14 +21,12 @@
     </script>
     <style>
         html, body { max-width: 100vw; overflow-x: hidden; }
-        /* Blog card images - show full image without cropping */
         .blog-card-image {
             width: 100%;
             height: 200px;
             object-fit: contain;
             background-color: #f3f4f6;
         }
-        /* Featured image - larger display */
         .featured-image {
             width: 100%;
             height: 100%;
@@ -38,6 +36,19 @@
         }
         .mobile-menu { display: none; }
         .mobile-menu.active { display: block; }
+        .new-badge {
+            display: inline-block;
+            background-color: #dc2626;
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -45,14 +56,11 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="../index.html">
                         <img class="h-16 w-auto" src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo">
                     </a>
                 </div>
-                
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
                     <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../index.html">Home</a>
                     <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../about.html">About</a>
@@ -81,14 +89,10 @@
                     <a class="text-buda-secondary font-medium" href="../blog/">Blog</a>
                     <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../contact.html">Contact</a>
                 </div>
-                
-                <!-- Desktop Contact -->
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
                     <a class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold" href="../contact.html">Free Quote</a>
                 </div>
-                
-                <!-- Mobile Contact & Menu Button -->
                 <div class="md:hidden flex items-center space-x-3">
                     <a href="tel:5127107116" class="text-buda-primary font-semibold text-sm">(512) 710-7116</a>
                     <a class="bg-buda-secondary text-white px-3 py-1.5 rounded-md hover:bg-red-700 font-semibold text-sm" href="../contact.html">Free Quote</a>
@@ -98,8 +102,6 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="../index.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Home</a>
@@ -162,6 +164,20 @@
                 <div>
                     <h3 class="text-2xl font-bold text-buda-primary border-b-2 border-buda-secondary pb-2 mb-6">Fence Buying Guides</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        <!-- NEW March 2026 post -->
+                        <article class="bg-white rounded-lg shadow-md overflow-hidden border-2 border-buda-secondary">
+                            <div class="bg-gray-100">
+                                <img class="blog-card-image" src="../images/blog-wood-vs-metal.jpg" alt="Wood Fence vs Metal Fence Austin">
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs text-gray-500 mb-1">March 1, 2026 <span class="new-badge">New</span></p>
+                                <h4 class="font-bold text-lg text-buda-primary mb-2">Wood Fence vs. Metal Fence: Which Is Right for Austin Homeowners?</h4>
+                                <p class="text-gray-600 text-sm mb-4">Cost, durability, maintenance, and curb appeal — everything you need to choose the right fence for your yard.</p>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="wood-vs-metal-fence-austin.html">Read More →</a>
+                            </div>
+                        </article>
+
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
                             <div class="bg-gray-100">
                                 <img class="blog-card-image" src="../images/blog-cedar-vs-pine.jpg" alt="Cedar vs Pine Fence Comparison">
@@ -172,6 +188,7 @@
                                 <a class="font-semibold text-buda-secondary hover:text-red-700" href="cedar-vs-pine-fence-austin.html">Read More →</a>
                             </div>
                         </article>
+
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
                             <div class="bg-gray-100">
                                 <img class="blog-card-image" src="../images/blog-chain-link-guide.png" alt="Chain Link Fence Guide">
@@ -182,6 +199,7 @@
                                 <a class="font-semibold text-buda-secondary hover:text-red-700" href="chain-link-fence-guide-texas.html">Read More →</a>
                             </div>
                         </article>
+
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
                             <div class="bg-gray-100">
                                 <img class="blog-card-image" src="../images/blog-privacy-fence-styles.jpg" alt="Privacy Fence Styles">
@@ -344,7 +362,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2025 Buda Fence Company. All rights reserved.</p>
+                <p>&copy; 2026 Buda Fence Company. All rights reserved.</p>
             </div>
         </div>
     </footer>
