@@ -67,41 +67,41 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Service Areas Index Page -->
+  <!-- Service Areas Index -->
   <url>
     <loc>https://budafenceco.com/service-areas</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Service Area Pages -->
+  <!-- Service Area Pages - Updated 2026-03-19 (blog resource sections added) -->
   <url>
     <loc>https://budafenceco.com/service-areas/austin</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://budafenceco.com/service-areas/buda</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://budafenceco.com/service-areas/kyle</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://budafenceco.com/service-areas/dripping-springs</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Blog Index -->
+  <!-- Blog Index - Updated 2026-03-19 -->
   <url>
     <loc>https://budafenceco.com/blog/</loc>
     <lastmod>2026-03-19</lastmod>
@@ -109,7 +109,13 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Posts - Updated 2026-03-19 (nav, footer, internal service area links added) -->
+  <!-- Blog Posts - Updated 2026-03-19 (nav, footer, internal links added) -->
+  <url>
+    <loc>https://budafenceco.com/blog/fence-installation-cost-austin</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://budafenceco.com/blog/wood-vs-metal-fence-austin</loc>
     <lastmod>2026-03-19</lastmod>
