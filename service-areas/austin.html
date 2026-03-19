@@ -98,6 +98,14 @@
         .skip-link { position: absolute; top: -40px; left: 0; background: #dc2626; color: white; padding: 8px; z-index: 100; }
         .skip-link:focus { top: 0; }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRJYMYZ44"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HNRJYMYZ44');
+    </script>
 </head>
 <body class="bg-gray-50">
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -443,7 +451,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Buda Fence Company</h3>
                     <p class="text-gray-400 text-sm mb-4">Building Budaful fences for Austin homeowners since 2015. Quality craftsmanship, premium materials, exceptional service.</p>
-                    <p class="text-gray-400 text-sm"><strong>Phone:</strong> <a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a><br><strong>Email:</strong> <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></p>
+                    <p class="text-gray-400 text-sm"><strong>Phone:</strong> <a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a><br><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#9af3f4fcf5daf8effefbfcfff4f9fff9f5b4f9f5f7" class="hover:text-white"><span class="__cf_email__" data-cfemail="d2bbbcb4bd92b0a7b6b3b4b7bcb1b7b1bdfcb1bdbf">[email&#160;protected]</span></a></p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
@@ -481,7 +489,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const button = document.querySelector('[aria-controls="mobile-menu"]');
@@ -493,10 +501,4 @@
             const button = dropdown.previousElementSibling;
             const svg = button.querySelector('svg');
             dropdown.classList.toggle('hidden');
-            const isExpanded = !dropdown.classList.contains('hidden');
-            button.setAttribute('aria-expanded', isExpanded);
-            if (svg) svg.style.transform = isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
-        }
-    </script>
-</body>
-</html>
+            const i
