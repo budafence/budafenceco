@@ -29,6 +29,8 @@
     <meta property="og:image" content="https://budafenceco.com/images/og-image.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <!-- FIX: Added og:image:alt for accessibility and social sharing -->
+    <meta property="og:image:alt" content="Buda Fence Company — Professional fence installation in Austin and Buda, TX">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Buda Fence Company">
 
@@ -51,8 +53,8 @@
 
     <!-- Preload hero image -->
     <link rel="preload" href="/images/hero-section.webp" as="image" type="image/webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- FIX: Added preconnect for Google Analytics (removed unnecessary fonts.googleapis preconnect since this page doesn't load Google Fonts) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -218,6 +220,8 @@
         a:focus, button:focus { outline: 2px solid #dc2626; outline-offset: 2px; }
         .skip-link { position: absolute; top: -40px; left: 0; background: #dc2626; color: #fff; padding: 8px; z-index: 100; border-radius: 0 0 4px 0; }
         .skip-link:focus { top: 0; }
+        /* FIX: Screen reader only class for emoji alternatives */
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
 
         /* Buttons */
         .btn { display: inline-block; padding: 1rem 2rem; border-radius: .5rem; font-weight: 600; text-align: center; transition: all .2s ease; cursor: pointer; }
@@ -250,8 +254,9 @@
             color: #fff;
             padding: 5rem 1.5rem;
         }
+        /* FIX: Removed background-attachment:fixed from desktop — causes severe jank/flicker on iOS Safari and many Android browsers. Parallax effect is not worth the mobile performance hit. */
         @media(min-width:768px){
-            .hero-bg { background-attachment: fixed; padding: 6rem 1.5rem; }
+            .hero-bg { padding: 6rem 1.5rem; }
         }
         .hero-inner { max-width: 1280px; margin: 0 auto; display: grid; gap: 3rem; align-items: center; }
         @media(min-width:1024px){ .hero-inner { grid-template-columns: 1fr 1fr; } }
@@ -269,7 +274,7 @@
         .hero-trust-item { display: flex; align-items: center; gap: .375rem; font-size: .8125rem; color: #cbd5e1; }
         .hero-trust-item svg { width: 1rem; height: 1rem; color: #4ade80; flex-shrink: 0; }
 
-        /* Hero right panel — why choose */
+        /* Hero right panel */
         .hero-panel { background: rgba(255,255,255,.08); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.15); border-radius: .75rem; padding: 2rem; }
         @supports not (backdrop-filter:blur(8px)){ .hero-panel { background: rgba(255,255,255,.15); } }
         .hero-panel h2 { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem; }
@@ -376,7 +381,7 @@
         summary { cursor: pointer; font-weight: 700; color: #111827; list-style: none; padding-right: 1.5rem; position: relative; font-size: 1rem; }
         summary::-webkit-details-marker { display: none; }
         summary::after { content: '+'; position: absolute; right: 0; top: 0; color: #dc2626; font-weight: 700; font-size: 1.25rem; line-height: 1; }
-        details[open] summary::after { content: '−'; }
+        details[open] summary::after { content: '\2212'; }
         details p { margin-top: .75rem; color: #374151; font-size: .9375rem; line-height: 1.7; }
         details a { color: #dc2626; font-weight: 600; }
 
@@ -391,6 +396,35 @@
         .cta-btn-call:hover { background: #f3f4f6; }
         .cta-btn-quote { background: #dc2626; color: #fff; padding: 1rem 2.25rem; border-radius: .375rem; font-weight: 700; font-size: 1.0625rem; text-decoration: none; transition: background .2s; border: 2px solid rgba(255,255,255,.25); }
         .cta-btn-quote:hover { background: #b91c1c; }
+
+        /* FIX: Mobile floating CTA bar — consistent with Austin page */
+        .mobile-cta-bar { display: none; }
+        @media (max-width: 767px) {
+            .mobile-cta-bar {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 50;
+                background: #1e293b;
+                padding: 10px 16px;
+                gap: 10px;
+                box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+            }
+            .mobile-cta-bar a {
+                flex: 1;
+                text-align: center;
+                padding: 12px 8px;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 15px;
+                text-decoration: none;
+            }
+            .mobile-cta-bar .cta-call { background: #dc2626; color: #fff; }
+            .mobile-cta-bar .cta-quote { background: #fff; color: #1e293b; }
+            footer { padding-bottom: 80px; }
+        }
     </style>
 
     <!-- LocalBusiness Schema -->
@@ -409,7 +443,7 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
+    <!-- Navigation — layout and spacing preserved per client request -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="container">
             <div class="flex items-center">
@@ -420,9 +454,9 @@
             <div class="desktop-nav">
                 <a class="text-buda-secondary font-medium" href="/" aria-current="page">Home</a>
                 <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/about">About</a>
-                <div class="dropdown">
-                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" aria-haspopup="true" aria-expanded="false" id="services-btn">Services ▾</button>
-                    <div class="dropdown-menu" role="menu" aria-labelledby="services-btn">
+                <div class="dropdown" data-dropdown>
+                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" aria-haspopup="true" aria-expanded="false" id="services-btn" data-dropdown-trigger>Services <span aria-hidden="true">▾</span></button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="services-btn" data-dropdown-menu>
                         <a href="/services" role="menuitem" class="font-semibold">All Services</a>
                         <a href="/services/deck-construction" role="menuitem">Deck Construction</a>
                         <a href="/services/wood-fence-installation" role="menuitem">Wood Fence Installation</a>
@@ -431,9 +465,9 @@
                         <a href="/services/fence-repair" role="menuitem">Fence Repair</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" aria-haspopup="true" aria-expanded="false" id="areas-btn">Service Areas ▾</button>
-                    <div class="dropdown-menu" role="menu" aria-labelledby="areas-btn">
+                <div class="dropdown" data-dropdown>
+                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" aria-haspopup="true" aria-expanded="false" id="areas-btn" data-dropdown-trigger>Service Areas <span aria-hidden="true">▾</span></button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="areas-btn" data-dropdown-menu>
                         <a href="/service-areas/" role="menuitem" class="text-buda-secondary font-semibold">All Service Areas</a>
                         <a href="/service-areas/austin" role="menuitem">Austin</a>
                         <a href="/service-areas/buda" role="menuitem">Buda</a>
@@ -503,8 +537,8 @@
                     <p class="hero-sub">Professional wood, metal &amp; chain link fence installation across Central Texas. Western Red Cedar. Steel posts. One-day installs. Built right — or we make it right, guaranteed.</p>
 
                     <div class="hero-btns">
-                        <a href="tel:5127107116" class="hero-btn-call">📞 Call (512) 710-7116</a>
-                        <a href="/contact" class="hero-btn-quote">Get Free Estimate →</a>
+                        <a href="tel:5127107116" class="hero-btn-call"><span aria-hidden="true">📞</span> Call (512) 710-7116</a>
+                        <a href="/contact" class="hero-btn-quote">Get Free Estimate <span aria-hidden="true">→</span></a>
                     </div>
 
                     <div class="hero-trust" role="list" aria-label="Trust indicators">
@@ -527,7 +561,7 @@
                     </div>
                 </div>
 
-                <!-- Why Choose Us panel — specific, not generic -->
+                <!-- Why Choose Us panel -->
                 <div class="hero-panel" aria-label="Why choose Buda Fence Company">
                     <h2>Why We Build Better Fences</h2>
                     <div class="hero-panel-item">
@@ -604,12 +638,12 @@
                             <h3>Wood Fences</h3>
                             <p>Premium Western Red Cedar with optional steel posts. Our most popular product — privacy, board-on-board, and modern horizontal styles for any yard.</p>
                             <ul>
-                                <li>✓ Western Red Cedar — Standard</li>
-                                <li>✓ PostMaster Steel Posts — Recommended</li>
-                                <li>✓ Privacy, Board-on-Board &amp; Horizontal</li>
-                                <li>✓ Ready Seal Staining Available</li>
+                                <li><span aria-hidden="true">✓</span> Western Red Cedar — Standard</li>
+                                <li><span aria-hidden="true">✓</span> PostMaster Steel Posts — Recommended</li>
+                                <li><span aria-hidden="true">✓</span> Privacy, Board-on-Board &amp; Horizontal</li>
+                                <li><span aria-hidden="true">✓</span> Ready Seal Staining Available</li>
                             </ul>
-                            <a href="/services/wood-fence-installation" class="card-link">View Wood Fence Options →</a>
+                            <a href="/services/wood-fence-installation" class="card-link">View Wood Fence Options <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
 
@@ -620,12 +654,12 @@
                             <h3>Metal Fences</h3>
                             <p>Wrought iron and aluminum fencing for homeowners who want elegance, low maintenance, and a fence that genuinely outlasts everything else.</p>
                             <ul>
-                                <li>✓ Wrought Iron &amp; Aluminum</li>
-                                <li>✓ Pool Fence Specialist</li>
-                                <li>✓ Rust-Resistant Powder Coating</li>
-                                <li>✓ Minimal Upkeep — Lasts Decades</li>
+                                <li><span aria-hidden="true">✓</span> Wrought Iron &amp; Aluminum</li>
+                                <li><span aria-hidden="true">✓</span> Pool Fence Specialist</li>
+                                <li><span aria-hidden="true">✓</span> Rust-Resistant Powder Coating</li>
+                                <li><span aria-hidden="true">✓</span> Minimal Upkeep — Lasts Decades</li>
                             </ul>
-                            <a href="/services/metal-fence-installation" class="card-link">View Metal Fence Options →</a>
+                            <a href="/services/metal-fence-installation" class="card-link">View Metal Fence Options <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
 
@@ -636,34 +670,34 @@
                             <h3>Chain Link Fences</h3>
                             <p>The most affordable way to secure your yard, contain pets, or define a property line. Galvanized or vinyl-coated, residential to commercial grade.</p>
                             <ul>
-                                <li>✓ Galvanized &amp; Black Vinyl-Coated</li>
-                                <li>✓ Most Affordable Fencing Option</li>
-                                <li>✓ Commercial Grade Available</li>
-                                <li>✓ Pet-Safe &amp; Child-Safe</li>
+                                <li><span aria-hidden="true">✓</span> Galvanized &amp; Black Vinyl-Coated</li>
+                                <li><span aria-hidden="true">✓</span> Most Affordable Fencing Option</li>
+                                <li><span aria-hidden="true">✓</span> Commercial Grade Available</li>
+                                <li><span aria-hidden="true">✓</span> Pet-Safe &amp; Child-Safe</li>
                             </ul>
-                            <a href="/services/chain-link-fence-installation" class="card-link">View Chain Link Options →</a>
+                            <a href="/services/chain-link-fence-installation" class="card-link">View Chain Link Options <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
 
-                    <!-- Fence Repair -->
+                    <!-- Fence Repair — PRICING REMOVED pending approval -->
                     <article class="service-card">
                         <img src="/images/cedar-fence-after.webp" alt="Cedar fence repair completed in Austin TX — post replacement and board replacement" width="600" height="400" loading="lazy">
                         <div class="service-card-body">
                             <h3>Fence Repair</h3>
                             <p>Storm damage, rotted posts, sagging gates, leaning fence lines — we diagnose the real problem and give you the honest fix, not the most expensive one.</p>
                             <ul>
-                                <li>✓ Storm Damage &amp; Post Replacement</li>
-                                <li>✓ Flat $175/Post — Discounts for Multiple</li>
-                                <li>✓ Gate Repair &amp; Rehang</li>
-                                <li>✓ Full Replace vs. Repair Assessment</li>
+                                <li><span aria-hidden="true">✓</span> Storm Damage &amp; Post Replacement</li>
+                                <li><span aria-hidden="true">✓</span> Discounts for Multiple Posts</li>
+                                <li><span aria-hidden="true">✓</span> Gate Repair &amp; Rehang</li>
+                                <li><span aria-hidden="true">✓</span> Full Replace vs. Repair Assessment</li>
                             </ul>
-                            <a href="/services/fence-repair" class="card-link">View Repair Services →</a>
+                            <a href="/services/fence-repair" class="card-link">View Repair Services <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
 
                 </div>
                 <div class="text-center mt-8">
-                    <a href="/services" class="btn bg-slate-800 text-white" style="background:#1e293b;color:#fff;padding:.875rem 2rem;">View All Services Including Deck Construction →</a>
+                    <a href="/services" class="btn bg-slate-800 text-white" style="background:#1e293b;color:#fff;padding:.875rem 2rem;">View All Services Including Deck Construction <span aria-hidden="true">→</span></a>
                 </div>
             </div>
         </section>
@@ -700,7 +734,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-8">
-                    <a href="/about" style="display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#e2e8f0;padding:.75rem 1.75rem;border-radius:.5rem;font-weight:600;font-size:.9375rem;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='rgba(255,255,255,.18)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">Learn More About How We Build → Meet William</a>
+                    <a href="/about" style="display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#e2e8f0;padding:.75rem 1.75rem;border-radius:.5rem;font-weight:600;font-size:.9375rem;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='rgba(255,255,255,.18)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">Learn More About How We Build <span aria-hidden="true">→</span> Meet William</a>
                 </div>
             </div>
         </section>
@@ -716,26 +750,26 @@
                     <a href="/service-areas/austin" class="area-card">
                         <h3>Austin, TX</h3>
                         <p>Circle C, Westlake, Steiner Ranch, South Congress &amp; all Austin neighborhoods</p>
-                        <span>Explore Austin →</span>
+                        <span>Explore Austin <span aria-hidden="true">→</span></span>
                     </a>
                     <a href="/service-areas/buda" class="area-card">
                         <h3>Buda, TX</h3>
                         <p>Our home base — Sunfield, Stoneridge, Whispering Hollow &amp; all of Buda</p>
-                        <span>Explore Buda →</span>
+                        <span>Explore Buda <span aria-hidden="true">→</span></span>
                     </a>
                     <a href="/service-areas/kyle" class="area-card">
                         <h3>Kyle, TX</h3>
                         <p>Plum Creek, Waterleaf, Crosswinds &amp; surrounding Kyle communities</p>
-                        <span>Explore Kyle →</span>
+                        <span>Explore Kyle <span aria-hidden="true">→</span></span>
                     </a>
                     <a href="/service-areas/dripping-springs" class="area-card">
                         <h3>Dripping Springs, TX</h3>
                         <p>Hill Country homes, ranches &amp; all Dripping Springs neighborhoods</p>
-                        <span>Explore Dripping Springs →</span>
+                        <span>Explore Dripping Springs <span aria-hidden="true">→</span></span>
                     </a>
                 </div>
                 <div class="area-note">
-                    <p><strong>Also serving:</strong> San Marcos, Wimberley, Driftwood, Westlake Hills, New Braunfels &amp; all communities within 25 miles of Buda. &nbsp;<a href="/contact">Not sure if we cover your area? Contact us →</a></p>
+                    <p><strong>Also serving:</strong> San Marcos, Wimberley, Driftwood, Westlake Hills, New Braunfels &amp; all communities within 25 miles of Buda. &nbsp;<a href="/contact">Not sure if we cover your area? Contact us <span aria-hidden="true">→</span></a></p>
                 </div>
             </div>
         </section>
@@ -745,33 +779,33 @@
             <div class="container">
                 <div class="text-center">
                     <h2 id="reviews-heading" class="section-heading">What Your Neighbors Are Saying</h2>
-                    <p class="section-sub" style="margin:0 auto;">4.9 ★ average across 122+ Google reviews. Real homeowners from Buda, Austin, and Kyle.</p>
+                    <p class="section-sub" style="margin:0 auto;">4.9 <span aria-hidden="true">★</span><span class="sr-only">stars</span> average across 122+ Google reviews. Real homeowners from Buda, Austin, and Kyle.</p>
                 </div>
                 <div class="reviews-grid">
                     <article class="review-card">
-                        <span class="review-badge" aria-label="Verified Google review">Google ★ Verified</span>
-                        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <span class="review-badge" aria-label="Verified Google review">Google <span aria-hidden="true">★</span> Verified</span>
+                        <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
                         <p class="review-text">"Great fence installation service company. If you're looking for true craftsmanship, I would highly recommend Buda Fence Co. Fair price, excellent customer service, quick installation and kept us in the loop during the entire process."</p>
                         <p class="review-author">Brian Stevenson</p>
                         <p class="review-location">Austin, TX</p>
                     </article>
                     <article class="review-card">
-                        <span class="review-badge" aria-label="Verified Google review">Google ★ Verified</span>
-                        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <span class="review-badge" aria-label="Verified Google review">Google <span aria-hidden="true">★</span> Verified</span>
+                        <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
                         <p class="review-text">"Truly an awesome company from estimate through fence completion. Completed the job in less than a day, left no mess, hauled all the old fence away. William is so easy to work with and really listened to what I expected for a reasonable cost."</p>
                         <p class="review-author">Rosanne Hatheway</p>
                         <p class="review-location">Buda, TX</p>
                     </article>
                     <article class="review-card">
-                        <span class="review-badge" aria-label="Verified Google review">Google ★ Verified</span>
-                        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <span class="review-badge" aria-label="Verified Google review">Google <span aria-hidden="true">★</span> Verified</span>
+                        <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
                         <p class="review-text">"Buda Fence Company are first class. I've dealt with a few fence companies over the years but none are close to the integrity and quality of workmanship BFC provides. I am really impressed with my new fence."</p>
                         <p class="review-author">Keith Melrose</p>
                         <p class="review-location">Kyle, TX</p>
                     </article>
                 </div>
                 <div class="reviews-aggregate">
-                    <p>⭐ 4.9 out of 5 stars across 122+ Google reviews &nbsp;·&nbsp; <a href="/about" style="color:#dc2626;font-weight:600;">Read more about us →</a></p>
+                    <p><span aria-hidden="true">⭐</span> 4.9 out of 5 stars across 122+ Google reviews &nbsp;·&nbsp; <a href="/about" style="color:#dc2626;font-weight:600;">Read more about us <span aria-hidden="true">→</span></a></p>
                 </div>
             </div>
         </section>
@@ -828,7 +862,7 @@
                     </a>
                 </div>
                 <div class="text-center mt-8">
-                    <a href="/blog/" style="display:inline-block;background:#1e293b;color:#fff;padding:.875rem 2rem;border-radius:.5rem;font-weight:600;font-size:.9375rem;text-decoration:none;">View All Articles on Our Blog →</a>
+                    <a href="/blog/" style="display:inline-block;background:#1e293b;color:#fff;padding:.875rem 2rem;border-radius:.5rem;font-weight:600;font-size:.9375rem;text-decoration:none;">View All Articles on Our Blog <span aria-hidden="true">→</span></a>
                 </div>
             </div>
         </section>
@@ -858,8 +892,9 @@
                         <p>Texas does not require a state license for fence contractors. We carry <strong>$1,000,000 in liability insurance</strong> and back every fence installation with a <strong>5-year workmanship warranty</strong>. If something isn't right due to our workmanship, we come back and fix it at no charge.</p>
                     </details>
                     <details>
+                        <!-- PRICING REMOVED from answer pending approval — was "$175/post" -->
                         <summary>Do you repair existing fences?</summary>
-                        <p>Yes. <a href="/services/fence-repair">Fence repair</a> is one of our core services. Post replacement is a flat <strong>$175/post</strong> with discounts for multiple posts. We repair storm damage, rotted posts, broken boards, sagging gates, and leaning fence lines across all of Central Texas. We'll always give you an honest assessment of whether repair or replacement makes more financial sense for your situation.</p>
+                        <p>Yes. <a href="/services/fence-repair">Fence repair</a> is one of our core services — including post replacement with discounts for multiple posts. We repair storm damage, rotted posts, broken boards, sagging gates, and leaning fence lines across all of Central Texas. We'll always give you an honest assessment of whether repair or replacement makes more financial sense for your situation.</p>
                     </details>
                     <details>
                         <summary>What areas do you serve?</summary>
@@ -874,10 +909,10 @@
             <div class="container">
                 <h2 id="cta-heading">Ready for Your Budaful Transformation?</h2>
                 <p>Join 5,000+ satisfied Central Texas homeowners. Get a free, no-obligation estimate today — and see exactly what your fence will cost before you commit to anything.</p>
-                <div class="cta-urgency" role="note">⏰ Typically booked 3–4 weeks out — don't wait until the spring rush</div>
+                <div class="cta-urgency" role="note"><span aria-hidden="true">⏰</span> Typically booked 3–4 weeks out — don't wait until the spring rush</div>
                 <div class="cta-buttons">
-                    <a href="tel:5127107116" class="cta-btn-call">📞 Call (512) 710-7116</a>
-                    <a href="/contact" class="cta-btn-quote">Schedule Free Estimate →</a>
+                    <a href="tel:5127107116" class="cta-btn-call"><span aria-hidden="true">📞</span> Call (512) 710-7116</a>
+                    <a href="/contact" class="cta-btn-quote">Schedule Free Estimate <span aria-hidden="true">→</span></a>
                 </div>
             </div>
         </section>
@@ -897,7 +932,8 @@
                     <address class="text-gray-400 text-sm not-italic">
                         <p style="margin-bottom:.5rem;"><strong>Address:</strong><br>308 Wincliff Dr<br>Buda, TX 78610</p>
                         <p style="margin-bottom:.5rem;"><strong>Phone:</strong> <a href="tel:+15127107116" class="hover:text-white">(512) 710-7116</a></p>
-                        <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#9dd4f3fbf2dddfe8f9fcdbf8f3fef8def2b3fef2f0" class="hover:text-white"><span class="__cf_email__" data-cfemail="0940676f66494b7c6d684f6c676a6c4a66276a6664">[email&#160;protected]</span></a></p>
+                        <!-- FIX: Plain mailto instead of Cloudflare email obfuscation for reliable rendering -->
+                        <p><strong>Email:</strong> <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></p>
                     </address>
                 </div>
                 <div>
@@ -925,46 +961,156 @@
                 </div>
             </div>
             <div class="border-t border-gray-800" style="padding-top:2rem;text-align:center;">
-                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year">2026</span> Buda Fence Company. All Rights Reserved. | <a class="hover:text-white" href="/contact">Contact Us</a></p>
+                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year"></span> Buda Fence Company. All Rights Reserved. | <a class="hover:text-white" href="/contact">Contact Us</a></p>
             </div>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <!-- FIX: Mobile floating CTA bar — always visible on phones -->
+    <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+        <a href="tel:5127107116" class="cta-call"><span aria-hidden="true">📞</span> Call Now</a>
+        <a href="/contact" class="cta-quote">Free Estimate</a>
+    </div>
+
+    <!-- FIX: Complete, non-truncated JavaScript with full keyboard navigation -->
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu
+
+            // Dynamic copyright year
+            var yearEl = document.getElementById('copyright-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // ===== MOBILE MENU =====
             var menuButton = document.getElementById('mobile-menu-button');
             var mobileMenu = document.getElementById('mobile-menu');
             if (menuButton && mobileMenu) {
                 menuButton.addEventListener('click', function(e) {
-                    e.preventDefault(); e.stopPropagation();
+                    e.preventDefault();
+                    e.stopPropagation();
                     var isOpen = mobileMenu.classList.contains('active');
-                    if (isOpen) { mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
-                    else { mobileMenu.classList.add('active'); menuButton.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
-                });
-                mobileMenu.querySelectorAll('a').forEach(function(link) {
-                    link.addEventListener('click', function() { mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded','false'); document.body.style.overflow=''; });
-                });
-                document.addEventListener('click', function(e) {
-                    if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target) && mobileMenu.classList.contains('active')) {
-                        mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded','false'); document.body.style.overflow='';
+                    if (isOpen) {
+                        mobileMenu.classList.remove('active');
+                        menuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    } else {
+                        mobileMenu.classList.add('active');
+                        menuButton.setAttribute('aria-expanded', 'true');
+                        document.body.style.overflow = 'hidden';
                     }
                 });
+                // Close mobile menu when a link is tapped
+                mobileMenu.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.remove('active');
+                        menuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    });
+                });
+                // Close on outside click
+                document.addEventListener('click', function(e) {
+                    if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target) && mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        menuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    }
+                });
+                // Close on Escape
                 document.addEventListener('keydown', function(e) {
-                    if (e.key==='Escape' && mobileMenu.classList.contains('active')) { mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+                    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        menuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                        menuButton.focus();
+                    }
                 });
             }
-            // Desktop dropdowns
+
+            // ===== DESKTOP DROPDOWNS — Click + Hover + Keyboard =====
             document.querySelectorAll('.dropdown').forEach(function(dropdown) {
                 var btn = dropdown.querySelector('button');
                 var menu = dropdown.querySelector('.dropdown-menu');
                 if (!btn || !menu) return;
+                var menuItems = menu.querySelectorAll('[role="menuitem"]');
+
+                // Click toggle
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
                     var isOpen = menu.classList.contains('active');
-                    document.querySelectorAll('.dropdown-menu.active').forEach(function(m) { m.classList.remove('active'); });
-                    if (!isOpen) { menu.classList.add('active'); btn.setAttribute('aria-expanded','true'); }
-                    else { menu.classList.remove('active'); btn.setAttribute('aria-expanded','false'); }
+                    closeAllDropdowns();
+                    if (!isOpen) {
+                        menu.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
                 });
+
+                // Keyboard: Enter/Space to open, ArrowDown to open + focus first item
+                btn.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        var isOpen = menu.classList.contains('active');
+                        closeAllDropdowns();
+                        if (!isOpen) {
+                            menu.classList.add('active');
+                            btn.setAttribute('aria-expanded', 'true');
+                            if (menuItems.length) menuItems[0].focus();
+                        }
+                    }
+                    if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        menu.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                        if (menuItems.length) menuItems[0].focus();
+                    }
+                });
+
+                // Arrow key navigation within menu items
+                menuItems.forEach(function(item, index) {
+                    item.addEventListener('keydown', function(e) {
+                        if (e.key === 'ArrowDown') {
+                            e.preventDefault();
+                            if (index < menuItems.length - 1) menuItems[index + 1].focus();
+                        }
+                        if (e.key === 'ArrowUp') {
+                            e.preventDefault();
+                            if (index > 0) menuItems[index - 1].focus();
+                            else btn.focus();
+                        }
+                        if (e.key === 'Escape') {
+                            e.preventDefault();
+                            menu.classList.remove('active');
+                            btn.setAttribute('aria-expanded', 'false');
+                            btn.focus();
+                        }
+                        if (e.key === 'Tab') {
+                            menu.classList.remove('active');
+                            btn.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                });
+
+                // Close on outside click
                 document.addEventListener('click', function(e) {
-                    if (!dropdown.contains(e.target)) { menu.classList.remove('active'); btn.setAttribute('aria-expanded'
+                    if (!dropdown.contains(e.target)) {
+                        menu.classList.remove('active');
+                        btn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            function closeAllDropdowns() {
+                document.querySelectorAll('.dropdown-menu.active').forEach(function(m) {
+                    m.classList.remove('active');
+                });
+                document.querySelectorAll('.dropdown button[aria-expanded="true"]').forEach(function(b) {
+                    b.setAttribute('aria-expanded', 'false');
+                });
+            }
+
+            // Close all dropdowns on Escape (global)
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeAllDropdowns();
+            });
+        });
+    </script>
+</body>
+</html>
