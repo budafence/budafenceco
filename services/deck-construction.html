@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FIX: Google tag was MISSING -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRJYMYZ44"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HNRJYMYZ44');
+  </script>
 
   <title>Deck Builder Austin TX | Custom Deck Construction | Buda Fence Company</title>
-  <meta name="description" content="Custom deck builder in Austin, TX. Cedar, pressure-treated pine, Ipe, and composite (Trex®, TimberTech®). Built right with clean installs and a 5-year workmanship warranty. Call (512) 710-7116 for a free estimate." />
-  <link rel="canonical" href="https://budafenceco.com/services/deck-construction.html" />
+  <meta name="description" content="Custom deck builder in Austin, TX. Cedar, pressure-treated pine, Ipe, and composite (Trex®, TimberTech®). Built right with clean installs and a 5-year workmanship warranty. Call (512) 710-7116 for a free estimate.">
+  <meta name="keywords" content="deck builder austin tx, custom deck construction, composite deck austin, cedar deck buda tx, trex deck installer, deck contractor central texas">
+  <meta name="author" content="Buda Fence Company">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://budafenceco.com/services/deck-construction.html">
+  <meta name="theme-color" content="#1e293b">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Deck Builder Austin TX | Custom Deck Construction | Buda Fence Company" />
-  <meta property="og:description" content="Custom decks built for Central Texas. Cedar, Ipe, and composite options. Built right with a 5-year workmanship warranty. Free estimate: (512) 710-7116." />
-  <meta property="og:url" content="https://budafenceco.com/services/deck-construction.html" />
-  <meta property="og:image" content="https://budafenceco.com/images/deck-builder-austin-hero-1920.webp" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Deck Builder Austin TX | Custom Deck Construction | Buda Fence Company">
+  <meta property="og:description" content="Custom decks built for Central Texas. Cedar, Ipe, and composite options. 5-year workmanship warranty. Free estimate: (512) 710-7116.">
+  <meta property="og:url" content="https://budafenceco.com/services/deck-construction.html">
+  <meta property="og:image" content="https://budafenceco.com/images/deck-builder-austin-hero-1920.webp">
+  <!-- FIX: Added og:image:alt -->
+  <meta property="og:image:alt" content="Custom deck construction in Austin, TX by Buda Fence Company">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Buda Fence Company">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Deck Builder Austin TX | Buda Fence Company">
+  <meta name="twitter:description" content="Custom decks — cedar, Ipe, composite. 5-year warranty. Call (512) 710-7116.">
+  <meta name="twitter:image" content="https://budafenceco.com/images/deck-builder-austin-hero-1920.webp">
+
+  <!-- Local SEO -->
+  <meta name="geo.region" content="US-TX">
+  <meta name="geo.placename" content="Buda, Texas">
+  <meta name="geo.position" content="30.09939;-97.86756">
+  <meta name="ICBM" content="30.09939, -97.86756">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
 
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Palette (keep aligned across site) -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            'buda-primary': '#1e3a5f',
+            /* FIX: Changed from #1e3a5f to #1e293b to match all other pages */
+            'buda-primary': '#1e293b',
             'buda-secondary': '#dc2626',
             'buda-ink': '#0b1220'
           }
@@ -35,192 +65,129 @@
 
   <style>
     html, body { max-width: 100vw; overflow-x: hidden; }
-    /* Hero uses your real files (960/1280/1600/1920) */
+    /* FIX: Hero image paths from ../images to /images */
     .hero-bg {
       background-image:
         linear-gradient(rgba(10, 15, 25, .65), rgba(10, 15, 25, .65)),
         image-set(
-          url('../images/deck-builder-austin-hero-960.webp') 1x,
-          url('../images/deck-builder-austin-hero-1920.webp') 2x
+          url('/images/deck-builder-austin-hero-960.webp') 1x,
+          url('/images/deck-builder-austin-hero-1920.webp') 2x
         );
       background-size: cover;
       background-position: center;
     }
+    .skip-link { position: absolute; top: -40px; left: 0; background: #dc2626; color: #fff; padding: 8px 16px; z-index: 100; text-decoration: none; transition: top .3s; }
+    .skip-link:focus { top: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+    .mobile-cta-bar { display: none; }
+    @media (max-width: 767px) {
+      .mobile-cta-bar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; background: #1e293b; padding: 10px 16px; gap: 10px; box-shadow: 0 -4px 12px rgba(0,0,0,0.2); }
+      .mobile-cta-bar a { flex: 1; text-align: center; padding: 12px 8px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; }
+      .mobile-cta-bar .cta-call { background: #dc2626; color: #fff; }
+      .mobile-cta-bar .cta-quote { background: #fff; color: #1e293b; }
+      footer { padding-bottom: 80px !important; }
+    }
   </style>
 
-  <!-- Structured Data -->
+  <!-- FIX: Schema — updated JPEG logo to WebP, "since 2014" references kept but corrected in visible footer -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://budafenceco.com/#business",
-        "name": "Buda Fence Company",
-        "url": "https://budafenceco.com/",
-        "telephone": "+15127107116",
-        "email": "info@budafenceco.com",
-        "image": "https://budafenceco.com/images/BudaFenceLogo.jpeg",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "308 Wincliff Dr",
-          "addressLocality": "Buda",
-          "addressRegion": "TX",
-          "postalCode": "78610",
-          "addressCountry": "US"
-        },
-        "areaServed": ["Austin","Buda","Kyle","Dripping Springs","Wimberley","San Marcos"]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://budafenceco.com/services/deck-construction.html#service",
-        "serviceType": "Deck Construction",
-        "provider": { "@id": "https://budafenceco.com/#business" },
-        "areaServed": "Central Texas",
-        "description": "Custom deck construction in Austin, TX and surrounding areas. Cedar, treated pine, Ipe hardwood, and composite decking options."
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://budafenceco.com/services/deck-construction.html#breadcrumbs",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://budafenceco.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://budafenceco.com/services.html" },
-          { "@type": "ListItem", "position": 3, "name": "Deck Construction", "item": "https://budafenceco.com/services/deck-construction.html" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://budafenceco.com/services/deck-construction.html#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is the best decking material for the Texas climate?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Composite decking (Trex®/TimberTech®) is low-maintenance and stable. Ipe hardwood is extremely durable. Cedar is a classic option that performs well when properly maintained."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need a permit to build a deck in Austin, TX?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Permits are often required for elevated decks, attached decks, or covered structures. Requirements vary by city and project details. We'll guide you through what applies to your build."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How much does a new deck cost in Austin?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cost depends on size, height, framing complexity, and materials. Treated pine is typically the most budget-friendly, cedar is mid-range, and composite/Ipe are premium options. We provide a clear, itemized estimate."
-            }
-          }
-        ]
-      }
-    ]
-  }
+  {"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://budafenceco.com/#business","name":"Buda Fence Company","url":"https://budafenceco.com/","telephone":"+15127107116","email":"info@budafenceco.com","image":"https://budafenceco.com/images/buda-fence-logo.webp","foundingDate":"2015","address":{"@type":"PostalAddress","streetAddress":"308 Wincliff Dr","addressLocality":"Buda","addressRegion":"TX","postalCode":"78610","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":30.09939,"longitude":-97.86756},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"areaServed":["Austin","Buda","Kyle","Dripping Springs","Wimberley","San Marcos"]},{"@type":"Service","@id":"https://budafenceco.com/services/deck-construction.html#service","serviceType":"Deck Construction","provider":{"@id":"https://budafenceco.com/#business"},"areaServed":"Central Texas","description":"Custom deck construction in Austin, TX. Cedar, treated pine, Ipe hardwood, and composite decking options."},{"@type":"BreadcrumbList","@id":"https://budafenceco.com/services/deck-construction.html#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://budafenceco.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://budafenceco.com/services"},{"@type":"ListItem","position":3,"name":"Deck Construction","item":"https://budafenceco.com/services/deck-construction.html"}]},{"@type":"FAQPage","@id":"https://budafenceco.com/services/deck-construction.html#faq","mainEntity":[{"@type":"Question","name":"What is the best decking material for the Texas climate?","acceptedAnswer":{"@type":"Answer","text":"Composite decking (Trex®/TimberTech®) is low-maintenance and stable. Ipe hardwood is extremely durable. Cedar is a classic option that performs well when properly maintained."}},{"@type":"Question","name":"Do I need a permit to build a deck in Austin, TX?","acceptedAnswer":{"@type":"Answer","text":"Permits are often required for elevated decks, attached decks, or covered structures. Requirements vary by city and project details. We'll guide you through what applies to your build."}},{"@type":"Question","name":"How much does a new deck cost in Austin?","acceptedAnswer":{"@type":"Answer","text":"Cost depends on size, height, framing complexity, and materials. We provide a clear, itemized estimate."}}]}]}
   </script>
 </head>
-
 <body class="bg-slate-50 text-buda-ink">
-  <!-- NAV (kept consistent structure) -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation — FIX: All URLs updated to clean paths, logo to WebP, Blog link added -->
+  <nav class="bg-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <div class="flex-shrink-0">
-          <a href="../index.html">
-            <img class="h-16 w-auto" src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo">
-          </a>
+          <a href="/" aria-label="Buda Fence Company Home"><img class="h-16 w-auto" src="/images/buda-fence-logo.webp" alt="Buda Fence Company Logo" width="97" height="48" loading="eager"></a>
         </div>
-
         <div class="hidden md:flex space-x-8">
-          <a href="../index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-          <a href="../about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
-
-          <div class="relative group">
-            <button class="text-buda-secondary font-medium pb-4">Services ▾</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-              <a href="../services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold">All Services</a>
-              <a href="deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-bold text-buda-secondary">Deck Construction</a>
-              <a href="wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
-              <a href="metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
-              <a href="chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
-              <a href="fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Fence Repair</a>
+          <a href="/" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
+          <a href="/about" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
+          <div class="relative group" data-dropdown>
+            <button class="text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>Services <span aria-hidden="true">▾</span></button>
+            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50" role="menu" data-dropdown-menu>
+              <a href="/services" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold" role="menuitem">All Services</a>
+              <a href="/services/deck-construction" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-bold text-buda-secondary" role="menuitem" aria-current="page">Deck Construction</a>
+              <a href="/services/wood-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Wood Fence Installation</a>
+              <a href="/services/metal-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Metal Fence Installation</a>
+              <a href="/services/chain-link-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Chain Link Fence Installation</a>
+              <a href="/services/fence-repair" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Fence Repair</a>
             </div>
           </div>
-
-          <div class="relative group">
-            <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-              <a href="../service-areas/" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-buda-secondary font-semibold">All Service Areas</a>
-              <a href="../service-areas/austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
-              <a href="../service-areas/buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
-              <a href="../service-areas/kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
-              <a href="../service-areas/dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
+          <div class="relative group" data-dropdown>
+            <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>Service Areas <span aria-hidden="true">▾</span></button>
+            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50" role="menu" data-dropdown-menu>
+              <a href="/service-areas/" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-buda-secondary font-semibold" role="menuitem">All Service Areas</a>
+              <a href="/service-areas/austin" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Austin</a>
+              <a href="/service-areas/buda" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Buda</a>
+              <a href="/service-areas/kyle" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Kyle</a>
+              <a href="/service-areas/dripping-springs" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Dripping Springs</a>
             </div>
           </div>
-
-          <a href="../gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-          <a href="../contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+          <a href="/gallery" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
+          <!-- FIX: Blog link was MISSING from nav -->
+          <a href="/blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
+          <a href="/contact" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
         </div>
-
         <div class="hidden md:flex items-center space-x-4">
-          <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
-          <a href="../contact.html" class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold">
-            Free Quote
-          </a>
+          <a href="tel:5127107116" class="text-buda-secondary font-semibold">(512) 710-7116</a>
+          <a href="/contact" class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold">Free Quote</a>
         </div>
-
-        <div class="md:hidden flex items-center">
-          <button id="mobile-menu-button" class="text-gray-700 hover:text-buda-secondary" aria-label="Open mobile menu">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
+        <div class="md:hidden flex items-center space-x-2">
+          <a href="/contact" class="bg-buda-secondary text-white px-3 py-1.5 rounded text-xs font-semibold">Quote</a>
+          <button id="mobile-menu-button" class="text-gray-700 hover:text-buda-secondary p-1" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
       </div>
     </div>
-
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <!-- FIX: Mobile menu expanded with full service/area links, Blog link -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t" role="menu">
       <div class="px-4 py-3 space-y-2">
-        <a href="../index.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Home</a>
-        <a href="../about.html" class="block py-2 text-gray-700 hover:text-buda-secondary">About</a>
-        <a href="../services.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Services</a>
-        <a href="../service-areas/" class="block py-2 text-buda-secondary hover:text-buda-secondary font-semibold">All Service Areas</a>
-        <a href="../gallery.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Gallery</a>
-        <a href="../contact.html" class="block py-2 text-gray-700 hover:text-buda-secondary">Contact</a>
-        <a href="tel:5127107116" class="block py-2 font-semibold text-buda-primary">(512) 710-7116</a>
+        <a href="/" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">Home</a>
+        <a href="/about" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">About</a>
+        <div class="py-2"><p class="text-gray-900 font-semibold mb-2">Services</p>
+          <a href="/services" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm font-semibold" role="menuitem">All Services</a>
+          <a href="/services/deck-construction" class="block pl-4 py-1 text-buda-secondary font-semibold text-sm" role="menuitem" aria-current="page">Deck Construction</a>
+          <a href="/services/wood-fence-installation" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Wood Fence</a>
+          <a href="/services/metal-fence-installation" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Metal Fence</a>
+          <a href="/services/chain-link-fence-installation" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Chain Link</a>
+          <a href="/services/fence-repair" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Fence Repair</a>
+        </div>
+        <div class="py-2"><p class="text-gray-900 font-semibold mb-2">Service Areas</p>
+          <a href="/service-areas/" class="block pl-4 py-1 text-buda-secondary text-sm font-semibold" role="menuitem">All Service Areas</a>
+          <a href="/service-areas/austin" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Austin</a>
+          <a href="/service-areas/buda" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Buda</a>
+          <a href="/service-areas/kyle" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Kyle</a>
+          <a href="/service-areas/dripping-springs" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Dripping Springs</a>
+        </div>
+        <a href="/gallery" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">Gallery</a>
+        <a href="/blog/" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">Blog</a>
+        <a href="/contact" class="block py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">Contact</a>
+        <div class="border-t border-gray-200 pt-2"><a href="tel:5127107116" class="block py-2 font-semibold text-buda-secondary">(512) 710-7116</a></div>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero-bg text-white">
+  <!-- Hero -->
+  <header class="hero-bg text-white" role="banner">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div class="max-w-3xl">
         <p class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1 rounded-full text-sm mb-5">
           <span class="font-semibold">Deck Construction</span>
-          <span class="opacity-80">•</span>
-          <span class="opacity-90">Austin • Buda • Kyle • Dripping Springs</span>
+          <span class="opacity-80" aria-hidden="true">•</span>
+          <span class="opacity-90">Austin <span aria-hidden="true">•</span> Buda <span aria-hidden="true">•</span> Kyle <span aria-hidden="true">•</span> Dripping Springs</span>
         </p>
-
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Custom Deck Builder in Austin, TX</h1>
-
-        <p class="text-lg md:text-2xl text-gray-200 mt-4">
-          Beautiful outdoor living spaces built to last — cedar, treated pine, Ipe hardwood, and composite decking.
-          Strong framing. Clean installs. Real craftsmanship.
-        </p>
-
+        <p class="text-lg md:text-2xl text-gray-200 mt-4">Beautiful outdoor living spaces built to last — cedar, treated pine, Ipe hardwood, and composite decking. Strong framing. Clean installs. Real craftsmanship.</p>
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="../contact.html" class="bg-buda-secondary text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg text-center">
-            Contact us today for your free quote
-          </a>
-          <a href="tel:5127107116" class="bg-white/10 border border-white/30 text-white px-8 py-3 rounded-md hover:bg-white/15 font-semibold text-lg text-center">
-            Call (512) 710-7116
-          </a>
+          <a href="/contact" class="bg-buda-secondary text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg text-center">Contact us today for your free quote</a>
+          <a href="tel:5127107116" class="bg-white/10 border border-white/30 text-white px-8 py-3 rounded-md hover:bg-white/15 font-semibold text-lg text-center">Call (512) 710-7116</a>
         </div>
-
         <div class="mt-6 flex flex-wrap gap-3 text-sm text-gray-200">
           <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1">5-year installation warranty</span>
           <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1">Built for Texas heat</span>
@@ -230,51 +197,43 @@
     </div>
   </header>
 
-  <main class="py-12">
+  <main id="main-content" class="py-12" role="main">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Breadcrumbs -->
+      <!-- Breadcrumbs — FIX: URLs updated -->
       <nav class="text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
         <ol class="flex flex-wrap gap-2">
-          <li><a class="hover:text-buda-secondary" href="../index.html">Home</a></li>
-          <li>/</li>
-          <li><a class="hover:text-buda-secondary" href="../services.html">Services</a></li>
-          <li>/</li>
-          <li class="text-gray-900 font-semibold">Deck Construction</li>
+          <li><a class="hover:text-buda-secondary" href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a class="hover:text-buda-secondary" href="/services">Services</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-gray-900 font-semibold" aria-current="page">Deck Construction</li>
         </ol>
       </nav>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        <!-- CONTENT -->
         <section class="lg:col-span-2 space-y-10">
+          <!-- Intro -->
           <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-7">
             <h2 class="text-3xl font-bold text-buda-primary">Austin Decks Built Like They Should Be</h2>
-            <p class="text-lg text-gray-700 mt-3">
-              If you want a deck that looks incredible and stays solid for years, the build details matter.
-              We bring the same "built right" mindset from our fence work into every deck project — clean lines, strong structure,
-              and finishes that elevate your backyard.
-            </p>
+            <p class="text-lg text-gray-700 mt-3">If you want a deck that looks incredible and stays solid for years, the build details matter. We bring the same "built right" mindset from our fence work into every deck project — clean lines, strong structure, and finishes that elevate your backyard.</p>
           </div>
 
+          <!-- Materials -->
           <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-7">
             <h3 class="text-2xl font-bold text-buda-primary mb-4">Decking Materials That Perform in Central Texas</h3>
             <div class="space-y-6">
               <div class="bg-slate-50 rounded-lg border border-slate-200 p-6">
                 <h4 class="text-xl font-bold text-buda-primary">Composite Decking (Trex®, TimberTech®)</h4>
-                <p class="text-gray-700 mt-2">
-                  Best for homeowners who want low maintenance with long-term durability and consistent looks.
-                </p>
+                <p class="text-gray-700 mt-2">Best for homeowners who want low maintenance with long-term durability and consistent looks.</p>
                 <ul class="list-disc list-inside text-gray-700 mt-4 space-y-2">
                   <li><span class="font-semibold">Low maintenance:</span> no sanding or staining cycles</li>
                   <li><span class="font-semibold">Durable:</span> resists rot, insects, and moisture issues</li>
                   <li><span class="font-semibold">Modern finishes:</span> clean colors and textures</li>
                 </ul>
               </div>
-
               <div class="bg-slate-50 rounded-lg border border-slate-200 p-6">
                 <h4 class="text-xl font-bold text-buda-primary">Wood Decks (Cedar, Pressure-Treated Pine, Ipe)</h4>
-                <p class="text-gray-700 mt-2">
-                  Real wood is timeless. We'll match your goals — budget-friendly, natural beauty, or premium hardwood longevity.
-                </p>
+                <p class="text-gray-700 mt-2">Real wood is timeless. We'll match your goals — budget-friendly, natural beauty, or premium hardwood longevity.</p>
                 <ul class="list-disc list-inside text-gray-700 mt-4 space-y-2">
                   <li><span class="font-semibold">Cedar:</span> beautiful grain, classic look, great performance with maintenance</li>
                   <li><span class="font-semibold">Pressure-treated pine:</span> cost-effective and strong</li>
@@ -284,116 +243,26 @@
             </div>
           </div>
 
-          <!-- GALLERY (01–08 in correct order) -->
+          <!-- Gallery — FIX: All image paths from ../images to /images -->
           <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-7">
             <div class="flex items-end justify-between gap-4 flex-wrap">
               <h3 class="text-2xl font-bold text-buda-primary">Deck Project Photos</h3>
-              <a href="../gallery.html" class="text-buda-secondary hover:text-red-700 font-semibold">View more work →</a>
+              <a href="/gallery" class="text-buda-secondary hover:text-red-700 font-semibold">View more work <span aria-hidden="true">→</span></a>
             </div>
-            <p class="text-gray-700 mt-2">
-              Ordered to match your file names: 01 → 08.
-            </p>
-
+            <p class="text-gray-700 mt-2">Recent deck builds across Austin, Buda, Kyle, and Dripping Springs.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
-              <!-- 01 -->
-              <figure class="rounded-lg overflow-hidden border border-slate-200">
-                <img
-                  src="../images/deck-builder-austin-01-640.webp"
-                  srcset="../images/deck-builder-austin-01-320.webp 320w, ../images/deck-builder-austin-01-480.webp 480w, ../images/deck-builder-austin-01-640.webp 640w"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  alt="Custom deck build in Austin TX by Buda Fence Company - photo 1"
-                  class="w-full h-64 object-cover"
-                  loading="lazy" decoding="async"
-                />
-              </figure>
-
-              <!-- 02 -->
-              <figure class="rounded-lg overflow-hidden border border-slate-200">
-                <img
-                  src="../images/deck-builder-austin-02-640.webp"
-                  srcset="../images/deck-builder-austin-02-320.webp 320w, ../images/deck-builder-austin-02-480.webp 480w, ../images/deck-builder-austin-02-640.webp 640w"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  alt="Custom deck build in Austin TX by Buda Fence Company - photo 2"
-                  class="w-full h-64 object-cover"
-                  loading="lazy" decoding="async"
-                />
-              </figure>
-
-              <!-- 03 -->
-              <figure class="rounded-lg overflow-hidden border border-slate-200">
-                <img
-                  src="../images/deck-builder-austin-03-640.webp"
-                  srcset="../images/deck-builder-austin-03-320.webp 320w, ../images/deck-builder-austin-03-480.webp 480w, ../images/deck-builder-austin-03-640.webp 640w"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  alt="Custom deck build in Austin TX by Buda Fence Company - photo 3"
-                  class="w-full h-64 object-cover"
-                  loading="lazy" decoding="async"
-                />
-              </figure>
-
-              <!-- 04 -->
-              <figure class="rounded-lg overflow-hidden border border-slate-200">
-                <img
-                  src="../images/deck-builder-austin-04-640.webp"
-                  srcset="../images/deck-builder-austin-04-320.webp 320w, ../images/deck-builder-austin-04-480.webp 480w, ../images/deck-builder-austin-04-640.webp 640w"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  alt="Custom deck build in Austin TX by Buda Fence Company - photo 4"
-                  class="w-full h-64 object-cover"
-                  loading="lazy" decoding="async"
-                />
-              </figure>
-
-              <!-- 05 -->
-              <figure class="rounded-lg overflow-hidden border border-slate-200">
-                <img
-                  src="../images/deck-builder-austin-05-640.webp"
-                  srcset="../images/deck-builder-austin-05-320.webp 320w, ../images/deck-builder-austin-05-480.webp 480w, ../images/deck-builder-austin-05-640.webp 640w"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  alt="Custom deck build in Austin TX by Buda Fence Company - photo 5"
-                  class="w-full h-64 object-cover"
-                  loading="lazy" decoding="async"
-                />
-              </figure>
-
-              <!-- 06 -->
-              <figure class="rounded-lg overflow-hidden border border-slate-200">
-                <img
-                  src="../images/deck-builder-austin-06-640.webp"
-                  srcset="../images/deck-builder-austin-06-320.webp 320w, ../images/deck-builder-austin-06-480.webp 480w, ../images/deck-builder-austin-06-640.webp 640w"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  alt="Custom deck build in Austin TX by Buda Fence Company - photo 6"
-                  class="w-full h-64 object-cover"
-                  loading="lazy" decoding="async"
-                />
-              </figure>
-
-              <!-- 07 -->
-              <figure class="rounded-lg overflow-hidden border border-slate-200">
-                <img
-                  src="../images/deck-builder-austin-07-640.webp"
-                  srcset="../images/deck-builder-austin-07-320.webp 320w, ../images/deck-builder-austin-07-480.webp 480w, ../images/deck-builder-austin-07-640.webp 640w"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  alt="Custom deck build in Austin TX by Buda Fence Company - photo 7"
-                  class="w-full h-64 object-cover"
-                  loading="lazy" decoding="async"
-                />
-              </figure>
-
-              <!-- 08 -->
-              <figure class="rounded-lg overflow-hidden border border-slate-200">
-                <img
-                  src="../images/deck-builder-austin-08-640.webp"
-                  srcset="../images/deck-builder-austin-08-320.webp 320w, ../images/deck-builder-austin-08-480.webp 480w, ../images/deck-builder-austin-08-640.webp 640w"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  alt="Custom deck build in Austin TX by Buda Fence Company - photo 8"
-                  class="w-full h-64 object-cover"
-                  loading="lazy" decoding="async"
-                />
-              </figure>
+              <figure class="rounded-lg overflow-hidden border border-slate-200"><img src="/images/deck-builder-austin-01-640.webp" srcset="/images/deck-builder-austin-01-320.webp 320w, /images/deck-builder-austin-01-480.webp 480w, /images/deck-builder-austin-01-640.webp 640w" sizes="(max-width: 640px) 100vw, 50vw" alt="Custom deck build in Austin TX by Buda Fence Company - photo 1" class="w-full h-64 object-cover" loading="lazy" decoding="async"></figure>
+              <figure class="rounded-lg overflow-hidden border border-slate-200"><img src="/images/deck-builder-austin-02-640.webp" srcset="/images/deck-builder-austin-02-320.webp 320w, /images/deck-builder-austin-02-480.webp 480w, /images/deck-builder-austin-02-640.webp 640w" sizes="(max-width: 640px) 100vw, 50vw" alt="Custom deck build in Austin TX by Buda Fence Company - photo 2" class="w-full h-64 object-cover" loading="lazy" decoding="async"></figure>
+              <figure class="rounded-lg overflow-hidden border border-slate-200"><img src="/images/deck-builder-austin-03-640.webp" srcset="/images/deck-builder-austin-03-320.webp 320w, /images/deck-builder-austin-03-480.webp 480w, /images/deck-builder-austin-03-640.webp 640w" sizes="(max-width: 640px) 100vw, 50vw" alt="Custom deck build in Austin TX by Buda Fence Company - photo 3" class="w-full h-64 object-cover" loading="lazy" decoding="async"></figure>
+              <figure class="rounded-lg overflow-hidden border border-slate-200"><img src="/images/deck-builder-austin-04-640.webp" srcset="/images/deck-builder-austin-04-320.webp 320w, /images/deck-builder-austin-04-480.webp 480w, /images/deck-builder-austin-04-640.webp 640w" sizes="(max-width: 640px) 100vw, 50vw" alt="Custom deck build in Austin TX by Buda Fence Company - photo 4" class="w-full h-64 object-cover" loading="lazy" decoding="async"></figure>
+              <figure class="rounded-lg overflow-hidden border border-slate-200"><img src="/images/deck-builder-austin-05-640.webp" srcset="/images/deck-builder-austin-05-320.webp 320w, /images/deck-builder-austin-05-480.webp 480w, /images/deck-builder-austin-05-640.webp 640w" sizes="(max-width: 640px) 100vw, 50vw" alt="Custom deck build in Austin TX by Buda Fence Company - photo 5" class="w-full h-64 object-cover" loading="lazy" decoding="async"></figure>
+              <figure class="rounded-lg overflow-hidden border border-slate-200"><img src="/images/deck-builder-austin-06-640.webp" srcset="/images/deck-builder-austin-06-320.webp 320w, /images/deck-builder-austin-06-480.webp 480w, /images/deck-builder-austin-06-640.webp 640w" sizes="(max-width: 640px) 100vw, 50vw" alt="Custom deck build in Austin TX by Buda Fence Company - photo 6" class="w-full h-64 object-cover" loading="lazy" decoding="async"></figure>
+              <figure class="rounded-lg overflow-hidden border border-slate-200"><img src="/images/deck-builder-austin-07-640.webp" srcset="/images/deck-builder-austin-07-320.webp 320w, /images/deck-builder-austin-07-480.webp 480w, /images/deck-builder-austin-07-640.webp 640w" sizes="(max-width: 640px) 100vw, 50vw" alt="Custom deck build in Austin TX by Buda Fence Company - photo 7" class="w-full h-64 object-cover" loading="lazy" decoding="async"></figure>
+              <figure class="rounded-lg overflow-hidden border border-slate-200"><img src="/images/deck-builder-austin-08-640.webp" srcset="/images/deck-builder-austin-08-320.webp 320w, /images/deck-builder-austin-08-480.webp 480w, /images/deck-builder-austin-08-640.webp 640w" sizes="(max-width: 640px) 100vw, 50vw" alt="Custom deck build in Austin TX by Buda Fence Company - photo 8" class="w-full h-64 object-cover" loading="lazy" decoding="async"></figure>
             </div>
           </div>
 
-          <!-- PROCESS -->
+          <!-- Process -->
           <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-7">
             <h3 class="text-2xl font-bold text-buda-primary mb-4">Our Deck Build Process</h3>
             <ol class="list-decimal list-inside text-gray-700 space-y-3">
@@ -409,50 +278,42 @@
           <div id="faq" class="bg-white rounded-xl shadow-sm border border-slate-200 p-7">
             <h3 class="text-2xl font-bold text-buda-primary mb-4">Frequently Asked Questions</h3>
             <div class="space-y-4">
-              <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
-                <h4 class="font-semibold text-lg text-buda-primary">What is the best decking material for the Texas climate?</h4>
-                <p class="text-gray-700 mt-2">Composite is low maintenance and stable. Ipe is premium durability. Cedar is a classic option that performs well when properly maintained.</p>
-              </div>
-              <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
-                <h4 class="font-semibold text-lg text-buda-primary">Do I need a permit to build a deck in Austin, TX?</h4>
-                <p class="text-gray-700 mt-2">Often yes for elevated/attached/covered decks. Requirements vary. We'll guide you through what applies to your build.</p>
-              </div>
-              <div class="bg-slate-50 border border-slate-200 rounded-lg p-5">
-                <h4 class="font-semibold text-lg text-buda-primary">How much does a new deck cost in Austin?</h4>
-                <p class="text-gray-700 mt-2">Depends on size, height, and materials. We provide a clear, itemized estimate.</p>
-              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-lg p-5"><h4 class="font-semibold text-lg text-buda-primary">What is the best decking material for the Texas climate?</h4><p class="text-gray-700 mt-2">Composite is low maintenance and stable. Ipe is premium durability. Cedar is a classic option that performs well when properly maintained.</p></div>
+              <div class="bg-slate-50 border border-slate-200 rounded-lg p-5"><h4 class="font-semibold text-lg text-buda-primary">Do I need a permit to build a deck in Austin, TX?</h4><p class="text-gray-700 mt-2">Often yes for elevated/attached/covered decks. Requirements vary. We'll guide you through what applies to your build.</p></div>
+              <div class="bg-slate-50 border border-slate-200 rounded-lg p-5"><h4 class="font-semibold text-lg text-buda-primary">How much does a new deck cost in Austin?</h4><p class="text-gray-700 mt-2">Depends on size, height, and materials. We provide a clear, itemized estimate. Call <a href="tel:5127107116" class="text-buda-secondary font-semibold hover:underline">(512) 710-7116</a> or <a href="/contact" class="text-buda-secondary font-semibold hover:underline">request a quote online</a>.</p></div>
             </div>
           </div>
         </section>
 
-        <!-- SIDEBAR -->
+        <!-- Sidebar — FIX: URLs updated -->
         <aside class="lg:col-span-1">
           <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sticky top-24">
             <h3 class="text-xl font-bold text-buda-primary mb-2">Get a Free Deck Estimate</h3>
             <p class="text-gray-700 mb-4">Call or request an estimate online. We'll respond fast with clear next steps.</p>
-
-            <a href="tel:5127107116" class="w-full text-center bg-buda-secondary text-white px-6 py-3 rounded-md hover:bg-red-700 font-semibold text-lg block mb-3">
-              Call (512) 710-7116
-            </a>
-
-            <a href="../contact.html" class="w-full text-center bg-buda-primary text-white px-6 py-3 rounded-md hover:bg-blue-800 font-semibold text-lg block">
-              Request Estimate Online
-            </a>
-
+            <a href="tel:5127107116" class="w-full text-center bg-buda-secondary text-white px-6 py-3 rounded-md hover:bg-red-700 font-semibold text-lg block mb-3">Call (512) 710-7116</a>
+            <a href="/contact" class="w-full text-center bg-buda-primary text-white px-6 py-3 rounded-md hover:bg-slate-700 font-semibold text-lg block">Request Estimate Online</a>
             <div class="mt-6 border-t border-slate-200 pt-5 text-center">
               <p class="font-semibold text-buda-primary">5-Year Installation Warranty</p>
               <p class="text-sm text-gray-600">On all deck projects</p>
             </div>
-
             <div class="mt-5 text-sm text-gray-700 bg-slate-50 border border-slate-200 rounded-lg p-4">
               <p class="font-semibold text-buda-primary mb-2">Service Areas</p>
               <ul class="space-y-1">
-                <li>Austin</li>
-                <li>Buda</li>
-                <li>Kyle</li>
-                <li>Dripping Springs</li>
+                <li><a href="/service-areas/austin" class="hover:text-buda-secondary">Austin</a></li>
+                <li><a href="/service-areas/buda" class="hover:text-buda-secondary">Buda</a></li>
+                <li><a href="/service-areas/kyle" class="hover:text-buda-secondary">Kyle</a></li>
+                <li><a href="/service-areas/dripping-springs" class="hover:text-buda-secondary">Dripping Springs</a></li>
                 <li>Wimberley</li>
                 <li>San Marcos</li>
+              </ul>
+            </div>
+            <div class="mt-5 text-sm text-gray-700 bg-slate-50 border border-slate-200 rounded-lg p-4">
+              <p class="font-semibold text-buda-primary mb-2">Other Services</p>
+              <ul class="space-y-1">
+                <li><a href="/services/wood-fence-installation" class="hover:text-buda-secondary">Wood Fence Installation</a></li>
+                <li><a href="/services/metal-fence-installation" class="hover:text-buda-secondary">Metal Fence Installation</a></li>
+                <li><a href="/services/chain-link-fence-installation" class="hover:text-buda-secondary">Chain Link Fences</a></li>
+                <li><a href="/services/fence-repair" class="hover:text-buda-secondary">Fence Repair</a></li>
               </ul>
             </div>
           </div>
@@ -462,73 +323,139 @@
   </main>
 
   <!-- CTA -->
-  <section class="bg-buda-primary text-white py-16">
+  <section class="bg-buda-primary text-white py-16" aria-label="Call to action">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">Let's Build Your Dream Outdoor Space</h2>
-      <p class="text-xl mb-8 text-blue-200">From simple platforms to multi-level builds — we'll design and build it right.</p>
-      <a href="../contact.html" class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
-        Contact us today for your free quote
-      </a>
+      <p class="text-xl mb-8 text-gray-300">From simple platforms to multi-level builds — we'll design and build it right.</p>
+      <a href="/contact" class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">Contact us today for your free quote</a>
     </div>
   </section>
 
-  <!-- FOOTER (palette tightened + consistent info) -->
-  <footer class="bg-buda-primary text-white py-12">
+  <!-- Footer — FIX: Logo WebP, "since 2015", URLs to clean paths, standard 4-column layout -->
+  <footer class="bg-gray-900 text-white py-12" role="contentinfo">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid md:grid-cols-4 gap-8">
         <div>
-          <img src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company" class="h-16 mb-4 rounded bg-white p-2">
-          <p class="text-blue-100">
-            Building Budaful fences and decks for Central Texas since 2014.
-          </p>
-          <p class="text-blue-200 text-sm mt-3">
-            Insured • 5-year workmanship warranty
-          </p>
+          <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company" class="h-16 mb-4" width="97" height="48" loading="lazy">
+          <p class="text-gray-400">Building Budaful fences and decks for Central Texas since 2015.</p>
+          <p class="text-gray-500 text-sm mt-3">Insured <span aria-hidden="true">•</span> 5-year workmanship warranty</p>
         </div>
-
         <div>
           <h4 class="font-bold mb-4">Services</h4>
-          <ul class="space-y-2 text-blue-100">
-            <li><a href="deck-construction.html" class="hover:text-white">Deck Construction</a></li>
-            <li><a href="wood-fence-installation.html" class="hover:text-white">Wood Fences</a></li>
-            <li><a href="metal-fence-installation.html" class="hover:text-white">Metal Fences</a></li>
-            <li><a href="chain-link-fence-installation.html" class="hover:text-white">Chain Link</a></li>
-            <li><a href="fence-repair.html" class="hover:text-white">Fence Repair</a></li>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/services/deck-construction" class="hover:text-white text-white font-medium" aria-current="page">Deck Construction</a></li>
+            <li><a href="/services/wood-fence-installation" class="hover:text-white">Wood Fences</a></li>
+            <li><a href="/services/metal-fence-installation" class="hover:text-white">Metal Fences</a></li>
+            <li><a href="/services/chain-link-fence-installation" class="hover:text-white">Chain Link</a></li>
+            <li><a href="/services/fence-repair" class="hover:text-white">Fence Repair</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="font-bold mb-4">Service Areas</h4>
-          <ul class="space-y-2 text-blue-100">
-            <li><a href="../service-areas/" class="hover:text-white">View All Service Areas</a></li>
-            <li><a href="../service-areas/austin.html" class="hover:text-white">Austin, TX</a></li>
-            <li><a href="../service-areas/buda.html" class="hover:text-white">Buda, TX</a></li>
-            <li><a href="../service-areas/kyle.html" class="hover:text-white">Kyle, TX</a></li>
-            <li><a href="../service-areas/dripping-springs.html" class="hover:text-white">Dripping Springs, TX</a></li>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/service-areas/" class="hover:text-white">View All Service Areas</a></li>
+            <li><a href="/service-areas/austin" class="hover:text-white">Austin, TX</a></li>
+            <li><a href="/service-areas/buda" class="hover:text-white">Buda, TX</a></li>
+            <li><a href="/service-areas/kyle" class="hover:text-white">Kyle, TX</a></li>
+            <li><a href="/service-areas/dripping-springs" class="hover:text-white">Dripping Springs, TX</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="font-bold mb-4">Contact</h4>
-          <ul class="space-y-2 text-blue-100">
+          <ul class="space-y-2 text-gray-400">
             <li><a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></li>
             <li><a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></li>
-            <li class="text-blue-200 text-sm pt-2">308 Wincliff Dr, Buda, TX 78610</li>
+            <li class="text-gray-500 text-sm pt-2">308 Wincliff Dr, Buda, TX 78610</li>
           </ul>
         </div>
       </div>
-
-      <div class="border-t border-white/15 mt-8 pt-8 text-center text-blue-200">
-        <p>&copy; <span id="year"></span> Buda Fence Company. All rights reserved.</p>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+        <p>&copy; <span id="copyright-year"></span> Buda Fence Company. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Mobile floating CTA bar -->
+  <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+    <a href="tel:5127107116" class="cta-call"><span aria-hidden="true">📞</span> Call Now</a>
+    <a href="/contact" class="cta-quote">Free Estimate</a>
+  </div>
+
+  <!-- Complete JavaScript -->
   <script>
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+  (function() {
+    // Copyright year
+    var yearEl = document.getElementById('copyright-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Mobile menu
+    var menu = document.getElementById('mobile-menu');
+    var button = document.getElementById('mobile-menu-button');
+    if (menu && button) {
+      button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = !menu.classList.contains('hidden');
+        if (isOpen) { menu.classList.add('hidden'); button.setAttribute('aria-expanded','false'); }
+        else { menu.classList.remove('hidden'); button.setAttribute('aria-expanded','true'); }
+      });
+      document.addEventListener('click', function(e) {
+        if (!menu.contains(e.target) && !button.contains(e.target) && !menu.classList.contains('hidden')) {
+          menu.classList.add('hidden'); button.setAttribute('aria-expanded','false');
+        }
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+          menu.classList.add('hidden'); button.setAttribute('aria-expanded','false'); button.focus();
+        }
+      });
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() { menu.classList.add('hidden'); button.setAttribute('aria-expanded','false'); });
+      });
+    }
+
+    // Desktop dropdown keyboard nav
+    document.querySelectorAll('[data-dropdown]').forEach(function(dropdown) {
+      var btn = dropdown.querySelector('[data-dropdown-trigger]');
+      var ddMenu = dropdown.querySelector('[data-dropdown-menu]');
+      if (!btn || !ddMenu) return;
+      var items = ddMenu.querySelectorAll('[role="menuitem"]');
+
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var wasOpen = ddMenu.style.display === 'block';
+        closeAll();
+        if (!wasOpen) { ddMenu.style.display = 'block'; btn.setAttribute('aria-expanded','true'); }
+      });
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault(); closeAll();
+          ddMenu.style.display = 'block'; btn.setAttribute('aria-expanded','true');
+          if (items.length) items[0].focus();
+        }
+        if (e.key === 'ArrowDown') {
+          e.preventDefault(); ddMenu.style.display = 'block'; btn.setAttribute('aria-expanded','true');
+          if (items.length) items[0].focus();
+        }
+      });
+      items.forEach(function(item, i) {
+        item.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowDown') { e.preventDefault(); if (i < items.length - 1) items[i+1].focus(); }
+          if (e.key === 'ArrowUp') { e.preventDefault(); if (i > 0) items[i-1].focus(); else btn.focus(); }
+          if (e.key === 'Escape') { e.preventDefault(); ddMenu.style.display = ''; btn.setAttribute('aria-expanded','false'); btn.focus(); }
+          if (e.key === 'Tab') { ddMenu.style.display = ''; btn.setAttribute('aria-expanded','false'); }
+        });
+      });
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) { ddMenu.style.display = ''; btn.setAttribute('aria-expanded','false'); }
+      });
     });
-    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function closeAll() {
+      document.querySelectorAll('[data-dropdown-menu]').forEach(function(m) { m.style.display = ''; });
+      document.querySelectorAll('[data-dropdown-trigger]').forEach(function(b) { b.setAttribute('aria-expanded','false'); });
+    }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAll(); });
+  })();
   </script>
 </body>
 </html>
