@@ -3,738 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FIX: Google tag was MISSING -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRJYMYZ44"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HNRJYMYZ44');
+    </script>
+
     <title>Fence Repair in Austin, TX | Emergency & Same-Day Service | Buda Fence Company</title>
     <meta name="description" content="Professional fence repair in Austin, TX. We fix storm damage, broken posts, leaning sections, and sagging gates. Most repairs completed within 48 hours. Call (512) 710-7116!">
+    <meta name="keywords" content="fence repair austin, fence repair buda tx, broken fence post repair, storm damage fence repair, gate repair austin, emergency fence repair central texas">
+    <meta name="author" content="Buda Fence Company">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://budafenceco.com/services/fence-repair.html">
+    <meta name="theme-color" content="#1e293b">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://budafenceco.com/services/fence-repair.html">
+    <meta property="og:title" content="Fence Repair in Austin, TX | Buda Fence Company">
+    <meta property="og:description" content="Professional fence repair — storm damage, broken posts, leaning sections, sagging gates. Most repairs within 48 hours. Call (512) 710-7116.">
+    <meta property="og:image" content="https://budafenceco.com/images/og-image.webp">
+    <meta property="og:image:alt" content="Buda Fence Company — professional fence repair services in Austin, TX">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Buda Fence Company">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fence Repair in Austin, TX | Buda Fence Company">
+    <meta name="twitter:description" content="Professional fence repair — storm damage, broken posts, sagging gates. Most repairs within 48 hours.">
+    <meta name="twitter:image" content="https://budafenceco.com/images/og-image.webp">
+
+    <!-- Local SEO -->
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Buda, Texas">
+    <meta name="geo.position" content="30.09939;-97.86756">
+    <meta name="ICBM" content="30.09939, -97.86756">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        html, body {
-            max-width: 100vw;
-            overflow-x: hidden;
-        }
-        * {
-            max-width: 100%;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            word-break: break-word;
+        html, body { max-width: 100vw; overflow-x: hidden; }
+        * { max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: #dc2626; color: #fff; padding: 8px 16px; z-index: 100; text-decoration: none; transition: top .3s; }
+        .skip-link:focus { top: 0; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+        .mobile-cta-bar { display: none; }
+        @media (max-width: 767px) {
+            .mobile-cta-bar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; background: #1e293b; padding: 10px 16px; gap: 10px; box-shadow: 0 -4px 12px rgba(0,0,0,0.2); }
+            .mobile-cta-bar a { flex: 1; text-align: center; padding: 12px 8px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; }
+            .mobile-cta-bar .cta-call { background: #dc2626; color: #fff; }
+            .mobile-cta-bar .cta-quote { background: #fff; color: #1e293b; }
+            footer { padding-bottom: 80px !important; }
         }
         @media (max-width: 768px) {
-            .container, .mx-auto, [class*="max-w"] {
-                max-width: 100vw !important;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            h1, h2, h3, h4, h5, h6, p, li, td, th, div, span {
-                word-wrap: break-word !important;
-                overflow-wrap: break-word !important;
-                word-break: break-word !important;
-            }
-            table {
-                font-size: 0.75rem;
-            }
-            .table-scroll {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            .table-scroll table {
-                min-width: 600px;
-            }
+            .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            .table-scroll table { min-width: 600px; }
+            table { font-size: 0.75rem; }
         }
     </style>
-    
-    <!-- Schema Markup -->
+
+    <!-- Service Schema — FIX: Updated logo from JPEG to WebP -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Fence Repair",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Buda Fence Company",
-        "image": "https://budafenceco.com/images/BudaFenceLogo.jpeg",
-        "@id": "https://budafenceco.com",
-        "url": "https://budafenceco.com",
-        "telephone": "(512) 710-7116",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "308 Wincliff Dr",
-          "addressLocality": "Buda",
-          "addressRegion": "TX",
-          "postalCode": "78610",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 30.09939,
-          "longitude": -97.86756
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "00:00",
-          "closes": "23:59"
-        },
-        "sameAs": [
-          "https://www.facebook.com/BudaFenceCo"
-        ]
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Austin",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Buda",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        }
-      ],
-      "description": "Professional fence repair services in Austin, TX. We repair storm damage, broken posts, leaning fences, sagging gates, and more. Same-day emergency service available. Most repairs completed within 48 hours."
-    }
+    {"@context":"https://schema.org","@type":"Service","serviceType":"Fence Repair","provider":{"@type":"LocalBusiness","name":"Buda Fence Company","image":"https://budafenceco.com/images/buda-fence-logo.webp","@id":"https://budafenceco.com","url":"https://budafenceco.com","telephone":"(512) 710-7116","address":{"@type":"PostalAddress","streetAddress":"308 Wincliff Dr","addressLocality":"Buda","addressRegion":"TX","postalCode":"78610","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":30.09939,"longitude":-97.86756},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"sameAs":["https://www.facebook.com/BudaFenceCo"]},"areaServed":[{"@type":"City","name":"Austin","containedInPlace":{"@type":"State","name":"Texas"}},{"@type":"City","name":"Buda","containedInPlace":{"@type":"State","name":"Texas"}},{"@type":"City","name":"Kyle","containedInPlace":{"@type":"State","name":"Texas"}},{"@type":"City","name":"Dripping Springs","containedInPlace":{"@type":"State","name":"Texas"}}],"description":"Professional fence repair services in Austin, TX. We repair storm damage, broken posts, leaning fences, sagging gates, and more. Same-day emergency service available."}
     </script>
-    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://budafenceco.com"},{"@type":"ListItem","position":2,"name":"Services","item":"https://budafenceco.com/services"},{"@type":"ListItem","position":3,"name":"Fence Repair","item":"https://budafenceco.com/services/fence-repair.html"}]}
+    </script>
     <!-- FAQ Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How quickly can you repair my fence?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most small to medium fence repairs can be completed within 48 hours of your call. We offer same-day and emergency repair services with proper notice. Larger repairs may need to be scheduled based on the scope of work."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What types of fence damage do you repair?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We repair all types of fence damage including storm damage, broken or rotted posts, leaning fence sections, damaged pickets and panels, sagging gates, and rot or insect damage. We work on wood, metal, chain link, and welded fences."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you repair a fence that another company installed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, absolutely. We can repair any type of wood, metal, or chain link fence, regardless of who originally installed it. We'll match the existing materials as closely as possible."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is it better to repair or replace my fence?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "As a rule of thumb, if less than 25% of your fence is damaged, a repair is usually the most cost-effective solution. If the damage is more widespread or the fence is nearing the end of its lifespan, replacement might be better. We'll give you an honest recommendation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer emergency fence repair?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we offer same-day and emergency fence repair services. We understand that a damaged fence can be a security risk. Call us at (512) 710-7116 for urgent repairs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is your most common fence repair?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Post replacement is our number one repair request. Fence posts often rot at ground level or break during storms. We replace damaged wood posts with new posts set properly in concrete for a lasting repair."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does fence repair cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Fence repair costs vary depending on the extent of damage. Simple picket replacements are very affordable, while multiple post replacements will cost more. We provide free, no-obligation quotes for all repair work."
-          }
-        }
-      ]
-    }
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How quickly can you repair my fence?","acceptedAnswer":{"@type":"Answer","text":"Most small to medium fence repairs can be completed within 48 hours of your call. We offer same-day and emergency repair services with proper notice."}},{"@type":"Question","name":"What types of fence damage do you repair?","acceptedAnswer":{"@type":"Answer","text":"We repair all types of fence damage including storm damage, broken or rotted posts, leaning fence sections, damaged pickets and panels, sagging gates, and rot or insect damage. We work on wood, metal, chain link, and welded fences."}},{"@type":"Question","name":"Can you repair a fence that another company installed?","acceptedAnswer":{"@type":"Answer","text":"Yes, absolutely. We can repair any type of wood, metal, or chain link fence, regardless of who originally installed it."}},{"@type":"Question","name":"Is it better to repair or replace my fence?","acceptedAnswer":{"@type":"Answer","text":"If less than 25% of your fence is damaged, a repair is usually the most cost-effective solution. If the damage is more widespread or the fence is nearing the end of its lifespan, replacement might be better. We'll give you an honest recommendation."}},{"@type":"Question","name":"Do you offer emergency fence repair?","acceptedAnswer":{"@type":"Answer","text":"Yes, we offer same-day and emergency fence repair services. Call us at (512) 710-7116 for urgent repairs."}},{"@type":"Question","name":"How much does fence repair cost?","acceptedAnswer":{"@type":"Answer","text":"Fence repair costs vary depending on the extent of damage. We provide free, no-obligation quotes for all repair work. Call (512) 710-7116 or visit our contact page."}}]}
     </script>
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation — FIX: All URLs updated to clean paths, logo to WebP -->
+    <nav class="bg-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="../index.html">
-                        <img class="h-16 w-auto" src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo">
-                    </a>
+                    <a href="/" aria-label="Buda Fence Company Home"><img class="h-16 w-auto" src="/images/buda-fence-logo.webp" alt="Buda Fence Company Logo" width="97" height="48" loading="eager"></a>
                 </div>
-                
-                <!-- Desktop Navigation -->
-<div class="hidden md:flex space-x-8">
-    <a href="../index.html" class="text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-    <a href="../about.html" class="text-gray-700 hover:text-buda-secondary font-medium">About</a>
-    <div class="relative group">
-        <button class="text-buda-secondary font-medium pb-4">Services ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="../services.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold">All Services</a>
-            <a href="deck-construction.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Deck Construction</a>
-            <a href="wood-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Wood Fence Installation</a>
-            <a href="metal-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Metal Fence Installation</a>
-            <a href="chain-link-fence-installation.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Chain Link Fence Installation</a>
-            <a href="fence-repair.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold text-red-600">Fence Repair</a>
-        </div>
-    </div>
-    <div class="relative group">
-        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
-        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-            <a href="../service-areas/" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-red-600 font-semibold">All Service Areas</a>
-            <a href="../service-areas/austin.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Austin</a>
-            <a href="../service-areas/buda.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Buda</a>
-            <a href="../service-areas/kyle.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Kyle</a>
-            <a href="../service-areas/dripping-springs.html" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Dripping Springs</a>
-        </div>
-    </div>
-    <a href="../gallery.html" class="text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-    <a href="../blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
-    <a href="../contact.html" class="text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
-</div>
-                
-                <!-- Desktop Contact -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-red-600 font-medium">Home</a>
+                    <a href="/about" class="text-gray-700 hover:text-red-600 font-medium">About</a>
+                    <div class="relative group" data-dropdown>
+                        <button class="text-red-600 font-medium pb-4" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>Services <span aria-hidden="true">▾</span></button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50" role="menu" data-dropdown-menu>
+                            <a href="/services" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold" role="menuitem">All Services</a>
+                            <a href="/services/deck-construction" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Deck Construction</a>
+                            <a href="/services/wood-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Wood Fence Installation</a>
+                            <a href="/services/metal-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Metal Fence Installation</a>
+                            <a href="/services/chain-link-fence-installation" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Chain Link Fence Installation</a>
+                            <a href="/services/fence-repair" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold text-red-600" role="menuitem" aria-current="page">Fence Repair</a>
+                        </div>
+                    </div>
+                    <div class="relative group" data-dropdown>
+                        <button class="text-gray-700 hover:text-red-600 font-medium pb-4" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>Service Areas <span aria-hidden="true">▾</span></button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50" role="menu" data-dropdown-menu>
+                            <a href="/service-areas/" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-red-600 font-semibold" role="menuitem">All Service Areas</a>
+                            <a href="/service-areas/austin" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Austin</a>
+                            <a href="/service-areas/buda" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Buda</a>
+                            <a href="/service-areas/kyle" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Kyle</a>
+                            <a href="/service-areas/dripping-springs" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" role="menuitem">Dripping Springs</a>
+                        </div>
+                    </div>
+                    <a href="/gallery" class="text-gray-700 hover:text-red-600 font-medium">Gallery</a>
+                    <a href="/blog/" class="text-gray-700 hover:text-red-600 font-medium">Blog</a>
+                    <a href="/contact" class="text-gray-700 hover:text-red-600 font-medium">Contact</a>
+                </div>
                 <div class="hidden md:flex items-center space-x-4">
-                    <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
-                    <a href="../contact.html" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold">Free Quote</a>
+                    <a href="tel:5127107116" class="text-red-600 font-semibold">(512) 710-7116</a>
+                    <a href="/contact" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold">Free Quote</a>
                 </div>
-                
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center space-x-2">
                     <a href="tel:5127107116" class="text-red-600 text-xs font-semibold whitespace-nowrap">(512) 710-7116</a>
-                    <a href="../contact.html" class="bg-red-600 text-white px-3 py-1.5 rounded text-xs font-semibold whitespace-nowrap">Quote</a>
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-red-600">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                    <a href="/contact" class="bg-red-600 text-white px-3 py-1.5 rounded text-xs font-semibold whitespace-nowrap">Quote</a>
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-red-600 p-1" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
             </div>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t" role="menu">
             <div class="px-4 pt-2 pb-4 space-y-2">
-                <a href="../index.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Home</a>
-                <a href="../about.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">About</a>
-                
-                <div class="py-2">
-                    <div class="font-medium text-gray-900 mb-2">Services</div>
-                    <div class="pl-4 space-y-2">
-                        <a href="../services.html" class="block py-1 text-gray-600 hover:text-red-600 font-semibold">All Services</a>
-                        <a href="wood-fence-installation.html" class="block py-1 text-gray-600 hover:text-red-600">Wood Fence</a>
-                        <a href="metal-fence-installation.html" class="block py-1 text-gray-600 hover:text-red-600">Metal Fence</a>
-                        <a href="chain-link-fence-installation.html" class="block py-1 text-gray-600 hover:text-red-600">Chain Link Fence</a>
-                        <a href="fence-repair.html" class="block py-1 text-red-600 font-semibold">Fence Repair</a>
-                    </div>
-                </div>
-                
-                <div class="py-2">
-                    <div class="font-medium text-gray-900 mb-2">Service Areas</div>
-                    <div class="pl-4 space-y-2">
-                        <a href="../service-areas/" class="block py-1 text-red-600 hover:text-red-600 font-semibold">All Service Areas</a>
-                        <a href="../service-areas/austin.html" class="block py-1 text-gray-600 hover:text-red-600">Austin</a>
-                        <a href="../service-areas/buda.html" class="block py-1 text-gray-600 hover:text-red-600">Buda</a>
-                        <a href="../service-areas/kyle.html" class="block py-1 text-gray-600 hover:text-red-600">Kyle</a>
-                        <a href="../service-areas/dripping-springs.html" class="block py-1 text-gray-600 hover:text-red-600">Dripping Springs</a>
-                    </div>
-                </div>
-                
-                <a href="../gallery.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Gallery</a>
-                <a href="../contact.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Contact</a>
+                <a href="/" class="block py-2 text-gray-700 hover:text-red-600 font-medium" role="menuitem">Home</a>
+                <a href="/about" class="block py-2 text-gray-700 hover:text-red-600 font-medium" role="menuitem">About</a>
+                <div class="py-2"><div class="font-medium text-gray-900 mb-2">Services</div><div class="pl-4 space-y-2">
+                    <a href="/services" class="block py-1 text-gray-600 hover:text-red-600 font-semibold" role="menuitem">All Services</a>
+                    <a href="/services/deck-construction" class="block py-1 text-gray-600 hover:text-red-600" role="menuitem">Deck Construction</a>
+                    <a href="/services/wood-fence-installation" class="block py-1 text-gray-600 hover:text-red-600" role="menuitem">Wood Fence</a>
+                    <a href="/services/metal-fence-installation" class="block py-1 text-gray-600 hover:text-red-600" role="menuitem">Metal Fence</a>
+                    <a href="/services/chain-link-fence-installation" class="block py-1 text-gray-600 hover:text-red-600" role="menuitem">Chain Link Fence</a>
+                    <a href="/services/fence-repair" class="block py-1 text-red-600 font-semibold" role="menuitem" aria-current="page">Fence Repair</a>
+                </div></div>
+                <div class="py-2"><div class="font-medium text-gray-900 mb-2">Service Areas</div><div class="pl-4 space-y-2">
+                    <a href="/service-areas/" class="block py-1 text-red-600 font-semibold" role="menuitem">All Service Areas</a>
+                    <a href="/service-areas/austin" class="block py-1 text-gray-600 hover:text-red-600" role="menuitem">Austin</a>
+                    <a href="/service-areas/buda" class="block py-1 text-gray-600 hover:text-red-600" role="menuitem">Buda</a>
+                    <a href="/service-areas/kyle" class="block py-1 text-gray-600 hover:text-red-600" role="menuitem">Kyle</a>
+                    <a href="/service-areas/dripping-springs" class="block py-1 text-gray-600 hover:text-red-600" role="menuitem">Dripping Springs</a>
+                </div></div>
+                <a href="/gallery" class="block py-2 text-gray-700 hover:text-red-600 font-medium" role="menuitem">Gallery</a>
+                <a href="/blog/" class="block py-2 text-gray-700 hover:text-red-600 font-medium" role="menuitem">Blog</a>
+                <a href="/contact" class="block py-2 text-gray-700 hover:text-red-600 font-medium" role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
 
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-    </script>
-
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-16">
+    <section class="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-16" role="banner">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Fence Repair in Austin, TX</h1>
                 <p class="text-xl mb-4">Fast, professional fence repairs for storm damage, broken posts, leaning sections, and sagging gates.</p>
-                <p class="text-lg mb-8 text-red-400 font-semibold">Most repairs completed within 48 hours • Same-day emergency service available</p>
+                <p class="text-lg mb-8 text-red-400 font-semibold">Most repairs completed within 48 hours <span aria-hidden="true">•</span> Same-day emergency service available</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="../contact.html" class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg">
-                        Get Free Estimate
-                    </a>
-                    <a href="tel:5127107116" class="bg-white text-slate-800 px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg">
-                        (512) 710-7116
-                    </a>
+                    <a href="/contact" class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg">Get Free Estimate</a>
+                    <a href="tel:5127107116" class="bg-white text-slate-800 px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg">(512) 710-7116</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Emergency Banner -->
-    <section class="bg-red-600 text-white py-4">
+    <section class="bg-red-600 text-white py-4" aria-label="Emergency repair notice">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-lg font-semibold">
-                🚨 Storm Damage? Need Emergency Repair? Call Now: <a href="tel:5127107116" class="underline">(512) 710-7116</a>
-            </p>
+            <p class="text-lg font-semibold"><span aria-hidden="true">🚨</span> Storm Damage? Need Emergency Repair? Call Now: <a href="tel:5127107116" class="underline">(512) 710-7116</a></p>
         </div>
     </section>
 
     <!-- Main Content -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Main Content Column -->
-            <div class="lg:col-span-2">
+            <div class="lg:col-span-2" id="main-content">
+
                 <!-- Introduction -->
                 <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-                    <p class="text-lg text-gray-700 mb-4">
-                        Has a recent Texas storm left your fence leaning? Is a broken gate compromising your security, or have years of wear and tear finally taken their toll? Don't let a damaged fence be a source of stress or a security risk. Buda Fence Company provides fast, reliable, and professional fence repair services throughout the Austin area.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-4">
-                        A damaged fence is more than just an eyesore; it can compromise your privacy, reduce your security, and put your children and pets at risk. In many cases, a targeted, professional repair can extend the life of your fence for many years, saving you thousands of dollars over a full replacement.
-                    </p>
-                    <p class="text-lg text-gray-700">
-                        We repair all types of fences that we install — <strong>wood, metal, chain link, and welded fences</strong>. Whether you need a single post replaced or multiple sections repaired, we've got you covered.
-                    </p>
+                    <p class="text-lg text-gray-700 mb-4">Has a recent Texas storm left your fence leaning? Is a broken gate compromising your security, or have years of wear and tear finally taken their toll? Don't let a damaged fence be a source of stress or a security risk. Buda Fence Company provides fast, reliable, and professional fence repair services throughout the Austin area.</p>
+                    <p class="text-lg text-gray-700 mb-4">A damaged fence is more than just an eyesore; it can compromise your privacy, reduce your security, and put your children and pets at risk. In many cases, a targeted, professional repair can extend the life of your fence for many years, saving you thousands of dollars over a full replacement.</p>
+                    <p class="text-lg text-gray-700">We repair all types of fences that we install — <strong>wood, metal, chain link, and welded fences</strong>. Whether you need a single post replaced or multiple sections repaired, we've got you covered.</p>
                 </div>
 
-                <!-- Common Repairs Section -->
+                <!-- Common Repairs -->
                 <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Fence Problems We Repair</h2>
-                    
                     <div class="grid md:grid-cols-2 gap-6">
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Broken or Rotted Posts</h3>
-                            <p class="text-gray-700">
-                                <strong>Our #1 repair request.</strong> Fence posts often rot at ground level or break during storms. We replace damaged posts with new posts set properly in concrete for a lasting repair.
-                            </p>
-                        </div>
-                        
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Leaning Fence Sections</h3>
-                            <p class="text-gray-700">
-                                Often caused by rotted wood posts or posts that weren't set properly in concrete. We can reset or replace posts to straighten your fence.
-                            </p>
-                        </div>
-                        
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Storm Damage</h3>
-                            <p class="text-gray-700">
-                                High winds and falling debris are a leading cause of fence damage in Central Texas. We respond quickly to storm damage calls.
-                            </p>
-                        </div>
-                        
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sagging or Misaligned Gates</h3>
-                            <p class="text-gray-700">
-                                Caused by hinge failure, post settling, or a gate that's too heavy for its frame. We can reinforce, rehang, or rebuild your gate.
-                            </p>
-                        </div>
-                        
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Damaged Pickets or Panels</h3>
-                            <p class="text-gray-700">
-                                Individual pickets or entire sections damaged by storms, falling limbs, or accidents. We match existing materials for seamless repairs.
-                            </p>
-                        </div>
-                        
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Rot and Insect Damage</h3>
-                            <p class="text-gray-700">
-                                Wood fences can suffer from rot at the base or damage from termites. We remove damaged sections and replace with treated materials.
-                            </p>
-                        </div>
+                        <div class="border-l-4 border-red-600 pl-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Broken or Rotted Posts</h3><p class="text-gray-700"><strong>Our #1 repair request.</strong> Fence posts often rot at ground level or break during storms. We replace damaged posts with new posts set properly in concrete for a lasting repair.</p></div>
+                        <div class="border-l-4 border-red-600 pl-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Leaning Fence Sections</h3><p class="text-gray-700">Often caused by rotted wood posts or posts that weren't set properly in concrete. We can reset or replace posts to straighten your fence.</p></div>
+                        <div class="border-l-4 border-red-600 pl-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Storm Damage</h3><p class="text-gray-700">High winds and falling debris are a leading cause of fence damage in Central Texas. We respond quickly to storm damage calls.</p></div>
+                        <div class="border-l-4 border-red-600 pl-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Sagging or Misaligned Gates</h3><p class="text-gray-700">Caused by hinge failure, post settling, or a gate that's too heavy for its frame. We can reinforce, rehang, or rebuild your gate.</p></div>
+                        <div class="border-l-4 border-red-600 pl-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Damaged Pickets or Panels</h3><p class="text-gray-700">Individual pickets or entire sections damaged by storms, falling limbs, or accidents. We match existing materials for seamless repairs.</p></div>
+                        <div class="border-l-4 border-red-600 pl-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Rot and Insect Damage</h3><p class="text-gray-700">Wood fences can suffer from rot at the base or damage from termites. We remove damaged sections and replace with treated materials.</p></div>
                     </div>
                 </div>
 
-                <!-- Photo Gallery -->
+                <!-- Photo Gallery — FIX: Image paths from ../images to /images -->
                 <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Fence Repair Gallery</h2>
-                    <p class="text-gray-700 mb-6">
-                        From storm damage to rotted posts, we handle all types of fence repairs in the Austin area.
-                    </p>
-                    
+                    <p class="text-gray-700 mb-6">From storm damage to rotted posts, we handle all types of fence repairs in the Austin area.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <picture>
-                                <source type="image/webp"
-                                  srcset="../images/storm-damage-480.webp 480w, ../images/storm-damage-768.webp 768w, ../images/storm-damage-1024.webp 1024w"
-                                  sizes="(max-width: 768px) 100vw, 50vw">
-                                <img src="../images/storm-damage.webp" alt="Storm damaged fence blown down requiring emergency repair in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async">
-                            </picture>
-                            <p class="text-sm text-gray-600 mt-2">Storm damage - fence blown down by high winds</p>
-                        </div>
-
-                        <div>
-                            <picture>
-                                <source type="image/webp"
-                                  srcset="../images/tree-damage-480.webp 480w, ../images/tree-damage-768.webp 768w, ../images/tree-damage-1024.webp 1024w"
-                                  sizes="(max-width: 768px) 100vw, 50vw">
-                                <img src="../images/tree-damage.webp" alt="Small tree branch fallen on fence causing damage in Central Texas" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async">
-                            </picture>
-                            <p class="text-sm text-gray-600 mt-2">Tree damage - branch damaging fence section</p>
-                        </div>
-
-                        <div>
-                            <picture>
-                                <source type="image/webp"
-                                  srcset="../images/post-replacement-480.webp 480w, ../images/post-replacement-768.webp 768w, ../images/post-replacement-1024.webp 1024w"
-                                  sizes="(max-width: 768px) 100vw, 50vw">
-                                <img src="../images/post-replacement.webp" alt="Rotted fence post at ground level needing replacement in Buda, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async">
-                            </picture>
-                            <p class="text-sm text-gray-600 mt-2">Rotted post - decay at ground level (our #1 repair)</p>
-                        </div>
-
-                        <div>
-                            <picture>
-                                <source type="image/webp"
-                                  srcset="../images/broken-gate-post-480.webp 480w, ../images/broken-gate-post-768.webp 768w, ../images/broken-gate-post-1024.webp 1024w"
-                                  sizes="(max-width: 768px) 100vw, 50vw">
-                                <img src="../images/broken-gate-post.webp" alt="Broken and damaged fence pickets needing repair in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async">
-                            </picture>
-                            <p class="text-sm text-gray-600 mt-2">Damaged pickets - common repair needed</p>
-                        </div>
-
-                        <div>
-                            <picture>
-                                <source type="image/webp"
-                                  srcset="../images/gate-repair-480.webp 480w, ../images/gate-repair-768.webp 768w, ../images/gate-repair-1024.webp 1024w"
-                                  sizes="(max-width: 768px) 100vw, 50vw">
-                                <img src="../images/gate-repair.webp" alt="Sagging fence gate repair diagram showing proper fix technique" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async">
-                            </picture>
-                            <p class="text-sm text-gray-600 mt-2">Gate repair - fixing sagging and alignment issues</p>
-                        </div>
-
-                        <div>
-                            <picture>
-                                <source type="image/webp"
-                                  srcset="../images/leaning-fence-section-480.webp 480w, ../images/leaning-fence-section-768.webp 768w, ../images/leaning-fence-section-1024.webp 1024w"
-                                  sizes="(max-width: 768px) 100vw, 50vw">
-                                <img src="../images/leaning-fence-section.webp" alt="Leaning fence section needing post repair in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async">
-                            </picture>
-                            <p class="text-sm text-gray-600 mt-2">Leaning fence - post replacement needed</p>
-                        </div>
-
-                        <div>
-                            <img src="../images/metal-fence-repair.jpg" alt="Metal and iron fence repair and welding service in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async">
-                            <p class="text-sm text-gray-600 mt-2">Metal fence repair - we also handle iron and steel</p>
-                        </div>
-
-                        <div>
-                            <img src="../images/fence-repair-completed.jpg" alt="Completed fence repair with new wood sections installed in Kyle, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async">
-                            <p class="text-sm text-gray-600 mt-2">Completed repair - new sections blending seamlessly</p>
-                        </div>
+                        <div><picture><source type="image/webp" srcset="/images/storm-damage-480.webp 480w, /images/storm-damage-768.webp 768w, /images/storm-damage-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 50vw"><img src="/images/storm-damage.webp" alt="Storm damaged fence blown down requiring emergency repair in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async"></picture><p class="text-sm text-gray-600 mt-2">Storm damage - fence blown down by high winds</p></div>
+                        <div><picture><source type="image/webp" srcset="/images/tree-damage-480.webp 480w, /images/tree-damage-768.webp 768w, /images/tree-damage-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 50vw"><img src="/images/tree-damage.webp" alt="Small tree branch fallen on fence causing damage in Central Texas" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async"></picture><p class="text-sm text-gray-600 mt-2">Tree damage - branch damaging fence section</p></div>
+                        <div><picture><source type="image/webp" srcset="/images/post-replacement-480.webp 480w, /images/post-replacement-768.webp 768w, /images/post-replacement-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 50vw"><img src="/images/post-replacement.webp" alt="Rotted fence post at ground level needing replacement in Buda, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async"></picture><p class="text-sm text-gray-600 mt-2">Rotted post - decay at ground level (our #1 repair)</p></div>
+                        <div><picture><source type="image/webp" srcset="/images/broken-gate-post-480.webp 480w, /images/broken-gate-post-768.webp 768w, /images/broken-gate-post-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 50vw"><img src="/images/broken-gate-post.webp" alt="Broken and damaged fence pickets needing repair in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async"></picture><p class="text-sm text-gray-600 mt-2">Damaged pickets - common repair needed</p></div>
+                        <div><picture><source type="image/webp" srcset="/images/gate-repair-480.webp 480w, /images/gate-repair-768.webp 768w, /images/gate-repair-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 50vw"><img src="/images/gate-repair.webp" alt="Sagging fence gate repair diagram showing proper fix technique" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async"></picture><p class="text-sm text-gray-600 mt-2">Gate repair - fixing sagging and alignment issues</p></div>
+                        <div><picture><source type="image/webp" srcset="/images/leaning-fence-section-480.webp 480w, /images/leaning-fence-section-768.webp 768w, /images/leaning-fence-section-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 50vw"><img src="/images/leaning-fence-section.webp" alt="Leaning fence section needing post repair in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async"></picture><p class="text-sm text-gray-600 mt-2">Leaning fence - post replacement needed</p></div>
+                        <div><img src="/images/metal-fence-repair.jpg" alt="Metal and iron fence repair and welding service in Austin, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async"><p class="text-sm text-gray-600 mt-2">Metal fence repair - we also handle iron and steel</p></div>
+                        <div><img src="/images/fence-repair-completed.jpg" alt="Completed fence repair with new wood sections installed in Kyle, TX" class="w-full h-64 object-cover rounded-lg shadow-md" loading="lazy" decoding="async"><p class="text-sm text-gray-600 mt-2">Completed repair - new sections blending seamlessly</p></div>
                     </div>
                 </div>
 
                 <!-- Repair vs Replace -->
                 <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">When to Repair vs. Replace Your Fence</h2>
-                    <p class="text-gray-700 mb-6">
-                        Deciding whether to repair or replace your fence can be tricky. Here's our honest guidance:
-                    </p>
-                    
+                    <p class="text-gray-700 mb-6">Deciding whether to repair or replace your fence can be tricky. Here's our honest guidance:</p>
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="bg-green-50 border border-green-200 rounded-lg p-6">
-                            <h3 class="text-xl font-semibold text-green-800 mb-3">✓ Repair Makes Sense When:</h3>
-                            <ul class="space-y-2 text-gray-700">
-                                <li>• Less than 25% of fence is damaged</li>
-                                <li>• Posts and framework are still solid</li>
-                                <li>• Damage is localized to one area</li>
-                                <li>• Fence is less than 10-15 years old</li>
-                                <li>• Only a few pickets or panels need replacing</li>
-                                <li>• Gate hardware needs adjustment or replacement</li>
-                            </ul>
+                            <h3 class="text-xl font-semibold text-green-800 mb-3"><span aria-hidden="true">✓</span> Repair Makes Sense When:</h3>
+                            <ul class="space-y-2 text-gray-700"><li>• Less than 25% of fence is damaged</li><li>• Posts and framework are still solid</li><li>• Damage is localized to one area</li><li>• Fence is less than 10-15 years old</li><li>• Only a few pickets or panels need replacing</li><li>• Gate hardware needs adjustment or replacement</li></ul>
                         </div>
-                        
                         <div class="bg-red-50 border border-red-200 rounded-lg p-6">
-                            <h3 class="text-xl font-semibold text-red-800 mb-3">✗ Replacement May Be Better When:</h3>
-                            <ul class="space-y-2 text-gray-700">
-                                <li>• More than 25% of fence is damaged</li>
-                                <li>• Multiple posts are rotted or broken</li>
-                                <li>• Fence is 15-20+ years old</li>
-                                <li>• Widespread rot or insect damage</li>
-                                <li>• Fence is leaning in multiple sections</li>
-                                <li>• Cost of repairs approaches replacement cost</li>
-                            </ul>
+                            <h3 class="text-xl font-semibold text-red-800 mb-3"><span aria-hidden="true">✗</span> Replacement May Be Better When:</h3>
+                            <ul class="space-y-2 text-gray-700"><li>• More than 25% of fence is damaged</li><li>• Multiple posts are rotted or broken</li><li>• Fence is 15-20+ years old</li><li>• Widespread rot or insect damage</li><li>• Fence is leaning in multiple sections</li><li>• Cost of repairs approaches replacement cost</li></ul>
                         </div>
                     </div>
-                    
-                    <p class="text-gray-700 mt-6">
-                        <strong>We'll always give you an honest recommendation.</strong> If repair makes sense, we'll repair it. If replacement is the better long-term investment, we'll tell you that too. No pressure, just honest advice.
-                    </p>
+                    <p class="text-gray-700 mt-6"><strong>We'll always give you an honest recommendation.</strong> If repair makes sense, we'll repair it. If replacement is the better long-term investment, we'll tell you that too. No pressure, just honest advice.</p>
                 </div>
 
-                <!-- Our Repair Process -->
+                <!-- Repair Process -->
                 <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Fence Repair Process</h2>
-                    <p class="text-gray-700 mb-6">
-                        We don't believe in temporary fixes. Our goal is to repair your fence in a way that makes it as strong, or even stronger, than it was before.
-                    </p>
-                    
+                    <p class="text-gray-700 mb-6">We don't believe in temporary fixes. Our goal is to repair your fence in a way that makes it as strong, or even stronger, than it was before.</p>
                     <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                1
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Quick Response & Assessment</h3>
-                                <p class="text-gray-700">
-                                    We try to answer every call that comes in. During heavy storm periods, we may be overwhelmed, but we always try to return calls the same business day. We'll schedule an assessment quickly — often within 1-2 days.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                2
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Honest Assessment & Clear Quote</h3>
-                                <p class="text-gray-700">
-                                    We thoroughly inspect the damage and identify the root cause. You'll receive a clear, upfront quote detailing the work to be done and materials required. No surprises.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                3
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Matching Materials</h3>
-                                <p class="text-gray-700">
-                                    We take great care to match your existing fence materials. Whether you have cedar, pine, metal, or chain link, we source materials that blend seamlessly with your original fence.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                4
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Professional, Lasting Repairs</h3>
-                                <p class="text-gray-700">
-                                    Most small repairs are completed within 48 hours. For post replacements, we set new posts properly in concrete. For gates, we rebuild frames, replace hardware, and ensure smooth operation. We do it right.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">
-                                5
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Cleanup & Final Inspection</h3>
-                                <p class="text-gray-700">
-                                    We clean up all old materials and debris. We conduct a final walkthrough with you to ensure you're completely satisfied with the repair.
-                                </p>
-                            </div>
-                        </div>
+                        <div class="flex items-start"><div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">1</div><div class="ml-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Quick Response & Assessment</h3><p class="text-gray-700">We try to answer every call that comes in. During heavy storm periods, we may be overwhelmed, but we always try to return calls the same business day. We'll schedule an assessment quickly — often within 1-2 days.</p></div></div>
+                        <div class="flex items-start"><div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">2</div><div class="ml-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Honest Assessment & Clear Quote</h3><p class="text-gray-700">We thoroughly inspect the damage and identify the root cause. You'll receive a clear, upfront quote detailing the work to be done and materials required. No surprises.</p></div></div>
+                        <div class="flex items-start"><div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">3</div><div class="ml-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Matching Materials</h3><p class="text-gray-700">We take great care to match your existing fence materials. Whether you have cedar, pine, metal, or chain link, we source materials that blend seamlessly with your original fence.</p></div></div>
+                        <div class="flex items-start"><div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">4</div><div class="ml-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Professional, Lasting Repairs</h3><p class="text-gray-700">Most small repairs are completed within 48 hours. For post replacements, we set new posts properly in concrete. For gates, we rebuild frames, replace hardware, and ensure smooth operation. We do it right.</p></div></div>
+                        <div class="flex items-start"><div class="flex-shrink-0 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">5</div><div class="ml-4"><h3 class="text-xl font-semibold text-gray-900 mb-2">Cleanup & Final Inspection</h3><p class="text-gray-700">We clean up all old materials and debris. We conduct a final walkthrough with you to ensure you're completely satisfied with the repair.</p></div></div>
                     </div>
                 </div>
 
-                <!-- Response Time Guarantee -->
+                <!-- Response Time -->
                 <div class="bg-gradient-to-r from-red-600 to-red-700 rounded-lg shadow-md p-8 mb-8 text-white">
                     <h2 class="text-3xl font-bold mb-6">Our Response Time Commitment</h2>
                     <div class="grid md:grid-cols-3 gap-6">
-                        <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">Same Day</div>
-                            <p>Emergency repairs available with proper notice</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">48 Hours</div>
-                            <p>Most small to medium repairs completed</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">24/7</div>
-                            <p>We answer calls around the clock</p>
-                        </div>
+                        <div class="text-center"><div class="text-4xl font-bold mb-2">Same Day</div><p>Emergency repairs available with proper notice</p></div>
+                        <div class="text-center"><div class="text-4xl font-bold mb-2">48 Hours</div><p>Most small to medium repairs completed</p></div>
+                        <div class="text-center"><div class="text-4xl font-bold mb-2">24/7</div><p>We answer calls around the clock</p></div>
                     </div>
-                    <p class="mt-6 text-center">
-                        During heavy storm periods, we may be overwhelmed with repair requests. We always prioritize emergency situations and do our best to respond as quickly as possible.
-                    </p>
+                    <p class="mt-6 text-center">During heavy storm periods, we may be overwhelmed with repair requests. We always prioritize emergency situations and do our best to respond as quickly as possible.</p>
                 </div>
 
                 <!-- FAQs -->
                 <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-                    
                     <div class="space-y-6">
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">How quickly can you repair my fence?</h3>
-                            <p class="text-gray-700">
-                                Most small to medium fence repairs can be completed within 48 hours of your call. We offer same-day and emergency repair services with proper notice. Larger repairs may need to be scheduled based on the scope of work.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">What types of fence damage do you repair?</h3>
-                            <p class="text-gray-700">
-                                We repair all types of fence damage including storm damage, broken or rotted posts, leaning fence sections, damaged pickets and panels, sagging gates, and rot or insect damage. We work on wood, metal, chain link, and welded fences.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Can you repair a fence that another company installed?</h3>
-                            <p class="text-gray-700">
-                                Yes, absolutely. We can repair any type of wood, metal, or chain link fence, regardless of who originally installed it. We'll match the existing materials as closely as possible.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">What is your most common fence repair?</h3>
-                            <p class="text-gray-700">
-                                Post replacement is our number one repair request. Fence posts often rot at ground level or break during storms. We replace damaged wood posts with new posts set properly in concrete for a lasting repair.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">My gate is sagging. Can it be fixed?</h3>
-                            <p class="text-gray-700">
-                                In most cases, yes. Sagging gates are usually caused by loose hinges, a settling post, or a frame that has come out of square. We can typically fix this by reinforcing the gate, replacing the hardware, or resetting the post.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">How much does fence repair cost?</h3>
-                            <p class="text-gray-700">
-                                Fence repair costs vary depending on the extent of damage. Simple picket replacements are very affordable, while multiple post replacements will cost more. We provide free, no-obligation quotes for all repair work.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Do you offer emergency fence repair?</h3>
-                            <p class="text-gray-700">
-                                Yes, we offer same-day and emergency fence repair services. We understand that a damaged fence can be a security risk for your family and pets. Call us at (512) 710-7116 for urgent repairs.
-                            </p>
-                        </div>
+                        <div><h3 class="text-xl font-semibold text-gray-900 mb-2">How quickly can you repair my fence?</h3><p class="text-gray-700">Most small to medium fence repairs can be completed within 48 hours of your call. We offer same-day and emergency repair services with proper notice. Larger repairs may need to be scheduled based on the scope of work.</p></div>
+                        <div><h3 class="text-xl font-semibold text-gray-900 mb-2">What types of fence damage do you repair?</h3><p class="text-gray-700">We repair all types of fence damage including storm damage, broken or rotted posts, leaning fence sections, damaged pickets and panels, sagging gates, and rot or insect damage. We work on wood, metal, chain link, and welded fences.</p></div>
+                        <div><h3 class="text-xl font-semibold text-gray-900 mb-2">Can you repair a fence that another company installed?</h3><p class="text-gray-700">Yes, absolutely. We can repair any type of wood, metal, or chain link fence, regardless of who originally installed it. We'll match the existing materials as closely as possible.</p></div>
+                        <div><h3 class="text-xl font-semibold text-gray-900 mb-2">What is your most common fence repair?</h3><p class="text-gray-700">Post replacement is our number one repair request. Fence posts often rot at ground level or break during storms. We replace damaged wood posts with new posts set properly in concrete for a lasting repair.</p></div>
+                        <div><h3 class="text-xl font-semibold text-gray-900 mb-2">My gate is sagging. Can it be fixed?</h3><p class="text-gray-700">In most cases, yes. Sagging gates are usually caused by loose hinges, a settling post, or a frame that has come out of square. We can typically fix this by reinforcing the gate, replacing the hardware, or resetting the post.</p></div>
+                        <div><h3 class="text-xl font-semibold text-gray-900 mb-2">How much does fence repair cost?</h3><p class="text-gray-700">Fence repair costs vary depending on the extent of damage. Simple picket replacements are very affordable, while multiple post replacements will cost more. We provide free, no-obligation quotes for all repair work. Call <a href="tel:5127107116" class="text-red-600 font-semibold hover:underline">(512) 710-7116</a> or <a href="/contact" class="text-red-600 font-semibold hover:underline">request a quote online</a>.</p></div>
+                        <div><h3 class="text-xl font-semibold text-gray-900 mb-2">Do you offer emergency fence repair?</h3><p class="text-gray-700">Yes, we offer same-day and emergency fence repair services. We understand that a damaged fence can be a security risk for your family and pets. Call us at <a href="tel:5127107116" class="text-red-600 font-semibold hover:underline">(512) 710-7116</a> for urgent repairs.</p></div>
                     </div>
                 </div>
 
-                <!-- Customer Testimonials -->
+                <!-- Testimonials -->
                 <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">What Our Repair Customers Say</h2>
-                    
                     <div class="space-y-6">
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <p class="text-gray-700 italic mb-2">
-                                "Quick, efficient and great repair. This is the second time we have had a post that has broke and William with Buda Fence did a wonderful job to make sure our yard was taken care of and secured for our family."
-                            </p>
-                            <p class="text-gray-900 font-semibold">— Holly F., Buda</p>
-                        </div>
-                        
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <p class="text-gray-700 italic mb-2">
-                                "Buda Fence did a nice job repairing our fence. We had 3 posts that broke during a windstorm and needed replaced quick. Called them Monday and we had our fence fixed on Tuesday for a great price."
-                            </p>
-                            <p class="text-gray-900 font-semibold">— Dale K., Austin</p>
-                        </div>
-                        
-                        <div class="border-l-4 border-red-600 pl-4">
-                            <p class="text-gray-700 italic mb-2">
-                                "William with Buda Fence made quick work out of our repairs when other companies stated we needed a full fence replacement. Will be calling them back for all of our fence work in the future."
-                            </p>
-                            <p class="text-gray-900 font-semibold">— Zach T., Driftwood</p>
-                        </div>
+                        <blockquote class="border-l-4 border-red-600 pl-4"><p class="text-gray-700 italic mb-2">"Quick, efficient and great repair. This is the second time we have had a post that has broke and William with Buda Fence did a wonderful job to make sure our yard was taken care of and secured for our family."</p><footer class="text-gray-900 font-semibold">— Holly F., Buda</footer></blockquote>
+                        <blockquote class="border-l-4 border-red-600 pl-4"><p class="text-gray-700 italic mb-2">"Buda Fence did a nice job repairing our fence. We had 3 posts that broke during a windstorm and needed replaced quick. Called them Monday and we had our fence fixed on Tuesday for a great price."</p><footer class="text-gray-900 font-semibold">— Dale K., Austin</footer></blockquote>
+                        <blockquote class="border-l-4 border-red-600 pl-4"><p class="text-gray-700 italic mb-2">"William with Buda Fence made quick work out of our repairs when other companies stated we needed a full fence replacement. Will be calling them back for all of our fence work in the future."</p><footer class="text-gray-900 font-semibold">— Zach T., Driftwood</footer></blockquote>
                     </div>
                 </div>
 
-                <!-- CTA Section -->
+                <!-- CTA -->
                 <div class="bg-gradient-to-r from-slate-800 to-slate-900 rounded-lg shadow-md p-8 text-white text-center">
                     <h2 class="text-3xl font-bold mb-4">Need Your Fence Repaired?</h2>
-                    <p class="text-xl mb-6">
-                        Don't let a damaged fence compromise your home's safety and appearance. Get fast, professional repairs from Austin's trusted fence company.
-                    </p>
+                    <p class="text-xl mb-6">Don't let a damaged fence compromise your home's safety and appearance. Get fast, professional repairs from Austin's trusted fence company.</p>
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="../contact.html" class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg">
-                            Get Free Estimate
-                        </a>
-                        <a href="tel:5127107116" class="bg-white text-slate-800 px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg">
-                            Call (512) 710-7116
-                        </a>
+                        <a href="/contact" class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 font-semibold text-lg">Get Free Estimate</a>
+                        <a href="tel:5127107116" class="bg-white text-slate-800 px-8 py-3 rounded-md hover:bg-gray-100 font-semibold text-lg">(512) 710-7116</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Sidebar -->
+            <!-- Sidebar — FIX: URLs updated to clean paths -->
             <div class="lg:col-span-1">
                 <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Emergency Repair?</h3>
                     <p class="text-gray-700 mb-4">Storm damage or security concern? We offer same-day emergency service.</p>
                     <div class="space-y-4">
-                        <a href="tel:5127107116" class="block bg-red-600 text-white text-center px-6 py-3 rounded-md hover:bg-red-700 font-semibold">
-                            (512) 710-7116
-                        </a>
-                        <a href="../contact.html" class="block bg-slate-800 text-white text-center px-6 py-3 rounded-md hover:bg-slate-700 font-semibold">
-                            Get Free Quote
-                        </a>
+                        <a href="tel:5127107116" class="block bg-red-600 text-white text-center px-6 py-3 rounded-md hover:bg-red-700 font-semibold">(512) 710-7116</a>
+                        <a href="/contact" class="block bg-slate-800 text-white text-center px-6 py-3 rounded-md hover:bg-slate-700 font-semibold">Get Free Quote</a>
                     </div>
-                    
                     <div class="mt-8 pt-6 border-t">
                         <h4 class="font-semibold text-gray-900 mb-3">We Repair All Fence Types</h4>
-                        <ul class="space-y-2 text-gray-700">
-                            <li>✓ Wood Fences (Cedar, Pine)</li>
-                            <li>✓ Metal Fences (Iron, Steel)</li>
-                            <li>✓ Chain Link Fences</li>
-                            <li>✓ Welded Fences</li>
-                            <li>✓ Gates (All Types)</li>
-                        </ul>
+                        <ul class="space-y-2 text-gray-700"><li><span aria-hidden="true">✓</span> Wood Fences (Cedar, Pine)</li><li><span aria-hidden="true">✓</span> Metal Fences (Iron, Steel)</li><li><span aria-hidden="true">✓</span> Chain Link Fences</li><li><span aria-hidden="true">✓</span> Welded Fences</li><li><span aria-hidden="true">✓</span> Gates (All Types)</li></ul>
                     </div>
-                    
                     <div class="mt-6 pt-6 border-t">
                         <h4 class="font-semibold text-gray-900 mb-3">Common Repairs</h4>
-                        <ul class="space-y-2 text-gray-700">
-                            <li>• Post Replacement (#1 Request)</li>
-                            <li>• Storm Damage</li>
-                            <li>• Leaning Fence Sections</li>
-                            <li>• Sagging Gates</li>
-                            <li>• Picket/Panel Replacement</li>
-                            <li>• Rot & Insect Damage</li>
-                        </ul>
+                        <ul class="space-y-2 text-gray-700"><li>• Post Replacement (#1 Request)</li><li>• Storm Damage</li><li>• Leaning Fence Sections</li><li>• Sagging Gates</li><li>• Picket/Panel Replacement</li><li>• Rot & Insect Damage</li></ul>
                     </div>
-                    
                     <div class="mt-6 pt-6 border-t">
                         <h4 class="font-semibold text-gray-900 mb-3">Service Areas</h4>
                         <ul class="space-y-2 text-gray-700">
-                            <li><a href="../service-areas/austin.html" class="hover:text-red-600">Austin, TX</a></li>
-                            <li><a href="../service-areas/buda.html" class="hover:text-red-600">Buda, TX</a></li>
-                            <li><a href="../service-areas/kyle.html" class="hover:text-red-600">Kyle, TX</a></li>
-                            <li><a href="../service-areas/dripping-springs.html" class="hover:text-red-600">Dripping Springs, TX</a></li>
+                            <li><a href="/service-areas/austin" class="hover:text-red-600">Austin, TX</a></li>
+                            <li><a href="/service-areas/buda" class="hover:text-red-600">Buda, TX</a></li>
+                            <li><a href="/service-areas/kyle" class="hover:text-red-600">Kyle, TX</a></li>
+                            <li><a href="/service-areas/dripping-springs" class="hover:text-red-600">Dripping Springs, TX</a></li>
                         </ul>
                     </div>
-                    
                     <div class="mt-6 pt-6 border-t">
                         <h4 class="font-semibold text-gray-900 mb-3">Other Services</h4>
                         <ul class="space-y-2 text-gray-700">
-                            <li><a href="wood-fence-installation.html" class="hover:text-red-600">Wood Fence Installation</a></li>
-                            <li><a href="metal-fence-installation.html" class="hover:text-red-600">Metal Fence Installation</a></li>
-                            <li><a href="chain-link-fence-installation.html" class="hover:text-red-600">Chain Link Fence Installation</a></li>
+                            <li><a href="/services/wood-fence-installation" class="hover:text-red-600">Wood Fence Installation</a></li>
+                            <li><a href="/services/metal-fence-installation" class="hover:text-red-600">Metal Fence Installation</a></li>
+                            <li><a href="/services/chain-link-fence-installation" class="hover:text-red-600">Chain Link Fence Installation</a></li>
                         </ul>
                     </div>
                 </div>
@@ -742,36 +338,129 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-12">
+    <!-- Footer — FIX: URLs updated, 4-column grid, service areas added -->
+    <footer class="bg-slate-900 text-white py-12" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Buda Fence Company</h3>
-                    <p class="text-gray-300 mb-4">Fast, professional fence repairs in Austin, TX.</p>
+                    <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company" class="h-16 mb-4" width="97" height="48" loading="lazy">
+                    <p class="text-gray-300 mb-4">Professional fence installation and repair in Austin, Buda, and Central Texas. Family-owned since 2015.</p>
                     <p class="text-gray-300">308 Wincliff Dr<br>Buda, TX 78610</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-300 hover:text-white">Home</a></li>
-                        <li><a href="../about.html" class="text-gray-300 hover:text-white">About</a></li>
-                        <li><a href="../services.html" class="text-gray-300 hover:text-white">Services</a></li>
-                        <li><a href="../gallery.html" class="text-gray-300 hover:text-white">Gallery</a></li>
-                        <li><a href="../contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="/services" class="text-gray-300 hover:text-white">All Services</a></li>
+                        <li><a href="/services/wood-fence-installation" class="text-gray-300 hover:text-white">Wood Fences</a></li>
+                        <li><a href="/services/metal-fence-installation" class="text-gray-300 hover:text-white">Metal Fences</a></li>
+                        <li><a href="/services/chain-link-fence-installation" class="text-gray-300 hover:text-white">Chain Link</a></li>
+                        <li><a href="/services/fence-repair" class="text-white font-medium" aria-current="page">Fence Repair</a></li>
+                        <li><a href="/services/deck-construction" class="text-gray-300 hover:text-white">Deck Construction</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Service Areas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/service-areas/" class="text-gray-300 hover:text-white">All Service Areas</a></li>
+                        <li><a href="/service-areas/austin" class="text-gray-300 hover:text-white">Austin, TX</a></li>
+                        <li><a href="/service-areas/buda" class="text-gray-300 hover:text-white">Buda, TX</a></li>
+                        <li><a href="/service-areas/kyle" class="text-gray-300 hover:text-white">Kyle, TX</a></li>
+                        <li><a href="/service-areas/dripping-springs" class="text-gray-300 hover:text-white">Dripping Springs, TX</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Us</h3>
                     <p class="text-gray-300 mb-2">Phone: <a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></p>
                     <p class="text-gray-300 mb-4">Email: <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></p>
-                    <p class="text-gray-300">Hours: 24/7 (Installation: 7am-6pm)</p>
+                    <p class="text-gray-300">Mon-Fri: 6 AM - 6 PM<br>Saturday: 9 AM - 2 PM<br><span class="text-sm text-gray-400">(Emergency service available)</span></p>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 Buda Fence Company. All rights reserved.</p>
+                <p>&copy; <span id="copyright-year"></span> Buda Fence Company. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile floating CTA bar -->
+    <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+        <a href="tel:5127107116" class="cta-call"><span aria-hidden="true">📞</span> Call Now</a>
+        <a href="/contact" class="cta-quote">Free Estimate</a>
+    </div>
+
+    <!-- Complete JavaScript -->
+    <script>
+    (function() {
+        // Copyright year
+        var yearEl = document.getElementById('copyright-year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Mobile menu
+        var menu = document.getElementById('mobile-menu');
+        var button = document.getElementById('mobile-menu-button');
+        if (menu && button) {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                var isOpen = !menu.classList.contains('hidden');
+                if (isOpen) { menu.classList.add('hidden'); button.setAttribute('aria-expanded','false'); }
+                else { menu.classList.remove('hidden'); button.setAttribute('aria-expanded','true'); }
+            });
+            document.addEventListener('click', function(e) {
+                if (!menu.contains(e.target) && !button.contains(e.target) && !menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden'); button.setAttribute('aria-expanded','false');
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden'); button.setAttribute('aria-expanded','false'); button.focus();
+                }
+            });
+            menu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() { menu.classList.add('hidden'); button.setAttribute('aria-expanded','false'); });
+            });
+        }
+
+        // Desktop dropdown keyboard nav
+        document.querySelectorAll('[data-dropdown]').forEach(function(dropdown) {
+            var btn = dropdown.querySelector('[data-dropdown-trigger]');
+            var ddMenu = dropdown.querySelector('[data-dropdown-menu]');
+            if (!btn || !ddMenu) return;
+            var items = ddMenu.querySelectorAll('[role="menuitem"]');
+
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                var isVisible = ddMenu.style.display === 'block';
+                closeAllDD();
+                if (!isVisible) { ddMenu.style.display = 'block'; btn.setAttribute('aria-expanded','true'); }
+            });
+            btn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault(); closeAllDD();
+                    ddMenu.style.display = 'block'; btn.setAttribute('aria-expanded','true');
+                    if (items.length) items[0].focus();
+                }
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault(); ddMenu.style.display = 'block'; btn.setAttribute('aria-expanded','true');
+                    if (items.length) items[0].focus();
+                }
+            });
+            items.forEach(function(item, i) {
+                item.addEventListener('keydown', function(e) {
+                    if (e.key === 'ArrowDown') { e.preventDefault(); if (i < items.length - 1) items[i+1].focus(); }
+                    if (e.key === 'ArrowUp') { e.preventDefault(); if (i > 0) items[i-1].focus(); else btn.focus(); }
+                    if (e.key === 'Escape') { e.preventDefault(); ddMenu.style.display = ''; btn.setAttribute('aria-expanded','false'); btn.focus(); }
+                    if (e.key === 'Tab') { ddMenu.style.display = ''; btn.setAttribute('aria-expanded','false'); }
+                });
+            });
+            document.addEventListener('click', function(e) {
+                if (!dropdown.contains(e.target)) { ddMenu.style.display = ''; btn.setAttribute('aria-expanded','false'); }
+            });
+        });
+        function closeAllDD() {
+            document.querySelectorAll('[data-dropdown-menu]').forEach(function(m) { m.style.display = ''; });
+            document.querySelectorAll('[data-dropdown-trigger]').forEach(function(b) { b.setAttribute('aria-expanded','false'); });
+        }
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAllDD(); });
+    })();
+    </script>
 </body>
 </html>
