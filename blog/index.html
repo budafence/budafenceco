@@ -3,16 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FIX: Google tag was MISSING -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRJYMYZ44"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HNRJYMYZ44');
+    </script>
+
     <title>Fence & Deck Resource Hub | Buda Fence Company | Austin, TX</title>
     <meta name="description" content="Your complete guide to fences in Central Texas. Find expert advice on fence installation, maintenance, permits, and materials from the pros at Buda Fence Company.">
-    <link rel="canonical" href="https://budafenceco.com/blog/" />
+    <meta name="keywords" content="fence blog austin, fence guide texas, cedar fence tips, fence installation advice, fence maintenance central texas, HOA fence approval">
+    <meta name="author" content="Buda Fence Company">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://budafenceco.com/blog/">
+    <meta name="theme-color" content="#1e293b">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://budafenceco.com/blog/">
+    <meta property="og:title" content="Fence & Deck Resource Hub | Buda Fence Company">
+    <meta property="og:description" content="Expert advice on fence installation, maintenance, permits, and materials from your local Central Texas fence contractor.">
+    <meta property="og:image" content="https://budafenceco.com/images/og-image.webp">
+    <meta property="og:image:alt" content="Buda Fence Company — fence planning resources and guides for Central Texas homeowners">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Buda Fence Company">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fence & Deck Resource Hub | Buda Fence Company">
+    <meta name="twitter:description" content="Expert advice on fence installation, maintenance, permits, and materials for Central Texas homeowners.">
+    <meta name="twitter:image" content="https://budafenceco.com/images/og-image.webp">
+
+    <!-- Local SEO -->
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Buda, Texas">
+    <meta name="geo.position" content="30.09939;-97.86756">
+    <meta name="ICBM" content="30.09939, -97.86756">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'buda-primary': '#1e3a5f',
+                        /* FIX: Changed from #1e3a5f to #1e293b to match all other pages */
+                        'buda-primary': '#1e293b',
                         'buda-secondary': '#dc2626',
                     }
                 }
@@ -25,103 +70,116 @@
         .featured-image { width: 100%; height: 100%; min-height: 300px; object-fit: contain; background-color: #f3f4f6; }
         .mobile-menu { display: none; }
         .mobile-menu.active { display: block; }
-        .new-badge {
-            display: inline-block;
-            background-color: #dc2626;
-            color: white;
-            font-size: 0.65rem;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 9999px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-left: 8px;
-            vertical-align: middle;
+        .new-badge { display: inline-block; background-color: #dc2626; color: white; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; margin-left: 8px; vertical-align: middle; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: #dc2626; color: #fff; padding: 8px 16px; z-index: 100; transition: top .3s; text-decoration: none; }
+        .skip-link:focus { top: 0; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+        /* FIX: Keyboard-accessible dropdown */
+        .dropdown-menu-active { display: block !important; }
+        /* Mobile CTA bar */
+        .mobile-cta-bar { display: none; }
+        @media (max-width: 767px) {
+            .mobile-cta-bar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; background: #1e293b; padding: 10px 16px; gap: 10px; box-shadow: 0 -4px 12px rgba(0,0,0,0.2); }
+            .mobile-cta-bar a { flex: 1; text-align: center; padding: 12px 8px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; }
+            .mobile-cta-bar .cta-call { background: #dc2626; color: #fff; }
+            .mobile-cta-bar .cta-quote { background: #fff; color: #1e293b; }
+            footer { padding-bottom: 80px !important; }
         }
     </style>
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"LocalBusiness","name":"Buda Fence Company","image":"https://budafenceco.com/images/buda-fence-logo.webp","@id":"https://budafenceco.com","url":"https://budafenceco.com","telephone":"(512) 710-7116","email":"info@budafenceco.com","address":{"@type":"PostalAddress","streetAddress":"308 Wincliff Dr","addressLocality":"Buda","addressRegion":"TX","postalCode":"78610","addressCountry":"US"},"foundingDate":"2015","sameAs":["https://www.facebook.com/BudaFenceCo"]}
+    </script>
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://budafenceco.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://budafenceco.com/blog/"}]}
+    </script>
 </head>
 <body class="bg-gray-100">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Navigation — FIX: All URLs updated from ../page.html to /page clean URLs -->
+    <nav class="bg-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0">
-                    <a href="../index.html"><img class="h-16 w-auto" src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo"></a>
+                    <!-- FIX: Logo updated from old JPEG to WebP, URL from ../index.html to / -->
+                    <a href="/" aria-label="Buda Fence Company Home"><img class="h-16 w-auto" src="/images/buda-fence-logo.webp" alt="Buda Fence Company Logo" width="97" height="48" loading="eager"></a>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../index.html">Home</a>
-                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../about.html">About</a>
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Services ▾</button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold" href="../services.html">All Services</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/deck-construction.html">Deck Construction</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/wood-fence-installation.html">Wood Fence Installation</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/metal-fence-installation.html">Metal Fence Installation</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/chain-link-fence-installation.html">Chain Link Fence Installation</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/fence-repair.html">Fence Repair</a>
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/">Home</a>
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/about">About</a>
+                    <div class="relative group" data-dropdown>
+                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>Services <span aria-hidden="true">▾</span></button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50" role="menu" data-dropdown-menu>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold" href="/services" role="menuitem">All Services</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/services/deck-construction" role="menuitem">Deck Construction</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/services/wood-fence-installation" role="menuitem">Wood Fence Installation</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/services/metal-fence-installation" role="menuitem">Metal Fence Installation</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/services/chain-link-fence-installation" role="menuitem">Chain Link Fence Installation</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/services/fence-repair" role="menuitem">Fence Repair</a>
                         </div>
                     </div>
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-buda-secondary font-semibold" href="../service-areas/">All Service Areas</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../service-areas/austin.html">Austin</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../service-areas/buda.html">Buda</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../service-areas/kyle.html">Kyle</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../service-areas/dripping-springs.html">Dripping Springs</a>
+                    <div class="relative group" data-dropdown>
+                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>Service Areas <span aria-hidden="true">▾</span></button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50" role="menu" data-dropdown-menu>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-buda-secondary font-semibold" href="/service-areas/" role="menuitem">All Service Areas</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/austin" role="menuitem">Austin</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/buda" role="menuitem">Buda</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/kyle" role="menuitem">Kyle</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/dripping-springs" role="menuitem">Dripping Springs</a>
                         </div>
                     </div>
-                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../gallery.html">Gallery</a>
-                    <a class="text-buda-secondary font-medium" href="../blog/">Blog</a>
-                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../contact.html">Contact</a>
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/gallery">Gallery</a>
+                    <a class="text-buda-secondary font-medium" href="/blog/" aria-current="page">Blog</a>
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/contact">Contact</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-4">
-                    <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
-                    <a class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold" href="../contact.html">Free Quote</a>
+                    <a href="tel:5127107116" class="text-buda-secondary font-semibold">(512) 710-7116</a>
+                    <a class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold" href="/contact">Free Quote</a>
                 </div>
                 <div class="md:hidden flex items-center space-x-3">
-                    <a class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold text-sm" href="../contact.html">Free Quote</a>
-                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-buda-secondary">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <a class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold text-sm" href="/contact">Free Quote</a>
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-buda-secondary p-1" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200" role="menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="../index.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-                <a href="../about.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
+                <a href="/" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">Home</a>
+                <a href="/about" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">About</a>
                 <div class="px-3 py-2">
                     <p class="text-gray-900 font-semibold mb-2">Services</p>
-                    <a href="../services.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm font-semibold">All Services</a>
-                    <a href="../services/deck-construction.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Deck Construction</a>
-                    <a href="../services/wood-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Wood Fence</a>
-                    <a href="../services/metal-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Metal Fence</a>
-                    <a href="../services/chain-link-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Chain Link</a>
-                    <a href="../services/fence-repair.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Fence Repair</a>
+                    <a href="/services" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm font-semibold" role="menuitem">All Services</a>
+                    <a href="/services/deck-construction" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Deck Construction</a>
+                    <a href="/services/wood-fence-installation" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Wood Fence</a>
+                    <a href="/services/metal-fence-installation" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Metal Fence</a>
+                    <a href="/services/chain-link-fence-installation" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Chain Link</a>
+                    <a href="/services/fence-repair" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Fence Repair</a>
                 </div>
                 <div class="px-3 py-2">
                     <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-                    <a href="../service-areas/" class="block pl-4 py-1 text-buda-secondary text-sm font-semibold">All Service Areas</a>
-                    <a href="../service-areas/austin.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Austin</a>
-                    <a href="../service-areas/buda.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Buda</a>
-                    <a href="../service-areas/kyle.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Kyle</a>
-                    <a href="../service-areas/dripping-springs.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Dripping Springs</a>
+                    <a href="/service-areas/" class="block pl-4 py-1 text-buda-secondary text-sm font-semibold" role="menuitem">All Service Areas</a>
+                    <a href="/service-areas/austin" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Austin</a>
+                    <a href="/service-areas/buda" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Buda</a>
+                    <a href="/service-areas/kyle" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Kyle</a>
+                    <a href="/service-areas/dripping-springs" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" role="menuitem">Dripping Springs</a>
                 </div>
-                <a href="../gallery.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-                <a href="../blog/" class="block px-3 py-2 text-buda-secondary font-medium">Blog</a>
-                <a href="../contact.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+                <a href="/gallery" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">Gallery</a>
+                <a href="/blog/" class="block px-3 py-2 text-buda-secondary font-medium" role="menuitem" aria-current="page">Blog</a>
+                <a href="/contact" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">Contact</a>
                 <div class="px-3 py-2 border-t border-gray-200">
-                    <a href="tel:5127107116" class="block text-buda-primary font-semibold">(512) 710-7116</a>
+                    <a href="tel:5127107116" class="block text-buda-secondary font-semibold py-1">(512) 710-7116</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <header class="bg-buda-primary text-white py-16">
+    <header class="bg-buda-primary text-white py-16" role="banner">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Fence & Deck Resource Hub</h1>
             <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Your complete guide to fences and decks in Central Texas. Find expert advice on installation, maintenance, HOAs, and materials.</p>
@@ -129,20 +187,20 @@
     </header>
 
     <!-- Main Content -->
-    <main class="py-12">
+    <main id="main-content" class="py-12" role="main">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- Featured Article -->
+            <!-- Featured Article — FIX: Image paths updated from ../images to /images -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
                 <div class="md:flex">
                     <div class="md:w-1/2 bg-gray-100 flex items-center justify-center">
-                        <img class="featured-image" src="../images/blog-wood-vs-metal.jpg" alt="Wood vs Metal Fence Comparison">
+                        <img class="featured-image" src="/images/blog-wood-vs-metal.jpg" alt="Wood vs Metal Fence Comparison — complete guide for Texas homeowners" loading="lazy">
                     </div>
                     <div class="md:w-1/2 p-8">
                         <p class="text-sm text-buda-secondary font-semibold">Featured Guide</p>
                         <h2 class="text-3xl font-bold text-buda-primary mt-2 mb-4">Wood vs. Metal Fence: A Complete Comparison for Texas Homeowners</h2>
                         <p class="text-gray-700 mb-6">Can't decide between the classic beauty of wood and the modern strength of metal? We break down the pros, cons, costs, and maintenance for each so you can make the best choice for your Austin home.</p>
-                        <a class="inline-block bg-buda-secondary text-white px-6 py-3 rounded-md hover:bg-red-700 font-semibold" href="wood-vs-metal-fence-comparison.html">Read the Full Guide →</a>
+                        <a class="inline-block bg-buda-secondary text-white px-6 py-3 rounded-md hover:bg-red-700 font-semibold" href="/blog/wood-vs-metal-fence-austin.html">Read the Full Guide <span aria-hidden="true">→</span></a>
                     </div>
                 </div>
             </div>
@@ -151,231 +209,292 @@
             <div class="space-y-12">
 
                 <!-- Fence Buying Guides -->
-                <div>
-                    <h3 class="text-2xl font-bold text-buda-primary border-b-2 border-buda-secondary pb-2 mb-6">Fence Buying Guides</h3>
+                <section aria-labelledby="buying-guides-heading">
+                    <h3 id="buying-guides-heading" class="text-2xl font-bold text-buda-primary border-b-2 border-buda-secondary pb-2 mb-6">Fence Buying Guides</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                        <!-- NEW April 2026 -->
                         <article class="bg-white rounded-lg shadow-md overflow-hidden border-2 border-buda-secondary">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/cedar-fence.webp" alt="Fence Installation Cost Austin TX 2026">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/cedar-fence.webp" alt="Fence Installation Cost Austin TX 2026" loading="lazy"></div>
                             <div class="p-6">
-                                <p class="text-xs text-gray-500 mb-1">April 1, 2026 <span class="new-badge">New</span></p>
+                                <p class="text-xs text-gray-500 mb-1"><time datetime="2026-04-01">April 1, 2026</time> <span class="new-badge">New</span></p>
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">How Much Does Fence Installation Cost in Austin, TX? (2026 Pricing Guide)</h4>
                                 <p class="text-gray-600 text-sm mb-4">Real Austin pricing from a local contractor — cedar styles, gates, staining, and what those "$17/LF" articles get wrong.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="fence-installation-cost-austin.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/fence-installation-cost-austin.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
-
-                        <!-- March 2026 -->
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-wood-vs-metal.jpg" alt="Wood Fence vs Metal Fence Austin">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-wood-vs-metal.jpg" alt="Wood Fence vs Metal Fence Austin" loading="lazy"></div>
                             <div class="p-6">
-                                <p class="text-xs text-gray-500 mb-1">March 1, 2026</p>
+                                <p class="text-xs text-gray-500 mb-1"><time datetime="2026-03-01">March 1, 2026</time></p>
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">Wood Fence vs. Metal Fence: Which Is Right for Austin Homeowners?</h4>
                                 <p class="text-gray-600 text-sm mb-4">Cost, durability, maintenance, and curb appeal — everything you need to choose the right fence for your yard.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="wood-vs-metal-fence-austin.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/wood-vs-metal-fence-austin.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
-
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-cedar-vs-pine.jpg" alt="Cedar vs Pine Fence Comparison">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-cedar-vs-pine.jpg" alt="Cedar vs Pine Fence Comparison" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">Cedar vs. Pine Fence for Austin</h4>
                                 <p class="text-gray-600 text-sm mb-4">Which wood is king in Central Texas? A deep dive into cost, durability, and aesthetics.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="cedar-vs-pine-fence-austin.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/cedar-vs-pine-fence-austin.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
-
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-chain-link-guide.png" alt="Chain Link Fence Guide">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-chain-link-guide.png" alt="Chain Link Fence Guide" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">The Modern Chain Link Fence</h4>
                                 <p class="text-gray-600 text-sm mb-4">It's not just for warehouses. Explore modern, stylish, and affordable chain link options.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="chain-link-fence-guide-texas.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/chain-link-fence-guide-texas.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
-
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-privacy-fence-styles.jpg" alt="Privacy Fence Styles">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-privacy-fence-styles.jpg" alt="Privacy Fence Styles" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">Top 10 Privacy Fence Styles</h4>
                                 <p class="text-gray-600 text-sm mb-4">From board-on-board to horizontal slats, find the perfect privacy fence style for your home.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="privacy-fence-styles-austin.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/privacy-fence-styles-austin.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
-
                     </div>
-                </div>
+                </section>
 
                 <!-- Maintenance & Care -->
-                <div>
-                    <h3 class="text-2xl font-bold text-buda-primary border-b-2 border-buda-secondary pb-2 mb-6">Maintenance & Care</h3>
+                <section aria-labelledby="maintenance-heading">
+                    <h3 id="maintenance-heading" class="text-2xl font-bold text-buda-primary border-b-2 border-buda-secondary pb-2 mb-6">Maintenance & Care</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/fence-maintenance-infographic.jpg" alt="Fence Maintenance Schedule Infographic">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/fence-maintenance-infographic.jpg" alt="Fence Maintenance Schedule Infographic" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">Central Texas Fence Maintenance</h4>
                                 <p class="text-gray-600 text-sm mb-4">A complete guide to protecting your fence from the harsh Texas sun, humidity, and storms.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="fence-maintenance-central-texas.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/fence-maintenance-central-texas.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-fence-staining.jpg" alt="How to Stain a Wood Fence">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-fence-staining.jpg" alt="How to Stain a Wood Fence" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">How to Stain a Wood Fence</h4>
                                 <p class="text-gray-600 text-sm mb-4">A step-by-step guide to staining your fence for maximum protection and beauty.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="how-to-stain-wood-fence.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/how-to-stain-wood-fence.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-fence-repair-vs-replace.jpg" alt="Fence Repair vs Replace">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-fence-repair-vs-replace.jpg" alt="Fence Repair vs Replace" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">Repair or Replace Your Fence?</h4>
                                 <p class="text-gray-600 text-sm mb-4">Learn how to assess fence damage and make the most cost-effective decision.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="fence-repair-vs-replace.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/fence-repair-vs-replace.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                     </div>
-                </div>
+                </section>
 
                 <!-- Permits, HOAs & Local Info -->
-                <div>
-                    <h3 class="text-2xl font-bold text-buda-primary border-b-2 border-buda-secondary pb-2 mb-6">Permits, HOAs & Local Info</h3>
+                <section aria-labelledby="permits-heading">
+                    <h3 id="permits-heading" class="text-2xl font-bold text-buda-primary border-b-2 border-buda-secondary pb-2 mb-6">Permits, HOAs & Local Info</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-austin-fence-permit.jpg" alt="Austin Fence Permit Guide">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-austin-fence-permit.jpg" alt="Austin Fence Permit Guide" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">Austin Fence Permit Guide</h4>
                                 <p class="text-gray-600 text-sm mb-4">Do you need a permit for your fence in Austin? Get a clear, simple answer here.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="austin-fence-permit-guide.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/austin-fence-permit-guide.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-hoa-approval.jpg" alt="HOA Fence Approval Tips">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-hoa-approval.jpg" alt="HOA Fence Approval Tips" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">Getting Your Fence HOA-Approved</h4>
                                 <p class="text-gray-600 text-sm mb-4">Tips and tricks for a smooth, fast approval process with your Homeowners Association.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="hoa-fence-approval-tips.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/hoa-fence-approval-tips.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-storm-damage.jpg" alt="Texas Storm Damage Fence Repair">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-storm-damage.jpg" alt="Texas Storm Damage Fence Repair" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">Texas Storm Damage & Fences</h4>
                                 <p class="text-gray-600 text-sm mb-4">What to do after a storm hits. A guide to emergency repairs and insurance claims.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="storm-damage-fence-repair-texas.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/storm-damage-fence-repair-texas.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                     </div>
-                </div>
+                </section>
 
                 <!-- Fence Types & Styles -->
-                <div>
-                    <h3 class="text-2xl font-bold text-buda-primary border-b-2 border-buda-secondary pb-2 mb-6">Fence Types & Styles</h3>
+                <section aria-labelledby="styles-heading">
+                    <h3 id="styles-heading" class="text-2xl font-bold text-buda-primary border-b-2 border-buda-secondary pb-2 mb-6">Fence Types & Styles</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-metal-fence-styles.jpg" alt="Metal Fence Styles Guide">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-metal-fence-styles.jpg" alt="Metal Fence Styles Guide" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">Guide to Metal Fence Styles</h4>
                                 <p class="text-gray-600 text-sm mb-4">Explore ornamental iron, aluminum, and modern steel fence options for your property.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="metal-fence-styles-guide.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/metal-fence-styles-guide.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                         <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <div class="bg-gray-100">
-                                <img class="blog-card-image" src="../images/blog-dog-fence.jpg" alt="Best Fence for Dogs in Texas">
-                            </div>
+                            <div class="bg-gray-100"><img class="blog-card-image" src="/images/blog-dog-fence.jpg" alt="Best Fence for Dogs in Texas" loading="lazy"></div>
                             <div class="p-6">
                                 <h4 class="font-bold text-lg text-buda-primary mb-2">The Best Fences for Dogs</h4>
                                 <p class="text-gray-600 text-sm mb-4">Keep your furry friends safe and secure. A look at the best pet-friendly fencing solutions.</p>
-                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="best-fence-for-dogs-texas.html">Read More →</a>
+                                <a class="font-semibold text-buda-secondary hover:text-red-700" href="/blog/best-fence-for-dogs-texas.html">Read More <span aria-hidden="true">→</span></a>
                             </div>
                         </article>
                     </div>
-                </div>
+                </section>
 
             </div>
         </div>
     </main>
 
     <!-- CTA -->
-    <section class="bg-white py-16">
+    <section class="bg-white py-16" aria-label="Call to action">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-buda-primary mb-4">Have a Question We Haven't Answered?</h2>
             <p class="text-xl mb-8 text-gray-600">Our team is ready to help. Contact us for a free estimate for your fence or deck project.</p>
-            <a class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition" href="../contact.html">Get Your Free Estimate</a>
+            <a class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition" href="/contact">Get Your Free Estimate</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <!-- Footer — FIX: All URLs updated to clean paths, logo to WebP, year to "since 2015" -->
+    <footer class="bg-gray-900 text-white py-12" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <img src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company" class="h-16 mb-4 rounded">
-                    <p class="text-gray-400">Building Budaful fences and decks for Central Texas since 2014.</p>
+                    <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company" class="h-16 mb-4" width="97" height="48" loading="lazy">
+                    <!-- FIX: Changed "since 2014" to "since 2015" to match all other pages -->
+                    <p class="text-gray-400">Building Budaful fences and decks for Central Texas since 2015.</p>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Services</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a class="hover:text-white" href="../services/deck-construction.html">Deck Construction</a></li>
-                        <li><a class="hover:text-white" href="../services/wood-fence-installation.html">Wood Fences</a></li>
-                        <li><a class="hover:text-white" href="../services/metal-fence-installation.html">Metal Fences</a></li>
-                        <li><a class="hover:text-white" href="../services/chain-link-fence-installation.html">Chain Link</a></li>
-                        <li><a class="hover:text-white" href="../services/fence-repair.html">Fence Repair</a></li>
+                        <li><a class="hover:text-white" href="/services/deck-construction">Deck Construction</a></li>
+                        <li><a class="hover:text-white" href="/services/wood-fence-installation">Wood Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/metal-fence-installation">Metal Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/chain-link-fence-installation">Chain Link</a></li>
+                        <li><a class="hover:text-white" href="/services/fence-repair">Fence Repair</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Company</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a class="hover:text-white" href="../about.html">About Us</a></li>
-                        <li><a class="hover:text-white" href="../blog/">Blog</a></li>
-                        <li><a class="hover:text-white" href="../contact.html">Contact</a></li>
+                        <li><a class="hover:text-white" href="/about">About Us</a></li>
+                        <li><a class="hover:text-white" href="/gallery">Gallery</a></li>
+                        <li><a class="hover:text-white" href="/blog/">Blog</a></li>
+                        <li><a class="hover:text-white" href="/contact">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></li>
-                        <li><a href="mailto:Info@BudaFenceCo.com" class="hover:text-white">Info@BudaFenceCo.com</a></li>
+                        <li><a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></li>
+                        <li>308 Wincliff Dr</li>
+                        <li>Buda, TX 78610</li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2026 Buda Fence Company. All rights reserved.</p>
+                <p>&copy; <span id="copyright-year"></span> Buda Fence Company. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Mobile floating CTA bar -->
+    <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+        <a href="tel:5127107116" class="cta-call"><span aria-hidden="true">📞</span> Call Now</a>
+        <a href="/contact" class="cta-quote">Free Estimate</a>
+    </div>
+
+    <!-- Complete JavaScript — replaces inline onclick -->
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('active');
+    (function() {
+        // Dynamic copyright year
+        var yearEl = document.getElementById('copyright-year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Mobile menu
+        var menu = document.getElementById('mobile-menu');
+        var button = document.getElementById('mobile-menu-button');
+        if (menu && button) {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                var isOpen = menu.classList.contains('active');
+                if (isOpen) {
+                    menu.classList.remove('active');
+                    button.setAttribute('aria-expanded', 'false');
+                } else {
+                    menu.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+            document.addEventListener('click', function(e) {
+                if (!menu.contains(e.target) && !button.contains(e.target) && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    button.setAttribute('aria-expanded', 'false');
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    button.setAttribute('aria-expanded', 'false');
+                    button.focus();
+                }
+            });
+            // Close on link tap (mobile)
+            menu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    menu.classList.remove('active');
+                    button.setAttribute('aria-expanded', 'false');
+                });
+            });
         }
+
+        // Desktop dropdowns — keyboard navigation
+        document.querySelectorAll('[data-dropdown]').forEach(function(dropdown) {
+            var btn = dropdown.querySelector('[data-dropdown-trigger]');
+            var ddMenu = dropdown.querySelector('[data-dropdown-menu]');
+            if (!btn || !ddMenu) return;
+            var items = ddMenu.querySelectorAll('[role="menuitem"]');
+
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                var wasOpen = ddMenu.classList.contains('dropdown-menu-active');
+                closeAllDropdowns();
+                if (!wasOpen) { ddMenu.classList.add('dropdown-menu-active'); btn.setAttribute('aria-expanded','true'); }
+            });
+            btn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    var wasOpen = ddMenu.classList.contains('dropdown-menu-active');
+                    closeAllDropdowns();
+                    if (!wasOpen) { ddMenu.classList.add('dropdown-menu-active'); btn.setAttribute('aria-expanded','true'); if (items.length) items[0].focus(); }
+                }
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    ddMenu.classList.add('dropdown-menu-active');
+                    btn.setAttribute('aria-expanded','true');
+                    if (items.length) items[0].focus();
+                }
+            });
+            items.forEach(function(item, i) {
+                item.addEventListener('keydown', function(e) {
+                    if (e.key === 'ArrowDown') { e.preventDefault(); if (i < items.length - 1) items[i+1].focus(); }
+                    if (e.key === 'ArrowUp') { e.preventDefault(); if (i > 0) items[i-1].focus(); else btn.focus(); }
+                    if (e.key === 'Escape') { e.preventDefault(); ddMenu.classList.remove('dropdown-menu-active'); btn.setAttribute('aria-expanded','false'); btn.focus(); }
+                    if (e.key === 'Tab') { ddMenu.classList.remove('dropdown-menu-active'); btn.setAttribute('aria-expanded','false'); }
+                });
+            });
+            document.addEventListener('click', function(e) {
+                if (!dropdown.contains(e.target)) { ddMenu.classList.remove('dropdown-menu-active'); btn.setAttribute('aria-expanded','false'); }
+            });
+        });
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('.dropdown-menu-active').forEach(function(m) { m.classList.remove('dropdown-menu-active'); });
+            document.querySelectorAll('[data-dropdown-trigger]').forEach(function(b) { b.setAttribute('aria-expanded','false'); });
+        }
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAllDropdowns(); });
+    })();
     </script>
 </body>
 </html>
