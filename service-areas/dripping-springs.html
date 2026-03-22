@@ -25,7 +25,6 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://budafenceco.com/service-areas/dripping-springs">
     <meta property="og:image" content="https://budafenceco.com/images/dripping-springs-downtown.jpg">
-    <!-- FIX: Added og:image:alt, locale, site_name -->
     <meta property="og:image:alt" content="Buda Fence Company — professional fence installation in Dripping Springs, TX">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Buda Fence Company">
@@ -50,7 +49,6 @@
             theme: {
                 extend: {
                     colors: {
-                        /* FIX: Changed from #1e3a5f to #1e293b */
                         'buda-primary': '#1e293b',
                         'buda-secondary': '#dc2626',
                     }
@@ -79,21 +77,20 @@
         }
     </style>
 
-    <!-- FIX: Schema — updated JPEG logo to WebP, added opening hours, geo coordinates -->
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"LocalBusiness","name":"Buda Fence Company","image":"https://budafenceco.com/images/buda-fence-logo.webp","url":"https://budafenceco.com/service-areas/dripping-springs","telephone":"(512) 710-7116","email":"info@budafenceco.com","foundingDate":"2015","address":{"@type":"PostalAddress","addressLocality":"Dripping Springs","addressRegion":"TX","postalCode":"78620","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":30.1902,"longitude":-98.0867},"areaServed":{"@type":"City","name":"Dripping Springs","sameAs":"https://en.wikipedia.org/wiki/Dripping_Springs,_Texas"},"priceRange":"$$","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"122"}}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Service","serviceType":"Fence Installation","provider":{"@type":"LocalBusiness","name":"Buda Fence Company"},"areaServed":{"@type":"City","name":"Dripping Springs","containedInPlace":{"@type":"State","name":"Texas"}},"description":"Professional fence installation services in Dripping Springs, TX including cedar privacy fences, metal fences, ranch fencing, and large acreage properties."}
     </script>
+    <!-- FIXED: Removed trailing slash from service-areas in breadcrumb schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://budafenceco.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://budafenceco.com/service-areas/"},{"@type":"ListItem","position":3,"name":"Dripping Springs","item":"https://budafenceco.com/service-areas/dripping-springs"}]}
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://budafenceco.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://budafenceco.com/service-areas"},{"@type":"ListItem","position":3,"name":"Dripping Springs","item":"https://budafenceco.com/service-areas/dripping-springs"}]}
     </script>
 </head>
 <body class="bg-gray-50">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation — FIX: Added data-dropdown for keyboard nav, removed inline onclick, aria-hidden on ▾/SVG -->
     <nav class="bg-white shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
@@ -115,7 +112,7 @@
                     <div class="relative group" data-dropdown>
                         <button class="text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>Service Areas <span aria-hidden="true">▾</span></button>
                         <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50" role="menu" data-dropdown-menu>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-buda-secondary font-semibold" href="/service-areas/" role="menuitem">All Service Areas</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-buda-secondary font-semibold" href="/service-areas" role="menuitem">All Service Areas</a>
                             <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/austin" role="menuitem">Austin</a>
                             <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/buda" role="menuitem">Buda</a>
                             <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/kyle" role="menuitem">Kyle</a>
@@ -123,7 +120,7 @@
                         </div>
                     </div>
                     <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/gallery">Gallery</a>
-                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/blog/">Blog</a>
+                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/blog">Blog</a>
                     <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/contact">Contact</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-3">
@@ -151,21 +148,20 @@
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/services/fence-repair" role="menuitem">Fence Repair</a>
                 </div>
                 <div class="py-2"><p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-                    <a class="block pl-4 py-1 text-buda-secondary text-sm font-semibold" href="/service-areas/" role="menuitem">All Service Areas</a>
+                    <a class="block pl-4 py-1 text-buda-secondary text-sm font-semibold" href="/service-areas" role="menuitem">All Service Areas</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/austin" role="menuitem">Austin</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/buda" role="menuitem">Buda</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/kyle" role="menuitem">Kyle</a>
                     <a class="block pl-4 py-1 text-buda-secondary font-semibold text-sm" href="/service-areas/dripping-springs" role="menuitem" aria-current="page">Dripping Springs</a>
                 </div>
                 <a class="block py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/gallery" role="menuitem">Gallery</a>
-                <a class="block py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/blog/" role="menuitem">Blog</a>
+                <a class="block py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/blog" role="menuitem">Blog</a>
                 <a class="block py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/contact" role="menuitem">Contact</a>
                 <div class="border-t border-gray-200 pt-2 mt-2"><a href="tel:5127107116" class="block py-2 text-buda-secondary font-semibold">(512) 710-7116</a></div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero — FIX: emoji aria-hidden -->
     <section class="relative bg-buda-primary text-white py-20" role="banner">
         <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('/images/hill-country-road-scenic.jpg');"></div>
         <div class="relative max-w-7xl mx-auto px-4 text-center">
@@ -180,7 +176,6 @@
         </div>
     </section>
 
-    <!-- Trust Badges -->
     <section class="bg-white py-8 border-b">
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -192,27 +187,24 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <main id="main-content" role="main">
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid lg:grid-cols-3 gap-12">
                 <div class="lg:col-span-2">
 
-                    <!-- Introduction -->
                     <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
                         <h2 class="text-3xl font-bold text-buda-primary mb-6">Hill Country Fence Specialists</h2>
                         <p class="text-gray-700 mb-4">Dripping Springs is known as the "Gateway to the Hill Country," and we understand that your fence needs to complement the natural beauty of this special area. Whether you have a cozy lot in a master-planned community or a sprawling ranch property, Buda Fence Company builds fences that enhance your Hill Country lifestyle.</p>
                         <p class="text-gray-700 mb-4">Many Dripping Springs properties feature larger lots and acreage, which means longer fence runs and unique challenges. Our team has extensive experience with large-scale projects, from multi-acre residential properties to working ranches. We know how to efficiently tackle big jobs while maintaining the quality craftsmanship you expect.</p>
                         <p class="text-gray-700 mb-4">From the established communities of Headwaters and Caliterra to rural properties along Hamilton Pool Road and Fitzhugh Road, we've helped hundreds of Dripping Springs homeowners secure their properties with beautiful, durable fencing that stands up to Texas weather and wildlife.</p>
-                        <p class="text-gray-700 mb-6">Wondering what your project will cost? See our <a href="/blog/fence-installation-cost-austin.html" class="text-buda-secondary font-semibold hover:underline">2026 Central Texas fence pricing guide</a> for real, current numbers on cedar, metal, and large-acreage projects.</p>
+                        <p class="text-gray-700 mb-6">Wondering what your project will cost? See our <a href="/blog/fence-installation-cost-austin" class="text-buda-secondary font-semibold hover:underline">2026 Central Texas fence pricing guide</a> for real, current numbers on cedar, metal, and large-acreage projects.</p>
                         <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
                             <h3 class="font-bold text-amber-800 mb-2">Large Acreage Specialists</h3>
                             <p class="text-amber-700">Have 5, 10, or 20+ acres to fence? No problem. We specialize in large-scale projects and can efficiently handle properties of any size. Ask about our volume pricing for extensive fence runs.</p>
                         </div>
                     </div>
 
-                    <!-- Communities -->
                     <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
                         <h2 class="text-3xl font-bold text-buda-primary mb-6">Dripping Springs Communities We Serve</h2>
                         <p class="text-gray-700 mb-6">From master-planned neighborhoods to rural ranches, we serve all of Dripping Springs and the surrounding Hill Country.</p>
@@ -225,7 +217,6 @@
                         <p class="text-gray-600 italic mt-6 text-center">Don't see your area? Give us a call — if you're in the Hill Country, we likely serve you!</p>
                     </div>
 
-                    <!-- Popular Fence Styles — FIX: Pricing REMOVED from cedar ($30/LF, $33/LF) and horizontal cedar ($39/LF) -->
                     <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
                         <h2 class="text-3xl font-bold text-buda-primary mb-6">Popular Fence Styles in Dripping Springs</h2>
                         <p class="text-gray-700 mb-6">Hill Country homeowners appreciate fences that blend with the natural landscape while providing privacy and security. Here are the most popular styles we install:</p>
@@ -234,8 +225,7 @@
                                 <img src="/images/cedar-fence-after.webp" alt="Cedar privacy fence installation Dripping Springs TX" class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
                                 <div class="p-4">
                                     <h3 class="font-bold text-buda-primary mb-2">Cedar Privacy Fence</h3>
-                                    <!-- FIX: Removed "$30/LF with wood posts, $33/LF with steel posts" pricing -->
-                                    <p class="text-gray-600 text-sm">The natural choice for Hill Country homes. Western Red Cedar's warm tones complement the landscape. Wood or steel post options available. <a href="/blog/fence-installation-cost-austin.html" class="text-buda-secondary hover:underline font-medium">See our pricing guide</a> for current rates.</p>
+                                    <p class="text-gray-600 text-sm">The natural choice for Hill Country homes. Western Red Cedar's warm tones complement the landscape. Wood or steel post options available. <a href="/blog/fence-installation-cost-austin" class="text-buda-secondary hover:underline font-medium">See our pricing guide</a> for current rates.</p>
                                 </div>
                             </div>
                             <div class="border rounded-lg overflow-hidden">
@@ -246,8 +236,7 @@
                                 <img src="/images/horizontal-cedar-fence.webp" alt="Horizontal cedar fence Dripping Springs TX" class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
                                 <div class="p-4">
                                     <h3 class="font-bold text-buda-primary mb-2">Horizontal Cedar</h3>
-                                    <!-- FIX: Removed "$39/LF with steel posts" pricing -->
-                                    <p class="text-gray-600 text-sm">Modern, contemporary look increasingly popular in Dripping Springs' newer communities. Clean lines that complement Hill Country architecture. <a href="/blog/fence-installation-cost-austin.html" class="text-buda-secondary hover:underline font-medium">See pricing</a>.</p>
+                                    <p class="text-gray-600 text-sm">Modern, contemporary look increasingly popular in Dripping Springs' newer communities. Clean lines that complement Hill Country architecture. <a href="/blog/fence-installation-cost-austin" class="text-buda-secondary hover:underline font-medium">See pricing</a>.</p>
                                 </div>
                             </div>
                             <div class="border rounded-lg overflow-hidden">
@@ -257,7 +246,6 @@
                         </div>
                     </div>
 
-                    <!-- Reviews — FIX: Wrapped in blockquote, star ratings aria-hidden -->
                     <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
                         <h2 class="text-3xl font-bold text-buda-primary mb-6">What Hill Country Neighbors Say</h2>
                         <div class="space-y-6">
@@ -276,7 +264,6 @@
                         </div>
                     </div>
 
-                    <!-- Why Choose Us — FIX: ✓ aria-hidden -->
                     <div class="bg-gradient-to-br from-buda-primary to-slate-700 rounded-xl shadow-lg p-8 mb-8 text-white">
                         <h2 class="text-3xl font-bold mb-6">Why Dripping Springs Homeowners Choose Us</h2>
                         <div class="grid md:grid-cols-2 gap-4">
@@ -289,23 +276,21 @@
                         </div>
                     </div>
 
-                    <!-- Resources — FIX: Removed inline onmouseover/onmouseout, using CSS class; emoji aria-hidden; fixed old color #1e3a5f in inline styles -->
                     <div class="bg-white rounded-xl shadow-lg p-8">
                         <h2 class="text-2xl font-bold text-buda-primary mb-2">Dripping Springs Fence Resources</h2>
                         <p class="text-gray-600 mb-6">Helpful guides for planning your Hill Country fence project.</p>
                         <div class="grid md:grid-cols-2 gap-4">
-                            <a href="/blog/fence-installation-cost-austin.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">💰</span><div><p class="font-semibold text-buda-primary text-sm">2026 Fence Pricing Guide</p><p class="text-xs text-gray-500 mt-1">Real Central Texas pricing — cedar, metal, gates</p></div></a>
-                            <a href="/blog/storm-damage-fence-repair-texas.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">⛈️</span><div><p class="font-semibold text-buda-primary text-sm">Storm Damage & Fence Repair</p><p class="text-xs text-gray-500 mt-1">What to do after a Texas storm hits</p></div></a>
-                            <a href="/blog/metal-fence-styles-guide.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🔩</span><div><p class="font-semibold text-buda-primary text-sm">Guide to Metal Fence Styles</p><p class="text-xs text-gray-500 mt-1">Ornamental options that preserve Hill Country views</p></div></a>
-                            <a href="/blog/fence-maintenance-central-texas.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🔧</span><div><p class="font-semibold text-buda-primary text-sm">Central Texas Fence Maintenance</p><p class="text-xs text-gray-500 mt-1">Protect your fence from the Texas climate</p></div></a>
-                            <a href="/blog/privacy-fence-styles-austin.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🏠</span><div><p class="font-semibold text-buda-primary text-sm">Top 10 Privacy Fence Styles</p><p class="text-xs text-gray-500 mt-1">Find the right style for your Hill Country home</p></div></a>
-                            <a href="/blog/wood-vs-metal-fence-austin.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🌲</span><div><p class="font-semibold text-buda-primary text-sm">Wood vs. Metal Fence</p><p class="text-xs text-gray-500 mt-1">Which is right for your Dripping Springs property?</p></div></a>
+                            <a href="/blog/fence-installation-cost-austin" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">💰</span><div><p class="font-semibold text-buda-primary text-sm">2026 Fence Pricing Guide</p><p class="text-xs text-gray-500 mt-1">Real Central Texas pricing — cedar, metal, gates</p></div></a>
+                            <a href="/blog/storm-damage-fence-repair-texas" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">⛈️</span><div><p class="font-semibold text-buda-primary text-sm">Storm Damage & Fence Repair</p><p class="text-xs text-gray-500 mt-1">What to do after a Texas storm hits</p></div></a>
+                            <a href="/blog/metal-fence-styles-guide" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🔩</span><div><p class="font-semibold text-buda-primary text-sm">Guide to Metal Fence Styles</p><p class="text-xs text-gray-500 mt-1">Ornamental options that preserve Hill Country views</p></div></a>
+                            <a href="/blog/fence-maintenance-central-texas" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🔧</span><div><p class="font-semibold text-buda-primary text-sm">Central Texas Fence Maintenance</p><p class="text-xs text-gray-500 mt-1">Protect your fence from the Texas climate</p></div></a>
+                            <a href="/blog/privacy-fence-styles-austin" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🏠</span><div><p class="font-semibold text-buda-primary text-sm">Top 10 Privacy Fence Styles</p><p class="text-xs text-gray-500 mt-1">Find the right style for your Hill Country home</p></div></a>
+                            <a href="/blog/wood-vs-metal-fence-austin" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🌲</span><div><p class="font-semibold text-buda-primary text-sm">Wood vs. Metal Fence</p><p class="text-xs text-gray-500 mt-1">Which is right for your Dripping Springs property?</p></div></a>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Sidebar — FIX: emoji aria-hidden, arrows aria-hidden -->
                 <div class="lg:col-span-1">
                     <div class="bg-buda-secondary text-white rounded-xl shadow-lg p-6 mb-6 sticky top-24">
                         <h3 class="text-xl font-bold mb-4">Get Your Free Hill Country Estimate</h3>
@@ -342,7 +327,6 @@
     </section>
     </main>
 
-    <!-- CTA -->
     <section class="bg-buda-primary text-white py-16" aria-label="Call to action">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-4">Ready for Your Hill Country Fence Project?</h2>
@@ -354,7 +338,6 @@
         </div>
     </section>
 
-    <!-- Footer — FIX: Cloudflare email obfuscation replaced, dynamic copyright year -->
     <footer class="bg-gray-900 text-white py-12" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
@@ -375,7 +358,7 @@
                 <div>
                     <h4 class="font-bold mb-4">Service Areas</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a class="hover:text-white" href="/service-areas/">View All Service Areas</a></li>
+                        <li><a class="hover:text-white" href="/service-areas">View All Service Areas</a></li>
                         <li><a class="hover:text-white" href="/service-areas/austin">Austin, TX</a></li>
                         <li><a class="hover:text-white" href="/service-areas/buda">Buda, TX</a></li>
                         <li><a class="hover:text-white" href="/service-areas/kyle">Kyle, TX</a></li>
@@ -386,7 +369,6 @@
                     <h4 class="font-bold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></li>
-                        <!-- FIX: Cloudflare email obfuscation replaced with plain mailto -->
                         <li><a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></li>
                         <li>Mon-Fri: 6 AM - 6 PM</li>
                         <li>Saturday: 9 AM - 2 PM</li>
@@ -399,20 +381,16 @@
         </div>
     </footer>
 
-    <!-- Mobile floating CTA bar -->
     <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
         <a href="tel:5127107116" class="cta-call"><span aria-hidden="true">📞</span> Call Now</a>
         <a href="/contact" class="cta-quote">Free Estimate</a>
     </div>
 
-    <!-- FIX: Complete JS — replaces inline onclick + truncated Cloudflare script, adds keyboard nav -->
     <script>
     (function() {
-        // Copyright year
         var yearEl = document.getElementById('copyright-year');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        // Mobile menu
         var menu = document.getElementById('mobile-menu');
         var button = document.getElementById('mobile-menu-button');
         if (menu && button) {
@@ -437,7 +415,6 @@
             });
         }
 
-        // Desktop dropdown keyboard nav
         document.querySelectorAll('[data-dropdown]').forEach(function(dropdown) {
             var btn = dropdown.querySelector('[data-dropdown-trigger]');
             var ddMenu = dropdown.querySelector('[data-dropdown-menu]');
