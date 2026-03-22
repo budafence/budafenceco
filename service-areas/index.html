@@ -8,9 +8,11 @@
     <meta name="keywords" content="fence installation austin, fence company buda tx, fence contractor kyle, dripping springs fence, central texas fence, local fence company">
     <meta name="author" content="Buda Fence Company">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://budafenceco.com/service-areas/">
+    <!-- FIXED: Removed trailing slash from canonical -->
+    <link rel="canonical" href="https://budafenceco.com/service-areas">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://budafenceco.com/service-areas/">
+    <!-- FIXED: Removed trailing slash from og:url -->
+    <meta property="og:url" content="https://budafenceco.com/service-areas">
     <meta property="og:title" content="Service Areas - Austin, Buda, Kyle & Central Texas | Buda Fence Company">
     <meta property="og:description" content="Professional fence installation serving Austin, Buda, Kyle, Dripping Springs & Central Texas. Local experts, free quotes!">
     <meta property="og:image" content="https://budafenceco.com/images/services-og.webp">
@@ -21,8 +23,7 @@
     <meta name="geo.position" content="30.09939;-97.86756">
     <meta name="ICBM" content="30.09939, -97.86756">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
@@ -67,31 +68,22 @@
         .transition-all { transition: all 0.3s ease; }
         .transition-colors { transition: color 0.2s ease, background-color 0.2s ease; }
         .grid { display: grid; gap: 2rem; }
-        .grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
-        @media (min-width: 768px) { .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 768px) { .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); } .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); } }
         .flex { display: flex; }
         .flex-col { flex-direction: column; }
+        .flex-wrap { flex-wrap: wrap; }
         .items-center { align-items: center; }
         .justify-between { justify-content: space-between; }
         .justify-center { justify-content: center; }
-        .space-x-2 > * + * { margin-left: 0.5rem; }
-        .space-x-4 > * + * { margin-left: 1rem; }
-        .space-x-8 > * + * { margin-left: 2rem; }
-        .space-y-2 > * + * { margin-top: 0.5rem; }
-        .space-y-4 > * + * { margin-top: 1rem; }
         .gap-2 { gap: 0.5rem; }
         .gap-4 { gap: 1rem; }
         .gap-8 { gap: 2rem; }
         .p-6 { padding: 1.5rem; }
         .p-8 { padding: 2rem; }
-        .p-10 { padding: 2.5rem; }
         .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
         .px-4 { padding-left: 1rem; padding-right: 1rem; }
-        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
         .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
         .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
         .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
         .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
         .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
@@ -99,18 +91,17 @@
         .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
         .pt-2 { padding-top: 0.5rem; }
         .pl-4 { padding-left: 1rem; }
+        .pb-3 { padding-bottom: 0.75rem; }
         .mb-2 { margin-bottom: 0.5rem; }
         .mb-3 { margin-bottom: 0.75rem; }
         .mb-4 { margin-bottom: 1rem; }
         .mb-6 { margin-bottom: 1.5rem; }
         .mb-8 { margin-bottom: 2rem; }
         .mb-12 { margin-bottom: 3rem; }
-        .mb-16 { margin-bottom: 4rem; }
         .mt-4 { margin-top: 1rem; }
         .mt-6 { margin-top: 1.5rem; }
         .mt-8 { margin-top: 2rem; }
         .mr-2 { margin-right: 0.5rem; }
-        .mr-3 { margin-right: 0.75rem; }
         .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
         .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
         .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
@@ -118,20 +109,16 @@
         .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
         .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
         .text-5xl { font-size: 3rem; line-height: 1; }
-        .text-6xl { font-size: 3.75rem; line-height: 1; }
         .leading-tight { line-height: 1.25; }
-        @media (min-width: 640px) { .sm\:text-5xl { font-size: 3rem; line-height: 1; } .sm\:flex-row { flex-direction: row; } }
+        @media (min-width: 640px) { .sm\:flex-row { flex-direction: row; } }
         @media (min-width: 768px) { .md\:text-5xl { font-size: 3rem; line-height: 1; } .md\:text-6xl { font-size: 3.75rem; line-height: 1; } }
         .border { border-width: 1px; }
-        .border-2 { border-width: 2px; }
         .border-t { border-top-width: 1px; }
         .border-gray-200 { border-color: #e5e7eb; }
-        .border-white { border-color: #ffffff; }
+        .border-gray-800 { border-color: #1f2937; }
         .relative { position: relative; }
-        .absolute { position: absolute; }
         .sticky { position: sticky; }
         .top-0 { top: 0; }
-        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
         .z-50 { z-index: 50; }
         .block { display: block; }
         .inline-block { display: inline-block; }
@@ -141,17 +128,14 @@
         .w-full { width: 100%; }
         .min-w-max { min-width: max-content; }
         .max-w-3xl { max-width: 48rem; }
-        .max-w-6xl { max-width: 72rem; }
+        .max-w-4xl { max-width: 56rem; }
         .mx-auto { margin-left: auto; margin-right: auto; }
-        .object-cover { object-fit: cover; }
         .overflow-hidden { overflow: hidden; }
         .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
         .hover\:bg-red-700:hover { background-color: #b91c1c; }
-        .hover\:bg-slate-700:hover { background-color: #334155; }
         .hover\:text-white:hover { color: #ffffff; }
         .hover\:text-buda-secondary:hover { color: #dc2626; }
         .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
-        .hover\:border-buda-secondary:hover { border-color: #dc2626; }
         @media (max-width: 767px) { .md\:hidden { display: block !important; } .hidden.md\:flex { display: none !important; } .mobile-menu.active { display: block; } }
         @media (min-width: 768px) { .md\:flex { display: flex; } .md\:hidden { display: none; } }
         nav { background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50; }
@@ -166,8 +150,10 @@
         .dropdown:hover .dropdown-menu, .dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
         .dropdown-menu a { display: block; padding: 0.5rem 1rem; white-space: nowrap; color: #374151; transition: background-color 0.2s ease; }
         .dropdown-menu a:hover, .dropdown-menu a:focus { background-color: #f3f4f6; color: #dc2626; }
-        .hero-overlay { background: linear-gradient(to right, rgba(30, 41, 59, 0.9), rgba(220, 38, 38, 0.85)); }
         a:focus, button:focus { outline: 2px solid #dc2626; outline-offset: 2px; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: #dc2626; color: #fff; padding: 8px; z-index: 100; border-radius: 0 0 4px 0; }
+        .skip-link:focus { top: 0; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
         .area-card { background: #ffffff; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 2px solid #e5e7eb; transition: all 0.3s ease; overflow: hidden; }
         .area-card:hover { border-color: #dc2626; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); transform: translateY(-4px); }
         .btn { display: inline-block; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-align: center; transition: all 0.2s ease; cursor: pointer; }
@@ -177,41 +163,26 @@
         .btn-secondary:hover { background-color: #f3f4f6; }
         ul { list-style: none; }
         .whitespace-nowrap { white-space: nowrap; }
+        .resource-card { display: flex; align-items: flex-start; padding: 1.25rem; border-radius: .75rem; border: 1px solid #e5e7eb; background: #fff; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,.1); transition: border-color .2s, box-shadow .2s; }
+        .resource-card:hover { border-color: #dc2626; box-shadow: 0 4px 6px -1px rgba(0,0,0,.15); }
+        .resource-icon { font-size: 1.75rem; margin-right: 1rem; flex-shrink: 0; }
+        .resource-title { font-weight: 700; color: #1e293b; font-size: 1rem; margin-bottom: .25rem; }
+        .resource-desc { font-size: .875rem; color: #6b7280; }
+        .mobile-cta-bar { display: none; }
+        @media (max-width: 767px) {
+            .mobile-cta-bar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; background: #1e293b; padding: 10px 16px; gap: 10px; box-shadow: 0 -4px 12px rgba(0,0,0,.2); }
+            .mobile-cta-bar a { flex: 1; text-align: center; padding: 12px 8px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; }
+            .mobile-cta-bar .cta-call { background: #dc2626; color: #fff; }
+            .mobile-cta-bar .cta-quote { background: #fff; color: #1e293b; }
+            footer { padding-bottom: 80px; }
+        }
     </style>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://budafenceco.com/#organization",
-      "name": "Buda Fence Company",
-      "description": "Professional fence installation serving Austin, Buda, Kyle, Dripping Springs and all of Central Texas",
-      "url": "https://budafenceco.com",
-      "telephone": "+1-512-710-7116",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "308 Wincliff Dr",
-        "addressLocality": "Buda",
-        "addressRegion": "TX",
-        "postalCode": "78610",
-        "addressCountry": "US"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Austin" },
-        { "@type": "City", "name": "Buda" },
-        { "@type": "City", "name": "Kyle" },
-        { "@type": "City", "name": "Dripping Springs" }
-      ]
-    }
+    {"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://budafenceco.com/#organization","name":"Buda Fence Company","description":"Professional fence installation serving Austin, Buda, Kyle, Dripping Springs and all of Central Texas","url":"https://budafenceco.com","telephone":"+1-512-710-7116","address":{"@type":"PostalAddress","streetAddress":"308 Wincliff Dr","addressLocality":"Buda","addressRegion":"TX","postalCode":"78610","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Austin"},{"@type":"City","name":"Buda"},{"@type":"City","name":"Kyle"},{"@type":"City","name":"Dripping Springs"}]}
     </script>
+    <!-- FIXED: Removed trailing slash from breadcrumb schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://budafenceco.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://budafenceco.com/service-areas/"}
-      ]
-    }
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://budafenceco.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://budafenceco.com/service-areas"}]}
     </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRJYMYZ44"></script>
@@ -223,6 +194,8 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="container">
@@ -231,13 +204,12 @@
                     <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company" class="h-12 w-auto" width="97" height="48" loading="eager">
                 </a>
             </div>
-            <!-- Desktop Nav -->
             <div class="desktop-nav">
                 <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/">Home</a>
                 <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/about">About</a>
-                <div class="dropdown">
-                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" aria-haspopup="true" aria-expanded="false" id="services-dropdown-btn">Services ▾</button>
-                    <div class="dropdown-menu" role="menu" aria-labelledby="services-dropdown-btn">
+                <div class="dropdown" data-dropdown>
+                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" aria-haspopup="true" aria-expanded="false" id="services-dropdown-btn" data-dropdown-trigger>Services <span aria-hidden="true">▾</span></button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="services-dropdown-btn" data-dropdown-menu>
                         <a href="/services" role="menuitem" class="font-semibold">All Services</a>
                         <a href="/services/deck-construction" role="menuitem">Deck Construction</a>
                         <a href="/services/wood-fence-installation" role="menuitem">Wood Fence Installation</a>
@@ -246,10 +218,10 @@
                         <a href="/services/fence-repair" role="menuitem">Fence Repair</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button class="text-buda-secondary font-medium transition-colors" aria-haspopup="true" aria-expanded="false" id="areas-dropdown-btn" aria-current="page">Service Areas ▾</button>
-                    <div class="dropdown-menu" role="menu" aria-labelledby="areas-dropdown-btn">
-                        <a href="/service-areas/" role="menuitem" class="text-buda-secondary font-semibold">All Service Areas</a>
+                <div class="dropdown" data-dropdown>
+                    <button class="text-buda-secondary font-medium transition-colors" aria-haspopup="true" aria-expanded="false" id="areas-dropdown-btn" aria-current="page" data-dropdown-trigger>Service Areas <span aria-hidden="true">▾</span></button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="areas-dropdown-btn" data-dropdown-menu>
+                        <a href="/service-areas" role="menuitem" class="text-buda-secondary font-semibold">All Service Areas</a>
                         <a href="/service-areas/austin" role="menuitem">Austin</a>
                         <a href="/service-areas/buda" role="menuitem">Buda</a>
                         <a href="/service-areas/kyle" role="menuitem">Kyle</a>
@@ -257,27 +229,22 @@
                     </div>
                 </div>
                 <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/gallery">Gallery</a>
-                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/blog/">Blog</a>
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/blog">Blog</a>
                 <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/contact">Contact</a>
             </div>
-            <!-- Desktop Contact -->
             <div class="desktop-nav">
                 <a href="tel:5127107116" class="text-buda-secondary font-medium hover:underline">(512) 710-7116</a>
                 <a class="btn btn-primary" href="/contact">Free Quote</a>
             </div>
-            <!-- Mobile: Free Quote + hamburger only -->
             <div class="md:hidden flex items-center gap-2">
                 <a class="bg-buda-secondary text-white rounded-lg font-semibold" style="padding:0.5rem 1rem;font-size:0.875rem;" href="/contact">Free Quote</a>
                 <button id="mobile-menu-button" class="text-gray-700 hover:text-buda-secondary" style="padding:0.35rem;" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu" role="menu">
-            <div class="px-2 pt-2 pb-3 space-y-1">
+            <div class="px-2 pt-2 pb-3">
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/">Home</a>
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/about">About</a>
                 <div class="px-3 py-2">
@@ -291,16 +258,16 @@
                 </div>
                 <div class="px-3 py-2">
                     <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-                    <a class="block pl-4 py-1 text-buda-secondary text-sm font-semibold" href="/service-areas/" aria-current="page">All Service Areas</a>
+                    <a class="block pl-4 py-1 text-buda-secondary text-sm font-semibold" href="/service-areas" aria-current="page">All Service Areas</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/austin">Austin</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/buda">Buda</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/kyle">Kyle</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/dripping-springs">Dripping Springs</a>
                 </div>
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/gallery">Gallery</a>
-                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/blog/">Blog</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/blog">Blog</a>
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/contact">Contact</a>
-                <div style="border-top:1px solid #e5e7eb;padding:.5rem .75rem;">
+                <div style="border-top:1px solid #e5e7eb;padding:.5rem .75rem;margin-top:.5rem;">
                     <a href="tel:5127107116" class="block py-2 text-buda-secondary font-semibold">(512) 710-7116</a>
                 </div>
             </div>
@@ -312,12 +279,12 @@
         <header class="relative overflow-hidden bg-buda-primary" role="banner">
             <div class="relative container py-24 text-white text-center">
                 <div class="max-w-3xl mx-auto">
-                    <div class="bg-yellow-500 text-gray-800 px-4 py-2 rounded-full text-sm font-medium inline-block mb-6">📍 Serving 25-Mile Radius from Buda</div>
+                    <div class="bg-yellow-500 text-gray-800 px-4 py-2 rounded-full text-sm font-medium inline-block mb-6"><span aria-hidden="true">📍</span> Serving 25-Mile Radius from Buda</div>
                     <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Professional Fence Installation Across Austin & Central Texas</h1>
                     <p class="text-xl mb-8 text-gray-200">We proudly serve Austin, Buda, Kyle, Dripping Springs, and surrounding communities with expert fence installation and repair. Local experts with 5,000+ fences installed since 2015.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:5127107116" class="btn btn-secondary text-lg">📞 Call (512) 710-7116</a>
-                        <a href="/contact" class="btn btn-primary text-lg border-2 border-white">Get Free Estimate</a>
+                        <a href="tel:5127107116" class="btn btn-secondary text-lg"><span aria-hidden="true">📞</span> Call (512) 710-7116</a>
+                        <a href="/contact" class="btn btn-primary text-lg" style="border:2px solid #fff;">Get Free Estimate</a>
                     </div>
                 </div>
             </div>
@@ -333,54 +300,54 @@
                 <div class="grid md:grid-cols-2 gap-8 mb-12">
                     <article class="area-card">
                         <div class="p-8">
-                            <div class="text-4xl mb-4">🌆</div>
+                            <div class="text-4xl mb-4" aria-hidden="true">🌆</div>
                             <h3 class="text-3xl font-bold text-buda-primary mb-3">Austin</h3>
                             <p class="text-gray-700 mb-4">Serving all Austin neighborhoods including South Austin, Central Austin, and surrounding areas. From urban properties to large lots, we handle projects of all sizes.</p>
-                            <ul class="space-y-2 text-gray-700 mb-6">
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>South Austin specialist</span></li>
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>HOA-compliant installations</span></li>
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>City permit assistance</span></li>
+                            <ul style="list-style:none;padding:0;margin:0 0 1.5rem 0;">
+                                <li class="flex items-start" style="margin-bottom:.5rem;"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>South Austin specialist</span></li>
+                                <li class="flex items-start" style="margin-bottom:.5rem;"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>HOA-compliant installations</span></li>
+                                <li class="flex items-start"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>City permit assistance</span></li>
                             </ul>
-                            <a href="/service-areas/austin" class="btn btn-primary w-full">View Austin Services →</a>
+                            <a href="/service-areas/austin" class="btn btn-primary w-full">View Austin Services <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
                     <article class="area-card">
                         <div class="p-8">
-                            <div class="text-4xl mb-4">🏡</div>
+                            <div class="text-4xl mb-4" aria-hidden="true">🏡</div>
                             <h3 class="text-3xl font-bold text-buda-primary mb-3">Buda</h3>
                             <p class="text-gray-700 mb-4">Our home base! We know Buda inside and out — from Garlic Creek to Sunfield, we've fenced hundreds of properties and understand local requirements.</p>
-                            <ul class="space-y-2 text-gray-700 mb-6">
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>Local Buda experts since 2015</span></li>
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>Same-day service available</span></li>
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>All neighborhoods covered</span></li>
+                            <ul style="list-style:none;padding:0;margin:0 0 1.5rem 0;">
+                                <li class="flex items-start" style="margin-bottom:.5rem;"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>Local Buda experts since 2015</span></li>
+                                <li class="flex items-start" style="margin-bottom:.5rem;"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>Same-day service available</span></li>
+                                <li class="flex items-start"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>All neighborhoods covered</span></li>
                             </ul>
-                            <a href="/service-areas/buda" class="btn btn-primary w-full">View Buda Services →</a>
+                            <a href="/service-areas/buda" class="btn btn-primary w-full">View Buda Services <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
                     <article class="area-card">
                         <div class="p-8">
-                            <div class="text-4xl mb-4">🌳</div>
+                            <div class="text-4xl mb-4" aria-hidden="true">🌳</div>
                             <h3 class="text-3xl font-bold text-buda-primary mb-3">Kyle</h3>
                             <p class="text-gray-700 mb-4">Serving the fast-growing Kyle area including Plum Creek, Anthem, and all surrounding developments. Expert installations for new construction and existing homes.</p>
-                            <ul class="space-y-2 text-gray-700 mb-6">
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>New construction specialist</span></li>
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>Rapid growth area expertise</span></li>
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>HOA approval assistance</span></li>
+                            <ul style="list-style:none;padding:0;margin:0 0 1.5rem 0;">
+                                <li class="flex items-start" style="margin-bottom:.5rem;"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>New construction specialist</span></li>
+                                <li class="flex items-start" style="margin-bottom:.5rem;"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>Rapid growth area expertise</span></li>
+                                <li class="flex items-start"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>HOA approval assistance</span></li>
                             </ul>
-                            <a href="/service-areas/kyle" class="btn btn-primary w-full">View Kyle Services →</a>
+                            <a href="/service-areas/kyle" class="btn btn-primary w-full">View Kyle Services <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
                     <article class="area-card">
                         <div class="p-8">
-                            <div class="text-4xl mb-4">🌄</div>
+                            <div class="text-4xl mb-4" aria-hidden="true">🌄</div>
                             <h3 class="text-3xl font-bold text-buda-primary mb-3">Dripping Springs</h3>
                             <p class="text-gray-700 mb-4">Beautiful Hill Country properties deserve beautiful fences. We specialize in custom installations that complement the natural landscape of Dripping Springs.</p>
-                            <ul class="space-y-2 text-gray-700 mb-6">
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>Hill Country terrain expertise</span></li>
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>Large property specialist</span></li>
-                                <li class="flex items-start"><span class="text-green-600 mr-2">✓</span><span>Custom ranch fencing</span></li>
+                            <ul style="list-style:none;padding:0;margin:0 0 1.5rem 0;">
+                                <li class="flex items-start" style="margin-bottom:.5rem;"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>Hill Country terrain expertise</span></li>
+                                <li class="flex items-start" style="margin-bottom:.5rem;"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>Large property specialist</span></li>
+                                <li class="flex items-start"><span class="text-green-600 mr-2" aria-hidden="true">✓</span><span>Custom ranch fencing</span></li>
                             </ul>
-                            <a href="/service-areas/dripping-springs" class="btn btn-primary w-full">View Dripping Springs Services →</a>
+                            <a href="/service-areas/dripping-springs" class="btn btn-primary w-full">View Dripping Springs Services <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
                 </div>
@@ -397,14 +364,14 @@
                 <div class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h3 class="font-bold text-buda-primary mb-3">Hays County Areas:</h3>
-                        <ul class="text-gray-700 space-y-1">
+                        <ul class="text-gray-700" style="display:grid;gap:.25rem;">
                             <li>• Niederwald</li><li>• Mountain City</li><li>• Bear Creek</li>
                             <li>• Driftwood</li><li>• Woodcreek</li>
                         </ul>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h3 class="font-bold text-buda-primary mb-3">Travis County Areas:</h3>
-                        <ul class="text-gray-700 space-y-1">
+                        <ul class="text-gray-700" style="display:grid;gap:.25rem;">
                             <li>• Manchaca</li><li>• Sunset Valley</li><li>• Oak Hill</li>
                             <li>• Circle C Ranch</li><li>• Shady Hollow</li>
                         </ul>
@@ -426,22 +393,22 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <div class="bg-gray-50 rounded-xl p-6">
-                        <div class="text-4xl mb-3">🏠</div>
+                        <div class="text-4xl mb-3" aria-hidden="true">🏠</div>
                         <h3 class="text-xl font-bold text-buda-primary mb-2">We Know Central Texas</h3>
                         <p class="text-gray-700">10+ years of experience with local soil conditions, weather patterns, HOA requirements, and city codes. We know what works here.</p>
                     </div>
                     <div class="bg-gray-50 rounded-xl p-6">
-                        <div class="text-4xl mb-3">⚡</div>
+                        <div class="text-4xl mb-3" aria-hidden="true">⚡</div>
                         <h3 class="text-xl font-bold text-buda-primary mb-2">Fast Response Times</h3>
                         <p class="text-gray-700">Being local means we can respond quickly to quotes, service calls, and emergency repairs. No waiting weeks for out-of-town contractors.</p>
                     </div>
                     <div class="bg-gray-50 rounded-xl p-6">
-                        <div class="text-4xl mb-3">🤝</div>
+                        <div class="text-4xl mb-3" aria-hidden="true">🤝</div>
                         <h3 class="text-xl font-bold text-buda-primary mb-2">Community Reputation</h3>
                         <p class="text-gray-700">Our reputation is everything. We've built 5,000+ fences for neighbors who trust us to do quality work at fair prices.</p>
                     </div>
                     <div class="bg-gray-50 rounded-xl p-6">
-                        <div class="text-4xl mb-3">🛡️</div>
+                        <div class="text-4xl mb-3" aria-hidden="true">🛡️</div>
                         <h3 class="text-xl font-bold text-buda-primary mb-2">5-Year Workmanship Guarantee</h3>
                         <p class="text-gray-700">We back every fence with a 5-year workmanship guarantee. Local means accountable — we're not disappearing after the job.</p>
                     </div>
@@ -449,47 +416,47 @@
             </div>
         </section>
 
-        <!-- FENCE RESOURCES SECTION -->
+        <!-- Fence Resources — FIXED: .html removed, inline JS removed, CSS class used instead -->
         <section class="py-16 bg-gray-50">
             <div class="container">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl font-bold text-slate-800 mb-4">Central Texas Fence Resources</h2>
-                    <p class="text-lg text-gray-700 max-w-2xl mx-auto">Everything you need to plan, price, and maintain your fence project — written by your local Central Texas fence contractor.</p>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">Everything you need to plan, price, and maintain your fence project — written by your local Central Texas fence contractor.</p>
                 </div>
-                <div style="display:grid;grid-template-columns:repeat(1,1fr);gap:1rem;max-width:64rem;margin:0 auto;">
+                <div style="display:grid;gap:1rem;max-width:64rem;margin:0 auto;">
                     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
-                        <a href="/blog/fence-installation-cost-austin.html" style="display:flex;align-items:flex-start;padding:1.25rem;border-radius:.75rem;border:1px solid #e5e7eb;background:#fff;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='#dc2626';this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='0 1px 3px rgba(0,0,0,.1)'">
-                            <span style="font-size:1.75rem;margin-right:1rem;flex-shrink:0;">💰</span>
-                            <div><p style="font-weight:700;color:#1e293b;font-size:1rem;margin-bottom:.25rem;">2026 Austin Fence Pricing Guide</p><p style="font-size:.875rem;color:#6b7280;">Real local pricing — cedar, metal, gates, staining. No outdated national averages.</p></div>
+                        <a href="/blog/fence-installation-cost-austin" class="resource-card">
+                            <span class="resource-icon" aria-hidden="true">💰</span>
+                            <div><p class="resource-title">2026 Austin Fence Pricing Guide</p><p class="resource-desc">Real local pricing — cedar, metal, gates, staining. No outdated national averages.</p></div>
                         </a>
-                        <a href="/blog/wood-vs-metal-fence-austin.html" style="display:flex;align-items:flex-start;padding:1.25rem;border-radius:.75rem;border:1px solid #e5e7eb;background:#fff;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='#dc2626';this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='0 1px 3px rgba(0,0,0,.1)'">
-                            <span style="font-size:1.75rem;margin-right:1rem;flex-shrink:0;">🌲</span>
-                            <div><p style="font-weight:700;color:#1e293b;font-size:1rem;margin-bottom:.25rem;">Wood vs. Metal Fence</p><p style="font-size:.875rem;color:#6b7280;">Which is right for your yard? Cost, privacy, durability, and maintenance compared.</p></div>
+                        <a href="/blog/wood-vs-metal-fence-austin" class="resource-card">
+                            <span class="resource-icon" aria-hidden="true">🌲</span>
+                            <div><p class="resource-title">Wood vs. Metal Fence</p><p class="resource-desc">Which is right for your yard? Cost, privacy, durability, and maintenance compared.</p></div>
                         </a>
                     </div>
                     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
-                        <a href="/blog/austin-fence-permit-guide.html" style="display:flex;align-items:flex-start;padding:1.25rem;border-radius:.75rem;border:1px solid #e5e7eb;background:#fff;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='#dc2626';this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='0 1px 3px rgba(0,0,0,.1)'">
-                            <span style="font-size:1.75rem;margin-right:1rem;flex-shrink:0;">📋</span>
-                            <div><p style="font-weight:700;color:#1e293b;font-size:1rem;margin-bottom:.25rem;">Austin Fence Permit Guide</p><p style="font-size:.875rem;color:#6b7280;">When you need a permit and how to get one quickly.</p></div>
+                        <a href="/blog/austin-fence-permit-guide" class="resource-card">
+                            <span class="resource-icon" aria-hidden="true">📋</span>
+                            <div><p class="resource-title">Austin Fence Permit Guide</p><p class="resource-desc">When you need a permit and how to get one quickly.</p></div>
                         </a>
-                        <a href="/blog/hoa-fence-approval-tips.html" style="display:flex;align-items:flex-start;padding:1.25rem;border-radius:.75rem;border:1px solid #e5e7eb;background:#fff;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='#dc2626';this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,.15)'" onmouseover="this.style.borderColor='#dc2626';this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='0 1px 3px rgba(0,0,0,.1)'">
-                            <span style="font-size:1.75rem;margin-right:1rem;flex-shrink:0;">🏘️</span>
-                            <div><p style="font-weight:700;color:#1e293b;font-size:1rem;margin-bottom:.25rem;">HOA Fence Approval Tips</p><p style="font-size:.875rem;color:#6b7280;">Navigate your HOA approval process smoothly and fast.</p></div>
+                        <a href="/blog/hoa-fence-approval-tips" class="resource-card">
+                            <span class="resource-icon" aria-hidden="true">🏘️</span>
+                            <div><p class="resource-title">HOA Fence Approval Tips</p><p class="resource-desc">Navigate your HOA approval process smoothly and fast.</p></div>
                         </a>
                     </div>
                     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
-                        <a href="/blog/fence-maintenance-central-texas.html" style="display:flex;align-items:flex-start;padding:1.25rem;border-radius:.75rem;border:1px solid #e5e7eb;background:#fff;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='#dc2626';this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='0 1px 3px rgba(0,0,0,.1)'">
-                            <span style="font-size:1.75rem;margin-right:1rem;flex-shrink:0;">🔧</span>
-                            <div><p style="font-weight:700;color:#1e293b;font-size:1rem;margin-bottom:.25rem;">Central Texas Fence Maintenance</p><p style="font-size:.875rem;color:#6b7280;">Protect your fence from Texas UV, storms, and clay soil.</p></div>
+                        <a href="/blog/fence-maintenance-central-texas" class="resource-card">
+                            <span class="resource-icon" aria-hidden="true">🔧</span>
+                            <div><p class="resource-title">Central Texas Fence Maintenance</p><p class="resource-desc">Protect your fence from Texas UV, storms, and clay soil.</p></div>
                         </a>
-                        <a href="/blog/storm-damage-fence-repair-texas.html" style="display:flex;align-items:flex-start;padding:1.25rem;border-radius:.75rem;border:1px solid #e5e7eb;background:#fff;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:border-color .2s,box-shadow .2s;" onmouseover="this.style.borderColor='#dc2626';this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,.15)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='0 1px 3px rgba(0,0,0,.1)'">
-                            <span style="font-size:1.75rem;margin-right:1rem;flex-shrink:0;">⛈️</span>
-                            <div><p style="font-weight:700;color:#1e293b;font-size:1rem;margin-bottom:.25rem;">Storm Damage & Insurance Tips</p><p style="font-size:.875rem;color:#6b7280;">What to do after a Texas storm damages your fence.</p></div>
+                        <a href="/blog/storm-damage-fence-repair-texas" class="resource-card">
+                            <span class="resource-icon" aria-hidden="true">⛈️</span>
+                            <div><p class="resource-title">Storm Damage & Insurance Tips</p><p class="resource-desc">What to do after a Texas storm damages your fence.</p></div>
                         </a>
                     </div>
                 </div>
                 <div class="text-center mt-8">
-                    <a href="/blog/" class="btn btn-primary" style="font-size:1rem;">View All Fence Guides →</a>
+                    <a href="/blog" class="btn btn-primary" style="font-size:1rem;">View All Fence Guides <span aria-hidden="true">→</span></a>
                 </div>
             </div>
         </section>
@@ -500,63 +467,136 @@
                 <h2 class="text-4xl font-bold mb-4">Ready for Your Free Estimate?</h2>
                 <p class="text-xl mb-8 text-gray-200">Serving Austin, Buda, Kyle, Dripping Springs & Central Texas. Call us today!</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="tel:5127107116" class="btn btn-secondary text-lg">📞 Call (512) 710-7116</a>
+                    <a href="tel:5127107116" class="btn btn-secondary text-lg"><span aria-hidden="true">📞</span> Call (512) 710-7116</a>
                     <a href="/contact" class="btn bg-white text-buda-primary hover:bg-gray-100 text-lg">Schedule Free Estimate</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- FIXED: Complete footer with all links, plain mailto, dynamic copyright year -->
     <footer class="bg-gray-900 text-white py-12" role="contentinfo">
         <div class="container">
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="grid md:grid-cols-4 gap-8" style="margin-bottom:2rem;">
                 <div>
-                    <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company" class="h-12 w-auto mb-4" width="97" height="48" loading="lazy">
+                    <img src="/images/buda-fence-logo.webp" alt="Buda Fence Company" class="h-12 w-auto" style="margin-bottom:1rem;" width="97" height="48" loading="lazy">
                     <p class="text-gray-400 text-sm">Professional fence installation serving Austin, Buda, Kyle, Dripping Springs, and all of Central Texas since 2015.</p>
                 </div>
                 <div>
-                    <h3 class="font-bold mb-4">Contact Us</h3>
-                    <ul class="text-gray-400 text-sm space-y-2">
-                        <li>📍 308 Wincliff Dr, Buda, TX 78610</li>
-                        <li>📞 <a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></li>
-                        <li>✉️ <a href="/cdn-cgi/l/email-protection#147d7a727b547661707572717a7771777b3a777b79" class="hover:text-white"><span class="__cf_email__" data-cfemail="7d14131b123d1f08191c1b18131e181e12531e1210">[email&#160;protected]</span></a></li>
+                    <h3 class="font-bold" style="margin-bottom:1rem;">Our Services</h3>
+                    <ul class="text-gray-400 text-sm" style="display:grid;gap:.5rem;">
+                        <li><a class="hover:text-white" href="/services/wood-fence-installation">Wood Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/metal-fence-installation">Metal Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/chain-link-fence-installation">Chain Link Fences</a></li>
+                        <li><a class="hover:text-white" href="/services/fence-repair">Fence Repair</a></li>
+                        <li><a class="hover:text-white" href="/services/deck-construction">Deck Construction</a></li>
+                        <li><a class="hover:text-white" href="/services">View All Services</a></li>
                     </ul>
                 </div>
+                <div>
+                    <h3 class="font-bold" style="margin-bottom:1rem;">Service Areas</h3>
+                    <ul class="text-gray-400 text-sm" style="display:grid;gap:.5rem;">
+                        <li><a class="text-white font-medium" href="/service-areas" aria-current="page">View All Service Areas</a></li>
+                        <li><a class="hover:text-white" href="/service-areas/austin">Austin, TX</a></li>
+                        <li><a class="hover:text-white" href="/service-areas/buda">Buda, TX</a></li>
+                        <li><a class="hover:text-white" href="/service-areas/kyle">Kyle, TX</a></li>
+                        <li><a class="hover:text-white" href="/service-areas/dripping-springs">Dripping Springs, TX</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold" style="margin-bottom:1rem;">Contact Us</h3>
+                    <address class="text-gray-400 text-sm" style="font-style:normal;display:grid;gap:.5rem;">
+                        <p>308 Wincliff Dr<br>Buda, TX 78610</p>
+                        <p><a href="tel:+15127107116" class="hover:text-white">(512) 710-7116</a></p>
+                        <p><a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></p>
+                        <p>Mon–Fri: 6 AM – 6 PM<br>Saturday: 9 AM – 2 PM</p>
+                    </address>
+                </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400 text-sm">&copy; 2026 Buda Fence Company. All rights reserved.</p>
+            <div class="border-t border-gray-800" style="padding-top:2rem;text-align:center;">
+                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year"></span> Buda Fence Company. All Rights Reserved. | <a class="hover:text-white" href="/contact">Contact Us</a></p>
             </div>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var menuButton = document.getElementById('mobile-menu-button');
-            var mobileMenu = document.getElementById('mobile-menu');
-            if (!menuButton || !mobileMenu) return;
+    <!-- ADDED: Mobile floating CTA bar -->
+    <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+        <a href="tel:5127107116" class="cta-call"><span aria-hidden="true">📞</span> Call Now</a>
+        <a href="/contact" class="cta-quote">Free Estimate</a>
+    </div>
+
+    <!-- FIXED: Complete JavaScript — replaces truncated original + Cloudflare script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Dynamic copyright year
+        var yearEl = document.getElementById('copyright-year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Mobile menu
+        var menuButton = document.getElementById('mobile-menu-button');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (menuButton && mobileMenu) {
             menuButton.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 var isOpen = mobileMenu.classList.contains('active');
-                if (isOpen) { mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded', 'false'); }
-                else { mobileMenu.classList.add('active'); menuButton.setAttribute('aria-expanded', 'true'); }
+                if (isOpen) { mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+                else { mobileMenu.classList.add('active'); menuButton.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
             });
-            var menuLinks = mobileMenu.querySelectorAll('a');
-            menuLinks.forEach(function(link) {
-                link.addEventListener('click', function() { mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded', 'false'); });
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() { mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; });
+            });
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target) && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active'); menuButton.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; menuButton.focus();
+                }
+            });
+        }
+
+        // Desktop dropdowns — click + hover + keyboard
+        document.querySelectorAll('[data-dropdown]').forEach(function(dropdown) {
+            var btn = dropdown.querySelector('[data-dropdown-trigger]');
+            var menu = dropdown.querySelector('[data-dropdown-menu]');
+            if (!btn || !menu) return;
+            var menuItems = menu.querySelectorAll('[role="menuitem"]');
+
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                var isOpen = menu.classList.contains('active');
+                closeAllDropdowns();
+                if (!isOpen) { menu.classList.add('active'); btn.setAttribute('aria-expanded', 'true'); }
+            });
+            btn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault(); var isOpen = menu.classList.contains('active'); closeAllDropdowns();
+                    if (!isOpen) { menu.classList.add('active'); btn.setAttribute('aria-expanded', 'true'); if (menuItems.length) menuItems[0].focus(); }
+                }
+                if (e.key === 'ArrowDown') { e.preventDefault(); menu.classList.add('active'); btn.setAttribute('aria-expanded', 'true'); if (menuItems.length) menuItems[0].focus(); }
+            });
+            menuItems.forEach(function(item, index) {
+                item.addEventListener('keydown', function(e) {
+                    if (e.key === 'ArrowDown') { e.preventDefault(); if (index < menuItems.length - 1) menuItems[index + 1].focus(); }
+                    if (e.key === 'ArrowUp') { e.preventDefault(); if (index > 0) menuItems[index - 1].focus(); else btn.focus(); }
+                    if (e.key === 'Escape') { e.preventDefault(); menu.classList.remove('active'); btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
+                    if (e.key === 'Tab') { menu.classList.remove('active'); btn.setAttribute('aria-expanded', 'false'); }
+                });
+            });
+            document.addEventListener('click', function(e) {
+                if (!dropdown.contains(e.target)) { menu.classList.remove('active'); btn.setAttribute('aria-expanded', 'false'); }
             });
         });
-        document.addEventListener('DOMContentLoaded', function() {
-            var dropdowns = document.querySelectorAll('.dropdown');
-            dropdowns.forEach(function(dropdown) {
-                var btn = dropdown.querySelector('button');
-                var menu = dropdown.querySelector('.dropdown-menu');
-                if (!btn || !menu) return;
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var isOpen = menu.classList.contains('active');
-                    document.querySelectorAll('.dropdown-menu.active').forEach(function(m) { m.classList.remove('active'); });
-                    if (!isOpen) { menu.classList.add('active'); btn.setAttribute('aria-expanded', 'true'); }
-                });
-                document.addEvent
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('.dropdown-menu.active').forEach(function(m) { m.classList.remove('active'); });
+            document.querySelectorAll('[data-dropdown-trigger]').forEach(function(b) { b.setAttribute('aria-expanded', 'false'); });
+        }
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAllDropdowns(); });
+    });
+    </script>
+</body>
+</html>
