@@ -1,0 +1,29 @@
+# ============================================
+# Buda Fence Co — Netlify Redirects
+# IMPORTANT: Rename this file to _redirects (no .txt extension)
+# Drop it in the root of your GitHub repo
+# ============================================
+
+# Remove .html extensions (explicit pages)
+/services/wood-fence-installation.html       /services/wood-fence-installation       301!
+/services/metal-fence-installation.html      /services/metal-fence-installation      301!
+/services/chain-link-fence-installation.html /services/chain-link-fence-installation  301!
+/services/fence-repair.html                  /services/fence-repair                  301!
+/services/deck-construction.html             /services/deck-construction             301!
+/services.html                               /services                               301!
+/service-areas.html                          /service-areas                          301!
+/service-areas/austin.html                   /service-areas/austin                   301!
+/service-areas/buda.html                     /service-areas/buda                     301!
+/service-areas/kyle.html                     /service-areas/kyle                     301!
+/service-areas/dripping-springs.html         /service-areas/dripping-springs         301!
+/blog.html                                   /blog                                   301!
+/gallery.html                                /gallery                                301!
+/contact.html                                /contact                                301!
+/about.html                                  /about                                  301!
+
+# Catch-all .html removal
+/*.html                                      /:splat                                 301!
+
+# Old Squarespace URLs
+/blog-tips                                   /blog                                   301!
+/blog-tips/*                                 /blog                                   301!
