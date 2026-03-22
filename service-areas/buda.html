@@ -28,7 +28,6 @@
     <meta property="og:image" content="https://budafenceco.com/images/buda-og-image.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <!-- FIX: Added og:image:alt -->
     <meta property="og:image:alt" content="Buda Fence Company — professional fence installation in Buda, TX">
     <meta property="og:site_name" content="Buda Fence Company">
     <meta property="og:locale" content="en_US">
@@ -118,12 +117,9 @@
         .mobile-menu{display:none}.mobile-menu.active{display:block}
         .skip-link{position:absolute;top:-40px;left:0;background:#dc2626;color:#fff;padding:8px 16px;z-index:100;text-decoration:none;transition:top .3s}.skip-link:focus{top:0}
         .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
-        /* FIX: Keyboard-accessible dropdown */
         .dropdown-menu-active{display:block !important}
-        /* FIX: Mobile CTA bar */
         .mobile-cta-bar{display:none}
         @media(max-width:767px){.mobile-cta-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:50;background:#1e293b;padding:10px 16px;gap:10px;box-shadow:0 -4px 12px rgba(0,0,0,.2)}.mobile-cta-bar a{flex:1;text-align:center;padding:12px 8px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none}.mobile-cta-bar .cta-call{background:#dc2626;color:#fff}.mobile-cta-bar .cta-quote{background:#fff;color:#1e293b}footer{padding-bottom:80px !important}}
-        /* Focus states */
         a:focus-visible,button:focus-visible{outline:2px solid #dc2626;outline-offset:2px}
         a:focus:not(:focus-visible),button:focus:not(:focus-visible){outline:none}
         @media(min-width:640px){.sm\:flex-row{flex-direction:row}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}
@@ -143,7 +139,6 @@
 <body class="bg-gray-50">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation — FIX: Removed role="banner" (wrong), added data-dropdown for keyboard nav, aria-hidden on ▾ and SVG -->
     <nav class="bg-white shadow-lg sticky top-0 z-50" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
@@ -165,7 +160,7 @@
                     <div class="relative group" data-dropdown>
                         <button class="text-buda-secondary font-medium pb-4" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger>Service Areas <span aria-hidden="true">▾</span></button>
                         <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50" role="menu" data-dropdown-menu>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-buda-secondary font-semibold" href="/service-areas/" role="menuitem">All Service Areas</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-buda-secondary font-semibold" href="/service-areas" role="menuitem">All Service Areas</a>
                             <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/austin" role="menuitem">Austin</a>
                             <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold text-buda-secondary" href="/service-areas/buda" role="menuitem" aria-current="page">Buda</a>
                             <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="/service-areas/kyle" role="menuitem">Kyle</a>
@@ -173,14 +168,13 @@
                         </div>
                     </div>
                     <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/gallery">Gallery</a>
-                    <a href="/blog/" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
+                    <a href="/blog" class="text-gray-700 hover:text-buda-secondary font-medium">Blog</a>
                     <a class="text-gray-700 hover:text-buda-secondary font-medium" href="/contact">Contact</a>
                 </div>
                 <div class="hidden md:flex space-x-4 items-center">
                     <a href="tel:5127107116" class="text-buda-secondary font-medium">(512) 710-7116</a>
                     <a class="bg-buda-secondary text-white px-4 py-2 rounded-lg hover:bg-red-700" href="/contact">Free Quote</a>
                 </div>
-                <!-- FIX: Removed inline onclick, added aria-controls -->
                 <div class="md:hidden flex items-center space-x-3">
                     <a class="bg-buda-secondary text-white px-3 py-2 rounded-lg text-sm font-semibold" href="/contact">Free Quote</a>
                     <button id="mobile-menu-button" class="text-gray-700 hover:text-buda-secondary ml-2 p-1" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -202,21 +196,20 @@
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/services/fence-repair" role="menuitem">Fence Repair</a>
                 </div>
                 <div class="px-3 py-2"><p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-                    <a class="block pl-4 py-1 text-buda-secondary hover:text-buda-secondary text-sm font-semibold" href="/service-areas/" role="menuitem">All Service Areas</a>
+                    <a class="block pl-4 py-1 text-buda-secondary hover:text-buda-secondary text-sm font-semibold" href="/service-areas" role="menuitem">All Service Areas</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/austin" role="menuitem">Austin</a>
                     <a class="block pl-4 py-1 text-buda-secondary font-semibold text-sm" href="/service-areas/buda" role="menuitem" aria-current="page">Buda</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/kyle" role="menuitem">Kyle</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/dripping-springs" role="menuitem">Dripping Springs</a>
                 </div>
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/gallery" role="menuitem">Gallery</a>
-                <a href="/blog/" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">Blog</a>
+                <a href="/blog" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" role="menuitem">Blog</a>
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/contact" role="menuitem">Contact</a>
                 <div class="px-3 py-2 border-t border-gray-200"><a href="tel:5127107116" class="block text-buda-secondary font-semibold py-1">(512) 710-7116</a></div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero — FIX: Emoji aria-hidden -->
     <section class="relative bg-buda-primary text-white py-20" aria-label="Buda fence installation services" role="banner">
         <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('/images/buda-mill-grain-downtown.webp');"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -230,14 +223,12 @@
         </div>
     </section>
 
-    <!-- Local Pride Banner -->
     <section class="bg-buda-secondary text-white py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-lg font-semibold text-white"><span aria-hidden="true">🤝</span> Proud to be Buda's local fence company — Building Budaful fences since 2015</p>
         </div>
     </section>
 
-    <!-- Trust Badges -->
     <section class="bg-white py-8 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -255,20 +246,18 @@
                 <div class="grid lg:grid-cols-3 gap-12">
                     <div class="lg:col-span-2">
 
-                        <!-- Introduction -->
                         <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                             <h2 class="text-3xl font-bold text-buda-primary mb-6">Your Neighbors in the Fence Business</h2>
                             <p class="text-gray-700 mb-4">When you hire Buda Fence Company, you're not just hiring a contractor — you're hiring your neighbors. We're a small family business located right here in Buda, and we take pride in serving the community we call home.</p>
                             <p class="text-gray-700 mb-4">Owner William Espich and his family live in Buda, shop at the local stores, and are invested in making our community better. When we build a fence for you, we're building it for a neighbor. That's why we never cut corners, always use premium materials, and stand behind every fence we install.</p>
                             <p class="text-gray-700 mb-4">From established neighborhoods like Bradfield Village and Garlic Creek to newer communities like Sunfield and Persimmon, we've installed fences throughout Buda. We know the soil conditions, the HOA requirements, and what styles work best for our Texas Hill Country setting.</p>
-                            <p class="text-gray-700">Wondering what a Buda fence project will cost? See our <a href="/blog/fence-installation-cost-austin.html" class="text-buda-secondary hover:underline font-medium">2026 Central Texas fence pricing guide</a> for real, current numbers.</p>
+                            <p class="text-gray-700">Wondering what a Buda fence project will cost? See our <a href="/blog/fence-installation-cost-austin" class="text-buda-secondary hover:underline font-medium">2026 Central Texas fence pricing guide</a> for real, current numbers.</p>
                             <div class="bg-slate-800 text-white p-6 rounded-lg mt-6">
                                 <h3 class="font-bold text-xl mb-2 text-white">Why Local Matters</h3>
                                 <p class="text-gray-200">When you choose a local company, your money stays in Buda. You get faster response times, personalized service, and a contractor who cares about their reputation in the community. We're not a big corporate franchise — we're your neighbors building fences.</p>
                             </div>
                         </div>
 
-                        <!-- Buda Neighborhoods -->
                         <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                             <h2 class="text-2xl font-bold text-buda-primary mb-6">Buda Neighborhoods We Serve</h2>
                             <p class="text-gray-700 mb-6">We've installed fences in virtually every Buda neighborhood. Whether you're in an established community with an aging fence that needs replacement, or a new build that needs its first fence, we're here to help.</p>
@@ -281,7 +270,6 @@
                             <p class="text-gray-600 text-sm italic">Don't see your neighborhood? Give us a call — if you're in Buda or the surrounding area, we serve you!</p>
                         </div>
 
-                        <!-- Popular Fence Styles — FIX: Pricing REMOVED from cedar card -->
                         <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                             <h2 class="text-2xl font-bold text-buda-primary mb-6">Popular Fence Styles in Buda</h2>
                             <p class="text-gray-700 mb-6">Buda homeowners love fences that complement our Texas Hill Country setting. Here are the most popular styles we install:</p>
@@ -290,8 +278,7 @@
                                     <img src="/images/cedar-fence-after.webp" alt="Cedar privacy fence installation Buda TX" class="w-full h-48 object-cover" width="400" height="192" loading="lazy">
                                     <div class="p-4">
                                         <h3 class="font-bold text-buda-primary mb-2">6' Cedar Privacy Fence</h3>
-                                        <!-- FIX: Removed "$30/LF installed" and "$33/LF" pricing per client rules -->
-                                        <p class="text-gray-600 text-sm">The #1 choice in Buda. Western Red Cedar built for Buda's clay soil and Texas heat. Wood or steel post options available. <a href="/blog/fence-installation-cost-austin.html" class="text-buda-secondary hover:underline font-medium">See our pricing guide</a> for current rates.</p>
+                                        <p class="text-gray-600 text-sm">The #1 choice in Buda. Western Red Cedar built for Buda's clay soil and Texas heat. Wood or steel post options available. <a href="/blog/fence-installation-cost-austin" class="text-buda-secondary hover:underline font-medium">See our pricing guide</a> for current rates.</p>
                                     </div>
                                 </div>
                                 <div class="border rounded-lg overflow-hidden">
@@ -309,7 +296,6 @@
                             </div>
                         </div>
 
-                        <!-- Customer Reviews — FIX: Wrapped in blockquote, star ratings aria-hidden -->
                         <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                             <h2 class="text-2xl font-bold text-buda-primary mb-6">What Buda Neighbors Say</h2>
                             <div class="space-y-6">
@@ -328,7 +314,6 @@
                             </div>
                         </div>
 
-                        <!-- Why Choose Local -->
                         <div class="bg-slate-800 text-white rounded-lg shadow-md p-8 mb-8">
                             <h2 class="text-2xl font-bold mb-6 text-white">Why Choose Your Local Buda Fence Company?</h2>
                             <div class="grid md:grid-cols-2 gap-6">
@@ -341,24 +326,22 @@
                             </div>
                         </div>
 
-                        <!-- Resources — FIX: Removed inline onmouseover/onmouseout, using CSS hover instead; emoji aria-hidden -->
                         <style>.resource-link{display:flex;align-items:flex-start;padding:1rem;border-radius:.5rem;border:1px solid #e5e7eb;text-decoration:none;transition:border-color .2s,box-shadow .2s}.resource-link:hover{border-color:#dc2626;box-shadow:0 4px 6px -1px rgba(0,0,0,.1)}</style>
                         <div class="bg-white rounded-lg shadow-md p-8">
                             <h2 class="text-2xl font-bold text-buda-primary mb-2">Buda Fence Resources</h2>
                             <p class="text-gray-600 mb-6">Helpful guides for planning your Buda fence project.</p>
                             <div class="grid md:grid-cols-2 gap-4">
-                                <a href="/blog/fence-installation-cost-austin.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">💰</span><div><p class="font-semibold text-buda-primary text-sm">2026 Fence Pricing Guide</p><p class="text-xs text-gray-500 mt-1">Real Central Texas pricing — cedar, metal, gates</p></div></a>
-                                <a href="/blog/cedar-vs-pine-fence-austin.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🌲</span><div><p class="font-semibold text-buda-primary text-sm">Cedar vs. Pine Fence</p><p class="text-xs text-gray-500 mt-1">Why we only use Western Red Cedar in Buda</p></div></a>
-                                <a href="/blog/wood-vs-metal-fence-austin.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🔩</span><div><p class="font-semibold text-buda-primary text-sm">Wood vs. Metal Fence</p><p class="text-xs text-gray-500 mt-1">Which is right for your Buda yard?</p></div></a>
-                                <a href="/blog/fence-maintenance-central-texas.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🔧</span><div><p class="font-semibold text-buda-primary text-sm">Central Texas Fence Maintenance</p><p class="text-xs text-gray-500 mt-1">Protect your fence from the Texas climate</p></div></a>
-                                <a href="/blog/best-fence-for-dogs-texas.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🐕</span><div><p class="font-semibold text-buda-primary text-sm">Best Fences for Dogs</p><p class="text-xs text-gray-500 mt-1">Keep your pets safely contained</p></div></a>
-                                <a href="/blog/fence-repair-vs-replace.html" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🛠️</span><div><p class="font-semibold text-buda-primary text-sm">Repair or Replace?</p><p class="text-xs text-gray-500 mt-1">How to make the right call on your fence</p></div></a>
+                                <a href="/blog/fence-installation-cost-austin" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">💰</span><div><p class="font-semibold text-buda-primary text-sm">2026 Fence Pricing Guide</p><p class="text-xs text-gray-500 mt-1">Real Central Texas pricing — cedar, metal, gates</p></div></a>
+                                <a href="/blog/cedar-vs-pine-fence-austin" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🌲</span><div><p class="font-semibold text-buda-primary text-sm">Cedar vs. Pine Fence</p><p class="text-xs text-gray-500 mt-1">Why we only use Western Red Cedar in Buda</p></div></a>
+                                <a href="/blog/wood-vs-metal-fence-austin" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🔩</span><div><p class="font-semibold text-buda-primary text-sm">Wood vs. Metal Fence</p><p class="text-xs text-gray-500 mt-1">Which is right for your Buda yard?</p></div></a>
+                                <a href="/blog/fence-maintenance-central-texas" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🔧</span><div><p class="font-semibold text-buda-primary text-sm">Central Texas Fence Maintenance</p><p class="text-xs text-gray-500 mt-1">Protect your fence from the Texas climate</p></div></a>
+                                <a href="/blog/best-fence-for-dogs-texas" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🐕</span><div><p class="font-semibold text-buda-primary text-sm">Best Fences for Dogs</p><p class="text-xs text-gray-500 mt-1">Keep your pets safely contained</p></div></a>
+                                <a href="/blog/fence-repair-vs-replace" class="resource-link"><span style="font-size:1.5rem;margin-right:.75rem" aria-hidden="true">🛠️</span><div><p class="font-semibold text-buda-primary text-sm">Repair or Replace?</p><p class="text-xs text-gray-500 mt-1">How to make the right call on your fence</p></div></a>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- Sidebar — FIX: Emoji aria-hidden -->
                     <div class="lg:col-span-1">
                         <div class="bg-buda-secondary text-white rounded-lg shadow-md p-6 mb-6 sticky top-24">
                             <h3 class="text-xl font-bold mb-4 text-white">Get Your Free Buda Estimate</h3>
@@ -395,7 +378,6 @@
         </section>
     </main>
 
-    <!-- CTA -->
     <section class="bg-buda-primary text-white py-16" aria-label="Call to action">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-4 text-white">Ready for Your Budaful Fence?</h2>
@@ -407,7 +389,6 @@
         </div>
     </section>
 
-    <!-- Footer — FIX: Cloudflare email obfuscation replaced with plain mailto, dynamic copyright year -->
     <footer class="bg-gray-900 text-white py-12" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
@@ -428,7 +409,7 @@
                 <div>
                     <h4 class="font-bold mb-4 text-white">Service Areas</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a class="hover:text-white" href="/service-areas/">View All Service Areas</a></li>
+                        <li><a class="hover:text-white" href="/service-areas">View All Service Areas</a></li>
                         <li><a class="hover:text-white" href="/service-areas/austin">Austin, TX</a></li>
                         <li><a class="text-white font-medium" href="/service-areas/buda" aria-current="page">Buda, TX</a></li>
                         <li><a class="hover:text-white" href="/service-areas/kyle">Kyle, TX</a></li>
@@ -439,7 +420,6 @@
                     <h4 class="font-bold mb-4 text-white">Contact</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a></li>
-                        <!-- FIX: Cloudflare email obfuscation replaced with plain mailto -->
                         <li><a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a></li>
                         <li>Mon-Fri: 6 AM - 6 PM</li>
                         <li>Saturday: 9 AM - 2 PM</li>
@@ -452,20 +432,16 @@
         </div>
     </footer>
 
-    <!-- Mobile floating CTA bar -->
     <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
         <a href="tel:5127107116" class="cta-call"><span aria-hidden="true">📞</span> Call Now</a>
         <a href="/contact" class="cta-quote">Free Estimate</a>
     </div>
 
-    <!-- FIX: Complete JavaScript — replaces inline onclick, adds keyboard nav, removes truncated Cloudflare script -->
     <script>
     (function() {
-        // Copyright year
         var yearEl = document.getElementById('copyright-year');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        // Mobile menu
         var menu = document.getElementById('mobile-menu');
         var button = document.getElementById('mobile-menu-button');
         if (menu && button) {
@@ -490,7 +466,6 @@
             });
         }
 
-        // Desktop dropdown keyboard nav
         document.querySelectorAll('[data-dropdown]').forEach(function(dropdown) {
             var btn = dropdown.querySelector('[data-dropdown-trigger]');
             var ddMenu = dropdown.querySelector('[data-dropdown-menu]');
