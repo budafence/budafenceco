@@ -26,7 +26,6 @@
     <meta property="og:image" content="https://budafenceco.com/images/chainlink-og.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <!-- FIX: Added og:image:alt -->
     <meta property="og:image:alt" content="Professional chain link fence installation in Austin, TX by Buda Fence Company">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Buda Fence Company">
@@ -42,7 +41,6 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="preload" href="/images/chainlink-hero.webp" as="image" type="image/webp">
-    <!-- FIX: Removed fonts.googleapis preconnect (page uses system fonts). Added GA preconnect. -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <style>
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -104,23 +102,18 @@
         .btn-primary{background-color:#dc2626;color:#fff}.btn-primary:hover{background-color:#b91c1c}
         .btn-secondary{background-color:#fff;color:#1e293b}.btn-secondary:hover{background-color:#f3f4f6}
         ul{list-style:none}address{font-style:normal}.not-italic{font-style:normal}.whitespace-nowrap{white-space:nowrap}
-        /* FIX: Mobile CTA bar */
         .mobile-cta-bar{display:none}
         @media(max-width:767px){.mobile-cta-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:50;background:#1e293b;padding:10px 16px;gap:10px;box-shadow:0 -4px 12px rgba(0,0,0,.2)}.mobile-cta-bar a{flex:1;text-align:center;padding:12px 8px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none}.mobile-cta-bar .cta-call{background:#dc2626;color:#fff}.mobile-cta-bar .cta-quote{background:#fff;color:#1e293b}footer{padding-bottom:80px !important}}
     </style>
-    <!-- LocalBusiness Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://budafenceco.com/#organization","name":"Buda Fence Company","alternateName":"Buda Fence Co","url":"https://budafenceco.com","telephone":"+1-512-710-7116","email":"info@budafenceco.com","image":"https://budafenceco.com/images/buda-fence-logo.webp","logo":"https://budafenceco.com/images/buda-fence-logo.webp","address":{"@type":"PostalAddress","streetAddress":"308 Wincliff Dr","addressLocality":"Buda","addressRegion":"TX","postalCode":"78610","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":"30.09939","longitude":"-97.86756"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"priceRange":"$$","areaServed":[{"@type":"City","name":"Austin"},{"@type":"City","name":"Buda"},{"@type":"City","name":"Kyle"},{"@type":"City","name":"Dripping Springs"}],"sameAs":["https://www.facebook.com/budafenceco","https://www.google.com/maps/place/Buda+Fence+Company"]}
+    {"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://budafenceco.com/#organization","name":"Buda Fence Company","alternateName":"Buda Fence Co","url":"https://budafenceco.com","telephone":"+1-512-710-7116","email":"info@budafenceco.com","image":"https://budafenceco.com/images/buda-fence-logo.webp","logo":"https://budafenceco.com/images/buda-fence-logo.webp","address":{"@type":"PostalAddress","streetAddress":"308 Wincliff Dr","addressLocality":"Buda","addressRegion":"TX","postalCode":"78610","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":"30.09939","longitude":"-97.86756"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"priceRange":"$$","areaServed":[{"@type":"City","name":"Austin"},{"@type":"City","name":"Buda"},{"@type":"City","name":"Kyle"},{"@type":"City","name":"Dripping Springs"}]}
     </script>
-    <!-- Service Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","@id":"https://budafenceco.com/services/chain-link-fence-installation#service","name":"Chain Link Fence Installation","serviceType":"Chain Link Fence Installation","provider":{"@id":"https://budafenceco.com/#organization"},"areaServed":[{"@type":"City","name":"Austin"},{"@type":"City","name":"Buda"},{"@type":"City","name":"Kyle"},{"@type":"City","name":"Dripping Springs"}],"description":"Professional chain link fence installation in Central Texas. Galvanized and vinyl-coated chain link fencing for residential and commercial properties.","offers":{"@type":"Offer","availability":"https://schema.org/InStock","priceCurrency":"USD"}}
+    {"@context":"https://schema.org","@type":"Service","@id":"https://budafenceco.com/services/chain-link-fence-installation#service","name":"Chain Link Fence Installation","serviceType":"Chain Link Fence Installation","provider":{"@id":"https://budafenceco.com/#organization"},"areaServed":[{"@type":"City","name":"Austin"},{"@type":"City","name":"Buda"},{"@type":"City","name":"Kyle"},{"@type":"City","name":"Dripping Springs"}],"description":"Professional chain link fence installation in Central Texas. Galvanized and vinyl-coated chain link fencing for residential and commercial properties."}
     </script>
-    <!-- FAQ Schema -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does a chain link fence last?","acceptedAnswer":{"@type":"Answer","text":"A professionally installed galvanized chain link fence commonly lasts 20–30 years. Vinyl-coated chain link can last even longer."}},{"@type":"Question","name":"What heights are available for chain link fences?","acceptedAnswer":{"@type":"Answer","text":"We install chain link fences from 4 ft up to 10 ft. Standard residential heights are 4, 5, and 6 ft. Commercial/security fences are often 8–10 ft."}},{"@type":"Question","name":"Can you add privacy slats to a chain link fence?","acceptedAnswer":{"@type":"Answer","text":"Yes. Privacy slats and windscreen fabric can be added to reduce visibility while still allowing airflow."}},{"@type":"Question","name":"Is chain link a good choice for dogs?","acceptedAnswer":{"@type":"Answer","text":"Yes. Chain link is one of the best options for dog containment because it's strong, durable, and provides a secure enclosure."}},{"@type":"Question","name":"How fast can you install a chain link fence?","acceptedAnswer":{"@type":"Answer","text":"Many standard residential projects can be completed at roughly 150–200 linear feet per day, depending on layout and terrain."}}]}
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does a chain link fence last?","acceptedAnswer":{"@type":"Answer","text":"A professionally installed galvanized chain link fence commonly lasts 20–30 years. Vinyl-coated chain link can last even longer."}},{"@type":"Question","name":"What heights are available for chain link fences?","acceptedAnswer":{"@type":"Answer","text":"We install chain link fences from 4 ft up to 10 ft. Standard residential heights are 4, 5, and 6 ft."}},{"@type":"Question","name":"Can you add privacy slats to a chain link fence?","acceptedAnswer":{"@type":"Answer","text":"Yes. Privacy slats and windscreen fabric can be added to reduce visibility while still allowing airflow."}},{"@type":"Question","name":"Is chain link a good choice for dogs?","acceptedAnswer":{"@type":"Answer","text":"Yes. Chain link is one of the best options for dog containment because it's strong, durable, and provides a secure enclosure."}},{"@type":"Question","name":"How fast can you install a chain link fence?","acceptedAnswer":{"@type":"Answer","text":"Many standard residential projects can be completed at roughly 150–200 linear feet per day."}}]}
     </script>
-    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://budafenceco.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://budafenceco.com/services"},{"@type":"ListItem","position":3,"name":"Chain Link Fence Installation","item":"https://budafenceco.com/services/chain-link-fence-installation"}]}
     </script>
@@ -128,7 +121,7 @@
 <body class="bg-gray-50">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation — FIX: Added data-dropdown attributes for keyboard nav, aria-hidden on ▾ -->
+    <!-- Navigation — FIXED: /service-areas/ and /blog/ trailing slashes removed -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="container">
             <div class="flex items-center"><a href="/" aria-label="Buda Fence Company Home"><img src="/images/buda-fence-logo.webp" alt="Buda Fence Company - Professional Fence Installation in Austin &amp; Buda, TX" class="h-12 w-auto" width="97" height="48" loading="eager"></a></div>
@@ -149,7 +142,7 @@
                 <div class="dropdown" data-dropdown>
                     <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" aria-haspopup="true" aria-expanded="false" id="areas-dropdown-btn" data-dropdown-trigger>Service Areas <span aria-hidden="true">▾</span></button>
                     <div class="dropdown-menu" role="menu" aria-labelledby="areas-dropdown-btn" data-dropdown-menu>
-                        <a href="/service-areas/" role="menuitem" class="text-buda-secondary font-semibold">All Service Areas</a>
+                        <a href="/service-areas" role="menuitem" class="text-buda-secondary font-semibold">All Service Areas</a>
                         <a href="/service-areas/austin" role="menuitem">Austin</a>
                         <a href="/service-areas/buda" role="menuitem">Buda</a>
                         <a href="/service-areas/kyle" role="menuitem">Kyle</a>
@@ -157,7 +150,7 @@
                     </div>
                 </div>
                 <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/gallery">Gallery</a>
-                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/blog/">Blog</a>
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/blog">Blog</a>
                 <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="/contact">Contact</a>
             </div>
             <div class="desktop-nav">
@@ -185,14 +178,14 @@
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/services/fence-repair" role="menuitem">Fence Repair</a>
                 </div>
                 <div class="px-3 py-2"><p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-                    <a class="block pl-4 py-1 text-buda-secondary text-sm font-semibold" href="/service-areas/" role="menuitem">All Service Areas</a>
+                    <a class="block pl-4 py-1 text-buda-secondary text-sm font-semibold" href="/service-areas" role="menuitem">All Service Areas</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/austin" role="menuitem">Austin</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/buda" role="menuitem">Buda</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/kyle" role="menuitem">Kyle</a>
                     <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="/service-areas/dripping-springs" role="menuitem">Dripping Springs</a>
                 </div>
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/gallery" role="menuitem">Gallery</a>
-                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/blog/" role="menuitem">Blog</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/blog" role="menuitem">Blog</a>
                 <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="/contact" role="menuitem">Contact</a>
             </div>
         </div>
@@ -278,15 +271,15 @@
         <section class="py-12"><div class="container">
             <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold text-buda-primary">Our Professional Installation Process</h2><p class="text-xl text-gray-600 mt-3">Straight, tight, secure—built to last.</p></div>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem">1</div><div><h3 class="text-xl font-bold text-buda-primary">Consultation & Layout</h3><p class="text-gray-700 mt-1">We confirm layout, property lines, gate needs, and recommend height + gauge + coating based on your goals.</p></div></div></div>
-                <div class="bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem">2</div><div><h3 class="text-xl font-bold text-buda-primary">Heavy-Duty Posts + Extra Concrete</h3><p class="text-gray-700 mt-1">Terminal posts (corners/ends/gates) get the strength they need—set deep and solid so your fence stays rigid.</p></div></div></div>
-                <div class="bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem">3</div><div><h3 class="text-xl font-bold text-buda-primary">Top Rail + Hardware</h3><p class="text-gray-700 mt-1">We install the framework and hardware correctly so the mesh stays tight and performs long-term.</p></div></div></div>
-                <div class="bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem">4</div><div><h3 class="text-xl font-bold text-buda-primary">Stretch Mesh Taut</h3><p class="text-gray-700 mt-1">This is where quality shows. We stretch it correctly so it won't sag, bow, or rattle.</p></div></div></div>
+                <div class="bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem" aria-hidden="true">1</div><div><h3 class="text-xl font-bold text-buda-primary">Consultation & Layout</h3><p class="text-gray-700 mt-1">We confirm layout, property lines, gate needs, and recommend height + gauge + coating based on your goals.</p></div></div></div>
+                <div class="bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem" aria-hidden="true">2</div><div><h3 class="text-xl font-bold text-buda-primary">Heavy-Duty Posts + Extra Concrete</h3><p class="text-gray-700 mt-1">Terminal posts (corners/ends/gates) get the strength they need—set deep and solid so your fence stays rigid.</p></div></div></div>
+                <div class="bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem" aria-hidden="true">3</div><div><h3 class="text-xl font-bold text-buda-primary">Top Rail + Hardware</h3><p class="text-gray-700 mt-1">We install the framework and hardware correctly so the mesh stays tight and performs long-term.</p></div></div></div>
+                <div class="bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem" aria-hidden="true">4</div><div><h3 class="text-xl font-bold text-buda-primary">Stretch Mesh Taut</h3><p class="text-gray-700 mt-1">This is where quality shows. We stretch it correctly so it won't sag, bow, or rattle.</p></div></div></div>
             </div>
-            <div class="mt-6 bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem">5</div><div><h3 class="text-xl font-bold text-buda-primary">Final Walkthrough & Cleanup</h3><p class="text-gray-700 mt-1">We verify alignment, gate swing/latch, and overall finish—then leave your property clean.</p></div></div></div>
+            <div class="mt-6 bg-white rounded-xl shadow-lg p-6"><div class="flex items-start gap-4"><div class="bg-buda-secondary text-white w-12 rounded-full flex items-center justify-center text-xl font-bold" style="height:3rem;min-width:3rem" aria-hidden="true">5</div><div><h3 class="text-xl font-bold text-buda-primary">Final Walkthrough & Cleanup</h3><p class="text-gray-700 mt-1">We verify alignment, gate swing/latch, and overall finish—then leave your property clean.</p></div></div></div>
         </div></section>
 
-        <!-- What Sets Us Apart — FIX: ✓ wrapped in aria-hidden -->
+        <!-- What Sets Us Apart -->
         <section class="py-12 bg-buda-primary"><div class="container">
             <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold text-white">What Sets Buda Fence Company Apart</h2><p class="text-xl text-white mt-3" style="opacity:.85">No shortcuts—just a better build that lasts.</p></div>
             <div class="grid md:grid-cols-2 gap-6">
@@ -320,7 +313,7 @@
         </div></div></section>
     </main>
 
-    <!-- Footer — FIX: Emoji wrapped in aria-hidden -->
+    <!-- Footer — FIXED: /service-areas/ trailing slash removed -->
     <footer class="bg-gray-900 text-white py-12" role="contentinfo">
         <div class="container">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
@@ -343,7 +336,7 @@
                 <div>
                     <h3 class="font-bold mb-4">Service Areas</h3>
                     <ul class="text-gray-400 text-sm space-y-2">
-                        <li><a class="hover:text-white" href="/service-areas/">View All Service Areas</a></li>
+                        <li><a class="hover:text-white" href="/service-areas">View All Service Areas</a></li>
                         <li><a class="hover:text-white" href="/service-areas/austin">Austin, TX</a></li>
                         <li><a class="hover:text-white" href="/service-areas/buda">Buda, TX</a></li>
                         <li><a class="hover:text-white" href="/service-areas/kyle">Kyle, TX</a></li>
@@ -373,14 +366,11 @@
         <a href="/contact" class="cta-quote">Free Estimate</a>
     </div>
 
-    <!-- Complete JavaScript — FIX: Added ArrowUp/ArrowDown to keyboard nav, dynamic copyright year -->
     <script>
     (function() {
-        // Dynamic copyright year
         var yearEl = document.getElementById('copyright-year');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        // Mobile menu
         var menu = document.getElementById('mobile-menu');
         var button = document.getElementById('mobile-menu-button');
         if (menu && button) {
@@ -405,7 +395,6 @@
             });
         }
 
-        // Desktop dropdown keyboard nav — FIX: Added ArrowDown/ArrowUp between menu items
         document.querySelectorAll('[data-dropdown]').forEach(function(dropdown) {
             var btn = dropdown.querySelector('[data-dropdown-trigger]');
             var ddMenu = dropdown.querySelector('[data-dropdown-menu]');
