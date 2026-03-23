@@ -1,8 +1,6 @@
-# ============================================
+# =============================================
 # Buda Fence Co — Netlify Redirects
-# IMPORTANT: Rename this file to _redirects (no .txt extension)
-# Drop it in the root of your GitHub repo
-# ============================================
+# =============================================
 
 # Remove .html extensions (explicit pages)
 /services/wood-fence-installation.html       /services/wood-fence-installation       301!
@@ -27,3 +25,4 @@
 # Old Squarespace URLs
 /blog-tips                                   /blog                                   301!
 /blog-tips/*                                 /blog                                   301!
+/contact-us                                  /contact                                301!
