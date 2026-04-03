@@ -3,27 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wood fence vs. metal fence for Texas homeowners — a complete comparison of cost, durability, maintenance, and curb appeal to help you make the right choice.">
+    
+    <!-- Primary Meta Tags -->
     <title>Wood vs. Metal Fence: A Complete Comparison for Texas Homeowners | Buda Fence Co.</title>
-    <link rel="canonical" href="https://budafenceco.com/blog/wood-vs-metal-fence-comparison.html" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'buda-primary': '#1e3a5f',
-                        'buda-secondary': '#dc2626',
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="description" content="Wood fence vs. metal fence for Texas homeowners — a complete comparison of cost, durability, maintenance, and curb appeal to help you make the right choice.">
+    <meta name="keywords" content="wood vs metal fence, fence comparison texas, cedar fence vs aluminum, wood fence cost, metal fence cost, fence installation austin, buda fence company">
+    <meta name="author" content="Buda Fence Company">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- FIXED: Canonical tag without .html extension -->
+    <link rel="canonical" href="https://budafenceco.com/blog/wood-vs-metal-fence-comparison">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://budafenceco.com/blog/wood-vs-metal-fence-comparison">
+    <meta property="og:title" content="Wood vs. Metal Fence: A Complete Comparison for Texas Homeowners">
+    <meta property="og:description" content="Complete comparison of wood vs metal fencing for Texas homeowners. Cost, durability, maintenance, and curb appeal analysis.">
+    <meta property="og:site_name" content="Buda Fence Company">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://budafenceco.com/blog/wood-vs-metal-fence-comparison">
+    <meta name="twitter:title" content="Wood vs. Metal Fence: Complete Comparison">
+    <meta name="twitter:description" content="Complete comparison of wood vs metal fencing for Texas homeowners.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Inline CSS - No Tailwind CDN -->
     <style>
-        html, body { max-width: 100vw; overflow-x: hidden; }
-        .mobile-menu { display: none; }
-        .mobile-menu.active { display: block; }
+        /* CSS Reset & Base Styles */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html { 
+            scroll-behavior: smooth; 
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f9fafb;
+            overflow-x: hidden;
+        }
+        
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        
+        /* Brand Colors */
+        .bg-buda-primary { background-color: #1e293b; }
+        .text-buda-primary { color: #1e293b; }
+        .bg-buda-secondary { background-color: #dc2626; }
+        .text-buda-secondary { color: #dc2626; }
+        
+        /* Utility Classes */
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        .font-medium { font-weight: 500; }
+        .text-white { color: #ffffff; }
+        .bg-white { background-color: #ffffff; }
+        .bg-gray-50 { background-color: #f9fafb; }
+        .bg-gray-100 { background-color: #f3f4f6; }
+        .bg-gray-900 { background-color: #111827; }
+        .text-gray-300 { color: #d1d5db; }
+        .text-gray-400 { color: #9ca3af; }
+        .text-gray-500 { color: #6b7280; }
+        .text-gray-600 { color: #4b5563; }
+        .text-gray-700 { color: #374151; }
+        .text-gray-800 { color: #1f2937; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .transition-all { transition: all 0.3s ease; }
+        .transition-colors { transition: color 0.2s ease, background-color 0.2s ease; }
+        
+        /* Grid */
+        .grid { display: grid; gap: 2rem; }
+        @media (min-width: 768px) {
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        /* Flexbox */
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-8 > * + * { margin-left: 2rem; }
+        .space-y-1 > * + * { margin-top: 0.25rem; }
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-8 { gap: 2rem; }
+        
+        /* Spacing */
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-8 { margin-top: 2rem; }
+        .pt-2 { padding-top: 0.5rem; }
+        .pt-6 { padding-top: 1.5rem; }
+        
+        /* Typography */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        
+        @media (min-width: 768px) {
+            .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        }
+        
+        /* Borders */
+        .border { border-width: 1px; }
+        .border-t { border-top-width: 1px; }
+        .border-b { border-width: 0; border-bottom-width: 1px; }
+        .border-gray-200 { border-color: #e5e7eb; }
+        .border-gray-800 { border-color: #1f2937; }
+        .divide-y > * + * { border-top: 1px solid #e5e7eb; }
+        
+        /* Positioning */
+        .sticky { position: sticky; }
+        .relative { position: relative; }
+        .top-0 { top: 0; }
+        .z-50 { z-index: 50; }
+        
+        /* Display */
+        .block { display: block; }
+        .hidden { display: none; }
+        
+        /* Sizing */
+        .h-12 { height: 3rem; }
+        .h-16 { height: 4rem; }
+        .h-20 { height: 5rem; }
+        .w-auto { width: auto; }
+        .w-full { width: 100%; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-7xl { max-width: 80rem; }
+        
+        /* Hover States */
+        .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+        .hover\:bg-red-700:hover { background-color: #b91c1c; }
+        .hover\:text-white:hover { color: #ffffff; }
+        .hover\:text-buda-secondary:hover { color: #dc2626; }
+        .hover\:underline:hover { text-decoration: underline; }
+        
+        /* Mobile Responsive */
+        @media (max-width: 767px) {
+            .md\:hidden { display: block !important; }
+            .hidden.md\:flex { display: none !important; }
+            .mobile-menu.active { display: block; }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:flex { display: flex; }
+            .md\:hidden { display: none; }
+            .md\:p-12 { padding: 3rem; }
+        }
+        
+        /* Navigation */
+        nav { background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem; }
+        
+        /* Desktop Navigation */
+        .desktop-nav { display: none; }
+        @media (min-width: 768px) {
+            .desktop-nav { display: flex; align-items: center; gap: 2rem; }
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu { 
+            display: none;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e7eb;
+        }
+        .mobile-menu.active { 
+            display: block;
+        }
+        
+        /* Dropdown Menu - JavaScript Driven */
+        .dropdown { position: relative; }
+        .dropdown button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border-radius: 0.5rem;
+            padding: 0.5rem 0;
+            min-width: max-content;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+        }
+        .dropdown-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            white-space: nowrap;
+            color: #374151;
+            transition: background-color 0.2s ease;
+        }
+        .dropdown-menu a:hover,
+        .dropdown-menu a:focus {
+            background-color: #f3f4f6;
+            color: #dc2626;
+        }
+        
+        /* Focus states */
+        a:focus, button:focus {
+            outline: 2px solid #dc2626;
+            outline-offset: 2px;
+        }
+        
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #dc2626;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            border-radius: 0 0 4px 0;
+        }
+        .skip-link:focus { top: 0; }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #dc2626;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: #b91c1c;
+        }
+        
+        /* List Reset */
+        ul { list-style: none; }
+        
+        /* Blog Article Styles */
+        .article-body {
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #1f2937;
+        }
+        .article-body h2 {
+            font-family: sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .article-body h3 {
+            font-family: sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+        .article-body ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+        .article-body a {
+            color: #2563eb;
+        }
+        .article-body a:hover {
+            text-decoration: underline;
+        }
+        .article-body table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: sans-serif;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        .article-body thead {
+            background-color: #1e293b;
+            color: #ffffff;
+        }
+        .article-body th {
+            text-align: left;
+            padding: 0.75rem 1rem;
+        }
+        .article-body td {
+            padding: 0.75rem 1rem;
+        }
+        .article-body tbody tr {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .article-body tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        .text-green-700 { color: #15803d; }
+        .text-red-600 { color: #dc2626; }
+        .text-red-300 { color: #fca5a5; }
+        .uppercase { text-transform: uppercase; }
+        .tracking-wide { letter-spacing: 0.025em; }
+        .whitespace-nowrap { white-space: nowrap; }
+        .flex-shrink-0 { flex-shrink: 0; }
+        .overflow-x-auto { overflow-x: auto; }
+        .not-italic { font-style: normal; }
     </style>
+    
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://budafenceco.com/#organization",
+      "name": "Buda Fence Company",
+      "image": "https://budafenceco.com/images/buda-fence-logo.webp",
+      "telephone": "+15127107116",
+      "email": "info@budafenceco.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "308 Wincliff Dr",
+        "addressLocality": "Buda",
+        "addressRegion": "TX",
+        "postalCode": "78610",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "30.09939",
+        "longitude": "-97.86756"
+      },
+      "url": "https://budafenceco.com",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "areaServed": [
+        {"@type": "City", "name": "Austin"},
+        {"@type": "City", "name": "Buda"},
+        {"@type": "City", "name": "Kyle"},
+        {"@type": "City", "name": "Dripping Springs"}
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "148",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+    <!-- BlogPosting Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Wood vs. Metal Fence: A Complete Comparison for Texas Homeowners",
+      "description": "Complete comparison of cost, durability, maintenance, and curb appeal between wood and metal fencing for Texas homeowners.",
+      "author": {
+        "@type": "Organization",
+        "name": "Buda Fence Company",
+        "@id": "https://budafenceco.com/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Buda Fence Company",
+        "@id": "https://budafenceco.com/#organization"
+      },
+      "datePublished": "2026-03-23",
+      "dateModified": "2026-03-23",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://budafenceco.com/blog/wood-vs-metal-fence-comparison"
+      }
+    }
+    </script>
+    
+    <!-- FAQPage Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -59,167 +487,217 @@
       }]
     }
     </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://budafenceco.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://budafenceco.com/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "Wood vs. Metal Fence Comparison", "item": "https://budafenceco.com/blog/wood-vs-metal-fence-comparison"}
+      ]
+    }
+    </script>
 </head>
-<body class="bg-gray-100">
-
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0">
-                    <a href="../index.html">
-                        <img class="h-16 w-auto" src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company Logo">
-                    </a>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../index.html">Home</a>
-                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../about.html">About</a>
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Services ▾</button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap font-semibold" href="../services.html">All Services</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/deck-construction.html">Deck Construction</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/wood-fence-installation.html">Wood Fence Installation</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/metal-fence-installation.html">Metal Fence Installation</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/chain-link-fence-installation.html">Chain Link Fence Installation</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../services/fence-repair.html">Fence Repair</a>
-                        </div>
-                    </div>
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-buda-secondary font-medium pb-4">Service Areas ▾</button>
-                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg pt-2 pb-2 min-w-max z-50">
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap text-buda-secondary font-semibold" href="../service-areas/">All Service Areas</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../service-areas/austin.html">Austin</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../service-areas/buda.html">Buda</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../service-areas/kyle.html">Kyle</a>
-                            <a class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap" href="../service-areas/dripping-springs.html">Dripping Springs</a>
-                        </div>
-                    </div>
-                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../gallery.html">Gallery</a>
-                    <a class="text-buda-secondary font-medium" href="../blog/">Blog</a>
-                    <a class="text-gray-700 hover:text-buda-secondary font-medium" href="../contact.html">Contact</a>
-                </div>
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="tel:5127107116" class="text-buda-primary font-semibold">(512) 710-7116</a>
-                    <a class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold" href="../contact.html">Free Quote</a>
-                </div>
-                <div class="md:hidden flex items-center space-x-3">
-                    <a class="bg-buda-secondary text-white px-4 py-2 rounded-md hover:bg-red-700 font-semibold text-sm" href="../contact.html">Free Quote</a>
-                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-buda-secondary">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="../index.html" aria-label="Buda Fence Company Home">
+                    <img src="../images/buda-fence-logo.webp" 
+                         alt="Buda Fence Company" 
+                         class="h-12 w-auto"
+                         width="97"
+                         height="48"
+                         loading="eager">
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="desktop-nav">
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="../index.html">Home</a>
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="../about.html">About</a>
+                
+                <div class="dropdown">
+                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" 
+                            aria-haspopup="true" 
+                            aria-expanded="false"
+                            id="services-dropdown-btn">
+                        Services ▾
                     </button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="services-dropdown-btn">
+                        <a href="../services.html" role="menuitem">All Services</a>
+                        <a href="../services/deck-construction.html" role="menuitem">Deck Construction</a>
+                        <a href="../services/wood-fence-installation.html" role="menuitem">Wood Fence Installation</a>
+                        <a href="../services/metal-fence-installation.html" role="menuitem">Metal Fence Installation</a>
+                        <a href="../services/chain-link-fence-installation.html" role="menuitem">Chain Link Fence Installation</a>
+                        <a href="../services/fence-repair.html" role="menuitem">Fence Repair</a>
+                    </div>
                 </div>
+                
+                <div class="dropdown">
+                    <button class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" 
+                            aria-haspopup="true" 
+                            aria-expanded="false"
+                            id="areas-dropdown-btn">
+                        Service Areas ▾
+                    </button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="areas-dropdown-btn">
+                        <a href="../service-areas/austin.html" role="menuitem">Austin</a>
+                        <a href="../service-areas/buda.html" role="menuitem">Buda</a>
+                        <a href="../service-areas/kyle.html" role="menuitem">Kyle</a>
+                        <a href="../service-areas/dripping-springs.html" role="menuitem">Dripping Springs</a>
+                    </div>
+                </div>
+                
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="../gallery.html">Gallery</a>
+                <a class="text-buda-secondary font-medium" href="../blog/">Blog</a>
+                <a class="text-gray-700 hover:text-buda-secondary font-medium transition-colors" href="../contact.html">Contact</a>
+            </div>
+            
+            <!-- Desktop Contact -->
+            <div class="desktop-nav">
+                <a href="tel:5127107116" class="text-buda-secondary font-medium hover:underline">(512) 710-7116</a>
+                <a class="btn btn-primary" href="../contact.html">Free Quote</a>
+            </div>
+            
+            <!-- Mobile Contact & Menu -->
+            <div class="md:hidden flex items-center gap-2">
+                <a href="tel:5127107116" 
+                   class="text-buda-secondary font-semibold whitespace-nowrap" 
+                   style="font-size: 0.8125rem;">(512) 710-7116</a>
+                <a class="bg-buda-secondary text-white rounded-lg font-semibold" 
+                   style="padding: 0.4rem 0.65rem; font-size: 0.8125rem;"
+                   href="../contact.html">Quote</a>
+                <button id="mobile-menu-button"
+                        class="text-gray-700 hover:text-buda-secondary" 
+                        style="padding: 0.35rem;"
+                        aria-label="Toggle mobile menu"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="width:1.5rem;height:1.5rem;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu" role="menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="../index.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Home</a>
-                <a href="../about.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">About</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="../index.html" role="menuitem">Home</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="../about.html" role="menuitem">About</a>
                 <div class="px-3 py-2">
                     <p class="text-gray-900 font-semibold mb-2">Services</p>
-                    <a href="../services.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm font-semibold">All Services</a>
-                    <a href="../services/deck-construction.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Deck Construction</a>
-                    <a href="../services/wood-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Wood Fence</a>
-                    <a href="../services/metal-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Metal Fence</a>
-                    <a href="../services/chain-link-fence-installation.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Chain Link</a>
-                    <a href="../services/fence-repair.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Fence Repair</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../services.html" role="menuitem">All Services</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../services/deck-construction.html" role="menuitem">Deck Construction</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../services/wood-fence-installation.html" role="menuitem">Wood Fence</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../services/metal-fence-installation.html" role="menuitem">Metal Fence</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../services/chain-link-fence-installation.html" role="menuitem">Chain Link</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../services/fence-repair.html" role="menuitem">Fence Repair</a>
                 </div>
                 <div class="px-3 py-2">
                     <p class="text-gray-900 font-semibold mb-2">Service Areas</p>
-                    <a href="../service-areas/" class="block pl-4 py-1 text-buda-secondary hover:text-buda-secondary text-sm font-semibold">All Service Areas</a>
-                    <a href="../service-areas/austin.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Austin</a>
-                    <a href="../service-areas/buda.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Buda</a>
-                    <a href="../service-areas/kyle.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Kyle</a>
-                    <a href="../service-areas/dripping-springs.html" class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm">Dripping Springs</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../service-areas/austin.html" role="menuitem">Austin</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../service-areas/buda.html" role="menuitem">Buda</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../service-areas/kyle.html" role="menuitem">Kyle</a>
+                    <a class="block pl-4 py-1 text-gray-600 hover:text-buda-secondary text-sm" href="../service-areas/dripping-springs.html" role="menuitem">Dripping Springs</a>
                 </div>
-                <a href="../gallery.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Gallery</a>
-                <a href="../blog/" class="block px-3 py-2 text-buda-secondary font-medium">Blog</a>
-                <a href="../contact.html" class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium">Contact</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="../gallery.html" role="menuitem">Gallery</a>
+                <a class="block px-3 py-2 text-buda-secondary font-medium" href="../blog/" role="menuitem" aria-current="page">Blog</a>
+                <a class="block px-3 py-2 text-gray-700 hover:text-buda-secondary font-medium" href="../contact.html" role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Article Header -->
-    <header class="bg-buda-primary text-white py-12">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="bg-buda-primary text-white py-12" role="banner">
+        <div class="max-w-3xl mx-auto px-4">
             <p class="text-sm text-red-300 font-semibold uppercase tracking-wide mb-2">Featured Guide</p>
             <h1 class="text-3xl md:text-4xl font-bold mb-4">Wood vs. Metal Fence: A Complete Comparison for Texas Homeowners</h1>
-            <p class="text-gray-300 text-sm">By Buda Fence Company &nbsp;&middot;&nbsp; 8 min read</p>
+            <p class="text-gray-300 text-sm">By Buda Fence Company &middot; 8 min read</p>
         </div>
     </header>
 
     <!-- Article Body -->
-    <main class="py-12">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-lg shadow-md p-8 md:p-12" style="font-family:Georgia,serif; font-size:1.1rem; line-height:1.8; color:#1f2937;">
+    <main id="main-content" class="py-12" role="main">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-md p-8 md:p-12 article-body">
 
                 <p class="mb-6">
-                    It's one of the first questions every Texas homeowner faces: wood fence or metal fence? Both are solid choices — but they serve very different purposes. After 5,000+ fence installations across <a href="https://budafenceco.com/service-areas/austin" class="text-blue-600 hover:underline">Austin</a>, <a href="https://budafenceco.com/service-areas/buda" class="text-blue-600 hover:underline">Buda</a>, <a href="https://budafenceco.com/service-areas/kyle" class="text-blue-600 hover:underline">Kyle</a>, and <a href="https://budafenceco.com/service-areas/dripping-springs" class="text-blue-600 hover:underline">Dripping Springs</a>, we've helped thousands of homeowners work through this exact decision. Here's everything you need to know.
+                    It's one of the first questions every Texas homeowner faces: wood fence or metal fence? Both are solid choices — but they serve very different purposes. After 5,000+ fence installations across <a href="../service-areas/austin.html">Austin</a>, <a href="../service-areas/buda.html">Buda</a>, <a href="../service-areas/kyle.html">Kyle</a>, and <a href="../service-areas/dripping-springs.html">Dripping Springs</a>, we've helped thousands of homeowners work through this exact decision. Here's everything you need to know.
                 </p>
 
-                <h2 class="text-2xl font-bold text-buda-primary mt-8 mb-4" style="font-family:sans-serif;">At a Glance: Wood vs. Metal</h2>
+                <h2>At a Glance: Wood vs. Metal</h2>
 
                 <div class="overflow-x-auto mb-8">
-                    <table class="w-full text-base border-collapse" style="font-family:sans-serif;">
+                    <table>
                         <thead>
-                            <tr class="bg-buda-primary text-white">
-                                <th class="text-left px-4 py-3">Category</th>
-                                <th class="text-left px-4 py-3">Wood Fence</th>
-                                <th class="text-left px-4 py-3">Metal Fence</th>
+                            <tr>
+                                <th>Category</th>
+                                <th>Wood Fence</th>
+                                <th>Metal Fence</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b border-gray-200">
-                                <td class="px-4 py-3 font-semibold">Upfront Cost</td>
-                                <td class="px-4 py-3 text-green-700 font-semibold">Lower ($27–$35/LF)</td>
-                                <td class="px-4 py-3">Higher ($25–$55+/LF)</td>
+                            <tr>
+                                <td class="font-semibold">Upfront Cost</td>
+                                <td class="text-green-700 font-semibold">Lower ($27–$35/LF)</td>
+                                <td>Higher ($25–$55+/LF)</td>
                             </tr>
-                            <tr class="bg-gray-50 border-b border-gray-200">
-                                <td class="px-4 py-3 font-semibold">Privacy</td>
-                                <td class="px-4 py-3 text-green-700 font-semibold">Full privacy</td>
-                                <td class="px-4 py-3 text-red-600">Open / no privacy</td>
+                            <tr>
+                                <td class="font-semibold">Privacy</td>
+                                <td class="text-green-700 font-semibold">Full privacy</td>
+                                <td class="text-red-600">Open / no privacy</td>
                             </tr>
-                            <tr class="border-b border-gray-200">
-                                <td class="px-4 py-3 font-semibold">Lifespan</td>
-                                <td class="px-4 py-3">15–20 years</td>
-                                <td class="px-4 py-3 text-green-700 font-semibold">25–50+ years</td>
+                            <tr>
+                                <td class="font-semibold">Lifespan</td>
+                                <td>15–20 years</td>
+                                <td class="text-green-700 font-semibold">25–50+ years</td>
                             </tr>
-                            <tr class="bg-gray-50 border-b border-gray-200">
-                                <td class="px-4 py-3 font-semibold">Maintenance</td>
-                                <td class="px-4 py-3">Stain every 2–3 years</td>
-                                <td class="px-4 py-3 text-green-700 font-semibold">Very low</td>
+                            <tr>
+                                <td class="font-semibold">Maintenance</td>
+                                <td>Stain every 2–3 years</td>
+                                <td class="text-green-700 font-semibold">Very low</td>
                             </tr>
-                            <tr class="border-b border-gray-200">
-                                <td class="px-4 py-3 font-semibold">Curb Appeal</td>
-                                <td class="px-4 py-3">Warm, natural look</td>
-                                <td class="px-4 py-3 text-green-700 font-semibold">Elegant, high-end</td>
+                            <tr>
+                                <td class="font-semibold">Curb Appeal</td>
+                                <td>Warm, natural look</td>
+                                <td class="text-green-700 font-semibold">Elegant, high-end</td>
                             </tr>
-                            <tr class="bg-gray-50 border-b border-gray-200">
-                                <td class="px-4 py-3 font-semibold">Pool Compliant</td>
-                                <td class="px-4 py-3 text-red-600">Usually not</td>
-                                <td class="px-4 py-3 text-green-700 font-semibold">Yes</td>
+                            <tr>
+                                <td class="font-semibold">Pool Compliant</td>
+                                <td class="text-red-600">Usually not</td>
+                                <td class="text-green-700 font-semibold">Yes</td>
                             </tr>
-                            <tr class="border-b border-gray-200">
-                                <td class="px-4 py-3 font-semibold">Best For</td>
-                                <td class="px-4 py-3">Privacy, pets, backyards</td>
-                                <td class="px-4 py-3">Pools, front yards, curb appeal</td>
+                            <tr>
+                                <td class="font-semibold">Best For</td>
+                                <td>Privacy, pets, backyards</td>
+                                <td>Pools, front yards, curb appeal</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h2 class="text-2xl font-bold text-buda-primary mt-8 mb-4" style="font-family:sans-serif;">Wood Fences: Privacy, Value, and Texas Charm</h2>
+                <h2>Wood Fences: Privacy, Value, and Texas Charm</h2>
 
                 <p class="mb-6">
                     Cedar wood fences are the most installed fence type in Central Texas — and for good reason. They provide full privacy, fit naturally into most HOA guidelines, and come in at a lower price point than metal. For backyards with dogs, kids, or simply a desire to keep the neighbors at a comfortable distance, wood is the natural choice.
                 </p>
 
                 <p class="mb-6">
-                    One important note: at <a href="https://budafenceco.com/services/wood-fence-installation" class="text-blue-600 hover:underline">Buda Fence Company</a>, we install all wood fences with <strong>galvanized steel PostMaster posts</strong> — not wood posts. Wood posts rot at the ground line, especially in the clay-heavy soil common across Hays and Travis counties. Steel posts last decades and protect your entire fence investment.
+                    One important note: at <a href="../services/wood-fence-installation.html">Buda Fence Company</a>, we install all wood fences with <strong>galvanized steel PostMaster posts</strong> — not wood posts. Wood posts rot at the ground line, especially in the clay-heavy soil common across Hays and Travis counties. Steel posts last decades and protect your entire fence investment.
                 </p>
 
-                <h3 class="text-xl font-bold text-buda-primary mt-6 mb-3" style="font-family:sans-serif;">Wood Fence Pros</h3>
-                <ul class="list-disc list-outside pl-6 mb-6 space-y-2">
+                <h3>Wood Fence Pros</h3>
+                <ul>
                     <li><strong>Complete privacy</strong> — solid boards, no sight lines</li>
                     <li><strong>Pet and child safe</strong> — no gaps, no sharp edges</li>
                     <li><strong>Lower upfront cost</strong> — $27–$35 per linear foot installed</li>
@@ -228,22 +706,22 @@
                     <li><strong>Easy to repair</strong> — individual boards can be replaced without replacing the whole fence</li>
                 </ul>
 
-                <h3 class="text-xl font-bold text-buda-primary mt-6 mb-3" style="font-family:sans-serif;">Wood Fence Cons</h3>
-                <ul class="list-disc list-outside pl-6 mb-6 space-y-2">
+                <h3>Wood Fence Cons</h3>
+                <ul>
                     <li><strong>Requires maintenance</strong> — staining or sealing every 2–3 years</li>
                     <li><strong>Texas UV is brutal</strong> — untreated wood fades, cracks, and grays quickly</li>
                     <li><strong>Shorter lifespan</strong> — 15–20 years vs. 25–50+ for metal</li>
                     <li><strong>Not pool-code compliant</strong> — Texas pool barrier rules typically require metal</li>
                 </ul>
 
-                <h2 class="text-2xl font-bold text-buda-primary mt-8 mb-4" style="font-family:sans-serif;">Metal Fences: Durability, Elegance, and Low Maintenance</h2>
+                <h2>Metal Fences: Durability, Elegance, and Low Maintenance</h2>
 
                 <p class="mb-6">
-                    <a href="https://budafenceco.com/services/metal-fence-installation" class="text-blue-600 hover:underline">Metal fencing</a> — primarily aluminum and wrought iron — is the go-to choice for front yards, pool enclosures, and homeowners who want a fence that looks sharp for decades without much upkeep. Powder-coated aluminum is essentially rust-proof and won't warp, rot, or require staining. Wrought iron is heavier and stronger, with a more traditional ornamental appearance.
+                    <a href="../services/metal-fence-installation.html">Metal fencing</a> — primarily aluminum and wrought iron — is the go-to choice for front yards, pool enclosures, and homeowners who want a fence that looks sharp for decades without much upkeep. Powder-coated aluminum is essentially rust-proof and won't warp, rot, or require staining. Wrought iron is heavier and stronger, with a more traditional ornamental appearance.
                 </p>
 
-                <h3 class="text-xl font-bold text-buda-primary mt-6 mb-3" style="font-family:sans-serif;">Metal Fence Pros</h3>
-                <ul class="list-disc list-outside pl-6 mb-6 space-y-2">
+                <h3>Metal Fence Pros</h3>
+                <ul>
                     <li><strong>Extremely durable</strong> — powder-coated aluminum resists rust for decades</li>
                     <li><strong>Very low maintenance</strong> — no staining, no sealing</li>
                     <li><strong>Long lifespan</strong> — 25–50+ years with proper installation</li>
@@ -252,45 +730,45 @@
                     <li><strong>Handles slopes well</strong> — wrackable panels follow grade changes naturally</li>
                 </ul>
 
-                <h3 class="text-xl font-bold text-buda-primary mt-6 mb-3" style="font-family:sans-serif;">Metal Fence Cons</h3>
-                <ul class="list-disc list-outside pl-6 mb-6 space-y-2">
+                <h3>Metal Fence Cons</h3>
+                <ul>
                     <li><strong>Higher upfront cost</strong> — $25–$55+ per linear foot installed</li>
                     <li><strong>No privacy</strong> — open picket design by nature</li>
                     <li><strong>Small dog gaps</strong> — standard picket spacing may allow small pets to escape</li>
                     <li><strong>Wrought iron needs touch-ups</strong> — chips or scratches should be treated to prevent rust</li>
                 </ul>
 
-                <h2 class="text-2xl font-bold text-buda-primary mt-8 mb-4" style="font-family:sans-serif;">Cost Comparison: What to Expect in Central Texas (2026)</h2>
+                <h2>Cost Comparison: What to Expect in Central Texas (2026)</h2>
 
                 <div class="overflow-x-auto mb-6">
-                    <table class="w-full text-base border-collapse" style="font-family:sans-serif;">
+                    <table>
                         <thead>
-                            <tr class="bg-buda-primary text-white">
-                                <th class="text-left px-4 py-3">Fence Type</th>
-                                <th class="text-left px-4 py-3">Per Linear Foot</th>
-                                <th class="text-left px-4 py-3">150 LF Estimate</th>
+                            <tr>
+                                <th>Fence Type</th>
+                                <th>Per Linear Foot</th>
+                                <th>150 LF Estimate</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b border-gray-200">
-                                <td class="px-4 py-3">Cedar Wood (6 ft privacy)</td>
-                                <td class="px-4 py-3">$27 – $35</td>
-                                <td class="px-4 py-3">$4,050 – $5,250</td>
+                            <tr>
+                                <td>Cedar Wood (6 ft privacy)</td>
+                                <td>$27 – $35</td>
+                                <td>$4,050 – $5,250</td>
                             </tr>
-                            <tr class="bg-gray-50 border-b border-gray-200">
-                                <td class="px-4 py-3">Cedar + Steel PostMaster Posts</td>
-                                <td class="px-4 py-3">$22 – $30</td>
-                                <td class="px-4 py-3">$3,300 – $4,500</td>
+                            <tr>
+                                <td>Cedar + Steel PostMaster Posts</td>
+                                <td>$22 – $30</td>
+                                <td>$3,300 – $4,500</td>
                             </tr>
-                            <tr class="border-b border-gray-200">
-                                <td class="px-4 py-3">Aluminum (ornamental)</td>
-                                <td class="px-4 py-3">$28 – $40</td>
-                                <td class="px-4 py-3">$4,200 – $6,000</td>
+                            <tr>
+                                <td>Aluminum (ornamental)</td>
+                                <td>$28 – $40</td>
+                                <td>$4,200 – $6,000</td>
                             </tr>
-                            <tr class="bg-gray-50 border-b border-gray-200">
-                                <td class="px-4 py-3">Wrought Iron</td>
-                                <td class="px-4 py-3">$35 – $55</td>
-                                <td class="px-4 py-3">$5,250 – $8,250</td>
+                            <tr>
+                                <td>Wrought Iron</td>
+                                <td>$35 – $55</td>
+                                <td>$5,250 – $8,250</td>
                             </tr>
                         </tbody>
                     </table>
@@ -298,52 +776,52 @@
 
                 <p class="mb-6">Pricing varies based on terrain, gate count, panel length, and material grade. A free on-site estimate gives you the most accurate number for your specific yard.</p>
 
-                <h2 class="text-2xl font-bold text-buda-primary mt-8 mb-4" style="font-family:sans-serif;">How Texas Weather Factors In</h2>
+                <h2>How Texas Weather Factors In</h2>
 
                 <p class="mb-6">
                     Central Texas throws everything at a fence — intense UV, clay soils that shift with moisture, and storms that can gust 60+ mph. Cedar holds up well against insects and rot naturally, but it needs staining to survive the UV. Aluminum doesn't warp, fade, or rust. Wrought iron is stronger but needs touch-ups on any surface damage to prevent oxidation. Either material can last decades with the right installation and basic care.
                 </p>
 
-                <h2 class="text-2xl font-bold text-buda-primary mt-8 mb-4" style="font-family:sans-serif;">The Best of Both Worlds</h2>
+                <h2>The Best of Both Worlds</h2>
 
                 <p class="mb-6">
                     One of the most popular setups we install across Austin and surrounding areas: <strong>metal fencing along the front of the property, cedar privacy fencing along the sides and back.</strong> You get the curb appeal and open elegance of metal where the street can see it, and full privacy where you actually spend time in your yard. It's a smart combination that balances aesthetics, function, and budget.
                 </p>
 
-                <h2 class="text-2xl font-bold text-buda-primary mt-8 mb-4" style="font-family:sans-serif;">Frequently Asked Questions</h2>
+                <h2>Frequently Asked Questions</h2>
 
-                <div class="divide-y divide-gray-200 mb-8">
-                    <div class="py-5">
-                        <h3 class="font-bold text-lg text-buda-primary" style="font-family:sans-serif;">Is wood or metal cheaper in Texas?</h3>
+                <div class="divide-y mb-8">
+                    <div style="padding-top:1.25rem;padding-bottom:1.25rem;">
+                        <h3>Is wood or metal cheaper in Texas?</h3>
                         <p class="pt-2">Wood is less expensive upfront at $27–$35 per linear foot installed. Metal runs $25–$55+ but requires far less maintenance, which offsets the cost over time.</p>
                     </div>
-                    <div class="py-5">
-                        <h3 class="font-bold text-lg text-buda-primary" style="font-family:sans-serif;">How long does a wood fence last in Texas?</h3>
+                    <div style="padding-top:1.25rem;padding-bottom:1.25rem;">
+                        <h3>How long does a wood fence last in Texas?</h3>
                         <p class="pt-2">With cedar boards and steel posts, expect 15–20 years. Staining every 2–3 years adds years to that lifespan. Wood posts significantly reduce longevity due to ground moisture and rot.</p>
                     </div>
-                    <div class="py-5">
-                        <h3 class="font-bold text-lg text-buda-primary" style="font-family:sans-serif;">What fence material handles Texas weather best?</h3>
+                    <div style="padding-top:1.25rem;padding-bottom:1.25rem;">
+                        <h3>What fence material handles Texas weather best?</h3>
                         <p class="pt-2">Both cedar and powder-coated aluminum perform well. Cedar is naturally resistant to insects and rot. Aluminum is essentially maintenance-free. The right choice depends on your privacy needs and budget.</p>
                     </div>
-                    <div class="py-5">
-                        <h3 class="font-bold text-lg text-buda-primary" style="font-family:sans-serif;">Can I mix wood and metal on the same property?</h3>
+                    <div style="padding-top:1.25rem;padding-bottom:1.25rem;">
+                        <h3>Can I mix wood and metal on the same property?</h3>
                         <p class="pt-2">Absolutely — and it's one of our most popular installs. Metal in front for curb appeal, cedar on the sides and back for privacy. Best of both worlds without blowing the budget.</p>
                     </div>
                 </div>
 
                 <!-- CTA Box -->
-                <div class="bg-buda-primary text-white rounded-lg p-8 text-center mt-8">
-                    <h2 class="text-2xl font-bold mb-3" style="font-family:sans-serif;">Ready to Get Started?</h2>
-                    <p class="text-gray-300 mb-6">Our team has installed 5,000+ fences across Central Texas. We'll walk your property, answer your questions, and give you a free no-pressure quote — usually the same week you call.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://budafenceco.com/contact" class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition">Get a Free Estimate</a>
-                        <a href="tel:5127107116" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-buda-primary transition">(512) 710-7116</a>
+                <div class="bg-buda-primary text-white rounded-lg p-8 text-center mt-8" style="background-color: #1e293b;">
+                    <h2 style="font-family:sans-serif;font-size:1.5rem;font-weight:700;margin-bottom:0.75rem;color:#ffffff;">Ready to Get Started?</h2>
+                    <p class="text-gray-300 mb-6" style="color:#d1d5db;">Our team has installed 5,000+ fences across Central Texas. We'll walk your property, answer your questions, and give you a free no-pressure quote — usually the same week you call.</p>
+                    <div class="flex flex-col gap-4" style="display:flex;flex-direction:column;gap:1rem;">
+                        <a href="../contact.html" class="bg-buda-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition" style="background-color:#dc2626;color:#ffffff;font-weight:700;padding:0.75rem 2rem;border-radius:0.5rem;display:inline-block;">Get a Free Estimate</a>
+                        <a href="tel:5127107116" class="border-2 text-white font-bold py-3 px-8 rounded-lg transition" style="border:2px solid #ffffff;color:#ffffff;font-weight:700;padding:0.75rem 2rem;border-radius:0.5rem;display:inline-block;">(512) 710-7116</a>
                     </div>
                 </div>
 
                 <!-- Back to Blog -->
                 <div class="mt-8 pt-6 border-t border-gray-200">
-                    <a href="../blog/" class="text-buda-secondary hover:underline font-semibold" style="font-family:sans-serif;">← Back to All Articles</a>
+                    <a href="../blog/" class="text-buda-secondary hover:underline font-semibold" style="font-family:sans-serif;color:#dc2626;font-weight:600;">← Back to All Articles</a>
                 </div>
 
             </div>
@@ -351,43 +829,177 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
+    <footer class="bg-gray-900 text-white py-12" role="contentinfo">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <img src="../images/BudaFenceLogo.jpeg" alt="Buda Fence Company" class="h-16 mb-4 rounded">
-                    <p class="text-gray-400">Building Budaful fences and decks for Central Texas since 2014.</p>
+                    <img src="../images/buda-fence-logo-white.webp" 
+                         alt="Buda Fence Company" 
+                         class="h-12 w-auto mb-4"
+                         width="97"
+                         height="48"
+                         loading="lazy">
+                    <p class="text-gray-400 text-sm mb-4">Professional fence installation and repair services in Austin, Buda, and Central Texas. Family-owned and operated since 2015.</p>
+                    <p class="text-gray-400 text-xs" style="font-style:italic;">🚨 Emergency fence repair available</p>
                 </div>
+                
                 <div>
-                    <h4 class="font-bold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a class="hover:text-white" href="../services/deck-construction.html">Deck Construction</a></li>
-                        <li><a class="hover:text-white" href="../services/wood-fence-installation.html">Wood Fences</a></li>
-                        <li><a class="hover:text-white" href="../services/metal-fence-installation.html">Metal Fences</a></li>
-                        <li><a class="hover:text-white" href="../services/chain-link-fence-installation.html">Chain Link</a></li>
-                        <li><a class="hover:text-white" href="../services/fence-repair.html">Fence Repair</a></li>
+                    <h3 class="font-bold mb-4">Our Services</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a class="hover:text-white transition-colors" href="../services/deck-construction.html">Deck Construction</a></li>
+                        <li><a class="hover:text-white transition-colors" href="../services/wood-fence-installation.html">Wood Fence</a></li>
+                        <li><a class="hover:text-white transition-colors" href="../services/metal-fence-installation.html">Metal Fence</a></li>
+                        <li><a class="hover:text-white transition-colors" href="../services/chain-link-fence-installation.html">Chain Link</a></li>
+                        <li><a class="hover:text-white transition-colors" href="../services/fence-repair.html">Fence Repair</a></li>
+                        <li><a class="hover:text-white transition-colors" href="../services.html">All Services</a></li>
                     </ul>
                 </div>
+                
                 <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a class="hover:text-white" href="../about.html">About Us</a></li>
-                        <li><a class="hover:text-white" href="../blog/">Blog</a></li>
-                        <li><a class="hover:text-white" href="../contact.html">Contact</a></li>
+                    <h3 class="font-bold mb-4">Service Areas</h3>
+                    <ul class="text-gray-400 text-sm space-y-2 mb-4">
+                        <li><a class="hover:text-white transition-colors" href="../service-areas/austin.html">Austin</a></li>
+                        <li><a class="hover:text-white transition-colors" href="../service-areas/buda.html">Buda</a></li>
+                        <li><a class="hover:text-white transition-colors" href="../service-areas/kyle.html">Kyle</a></li>
+                        <li><a class="hover:text-white transition-colors" href="../service-areas/dripping-springs.html">Dripping Springs</a></li>
                     </ul>
+                    <p class="text-gray-400 text-xs">+ 25-mile radius from Buda</p>
                 </div>
+                
                 <div>
-                    <h4 class="font-bold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                       <strong>Phone:</strong> <a href="tel:5127107116" class="hover:text-white">(512) 710-7116</a><br>
-                        <strong>Email:</strong> <a href="mailto:info@budafenceco.com" class="hover:text-white">info@budafenceco.com</a>
-                    </ul>
+                    <h3 class="font-bold mb-4">Contact Us</h3>
+                    <address class="text-gray-400 text-sm not-italic space-y-2">
+                        <p>📍 308 Wincliff Dr<br>Buda, TX 78610</p>
+                        <p>📞 <a href="tel:+15127107116" class="hover:text-white transition-colors">(512) 710-7116</a></p>
+                        <p>✉️ <a href="mailto:info@budafenceco.com" class="hover:text-white transition-colors">info@budafenceco.com</a></p>
+                        <p class="pt-2">
+                            <strong class="text-white">Business Hours:</strong><br>
+                            Mon-Fri: 6 AM - 6 PM ☀️<br>
+                            Sat: 9 AM - 2 PM 🔨
+                        </p>
+                    </address>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2026 Buda Fence Company. All rights reserved.</p>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year">2026</span> Buda Fence Company. All Rights Reserved. | <a class="hover:text-white transition-colors" href="../contact.html">Contact Us</a></p>
             </div>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/
+    <!-- JavaScript for Mobile Menu and Dropdowns -->
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuButton = document.getElementById('mobile-menu-button');
+            var mobileMenu = document.getElementById('mobile-menu');
+            
+            if (!menuButton || !mobileMenu) return;
+            
+            menuButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var isOpen = mobileMenu.classList.contains('active');
+                
+                if (isOpen) {
+                    mobileMenu.classList.remove('active');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                } else {
+                    mobileMenu.classList.add('active');
+                    menuButton.setAttribute('aria-expanded', 'true');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+            
+            var menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+                    if (mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        menuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        // Dropdown menus
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(function(dropdown) {
+                var btn = dropdown.querySelector('button');
+                var menu = dropdown.querySelector('.dropdown-menu');
+                
+                if (!btn || !menu) return;
+                
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var isOpen = menu.classList.contains('active');
+                    
+                    document.querySelectorAll('.dropdown-menu.active').forEach(function(m) {
+                        if (m !== menu) {
+                            m.classList.remove('active');
+                            m.previousElementSibling.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                    
+                    if (!isOpen) {
+                        menu.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                    } else {
+                        menu.classList.remove('active');
+                        btn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+                
+                btn.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+                
+                menu.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        menu.classList.remove('active');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.focus();
+                    }
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        menu.classList.remove('active');
+                        btn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+            
+            // Dynamic Copyright Year
+            var yearSpan = document.getElementById('copyright-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
