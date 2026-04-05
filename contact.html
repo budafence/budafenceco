@@ -110,6 +110,16 @@
       }
     }
 
+    /* Mobile header elements */
+    .mobile-only {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    @media(min-width:768px){
+      .mobile-only { display: none !important; }
+    }
+
     /* ===== NAVIGATION ===== */
     nav { background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.1); position: sticky; top: 0; z-index: 50; }
     nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem; }
@@ -528,10 +538,6 @@
       .mobile-cta-bar .cta-quote { background: #fff; color: #1e293b; }
       footer { padding-bottom: 80px; }
     }
-
-    /* Responsive utilities */
-    @media(max-width:767px){ .md\:hidden { display: block !important; } .hidden.md\:flex { display: none !important; } .mobile-menu.active { display: block; } }
-    @media(min-width:768px){ .md\:flex { display: flex; } .md\:hidden { display: none; } }
   </style>
 
   <!-- Schema Markup -->
@@ -654,7 +660,7 @@
         <a href="tel:5127107116" style="color:#1e293b;font-weight:600;">(512) 710-7116</a>
         <a href="/contact" style="background:#dc2626;color:#fff;padding:0.5rem 1rem;border-radius:0.375rem;font-weight:600;">Free Quote</a>
       </div>
-      <div class="md:hidden" style="display:flex;align-items:center;gap:0.5rem;">
+      <div class="mobile-only">
         <a href="/contact" style="background:#dc2626;color:#fff;padding:0.5rem 1rem;border-radius:0.25rem;font-size:0.875rem;font-weight:600;">Free Quote</a>
         <button id="mobile-menu-button" style="padding:0.5rem;" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg style="width:1.5rem;height:1.5rem;color:#374151;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
