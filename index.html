@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Preconnect to GA (must be before the script request) -->
+    <!-- Preconnect to GA (connection ready when script loads) -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRJYMYZ44"></script>
+    <!-- Google Analytics — deferred until after first paint for mobile performance -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HNRJYMYZ44');
+      // Delay GA loading until browser is idle (after LCP)
+      function loadGA() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HNRJYMYZ44';
+        s.async = true;
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-HNRJYMYZ44');
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGA, { timeout: 3000 });
+      } else {
+        setTimeout(loadGA, 2000);
+      }
     </script>
     <!-- Primary Meta Tags -->
     <title>Buda Fence Company | #1 Fence Contractor in Buda & Austin TX</title>
@@ -46,7 +57,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <!-- Preload hero image -->
-    <link rel="preload" href="/images/hero-section.webp" as="image" type="image/webp">
+    <link rel="preload" href="/images/hero-section.webp" as="image" type="image/webp" fetchpriority="high">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
@@ -55,18 +66,10 @@
         a { text-decoration: none; color: inherit; }
         button { font-family: inherit; cursor: pointer; border: none; background: none; }
         /* Brand colors */
-        .bg-buda-primary { background-color: #1e293b; }
-        .text-buda-primary { color: #1e293b; }
-        .bg-buda-secondary { background-color: #dc2626; }
-        .text-buda-secondary { color: #dc2626; }
         /* Layout */
         .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
         /* Typography helpers */
-        .text-center { text-align: center; }
         .font-bold { font-weight: 700; }
-        .font-semibold { font-weight: 600; }
-        .font-medium { font-weight: 500; }
-        .text-white { color: #fff; }
         ul { list-style: none; }
         /* Accessibility */
         a:focus, button:focus { outline: 2px solid #dc2626; outline-offset: 2px; }
@@ -198,6 +201,8 @@
         /* SEO CONTENT PANEL - RESTORED */
         .hero-panel { background: rgba(255,255,255,.08); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.15); border-radius: .75rem; padding: 2rem; }
         @supports not (backdrop-filter:blur(8px)){ .hero-panel { background: rgba(255,255,255,.15); } }
+        /* Disable expensive blur on mobile for GPU performance */
+        @media(max-width:767px){ .hero-panel { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(30,41,59,.92); } }
         .hero-panel h2 { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem; }
         .hero-panel-item { display: flex; align-items: flex-start; gap: .875rem; margin-bottom: 1.125rem; }
         .hero-panel-item:last-child { margin-bottom: 0; }
@@ -235,6 +240,11 @@
             line-height: 1.3;
         }
         /* ===== STATS BAR ===== */
+        /* Below-fold rendering optimization — skip layout/paint until scrolled into view */
+        .stats-bar, .quote-strip, .services-section, .materials-section, .areas-section, .reviews-section, .resources-section, .faq-section, .cta-section {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 500px;
+        }
         .stats-bar { background: #dc2626; color: #fff; padding: 1.25rem 0; }
         .stats-inner { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; text-align: center; }
         @media(min-width:640px){ .stats-inner { grid-template-columns: repeat(4,1fr); } }
@@ -369,15 +379,10 @@
         @media(max-width:767px){ .md\:hidden { display: block !important; } .mobile-menu.active { display: block; } }
         @media(min-width:768px){ .md\:flex { display: flex; } .md\:hidden { display: none; } }
         .grid { display: grid; gap: 2rem; }
-        @media(min-width:640px){ .sm\:grid-cols-2 { grid-template-columns: repeat(2,1fr); } }
-        @media(min-width:768px){ .md\:grid-cols-2 { grid-template-columns: repeat(2,1fr); } .md\:grid-cols-3 { grid-template-columns: repeat(3,1fr); } .md\:grid-cols-4 { grid-template-columns: repeat(4,1fr); } }
-        .flex { display: flex; }
-        .flex-col { flex-direction: column; }
-        .items-center { align-items: center; }
-        .gap-2 { gap: .5rem; }
-        .gap-8 { gap: 2rem; }
+        @media(min-width:768px){ .md\:grid-cols-4 { grid-template-columns: repeat(4,1fr); } }
         .h-12 { height: 3rem; }
         .w-auto { width: auto; }
+        .gap-8 { gap: 2rem; }
     </style>
     <!-- LocalBusiness Schema -->
     <script type="application/ld+json">
@@ -601,7 +606,7 @@
                 </div>
                 <div class="services-grid">
                     <article class="service-card">
-                        <img src="/images/cedar-fence.webp" alt="Western Red Cedar privacy fence installed in Austin TX" width="600" height="400" loading="lazy">
+                        <img src="/images/cedar-fence.webp" alt="Western Red Cedar privacy fence installed in Austin TX" width="600" height="400" loading="lazy" decoding="async">
                         <div class="service-card-body">
                             <h3>Wood Fences</h3>
                             <p>Premium Western Red Cedar with optional steel posts. Our most popular product — privacy, board-on-board, and modern horizontal styles for any yard.</p>
@@ -615,7 +620,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <img src="/images/metal-fence.webp" alt="Black metal ornamental iron fence around pool in Austin TX" width="600" height="400" loading="lazy">
+                        <img src="/images/metal-fence.webp" alt="Black metal ornamental iron fence around pool in Austin TX" width="600" height="400" loading="lazy" decoding="async">
                         <div class="service-card-body">
                             <h3>Metal Fences</h3>
                             <p>Wrought iron and aluminum fencing for homeowners who want elegance, low maintenance, and a fence that genuinely outlasts everything else.</p>
@@ -629,7 +634,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <img src="/images/chain-link-fence.webp" alt="Black vinyl-coated chain link fence installation in Austin TX backyard" width="600" height="400" loading="lazy">
+                        <img src="/images/chain-link-fence.webp" alt="Black vinyl-coated chain link fence installation in Austin TX backyard" width="600" height="400" loading="lazy" decoding="async">
                         <div class="service-card-body">
                             <h3>Chain Link Fences</h3>
                             <p>The most affordable way to secure your yard, contain pets, or define a property line. Galvanized or vinyl-coated, residential to commercial grade.</p>
@@ -643,7 +648,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <img src="/images/cedar-fence-after.webp" alt="Cedar fence repair completed in Austin TX" width="600" height="400" loading="lazy">
+                        <img src="/images/cedar-fence-after.webp" alt="Cedar fence repair completed in Austin TX" width="600" height="400" loading="lazy" decoding="async">
                         <div class="service-card-body">
                             <h3>Fence Repair</h3>
                             <p>Storm damage, rotted posts, sagging gates, leaning fence lines — we diagnose the real problem and give you the honest fix, not the most expensive one.</p>
@@ -876,7 +881,7 @@
         <div class="container">
             <div class="grid md:grid-cols-4 gap-8" style="margin-bottom:2rem;">
                 <div>
-                    <img src="/images/buda-fence-logo-white.webp" alt="Buda Fence Company" class="h-12 w-auto" style="margin-bottom:1rem;" width="97" height="48" loading="lazy">
+                    <img src="/images/buda-fence-logo-white.webp" alt="Buda Fence Company" class="h-12 w-auto" style="margin-bottom:1rem;" width="97" height="48" loading="lazy" decoding="async">
                     <p style="color:#9ca3af;font-size:0.875rem;">Professional fence installation and repair in Austin, Buda, and Central Texas. Family-owned and operated since 2015.</p>
                 </div>
                 <div>
@@ -935,7 +940,7 @@
                     } else {
                         stickyHeader.classList.remove('visible');
                     }
-                });
+                }, { passive: true });
             }
             // Mobile menu
             var menuButton = document.getElementById('mobile-menu-button');
